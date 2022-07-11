@@ -1,5 +1,11 @@
+import { MainPage } from "./components/organisms/MainPage";
+
 function App() {
-    return <div className="App">asd</div>;
+    return (
+        <div className="App">
+            <MainPage />
+        </div>
+    );
 }
 
 export default App;
