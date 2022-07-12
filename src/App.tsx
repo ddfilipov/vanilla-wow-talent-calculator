@@ -2,7 +2,7 @@ import { MainPage } from "./components/organisms/MainPage";
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <MainPage />
         </div>
     );
