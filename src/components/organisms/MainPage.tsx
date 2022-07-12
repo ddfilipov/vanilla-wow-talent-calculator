@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { TalentNode } from "../atoms/TalentNode";
 import styled from "styled-components";
+import { ClassChooser } from "../molecules/ClassChooser";
 
 const MainContainer = styled.div`
     display: flex;
@@ -18,7 +19,9 @@ const Container = styled.div`
 export const MainPage: FC = () => {
     return (
         <MainContainer>
-            <Container />
+            <Container>
+                <ClassChooser />
+            </Container>
         </MainContainer>
     );
 };
