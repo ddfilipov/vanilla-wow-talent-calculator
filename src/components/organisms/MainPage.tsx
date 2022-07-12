@@ -1,5 +1,4 @@
-import React, { FC } from "react";
-import { TalentNode } from "../atoms/TalentNode";
+import { FC } from "react";
 import styled from "styled-components";
 import { ClassChooser } from "../molecules/ClassChooser";
 
