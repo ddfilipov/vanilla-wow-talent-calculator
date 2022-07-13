@@ -1,5 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { classes } from "../consts";
+import warr from "../../images/class_warrior.jpg";
 
 const Container = styled.div`
     border: 1px solid white;
@@ -9,9 +11,11 @@ const Container = styled.div`
 export const ClassChooser: FC = () => {
     return (
         <Container>
-            <ul>
-                <li>warrior</li>
-            </ul>
+            <div>
+                {/* {classes.map((clase, index) => ( */}
+                <img src={warr}></img>
+                {/* ))} */}
+            </div>
         </Container>
     );
 };
