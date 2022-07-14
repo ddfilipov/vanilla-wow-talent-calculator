@@ -12,7 +12,7 @@ export const ClassChooser: FC = () => {
         <Container>
             <div>
                 {classes2.ayuda.map((clase) => (
-                    <img src={clase.class.src} key={clase.class.name}></img>
+                    <img src={clase.class.src} key={clase.class.name} alt={clase.class.name}></img>
                 ))}
             </div>
         </Container>

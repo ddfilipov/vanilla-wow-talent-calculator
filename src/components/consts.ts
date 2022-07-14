@@ -1,4 +1,4 @@
-import { IClassWrapper, IClass } from "../interfaces";
+import { IClassWrapper } from "../interfaces";
 import druid from "../images/class_druid.jpg";
 import hunter from "../images/class_hunter.jpg";
 import mage from "../images/class_mage.jpg";
