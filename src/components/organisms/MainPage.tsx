@@ -13,6 +13,9 @@ const Container = styled.div`
     width: 1000px;
     height: 700px;
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 `;
 
 export const MainPage: FC = () => {
