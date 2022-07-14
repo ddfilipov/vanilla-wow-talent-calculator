@@ -4,7 +4,6 @@ import { classes2 } from "../consts";
 
 const Container = styled.div`
     border: 1px solid white;
-    margin-top: 10px;
     align-self: center;
     div {
         display: flex;
@@ -27,7 +26,9 @@ export const ClassChooser: FC = () => {
             <Container>
                 <div>
                     {classes2.ayuda.map((clase) => (
-                        <img src={clase.class.src} key={clase.class.name} alt={clase.class.name}></img>
+                        <a href="">
+                            <img src={clase.class.src} key={clase.class.name} alt={clase.class.name}></img>
+                        </a>
                     ))}
                 </div>
             </Container>
