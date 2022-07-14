@@ -1,15 +1,14 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { ClassIcon } from "../atoms/ClassIcon";
 import { classes2 } from "../consts";
 
 const Container = styled.div`
-    border: 1px solid white;
     align-self: center;
-    div {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 `;
 
 // TODO: change name!!!
@@ -24,13 +23,9 @@ export const ClassChooser: FC = () => {
         <>
             <Letritas>Choose a class:</Letritas>
             <Container>
-                <div>
-                    {classes2.ayuda.map((clase) => (
-                        <a href="">
-                            <img src={clase.class.src} key={clase.class.name} alt={clase.class.name}></img>
-                        </a>
-                    ))}
-                </div>
+                {classes2.ayuda.map((clase) => (
+                    <ClassIcon href={""} src={clase.class.src} alt={clase.class.name} />
+                ))}
             </Container>
         </>
     );
