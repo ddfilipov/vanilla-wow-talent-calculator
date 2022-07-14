@@ -9,7 +9,7 @@ import shaman from "../images/class_shaman.jpg";
 import warlock from "../images/class_warlock.jpg";
 import warrior from "../images/class_warrior.jpg";
 
-export const classes2: IClassWrapper = {
+export const classes: IClassWrapper = {
     ayuda: [
         { class: { name: "druid", src: druid } },
         { class: { name: "hunter", src: hunter } },

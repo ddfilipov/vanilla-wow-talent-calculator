@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { ClassIcon } from "../atoms/ClassIcon";
-import { classes2 } from "../consts";
+import { classes } from "../consts";
 
 const Container = styled.div`
     align-self: center;
@@ -23,7 +23,7 @@ export const ClassChooser: FC = () => {
         <>
             <Letritas>Choose a class:</Letritas>
             <Container>
-                {classes2.ayuda.map((clase) => (
+                {classes.ayuda.map((clase) => (
                     <ClassIcon href={""} src={clase.class.src} alt={clase.class.name} />
                 ))}
             </Container>
