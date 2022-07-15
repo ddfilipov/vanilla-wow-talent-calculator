@@ -22,9 +22,14 @@ export const ClassChooser: FC = () => {
     return (
         <>
             <Letritas>Choose a class:</Letritas>
-            <Container>
+            {/* <Container>
                 {classes.ayuda.map((clase) => (
                     <ClassIcon href={""} src={clase.class.src} alt={clase.class.name} />
+                ))}
+            </Container> */}
+            <Container>
+                {classes.ayuda.map((clase) => (
+                    <ClassIcon href={`/${clase.class.name}`} src={clase.class.src} alt={clase.class.name} />
                 ))}
             </Container>
         </>

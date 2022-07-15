@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export interface ClassIconProps {
     href: string;
@@ -7,12 +7,12 @@ export interface ClassIconProps {
     alt: string;
 }
 
-const Container = styled.a``;
+// const Container = styled.a``;
 
 export const ClassIcon: FC<ClassIconProps> = ({ href, src, alt }) => {
     return (
-        <Container href={href}>
+        <Link to={href}>
             <img src={src} alt={alt}></img>
-        </Container>
+        </Link>
     );
 };
