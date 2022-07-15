@@ -1,10 +1,11 @@
 import { MainPage } from "./components/organisms/MainPage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
     return (
-        <div>
-            <MainPage />
-        </div>
+        <Routes>
+            <Route path="/" element={<MainPage />} />
+        </Routes>
     );
 }
 
