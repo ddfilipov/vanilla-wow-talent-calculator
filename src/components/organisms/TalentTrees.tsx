@@ -1,26 +1,25 @@
 import { FC } from "react";
+import styled from "styled-components";
+import { TalentTree } from "../molecules/TalentTree";
 
-// const MainContainer = styled.div`
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// `;
-
-// const Container = styled.div`
-//     border: 1px solid white;
-//     width: 1000px;
-//     height: 700px;
-//     margin-top: 100px;
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-//     gap: 10px;
-// `;
+const Container = styled.div`
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 1.5rem;
+    justify-items: center;
+    height: 100%;
+`;
 
 interface TalentTreesProps {
     className: string;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({ className }) => {
-    return <>Talent tree of {className}</>;
+    return (
+        <Container>
+            <TalentTree className={className}/>
+            <TalentTree className={className}/>
+            <TalentTree className={className}/>
+        </Container>
+    );
 };

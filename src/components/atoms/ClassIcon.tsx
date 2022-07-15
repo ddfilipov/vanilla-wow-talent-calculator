@@ -7,7 +7,6 @@ export interface ClassIconProps {
     alt: string;
 }
 
-// const Container = styled.a``;
 
 export const ClassIcon: FC<ClassIconProps> = ({ href, src, alt }) => {
     return (
