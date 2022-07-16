@@ -1,5 +1,5 @@
-import { TalentTrees } from "../components/organisms/TalentTrees";
+import { TalentArea } from "../components/organisms/TalentArea";
 
 export default function Shaman() {
-    return <TalentTrees className="shaman" />;
+    return <TalentArea className="shaman" />;
 }

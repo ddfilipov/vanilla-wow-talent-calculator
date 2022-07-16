@@ -19,7 +19,7 @@ const MainContainer = styled.div`
 
 const Container = styled.div`
     border: 1px solid white;
-    width: 1000px;
+    width: 1200px;
     height: 700px;
     margin-top: 100px;
     display: flex;
