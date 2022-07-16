@@ -1,6 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC } from "react";
 import styled from "styled-components";
+import { ITalentTreeBackground } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 
 const Container = styled.div`
@@ -13,17 +14,21 @@ const Container = styled.div`
 
 const AreaSuperior = styled.div`
     border: 1px solid white;
+    color: white;
+    text-align: center;
+    font-size: 32px;
 `;
 
 interface TalentAreaProps {
     className: string;
+    talentBackgroundImages: ITalentTreeBackground;
 }
 
-export const TalentArea: FC<TalentAreaProps> = ({ className }) => {
+export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundImages }) => {
     return (
         <Container>
-            <AreaSuperior>Area superior</AreaSuperior>
-            <TalentTrees className={className} />
+            <AreaSuperior>{className}</AreaSuperior>
+            <TalentTrees className={className} talentBackgroundImages={talentBackgroundImages} />
         </Container>
     );
 };
