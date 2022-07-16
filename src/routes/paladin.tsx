@@ -1,14 +1,14 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import arms from "../images/warrior_tree_arms.jpeg";
-import fury from "../images/warrior_tree_fury.jpeg";
-import protection from "../images/warrior_tree_protection.jpeg";
+import holy from "../images/paladin_tree_holy.jpeg";
+import protection from "../images/paladin_tree_protection.jpeg";
+import retribution from "../images/paladin_tree_retribution.jpeg";
 import { ITalentTreeBackground } from "../interfaces";
 
 export default function Paladin() {
     const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: arms,
-        secondTalentTreeKey: fury,
-        thirdTalentTreeKey: protection,
+        firstTalentTreeKey: holy,
+        secondTalentTreeKey: protection,
+        thirdTalentTreeKey: retribution,
     };
 
     return <TalentArea className="paladin" talentBackgroundImages={talentTreeBackgroundImgs} />;

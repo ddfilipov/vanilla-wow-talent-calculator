@@ -1,14 +1,14 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import arms from "../images/warrior_tree_arms.jpeg";
-import fury from "../images/warrior_tree_fury.jpeg";
-import protection from "../images/warrior_tree_protection.jpeg";
+import bm from "../images/hunter_tree_bm.jpeg";
+import marksmanship from "../images/hunter_tree_marksmanship.jpeg";
+import survival from "../images/hunter_tree_survival.jpeg";
 import { ITalentTreeBackground } from "../interfaces";
 
 export default function Hunter() {
     const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: arms,
-        secondTalentTreeKey: fury,
-        thirdTalentTreeKey: protection,
+        firstTalentTreeKey: bm,
+        secondTalentTreeKey: marksmanship,
+        thirdTalentTreeKey: survival,
     };
 
     return <TalentArea className="hunter" talentBackgroundImages={talentTreeBackgroundImgs} />;

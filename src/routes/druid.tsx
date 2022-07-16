@@ -1,14 +1,14 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import arms from "../images/warrior_tree_arms.jpeg";
-import fury from "../images/warrior_tree_fury.jpeg";
-import protection from "../images/warrior_tree_protection.jpeg";
+import balance from "../images/druid_tree_balance.jpeg";
+import feral from "../images/druid_tree_feral.jpeg";
+import restoration from "../images/druid_tree_restoration.jpeg";
 import { ITalentTreeBackground } from "../interfaces";
 
 export default function Druid() {
     const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: arms,
-        secondTalentTreeKey: fury,
-        thirdTalentTreeKey: protection,
+        firstTalentTreeKey: balance,
+        secondTalentTreeKey: feral,
+        thirdTalentTreeKey: restoration,
     };
 
     return <TalentArea className="druid" talentBackgroundImages={talentTreeBackgroundImgs} />;

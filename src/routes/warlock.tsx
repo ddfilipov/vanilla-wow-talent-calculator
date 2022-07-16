@@ -1,14 +1,14 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import arms from "../images/warrior_tree_arms.jpeg";
-import fury from "../images/warrior_tree_fury.jpeg";
-import protection from "../images/warrior_tree_protection.jpeg";
+import affliction from "../images/warlock_tree_affliction.jpeg";
+import demonology from "../images/warlock_tree_demonology.jpeg";
+import destruction from "../images/warlock_tree_destruction.jpeg";
 import { ITalentTreeBackground } from "../interfaces";
 
 export default function Warlock() {
     const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: arms,
-        secondTalentTreeKey: fury,
-        thirdTalentTreeKey: protection,
+        firstTalentTreeKey: affliction,
+        secondTalentTreeKey: demonology,
+        thirdTalentTreeKey: destruction,
     };
 
     return <TalentArea className="warlock" talentBackgroundImages={talentTreeBackgroundImgs} />;

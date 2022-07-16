@@ -1,14 +1,14 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import arms from "../images/warrior_tree_arms.jpeg";
-import fury from "../images/warrior_tree_fury.jpeg";
-import protection from "../images/warrior_tree_protection.jpeg";
+import discipline from "../images/priest_tree_discipline.jpeg";
+import holy from "../images/priest_tree_holy.jpeg";
+import shadow from "../images/priest_tree_shadow.jpeg";
 import { ITalentTreeBackground } from "../interfaces";
 
 export default function Priest() {
     const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: arms,
-        secondTalentTreeKey: fury,
-        thirdTalentTreeKey: protection,
+        firstTalentTreeKey: discipline,
+        secondTalentTreeKey: holy,
+        thirdTalentTreeKey: shadow,
     };
 
     return <TalentArea className="priest" talentBackgroundImages={talentTreeBackgroundImgs} />;

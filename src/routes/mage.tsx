@@ -1,14 +1,14 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import arms from "../images/warrior_tree_arms.jpeg";
-import fury from "../images/warrior_tree_fury.jpeg";
-import protection from "../images/warrior_tree_protection.jpeg";
+import arcane from "../images/mage_tree_arcane.jpeg";
+import fire from "../images/mage_tree_fire.jpeg";
+import frost from "../images/mage_tree_frost.jpeg";
 import { ITalentTreeBackground } from "../interfaces";
 
 export default function Mage() {
     const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: arms,
-        secondTalentTreeKey: fury,
-        thirdTalentTreeKey: protection,
+        firstTalentTreeKey: arcane,
+        secondTalentTreeKey: fire,
+        thirdTalentTreeKey: frost,
     };
 
     return <TalentArea className="mage" talentBackgroundImages={talentTreeBackgroundImgs} />;
