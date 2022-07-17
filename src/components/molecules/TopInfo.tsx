@@ -2,27 +2,26 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { ClassChooser } from "../molecules/ClassChooser";
-import { TopInfo } from "../molecules/TopInfo";
 
 const Container = styled.div`
-    border: 1px solid white;
-    color: white;
     display: grid;
-    grid-template-rows: 50% auto;
+    grid-template-columns: 50% 15% auto;
     align-content: center;
-    padding: 1rem;
-    gap: 1rem;
+    background-color: #001015;
+    border: 1px solid black;
+    border-radius: 1rem;
 `;
 
 interface TalentAreaProps {
     className: string;
 }
 
-export const TopTalentArea: FC<TalentAreaProps> = ({ className }) => {
+export const TopInfo: FC<TalentAreaProps> = ({ className }) => {
     return (
         <Container>
-            <ClassChooser />
-            <TopInfo className={className} />
+            <span>{className} (0/0/0)</span>
+            <span>Required level: -</span>
+            <span>Remaining Points: 51</span>
         </Container>
     );
 };
