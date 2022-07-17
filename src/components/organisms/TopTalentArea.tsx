@@ -1,6 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC } from "react";
 import styled from "styled-components";
+import { ClassChooser } from "../molecules/ClassChooser";
 
 const Container = styled.div`
     border: 1px solid white;
@@ -14,5 +15,9 @@ interface TalentAreaProps {
 }
 
 export const TopTalentArea: FC<TalentAreaProps> = ({ className }) => {
-    return <Container>{className}</Container>;
+    return (
+        <Container>
+            <ClassChooser />
+        </Container>
+    );
 };

@@ -7,7 +7,7 @@ import { TopTalentArea } from "./TopTalentArea";
 
 const Container = styled.div`
     display: grid;
-    grid-template-rows: 10% auto;
+    grid-template-rows: 15% auto;
     height: inherit;
     gap: 1rem;
     padding: 2rem;
