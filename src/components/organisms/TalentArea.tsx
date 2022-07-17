@@ -3,6 +3,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import { ITalentTreeBackground } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
+import { TopTalentArea } from "./TopTalentArea";
 
 const Container = styled.div`
     display: grid;
@@ -10,13 +11,6 @@ const Container = styled.div`
     height: inherit;
     gap: 1rem;
     padding: 2rem;
-`;
-
-const AreaSuperior = styled.div`
-    border: 1px solid white;
-    color: white;
-    text-align: center;
-    font-size: 32px;
 `;
 
 interface TalentAreaProps {
@@ -27,7 +21,7 @@ interface TalentAreaProps {
 export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundImages }) => {
     return (
         <Container>
-            <AreaSuperior>{className}</AreaSuperior>
+            <TopTalentArea className={className}></TopTalentArea>
             <TalentTrees className={className} talentBackgroundImages={talentBackgroundImages} />
         </Container>
     );
