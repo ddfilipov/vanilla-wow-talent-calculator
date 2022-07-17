@@ -1,5 +1,5 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import { ITalentTreeBackground } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
@@ -20,6 +20,12 @@ interface TalentAreaProps {
 
 export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundImages }) => {
     const [remainingTalentPoints, setRemainingTalentPoints] = useState<number>(51);
+    const [requiredLevel, setRequiredLevel] = useState<number>(9);
+
+    useEffect(() => {
+        const previousRemainingPoints = remainingTalentPoints;
+        setRequiredLevel(requiredLevel + 1);
+    }, [remainingTalentPoints]);
 
     return (
         <Container>
