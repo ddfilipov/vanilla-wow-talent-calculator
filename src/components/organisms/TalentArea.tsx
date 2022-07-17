@@ -19,11 +19,11 @@ interface TalentAreaProps {
 }
 
 export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundImages }) => {
-    const [currentTalentPoints, setCurrentTalentPoints] = useState<number>(51);
+    const [remainingTalentPoints, setRemainingTalentPoints] = useState<number>(51);
 
     return (
         <Container>
-            <TopTalentArea className={className} currentTalentPoints={currentTalentPoints}></TopTalentArea>
+            <TopTalentArea className={className} remainingTalentPoints={remainingTalentPoints}></TopTalentArea>
             <TalentTrees className={className} talentBackgroundImages={talentBackgroundImages} />
         </Container>
     );
