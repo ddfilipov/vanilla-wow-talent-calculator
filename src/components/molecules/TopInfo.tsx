@@ -14,14 +14,15 @@ const Container = styled.div`
 
 interface TalentAreaProps {
     className: string;
+    currentTalentPoints:number;
 }
 
-export const TopInfo: FC<TalentAreaProps> = ({ className }) => {
+export const TopInfo: FC<TalentAreaProps> = ({ className, currentTalentPoints }) => {
     return (
         <Container>
             <span>{className} (0/0/0)</span>
             <span>Required level: -</span>
-            <span>Remaining Points: 51</span>
+            <span>Remaining Points: {currentTalentPoints}</span>
         </Container>
     );
 };
