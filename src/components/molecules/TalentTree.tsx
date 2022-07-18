@@ -23,9 +23,5 @@ interface TalentTreeProps {
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage }) => {
-    console.log(backgroundImage);
-    return (
-        <Container backgroundImage={backgroundImage}>
-        </Container>
-    );
+    return <Container backgroundImage={backgroundImage}></Container>;
 };

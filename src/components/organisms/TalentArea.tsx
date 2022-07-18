@@ -1,5 +1,5 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
-import { FC, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { ITalentTreeBackground } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
@@ -19,18 +19,52 @@ interface TalentAreaProps {
 }
 
 export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundImages }) => {
-    const [remainingTalentPoints, setRemainingTalentPoints] = useState<number>(51);
-    const [requiredLevel, setRequiredLevel] = useState<number>(9);
+    const MAX_LEVEL = 60;
+    const MAX_TALENT_POINTS = 5;
+    const MIN_TALENT_POINTS = 0;
+    const STARTING_LEVEL = 9;
+
+    const [remainingTalentPoints, setRemainingTalentPoints] = useState<number>(MAX_TALENT_POINTS);
+    const [oldRemainingTalentPoints, setOldRemainingTalentPoints] = useState<number>(remainingTalentPoints);
+    const [requiredLevel, setRequiredLevel] = useState<number>(STARTING_LEVEL);
 
     useEffect(() => {
-        const previousRemainingPoints = remainingTalentPoints;
-        setRequiredLevel(requiredLevel + 1);
+        setOldRemainingTalentPoints(remainingTalentPoints);
+        if (oldRemainingTalentPoints != undefined) {
+            if (oldRemainingTalentPoints > remainingTalentPoints) {
+                setRequiredLevel(requiredLevel + 1);
+            } else if (oldRemainingTalentPoints < remainingTalentPoints) {
+                setRequiredLevel(requiredLevel - 1);
+            }
+        }
+    }, [remainingTalentPoints]);
+
+    const subirPuntos = useCallback(() => {
+        if (remainingTalentPoints > MIN_TALENT_POINTS) {
+            setRemainingTalentPoints(remainingTalentPoints - 1);
+        }
+    }, [remainingTalentPoints]);
+
+    const bajarPuntos = useCallback(() => {
+        if (remainingTalentPoints < MAX_TALENT_POINTS) {
+            setRemainingTalentPoints(remainingTalentPoints + 1);
+        }
     }, [remainingTalentPoints]);
 
     return (
         <Container>
-            <TopTalentArea className={className} remainingTalentPoints={remainingTalentPoints}></TopTalentArea>
+            <TopTalentArea
+                className={className}
+                remainingTalentPoints={remainingTalentPoints}
+                requiredLevel={requiredLevel}
+            ></TopTalentArea>
             <TalentTrees className={className} talentBackgroundImages={talentBackgroundImages} />
+            {/* <button type="button" onClick={subirPuntos}>
+                Subir talento
+            </button>
+            <button type="button" onClick={bajarPuntos}>
+                Bajar talento
+            </button> */}
         </Container>
     );
 };
