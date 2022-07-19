@@ -9,6 +9,7 @@ const Container = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 `;
 
 export const ClassChooser: FC = () => {
