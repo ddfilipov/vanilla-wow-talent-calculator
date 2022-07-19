@@ -1,8 +1,19 @@
 import { FC } from "react";
 import styled from "styled-components";
-import asd from "../../images/warrior_tree_arms.jpeg";
 
-const Container = styled.div<BackgroundImage>`
+const Container = styled.div`
+    display: grid;
+    grid-template-rows: 6% auto;
+    justify-self: stretch;
+    color: white;
+`;
+
+// TODO: change this name, lame
+const TopPart = styled.div`
+    border: 1px solid white;
+`;
+
+const TalentTreeStyled = styled.div<BackgroundImage>`
     border: 1px solid white;
     height: auto;
     width: auto;
@@ -23,5 +34,10 @@ interface TalentTreeProps {
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage }) => {
-    return <Container backgroundImage={backgroundImage}></Container>;
+    return (
+        <Container>
+            <TopPart>Spec</TopPart>
+            <TalentTreeStyled backgroundImage={backgroundImage}></TalentTreeStyled>
+        </Container>
+    );
 };
