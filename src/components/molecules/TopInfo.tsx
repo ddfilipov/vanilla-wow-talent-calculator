@@ -1,7 +1,6 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC } from "react";
 import styled from "styled-components";
-import { ClassChooser } from "../molecules/ClassChooser";
 
 const Container = styled.div`
     display: grid;
@@ -18,11 +17,11 @@ interface TalentAreaProps {
     requiredLevel: number;
 }
 
-export const TopInfo: FC<TalentAreaProps> = ({ className, remainingTalentPoints, requiredLevel}) => {
+export const TopInfo: FC<TalentAreaProps> = ({ className, remainingTalentPoints, requiredLevel }) => {
     return (
         <Container>
             <span>{className} (0/0/0)</span>
-            <span>Required level: {requiredLevel}</span>
+            <span>Required level: {requiredLevel < 10 ? "-" : requiredLevel}</span>
             <span>Remaining Points: {remainingTalentPoints}</span>
         </Container>
     );

@@ -19,8 +19,7 @@ interface TalentAreaProps {
 }
 
 export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundImages }) => {
-    const MAX_LEVEL = 60;
-    const MAX_TALENT_POINTS = 5;
+    const MAX_TALENT_POINTS = 51;
     const MIN_TALENT_POINTS = 0;
     const STARTING_LEVEL = 9;
 
@@ -30,7 +29,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundIma
 
     useEffect(() => {
         setOldRemainingTalentPoints(remainingTalentPoints);
-        if (oldRemainingTalentPoints != undefined) {
+        if (oldRemainingTalentPoints !== undefined) {
             if (oldRemainingTalentPoints > remainingTalentPoints) {
                 setRequiredLevel(requiredLevel + 1);
             } else if (oldRemainingTalentPoints < remainingTalentPoints) {
