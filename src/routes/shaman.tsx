@@ -5,10 +5,10 @@ import third_spec_background from "../images/shaman_tree_restoration.jpeg";
 import first_spec_icon from "../images/hunter_spec_bm.jpg";
 import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
 import third_spec_icon from "../images/hunter_spec_survival.jpg";
-import { IClassIconStuff } from "../interfaces";
+import { ITalentTreeData } from "../interfaces";
 
 export default function Shaman() {
-    const talentTreeBackgroundImgs: IClassIconStuff = {
+    const talentTreeBackgroundImgs: ITalentTreeData = {
         className: "shaman",
         specIcons: {
             firstSpecSrc: first_spec_icon,

@@ -20,7 +20,7 @@ export interface ISpecImage {
     thirdSpecSrc: string;
 }
 
-export interface IClassIconStuff {
+export interface ITalentTreeData {
     className: string;
     specIcons: ISpecImage;
     talentTreesBackgrounds: ITalentTreeBackground;

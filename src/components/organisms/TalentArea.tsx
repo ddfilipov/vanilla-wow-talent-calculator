@@ -1,7 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { IClassIconStuff } from "../../interfaces";
+import { ITalentTreeData } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 interface TalentAreaProps {
-    data: IClassIconStuff;
+    data: ITalentTreeData;
 }
 
 export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
