@@ -11,6 +11,8 @@ const Container = styled.div`
 // TODO: change this name, lame
 const TopPart = styled.div`
     border: 1px solid white;
+    display: grid;
+    grid-template-columns: 90% auto;
 `;
 
 const TalentTreeStyled = styled.div<BackgroundImage>`
@@ -31,12 +33,16 @@ interface BackgroundImage {
 interface TalentTreeProps {
     className: string;
     backgroundImage: string;
+    specImage: string;
 }
 
-export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage }) => {
+export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage, specImage }) => {
     return (
         <Container>
-            <TopPart>Spec</TopPart>
+            <TopPart>
+                <div>Spec</div>
+                <div>X</div>
+            </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}></TalentTreeStyled>
         </Container>
     );

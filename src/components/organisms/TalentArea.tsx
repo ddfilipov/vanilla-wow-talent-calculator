@@ -1,7 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { ITalentTreeBackground } from "../../interfaces";
+import { IClassIconStuff } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -14,11 +14,10 @@ const Container = styled.div`
 `;
 
 interface TalentAreaProps {
-    className: string;
-    talentBackgroundImages: ITalentTreeBackground;
+    data: IClassIconStuff;
 }
 
-export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundImages }) => {
+export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     const MAX_TALENT_POINTS = 51;
     const MIN_TALENT_POINTS = 0;
     const STARTING_LEVEL = 9;
@@ -53,11 +52,15 @@ export const TalentArea: FC<TalentAreaProps> = ({ className, talentBackgroundIma
     return (
         <Container>
             <TopTalentArea
-                className={className}
+                className={data.className}
                 remainingTalentPoints={remainingTalentPoints}
                 requiredLevel={requiredLevel}
             ></TopTalentArea>
-            <TalentTrees className={className} talentBackgroundImages={talentBackgroundImages} />
+            <TalentTrees
+                className={data.className}
+                talentBackgroundImages={data.talentTreesBackgrounds}
+                talentSpecImages={data.specIcons}
+            />
             {/* <button type="button" onClick={subirPuntos}>
                 Subir talento
             </button>

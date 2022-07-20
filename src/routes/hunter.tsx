@@ -1,15 +1,27 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import bm from "../images/hunter_tree_bm.jpeg";
-import marksmanship from "../images/hunter_tree_marksmanship.jpeg";
-import survival from "../images/hunter_tree_survival.jpeg";
-import { ITalentTreeBackground } from "../interfaces";
+import first_spec_background from "../images/hunter_tree_bm.jpeg";
+import second_spec_background from "../images/hunter_tree_marksmanship.jpeg";
+import third_spec_background from "../images/hunter_tree_survival.jpeg";
+import first_spec_icon from "../images/hunter_spec_bm.jpg";
+import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
+import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import { IClassIconStuff } from "../interfaces";
 
 export default function Hunter() {
-    const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: bm,
-        secondTalentTreeKey: marksmanship,
-        thirdTalentTreeKey: survival,
+    const talentTreeBackgroundImgs: IClassIconStuff = {
+        className: "hunter",
+        specIcons: {
+            firstSpecSrc: first_spec_icon,
+            secondSpecSrc: second_spec_icon,
+            thirdSpecSrc: third_spec_icon,
+        },
+        talentTreesBackgrounds: {
+            firstTalentTreeKey: first_spec_background,
+            secondTalentTreeKey: second_spec_background,
+            thirdTalentTreeKey: third_spec_background,
+        },
     };
 
-    return <TalentArea className="hunter" talentBackgroundImages={talentTreeBackgroundImgs} />;
+    // return <TalentArea talentTreeImages={talentTreeBackgroundImgs} />;
+    return <TalentArea data={talentTreeBackgroundImgs} />;
 }

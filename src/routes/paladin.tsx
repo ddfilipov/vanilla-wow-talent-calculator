@@ -1,15 +1,27 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import holy from "../images/paladin_tree_holy.jpeg";
-import protection from "../images/paladin_tree_protection.jpeg";
-import retribution from "../images/paladin_tree_retribution.jpeg";
-import { ITalentTreeBackground } from "../interfaces";
+import first_spec_background from "../images/paladin_tree_holy.jpeg";
+import second_spec_background from "../images/paladin_tree_protection.jpeg";
+import third_spec_background from "../images/paladin_tree_retribution.jpeg";
+import first_spec_icon from "../images/hunter_spec_bm.jpg";
+import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
+import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import { IClassIconStuff } from "../interfaces";
 
 export default function Paladin() {
-    const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: holy,
-        secondTalentTreeKey: protection,
-        thirdTalentTreeKey: retribution,
+    const talentTreeBackgroundImgs: IClassIconStuff = {
+        className: "paladin",
+        specIcons: {
+            firstSpecSrc: first_spec_icon,
+            secondSpecSrc: second_spec_icon,
+            thirdSpecSrc: third_spec_icon,
+        },
+        talentTreesBackgrounds: {
+            firstTalentTreeKey: first_spec_background,
+            secondTalentTreeKey: second_spec_background,
+            thirdTalentTreeKey: third_spec_background,
+        },
     };
 
-    return <TalentArea className="paladin" talentBackgroundImages={talentTreeBackgroundImgs} />;
+    // return <TalentArea talentTreeImages={talentTreeBackgroundImgs} />;
+    return <TalentArea data={talentTreeBackgroundImgs} />;
 }

@@ -1,15 +1,27 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import discipline from "../images/priest_tree_discipline.jpeg";
-import holy from "../images/priest_tree_holy.jpeg";
-import shadow from "../images/priest_tree_shadow.jpeg";
-import { ITalentTreeBackground } from "../interfaces";
+import first_spec_background from "../images/priest_tree_discipline.jpeg";
+import second_spec_background from "../images/priest_tree_holy.jpeg";
+import third_spec_background from "../images/priest_tree_shadow.jpeg";
+import first_spec_icon from "../images/hunter_spec_bm.jpg";
+import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
+import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import { IClassIconStuff } from "../interfaces";
 
 export default function Priest() {
-    const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: discipline,
-        secondTalentTreeKey: holy,
-        thirdTalentTreeKey: shadow,
+    const talentTreeBackgroundImgs: IClassIconStuff = {
+        className: "priest",
+        specIcons: {
+            firstSpecSrc: first_spec_icon,
+            secondSpecSrc: second_spec_icon,
+            thirdSpecSrc: third_spec_icon,
+        },
+        talentTreesBackgrounds: {
+            firstTalentTreeKey: first_spec_background,
+            secondTalentTreeKey: second_spec_background,
+            thirdTalentTreeKey: third_spec_background,
+        },
     };
 
-    return <TalentArea className="priest" talentBackgroundImages={talentTreeBackgroundImgs} />;
+    // return <TalentArea talentTreeImages={talentTreeBackgroundImgs} />;
+    return <TalentArea data={talentTreeBackgroundImgs} />;
 }

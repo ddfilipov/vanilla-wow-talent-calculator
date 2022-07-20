@@ -1,15 +1,27 @@
 import { TalentArea } from "../components/organisms/TalentArea";
-import balance from "../images/druid_tree_balance.jpeg";
-import feral from "../images/druid_tree_feral.jpeg";
-import restoration from "../images/druid_tree_restoration.jpeg";
-import { ITalentTreeBackground } from "../interfaces";
+import first_spec_background from "../images/druid_tree_balance.jpeg";
+import second_spec_background from "../images/druid_tree_feral.jpeg";
+import third_spec_background from "../images/druid_tree_restoration.jpeg";
+import first_spec_icon from "../images/hunter_spec_bm.jpg";
+import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
+import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import { IClassIconStuff } from "../interfaces";
 
 export default function Druid() {
-    const talentTreeBackgroundImgs: ITalentTreeBackground = {
-        firstTalentTreeKey: balance,
-        secondTalentTreeKey: feral,
-        thirdTalentTreeKey: restoration,
+    const talentTreeBackgroundImgs: IClassIconStuff = {
+        className: "druid",
+        specIcons: {
+            firstSpecSrc: first_spec_icon,
+            secondSpecSrc: second_spec_icon,
+            thirdSpecSrc: third_spec_icon,
+        },
+        talentTreesBackgrounds: {
+            firstTalentTreeKey: first_spec_background,
+            secondTalentTreeKey: second_spec_background,
+            thirdTalentTreeKey: third_spec_background,
+        },
     };
 
-    return <TalentArea className="druid" talentBackgroundImages={talentTreeBackgroundImgs} />;
+    // return <TalentArea talentTreeImages={talentTreeBackgroundImgs} />;
+    return <TalentArea data={talentTreeBackgroundImgs} />;
 }
