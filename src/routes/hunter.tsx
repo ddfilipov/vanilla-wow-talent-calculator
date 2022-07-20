@@ -22,6 +22,5 @@ export default function Hunter() {
         },
     };
 
-    // return <TalentArea talentTreeImages={talentTreeBackgroundImgs} />;
     return <TalentArea data={talentTreeBackgroundImgs} />;
 }
