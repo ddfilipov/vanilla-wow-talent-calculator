@@ -19,9 +19,15 @@ export interface ISpecImage {
     secondSpecSrc: string;
     thirdSpecSrc: string;
 }
+export interface ISpecNames {
+    firstSpecName: string;
+    secondSpecName: string;
+    thirdSpecName: string;
+}
 
 export interface ITalentTreeData {
     className: string;
     specIcons: ISpecImage;
+    specNames: ISpecNames;
     talentTreesBackgrounds: ITalentTreeBackground;
 }

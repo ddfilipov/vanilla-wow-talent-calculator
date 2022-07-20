@@ -8,12 +8,17 @@ import third_spec_icon from "../images/hunter_spec_survival.jpg";
 import { ITalentTreeData } from "../interfaces";
 
 export default function Paladin() {
-    const talentTreeBackgroundImgs: ITalentTreeData = {
+    const talentTreeData: ITalentTreeData = {
         className: "paladin",
         specIcons: {
             firstSpecSrc: first_spec_icon,
             secondSpecSrc: second_spec_icon,
             thirdSpecSrc: third_spec_icon,
+        },
+        specNames: {
+            firstSpecName: "Beast Mastery",
+            secondSpecName: "Marksmanship",
+            thirdSpecName: "Survival",
         },
         talentTreesBackgrounds: {
             firstTalentTreeKey: first_spec_background,
@@ -22,5 +27,5 @@ export default function Paladin() {
         },
     };
 
-    return <TalentArea data={talentTreeBackgroundImgs} />;
+    return <TalentArea data={talentTreeData} />;
 }
