@@ -2,9 +2,9 @@ import { TalentArea } from "../components/organisms/TalentArea";
 import first_spec_background from "../images/priest_tree_discipline.jpeg";
 import second_spec_background from "../images/priest_tree_holy.jpeg";
 import third_spec_background from "../images/priest_tree_shadow.jpeg";
-import first_spec_icon from "../images/hunter_spec_bm.jpg";
-import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
-import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import first_spec_icon from "../images/priest_spec_discipline.jpg";
+import second_spec_icon from "../images/priest_spec_holy.jpg";
+import third_spec_icon from "../images/priest_spec_shadow.jpg";
 import { ITalentTreeData } from "../interfaces";
 
 export default function Priest() {
@@ -16,9 +16,9 @@ export default function Priest() {
             thirdSpecSrc: third_spec_icon,
         },
         specNames: {
-            firstSpecName: "Beast Mastery",
-            secondSpecName: "Marksmanship",
-            thirdSpecName: "Survival",
+            firstSpecName: "Discipline",
+            secondSpecName: "Holy",
+            thirdSpecName: "Shadow",
         },
         talentTreesBackgrounds: {
             firstTalentTreeKey: first_spec_background,

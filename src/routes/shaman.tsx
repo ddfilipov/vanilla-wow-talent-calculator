@@ -2,9 +2,9 @@ import { TalentArea } from "../components/organisms/TalentArea";
 import first_spec_background from "../images/shaman_tree_elemental.jpeg";
 import second_spec_background from "../images/shaman_tree_enhancement.jpeg";
 import third_spec_background from "../images/shaman_tree_restoration.jpeg";
-import first_spec_icon from "../images/hunter_spec_bm.jpg";
-import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
-import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import first_spec_icon from "../images/shaman_spec_elemental.jpg";
+import second_spec_icon from "../images/shaman_spec_enhancement.jpg";
+import third_spec_icon from "../images/shaman_spec_restoration.jpg";
 import { ITalentTreeData } from "../interfaces";
 
 export default function Shaman() {
@@ -16,9 +16,9 @@ export default function Shaman() {
             thirdSpecSrc: third_spec_icon,
         },
         specNames: {
-            firstSpecName: "Beast Mastery",
-            secondSpecName: "Marksmanship",
-            thirdSpecName: "Survival",
+            firstSpecName: "Elemental",
+            secondSpecName: "Enhancement",
+            thirdSpecName: "Restoration",
         },
         talentTreesBackgrounds: {
             firstTalentTreeKey: first_spec_background,

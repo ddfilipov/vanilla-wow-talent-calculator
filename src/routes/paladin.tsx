@@ -2,9 +2,9 @@ import { TalentArea } from "../components/organisms/TalentArea";
 import first_spec_background from "../images/paladin_tree_holy.jpeg";
 import second_spec_background from "../images/paladin_tree_protection.jpeg";
 import third_spec_background from "../images/paladin_tree_retribution.jpeg";
-import first_spec_icon from "../images/hunter_spec_bm.jpg";
-import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
-import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import first_spec_icon from "../images/paladin_spec_holy.jpg";
+import second_spec_icon from "../images/paladin_spec_protection.jpg";
+import third_spec_icon from "../images/paladin_spec_retribution.jpg";
 import { ITalentTreeData } from "../interfaces";
 
 export default function Paladin() {
@@ -16,9 +16,9 @@ export default function Paladin() {
             thirdSpecSrc: third_spec_icon,
         },
         specNames: {
-            firstSpecName: "Beast Mastery",
-            secondSpecName: "Marksmanship",
-            thirdSpecName: "Survival",
+            firstSpecName: "Holy",
+            secondSpecName: "Protection",
+            thirdSpecName: "Retribution",
         },
         talentTreesBackgrounds: {
             firstTalentTreeKey: first_spec_background,

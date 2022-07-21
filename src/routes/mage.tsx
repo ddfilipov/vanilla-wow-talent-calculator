@@ -2,9 +2,9 @@ import { TalentArea } from "../components/organisms/TalentArea";
 import first_spec_background from "../images/mage_tree_arcane.jpeg";
 import second_spec_background from "../images/mage_tree_fire.jpeg";
 import third_spec_background from "../images/mage_tree_frost.jpeg";
-import first_spec_icon from "../images/hunter_spec_bm.jpg";
-import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
-import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import first_spec_icon from "../images/mage_spec_arcane.jpg";
+import second_spec_icon from "../images/mage_spec_fire.jpg";
+import third_spec_icon from "../images/mage_spec_frost.jpg";
 import { ITalentTreeData } from "../interfaces";
 
 export default function Mage() {
@@ -16,9 +16,9 @@ export default function Mage() {
             thirdSpecSrc: third_spec_icon,
         },
         specNames: {
-            firstSpecName: "Beast Mastery",
-            secondSpecName: "Marksmanship",
-            thirdSpecName: "Survival",
+            firstSpecName: "Arcane",
+            secondSpecName: "Fire",
+            thirdSpecName: "Frost",
         },
         talentTreesBackgrounds: {
             firstTalentTreeKey: first_spec_background,

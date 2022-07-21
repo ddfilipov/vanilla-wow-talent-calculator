@@ -2,9 +2,9 @@ import { TalentArea } from "../components/organisms/TalentArea";
 import first_spec_background from "../images/warlock_tree_affliction.jpeg";
 import second_spec_background from "../images/warlock_tree_demonology.jpeg";
 import third_spec_background from "../images/warlock_tree_destruction.jpeg";
-import first_spec_icon from "../images/hunter_spec_bm.jpg";
-import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
-import third_spec_icon from "../images/hunter_spec_survival.jpg";
+import first_spec_icon from "../images/warlock_spec_affliction.jpg";
+import second_spec_icon from "../images/warlock_spec_demonology.jpg";
+import third_spec_icon from "../images/warlock_spec_destruction.jpg";
 import { ITalentTreeData } from "../interfaces";
 
 export default function Warlock() {
@@ -16,9 +16,9 @@ export default function Warlock() {
             thirdSpecSrc: third_spec_icon,
         },
         specNames: {
-            firstSpecName: "Beast Mastery",
-            secondSpecName: "Marksmanship",
-            thirdSpecName: "Survival",
+            firstSpecName: "Affliction",
+            secondSpecName: "Demonology",
+            thirdSpecName: "Destruction",
         },
         talentTreesBackgrounds: {
             firstTalentTreeKey: first_spec_background,
