@@ -12,7 +12,7 @@ const Container = styled.div`
 const TopPart = styled.div<BackgroundImage>`
     border: 1px solid white;
     display: grid;
-    grid-template-columns: 10% auto;
+    grid-template-columns: 10% 1fr 20px;
     div {
         :first-child {
             background-image: url(${(props) => props.backgroundImage});
@@ -53,6 +53,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage, sp
                 {/* <img src={specImage} /> */}
                 <div></div>
                 <div>{specName}</div>
+                <div>X</div>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}></TalentTreeStyled>
         </Container>
