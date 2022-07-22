@@ -5,7 +5,7 @@ import { TalentTree } from "../molecules/TalentTree";
 
 const Container = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     height: 100%;
 `;
