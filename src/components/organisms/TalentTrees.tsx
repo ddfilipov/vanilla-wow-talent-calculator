@@ -15,9 +15,18 @@ interface TalentTreesProps {
     talentBackgroundImages: ITalentTreeBackground;
     talentSpecImages: ISpecImage;
     talentSpecNames: ISpecNames;
+    subirPuntos: () => void;
+    bajarPuntos: () => void;
 }
 
-export const TalentTrees: FC<TalentTreesProps> = ({ className, talentBackgroundImages, talentSpecImages, talentSpecNames }) => {
+export const TalentTrees: FC<TalentTreesProps> = ({
+    className,
+    talentBackgroundImages,
+    talentSpecImages,
+    talentSpecNames,
+    subirPuntos,
+    bajarPuntos,
+}) => {
     return (
         <Container>
             <TalentTree
@@ -25,18 +34,24 @@ export const TalentTrees: FC<TalentTreesProps> = ({ className, talentBackgroundI
                 backgroundImage={talentBackgroundImages.firstTalentTreeKey}
                 specImage={talentSpecImages.firstSpecSrc}
                 specName={talentSpecNames.firstSpecName}
+                subirPuntos={subirPuntos}
+                bajarPuntos={bajarPuntos}
             />
             <TalentTree
                 className={className}
                 backgroundImage={talentBackgroundImages.secondTalentTreeKey}
                 specImage={talentSpecImages.secondSpecSrc}
                 specName={talentSpecNames.secondSpecName}
+                subirPuntos={subirPuntos}
+                bajarPuntos={bajarPuntos}
             />
             <TalentTree
                 className={className}
                 backgroundImage={talentBackgroundImages.thirdTalentTreeKey}
                 specImage={talentSpecImages.thirdSpecSrc}
                 specName={talentSpecNames.thirdSpecName}
+                subirPuntos={subirPuntos}
+                bajarPuntos={bajarPuntos}
             />
         </Container>
     );

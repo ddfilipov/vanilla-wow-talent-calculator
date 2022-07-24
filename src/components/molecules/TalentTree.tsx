@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { TalentNode } from "../atoms/TalentNode";
 
 const Container = styled.div`
     display: grid;
@@ -33,9 +34,11 @@ const TalentTreeStyled = styled.div<BackgroundImage>`
     background-image: url(${(props) => props.backgroundImage});
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 10px;
 `;
 
-interface BackgroundImage {
+// TODO: should be a general interface, move
+export interface BackgroundImage {
     backgroundImage: string;
 }
 
@@ -44,18 +47,22 @@ interface TalentTreeProps {
     backgroundImage: string;
     specImage: string;
     specName: string;
+    subirPuntos: () => void;
+    bajarPuntos: () => void;
 }
 
-export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage, specImage, specName }) => {
+export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage, specImage, specName, subirPuntos, bajarPuntos }) => {
     return (
         <Container>
             <TopPart backgroundImage={specImage}>
                 {/* <img src={specImage} /> */}
                 <div></div>
-                <div>{specName}</div>
+                <div>{`${specName} ()`}</div>
                 <div>X</div>
             </TopPart>
-            <TalentTreeStyled backgroundImage={backgroundImage}></TalentTreeStyled>
+            <TalentTreeStyled backgroundImage={backgroundImage}>
+                <TalentNode subirPuntos={subirPuntos} bajarPuntos={bajarPuntos}></TalentNode>
+            </TalentTreeStyled>
         </Container>
     );
 };

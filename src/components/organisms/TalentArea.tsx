@@ -61,6 +61,8 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 talentBackgroundImages={data.talentTreesBackgrounds}
                 talentSpecImages={data.specIcons}
                 talentSpecNames={data.specNames}
+                subirPuntos={subirPuntos}
+                bajarPuntos={bajarPuntos}
             />
             {/* <button type="button" onClick={subirPuntos}>
                 Subir talento
