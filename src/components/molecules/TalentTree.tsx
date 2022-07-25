@@ -47,21 +47,19 @@ interface TalentTreeProps {
     backgroundImage: string;
     specImage: string;
     specName: string;
-    subirPuntos: () => void;
-    bajarPuntos: () => void;
+    handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const TalentTree: FC<TalentTreeProps> = ({ className, backgroundImage, specImage, specName, subirPuntos, bajarPuntos }) => {
+export const TalentTree: FC<TalentTreeProps> = ({ backgroundImage, specImage, specName, handleClickNode }) => {
     return (
         <Container>
             <TopPart backgroundImage={specImage}>
-                {/* <img src={specImage} /> */}
                 <div></div>
                 <div>{`${specName} ()`}</div>
                 <div>X</div>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
-                <TalentNode subirPuntos={subirPuntos} bajarPuntos={bajarPuntos}></TalentNode>
+                <TalentNode handleClickNode={handleClickNode}></TalentNode>
             </TalentTreeStyled>
         </Container>
     );

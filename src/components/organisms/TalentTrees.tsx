@@ -15,8 +15,7 @@ interface TalentTreesProps {
     talentBackgroundImages: ITalentTreeBackground;
     talentSpecImages: ISpecImage;
     talentSpecNames: ISpecNames;
-    subirPuntos: () => void;
-    bajarPuntos: () => void;
+    handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({
@@ -24,8 +23,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({
     talentBackgroundImages,
     talentSpecImages,
     talentSpecNames,
-    subirPuntos,
-    bajarPuntos,
+    handleClickNode,
 }) => {
     return (
         <Container>
@@ -34,24 +32,21 @@ export const TalentTrees: FC<TalentTreesProps> = ({
                 backgroundImage={talentBackgroundImages.firstTalentTreeKey}
                 specImage={talentSpecImages.firstSpecSrc}
                 specName={talentSpecNames.firstSpecName}
-                subirPuntos={subirPuntos}
-                bajarPuntos={bajarPuntos}
+                handleClickNode={handleClickNode}
             />
             <TalentTree
                 className={className}
                 backgroundImage={talentBackgroundImages.secondTalentTreeKey}
                 specImage={talentSpecImages.secondSpecSrc}
                 specName={talentSpecNames.secondSpecName}
-                subirPuntos={subirPuntos}
-                bajarPuntos={bajarPuntos}
+                handleClickNode={handleClickNode}
             />
             <TalentTree
                 className={className}
                 backgroundImage={talentBackgroundImages.thirdTalentTreeKey}
                 specImage={talentSpecImages.thirdSpecSrc}
                 specName={talentSpecNames.thirdSpecName}
-                subirPuntos={subirPuntos}
-                bajarPuntos={bajarPuntos}
+                handleClickNode={handleClickNode}
             />
         </Container>
     );

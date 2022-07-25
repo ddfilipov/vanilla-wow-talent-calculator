@@ -37,6 +37,16 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
         }
     }, [remainingTalentPoints]);
 
+    const handleClickNode = (e: React.MouseEvent<HTMLButtonElement>) => {
+        console.log("hola?!?!?!?");
+        if (e.type === "click") {
+            subirPuntos();
+        } else if (e.type === "contextmenu") {
+            bajarPuntos();
+        }
+        e.preventDefault();
+    };
+
     const subirPuntos = useCallback(() => {
         if (remainingTalentPoints > MIN_TALENT_POINTS) {
             setRemainingTalentPoints(remainingTalentPoints - 1);
@@ -61,8 +71,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 talentBackgroundImages={data.talentTreesBackgrounds}
                 talentSpecImages={data.specIcons}
                 talentSpecNames={data.specNames}
-                subirPuntos={subirPuntos}
-                bajarPuntos={bajarPuntos}
+                handleClickNode={handleClickNode}
             />
             {/* <button type="button" onClick={subirPuntos}>
                 Subir talento

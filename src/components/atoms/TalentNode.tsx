@@ -20,15 +20,27 @@ const ButtonStyled = styled.button<BackgroundImage>`
     background-image: url(${(props) => props.backgroundImage});
 `;
 
+const clickNode = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (e.type === "click") {
+        console.log("left click");
+    } else if (e.type === "contextmenu") {
+        console.log("right click");
+    }
+    e.preventDefault();
+};
+
 export interface TalentNodeProps {
-    subirPuntos: () => void;
-    bajarPuntos: () => void;
+    handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({ subirPuntos, bajarPuntos }) => {
+export const TalentNode: FC<TalentNodeProps> = ({ handleClickNode }) => {
     return (
         <ButtonContainer>
-            <ButtonStyled backgroundImage={foto} onClick={subirPuntos}></ButtonStyled>
+            <ButtonStyled
+                backgroundImage={foto}
+                onClick={handleClickNode}
+                onContextMenu={handleClickNode}
+            ></ButtonStyled>
         </ButtonContainer>
     );
 };
