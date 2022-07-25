@@ -18,16 +18,8 @@ const ButtonStyled = styled.button<BackgroundImage>`
     height: 38px;
     width: 38px;
     background-image: url(${(props) => props.backgroundImage});
+    cursor: pointer;
 `;
-
-const clickNode = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (e.type === "click") {
-        console.log("left click");
-    } else if (e.type === "contextmenu") {
-        console.log("right click");
-    }
-    e.preventDefault();
-};
 
 export interface TalentNodeProps {
     handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
