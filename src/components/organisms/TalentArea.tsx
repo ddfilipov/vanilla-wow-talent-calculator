@@ -17,6 +17,11 @@ interface TalentAreaProps {
     data: ITalentTreeData;
 }
 
+interface IPrueba {
+    remainingTalentPoints: number;
+    treeTalentPoints: number[];
+}
+
 export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     const MAX_TALENT_POINTS = 51;
     const MIN_TALENT_POINTS = 0;
@@ -25,8 +30,15 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     const [remainingTalentPoints, setRemainingTalentPoints] = useState<number>(MAX_TALENT_POINTS);
     const [oldRemainingTalentPoints, setOldRemainingTalentPoints] = useState<number>(remainingTalentPoints);
     const [requiredLevel, setRequiredLevel] = useState<number>(STARTING_LEVEL);
+    const [treeTalentPoints, setTreeTalentPoints] = useState<number[]>([0, 0, 0]);
+
+    const [remainingTalentPoints2, setRemainingTalentPoints2] = useState<IPrueba>({
+        remainingTalentPoints: MAX_TALENT_POINTS,
+        treeTalentPoints: [0, 0, 0],
+    });
 
     useEffect(() => {
+        // TODO: convertir esta parte en funcion manageRequiredRemainingPoints o algo así
         setOldRemainingTalentPoints(remainingTalentPoints);
         if (oldRemainingTalentPoints !== undefined) {
             if (oldRemainingTalentPoints > remainingTalentPoints) {
@@ -41,8 +53,10 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
         console.log("hola?!?!?!?");
         if (e.type === "click") {
             subirPuntos();
+            subirPuntosSpec();
         } else if (e.type === "contextmenu") {
             bajarPuntos();
+            bajarPuntosSpec();
         }
         e.preventDefault();
     };
@@ -58,6 +72,10 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
             setRemainingTalentPoints(remainingTalentPoints + 1);
         }
     }, [remainingTalentPoints]);
+
+    const subirPuntosSpec = useCallback(() => {}, []);
+
+    const bajarPuntosSpec = useCallback(() => {}, []);
 
     return (
         <Container>
