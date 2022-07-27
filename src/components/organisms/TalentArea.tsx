@@ -50,7 +50,6 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     }, [remainingTalentPoints]);
 
     const handleClickNode = (e: React.MouseEvent<HTMLButtonElement>) => {
-        console.log("hola?!?!?!?");
         if (e.type === "click") {
             subirPuntos();
             subirPuntosSpec();
