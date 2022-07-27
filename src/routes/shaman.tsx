@@ -5,27 +5,17 @@ import third_spec_background from "../images/shaman_tree_restoration.jpeg";
 import first_spec_icon from "../images/shaman_spec_elemental.jpg";
 import second_spec_icon from "../images/shaman_spec_enhancement.jpg";
 import third_spec_icon from "../images/shaman_spec_restoration.jpg";
-import { ITalentTreeData } from "../interfaces";
+import { IClassData } from "../interfaces";
 
 export default function Shaman() {
-    const talentTreeData: ITalentTreeData = {
-        classId: 7,
-        className: "shaman",
-        specIcons: {
-            firstSpecSrc: first_spec_icon,
-            secondSpecSrc: second_spec_icon,
-            thirdSpecSrc: third_spec_icon,
-        },
-        specNames: {
-            firstSpecName: "Elemental",
-            secondSpecName: "Enhancement",
-            thirdSpecName: "Restoration",
-        },
-        talentTreesBackgrounds: {
-            firstTalentTreeKey: first_spec_background,
-            secondTalentTreeKey: second_spec_background,
-            thirdTalentTreeKey: third_spec_background,
-        },
+    const talentTreeData: IClassData = {
+        classId: 1,
+        className: "Shaman",
+        specData: [
+            { specId: 1, specName: "Elemental", specIcon: first_spec_icon, specBackground: first_spec_background },
+            { specId: 2, specName: "Enhancement", specIcon: second_spec_icon, specBackground: second_spec_background },
+            { specId: 3, specName: "Restoration", specIcon: third_spec_icon, specBackground: third_spec_background },
+        ],
     };
 
     return <TalentArea data={talentTreeData} />;

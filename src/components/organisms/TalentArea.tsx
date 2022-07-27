@@ -1,7 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { ITalentTreeData } from "../../interfaces";
+import { IClassData, ITalentTreeData } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 interface TalentAreaProps {
-    data: ITalentTreeData;
+    data: IClassData;
 }
 
 interface IPrueba {
@@ -84,9 +84,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 requiredLevel={requiredLevel}
             ></TopTalentArea>
             <TalentTrees
-                talentBackgroundImages={data.talentTreesBackgrounds}
-                talentSpecImages={data.specIcons}
-                talentSpecNames={data.specNames}
+                specData={data.specData}
                 handleClickNode={handleClickNode}
             />
         </Container>

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecImages, ISpecNames, ISpecBackgrounds } from "../../interfaces";
+import { ISpecImages, ISpecNames, ISpecBackgrounds, ISpecData } from "../../interfaces";
 import { TalentTree } from "../molecules/TalentTree";
 
 const Container = styled.div`
@@ -11,38 +11,21 @@ const Container = styled.div`
 `;
 
 interface TalentTreesProps {
-    talentBackgroundImages: ISpecBackgrounds;
-    talentSpecImages: ISpecImages;
-    talentSpecNames: ISpecNames;
+    specData: ISpecData[];
     handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const TalentTrees: FC<TalentTreesProps> = ({
-    talentBackgroundImages,
-    talentSpecImages,
-    talentSpecNames,
-    handleClickNode,
-}) => {
+export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode }) => {
     return (
         <Container>
-            <TalentTree
-                backgroundImage={talentBackgroundImages.firstTalentTreeKey}
-                specImage={talentSpecImages.firstSpecSrc}
-                specName={talentSpecNames.firstSpecName}
-                handleClickNode={handleClickNode}
-            />
-            <TalentTree
-                backgroundImage={talentBackgroundImages.secondTalentTreeKey}
-                specImage={talentSpecImages.secondSpecSrc}
-                specName={talentSpecNames.secondSpecName}
-                handleClickNode={handleClickNode}
-            />
-            <TalentTree
-                backgroundImage={talentBackgroundImages.thirdTalentTreeKey}
-                specImage={talentSpecImages.thirdSpecSrc}
-                specName={talentSpecNames.thirdSpecName}
-                handleClickNode={handleClickNode}
-            />
+            {specData.map((spec) => (
+                <TalentTree
+                    backgroundImage={spec.specBackground}
+                    specImage={spec.specIcon}
+                    specName={spec.specName}
+                    handleClickNode={handleClickNode}
+                />
+            ))}
         </Container>
     );
 };

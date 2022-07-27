@@ -5,27 +5,17 @@ import third_spec_background from "../images/paladin_tree_retribution.jpeg";
 import first_spec_icon from "../images/paladin_spec_holy.jpg";
 import second_spec_icon from "../images/paladin_spec_protection.jpg";
 import third_spec_icon from "../images/paladin_spec_retribution.jpg";
-import { ITalentTreeData } from "../interfaces";
+import { IClassData } from "../interfaces";
 
 export default function Paladin() {
-    const talentTreeData: ITalentTreeData = {
-        classId: 4,
-        className: "paladin",
-        specIcons: {
-            firstSpecSrc: first_spec_icon,
-            secondSpecSrc: second_spec_icon,
-            thirdSpecSrc: third_spec_icon,
-        },
-        specNames: {
-            firstSpecName: "Holy",
-            secondSpecName: "Protection",
-            thirdSpecName: "Retribution",
-        },
-        talentTreesBackgrounds: {
-            firstTalentTreeKey: first_spec_background,
-            secondTalentTreeKey: second_spec_background,
-            thirdTalentTreeKey: third_spec_background,
-        },
+    const talentTreeData: IClassData = {
+        classId: 1,
+        className: "Paladin",
+        specData: [
+            { specId: 1, specName: "Holy", specIcon: first_spec_icon, specBackground: first_spec_background },
+            { specId: 2, specName: "Protection", specIcon: second_spec_icon, specBackground: second_spec_background },
+            { specId: 3, specName: "Retribution", specIcon: third_spec_icon, specBackground: third_spec_background },
+        ],
     };
 
     return <TalentArea data={talentTreeData} />;

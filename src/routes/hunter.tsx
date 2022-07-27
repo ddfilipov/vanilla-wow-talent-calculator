@@ -5,27 +5,18 @@ import third_spec_background from "../images/hunter_tree_survival.jpeg";
 import first_spec_icon from "../images/hunter_spec_bm.jpg";
 import second_spec_icon from "../images/hunter_spec_marksmanship.jpg";
 import third_spec_icon from "../images/hunter_spec_survival.jpg";
-import { ITalentTreeData } from "../interfaces";
+import { IClassData } from "../interfaces";
 
 export default function Hunter() {
-    const talentTreeData: ITalentTreeData = {
-        classId: 2,
-        className: "hunter",
-        specIcons: {
-            firstSpecSrc: first_spec_icon,
-            secondSpecSrc: second_spec_icon,
-            thirdSpecSrc: third_spec_icon,
-        },
-        specNames: {
-            firstSpecName: "Beast Mastery",
-            secondSpecName: "Marksmanship",
-            thirdSpecName: "Survival",
-        },
-        talentTreesBackgrounds: {
-            firstTalentTreeKey: first_spec_background,
-            secondTalentTreeKey: second_spec_background,
-            thirdTalentTreeKey: third_spec_background,
-        },
+
+    const talentTreeData: IClassData = {
+        classId: 1,
+        className: "Hunter",
+        specData: [
+            { specId: 1, specName: "Beast Mastery", specIcon: first_spec_icon, specBackground: first_spec_background },
+            { specId: 2, specName: "Marksmanship", specIcon: second_spec_icon, specBackground: second_spec_background },
+            { specId: 3, specName: "Survival", specIcon: third_spec_icon, specBackground: third_spec_background },
+        ],
     };
 
     return <TalentArea data={talentTreeData} />;

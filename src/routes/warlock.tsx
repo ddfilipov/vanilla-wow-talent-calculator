@@ -5,27 +5,17 @@ import third_spec_background from "../images/warlock_tree_destruction.jpeg";
 import first_spec_icon from "../images/warlock_spec_affliction.jpg";
 import second_spec_icon from "../images/warlock_spec_demonology.jpg";
 import third_spec_icon from "../images/warlock_spec_destruction.jpg";
-import { ITalentTreeData } from "../interfaces";
+import { IClassData } from "../interfaces";
 
 export default function Warlock() {
-    const talentTreeData: ITalentTreeData = {
-        classId: 8,
-        className: "warlock",
-        specIcons: {
-            firstSpecSrc: first_spec_icon,
-            secondSpecSrc: second_spec_icon,
-            thirdSpecSrc: third_spec_icon,
-        },
-        specNames: {
-            firstSpecName: "Affliction",
-            secondSpecName: "Demonology",
-            thirdSpecName: "Destruction",
-        },
-        talentTreesBackgrounds: {
-            firstTalentTreeKey: first_spec_background,
-            secondTalentTreeKey: second_spec_background,
-            thirdTalentTreeKey: third_spec_background,
-        },
+    const talentTreeData: IClassData = {
+        classId: 1,
+        className: "Warlock",
+        specData: [
+            { specId: 1, specName: "Affliction", specIcon: first_spec_icon, specBackground: first_spec_background },
+            { specId: 2, specName: "Demonology", specIcon: second_spec_icon, specBackground: second_spec_background },
+            { specId: 3, specName: "Destruction", specIcon: third_spec_icon, specBackground: third_spec_background },
+        ],
     };
 
     return <TalentArea data={talentTreeData} />;
