@@ -11,7 +11,6 @@ const Container = styled.div`
 `;
 
 interface TalentTreesProps {
-    className: string;
     talentBackgroundImages: ITalentTreeBackground;
     talentSpecImages: ISpecImage;
     talentSpecNames: ISpecNames;
@@ -19,7 +18,6 @@ interface TalentTreesProps {
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({
-    className,
     talentBackgroundImages,
     talentSpecImages,
     talentSpecNames,
@@ -28,21 +26,18 @@ export const TalentTrees: FC<TalentTreesProps> = ({
     return (
         <Container>
             <TalentTree
-                className={className}
                 backgroundImage={talentBackgroundImages.firstTalentTreeKey}
                 specImage={talentSpecImages.firstSpecSrc}
                 specName={talentSpecNames.firstSpecName}
                 handleClickNode={handleClickNode}
             />
             <TalentTree
-                className={className}
                 backgroundImage={talentBackgroundImages.secondTalentTreeKey}
                 specImage={talentSpecImages.secondSpecSrc}
                 specName={talentSpecNames.secondSpecName}
                 handleClickNode={handleClickNode}
             />
             <TalentTree
-                className={className}
                 backgroundImage={talentBackgroundImages.thirdTalentTreeKey}
                 specImage={talentSpecImages.thirdSpecSrc}
                 specName={talentSpecNames.thirdSpecName}

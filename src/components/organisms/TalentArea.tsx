@@ -85,18 +85,11 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 requiredLevel={requiredLevel}
             ></TopTalentArea>
             <TalentTrees
-                className={data.className}
                 talentBackgroundImages={data.talentTreesBackgrounds}
                 talentSpecImages={data.specIcons}
                 talentSpecNames={data.specNames}
                 handleClickNode={handleClickNode}
             />
-            {/* <button type="button" onClick={subirPuntos}>
-                Subir talento
-            </button>
-            <button type="button" onClick={bajarPuntos}>
-                Bajar talento
-            </button> */}
         </Container>
     );
 };

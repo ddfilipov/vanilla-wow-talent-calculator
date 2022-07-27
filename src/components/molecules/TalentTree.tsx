@@ -43,7 +43,6 @@ export interface BackgroundImage {
 }
 
 interface TalentTreeProps {
-    className: string;
     backgroundImage: string;
     specImage: string;
     specName: string;
