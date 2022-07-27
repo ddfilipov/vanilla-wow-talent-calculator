@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecImages, ISpecNames, ISpecBackgrounds, ISpecData } from "../../interfaces";
+import { ISpecData } from "../../interfaces";
 import { TalentTree } from "../molecules/TalentTree";
 
 const Container = styled.div`

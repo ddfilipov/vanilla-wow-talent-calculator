@@ -1,7 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { IClassData, ITalentTreeData } from "../../interfaces";
+import { IClassData } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -83,10 +83,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 remainingTalentPoints={remainingTalentPoints}
                 requiredLevel={requiredLevel}
             ></TopTalentArea>
-            <TalentTrees
-                specData={data.specData}
-                handleClickNode={handleClickNode}
-            />
+            <TalentTrees specData={data.specData} handleClickNode={handleClickNode} />
         </Container>
     );
 };
