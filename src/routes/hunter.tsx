@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Hunter() {
 
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Hunter",
         specData: [
@@ -19,5 +19,5 @@ export default function Hunter() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

@@ -8,7 +8,7 @@ import third_spec_icon from "../images/paladin_spec_retribution.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Paladin() {
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Paladin",
         specData: [
@@ -18,5 +18,5 @@ export default function Paladin() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

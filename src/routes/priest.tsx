@@ -8,7 +8,7 @@ import third_spec_icon from "../images/priest_spec_shadow.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Priest() {
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Priest",
         specData: [
@@ -18,5 +18,5 @@ export default function Priest() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

@@ -8,7 +8,7 @@ import third_spec_icon from "../images/mage_spec_frost.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Mage() {
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Mage",
         specData: [
@@ -18,5 +18,5 @@ export default function Mage() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

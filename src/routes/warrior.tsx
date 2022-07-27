@@ -8,7 +8,7 @@ import third_spec_icon from "../images/warrior_spec_protection.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Warrior() {
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Warrior",
         specData: [
@@ -18,5 +18,5 @@ export default function Warrior() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

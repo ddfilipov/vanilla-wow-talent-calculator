@@ -8,7 +8,7 @@ import third_spec_icon from "../images/warlock_spec_destruction.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Warlock() {
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Warlock",
         specData: [
@@ -18,5 +18,5 @@ export default function Warlock() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

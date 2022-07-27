@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Druid() {
 
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Druid",
         specData: [
@@ -19,5 +19,5 @@ export default function Druid() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

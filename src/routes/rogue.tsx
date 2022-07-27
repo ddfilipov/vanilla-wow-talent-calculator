@@ -8,7 +8,7 @@ import third_spec_icon from "../images/rogue_spec_subtlety.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Rogue() {
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Rogue",
         specData: [
@@ -18,5 +18,5 @@ export default function Rogue() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }

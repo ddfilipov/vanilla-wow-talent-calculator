@@ -8,7 +8,7 @@ import third_spec_icon from "../images/shaman_spec_restoration.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Shaman() {
-    const talentTreeData: IClassData = {
+    const classData: IClassData = {
         classId: 1,
         className: "Shaman",
         specData: [
@@ -18,5 +18,5 @@ export default function Shaman() {
         ],
     };
 
-    return <TalentArea data={talentTreeData} />;
+    return <TalentArea data={classData} />;
 }
