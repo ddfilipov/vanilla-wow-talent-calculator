@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Shaman() {
     const talentTreeData: ITalentTreeData = {
+        classId: 7,
         className: "shaman",
         specIcons: {
             firstSpecSrc: first_spec_icon,

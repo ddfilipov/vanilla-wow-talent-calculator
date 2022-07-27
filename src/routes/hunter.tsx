@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Hunter() {
     const talentTreeData: ITalentTreeData = {
+        classId: 2,
         className: "hunter",
         specIcons: {
             firstSpecSrc: first_spec_icon,

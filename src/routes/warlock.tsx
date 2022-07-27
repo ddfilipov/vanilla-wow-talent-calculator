@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Warlock() {
     const talentTreeData: ITalentTreeData = {
+        classId: 8,
         className: "warlock",
         specIcons: {
             firstSpecSrc: first_spec_icon,

@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Druid() {
     const talentTreeData: ITalentTreeData = {
+        classId: 1,
         className: "druid",
         specIcons: {
             firstSpecSrc: first_spec_icon,

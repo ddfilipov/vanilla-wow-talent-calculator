@@ -26,6 +26,7 @@ export interface ISpecNames {
 }
 
 export interface ITalentTreeData {
+    classId: number;
     className: string;
     specIcons: ISpecImage;
     specNames: ISpecNames;

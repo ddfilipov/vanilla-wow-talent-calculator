@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Paladin() {
     const talentTreeData: ITalentTreeData = {
+        classId: 4,
         className: "paladin",
         specIcons: {
             firstSpecSrc: first_spec_icon,

@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Priest() {
     const talentTreeData: ITalentTreeData = {
+        classId: 5,
         className: "priest",
         specIcons: {
             firstSpecSrc: first_spec_icon,

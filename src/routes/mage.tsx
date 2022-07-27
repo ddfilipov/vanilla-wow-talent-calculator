@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Mage() {
     const talentTreeData: ITalentTreeData = {
+        classId: 3,
         className: "mage",
         specIcons: {
             firstSpecSrc: first_spec_icon,

@@ -9,6 +9,7 @@ import { ITalentTreeData } from "../interfaces";
 
 export default function Rogue() {
     const talentTreeData: ITalentTreeData = {
+        classId: 6,
         className: "rogue",
         specIcons: {
             firstSpecSrc: first_spec_icon,
