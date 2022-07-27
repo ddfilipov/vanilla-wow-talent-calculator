@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecImage, ISpecNames, ITalentTreeBackground } from "../../interfaces";
+import { ISpecImages, ISpecNames, ISpecBackgrounds } from "../../interfaces";
 import { TalentTree } from "../molecules/TalentTree";
 
 const Container = styled.div`
@@ -11,8 +11,8 @@ const Container = styled.div`
 `;
 
 interface TalentTreesProps {
-    talentBackgroundImages: ITalentTreeBackground;
-    talentSpecImages: ISpecImage;
+    talentBackgroundImages: ISpecBackgrounds;
+    talentSpecImages: ISpecImages;
     talentSpecNames: ISpecNames;
     handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
