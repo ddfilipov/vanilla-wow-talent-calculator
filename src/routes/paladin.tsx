@@ -12,9 +12,19 @@ export default function Paladin() {
         classId: 1,
         className: "Paladin",
         specData: [
-            { specId: 1, specName: "Holy", specIcon: first_spec_icon, specBackground: first_spec_background },
-            { specId: 2, specName: "Protection", specIcon: second_spec_icon, specBackground: second_spec_background },
-            { specId: 3, specName: "Retribution", specIcon: third_spec_icon, specBackground: third_spec_background },
+            { specId: "firstSpec", specName: "Holy", specIcon: first_spec_icon, specBackground: first_spec_background },
+            {
+                specId: "secondSpec",
+                specName: "Protection",
+                specIcon: second_spec_icon,
+                specBackground: second_spec_background,
+            },
+            {
+                specId: "thirdSpec",
+                specName: "Retribution",
+                specIcon: third_spec_icon,
+                specBackground: third_spec_background,
+            },
         ],
     };
 

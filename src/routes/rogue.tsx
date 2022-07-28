@@ -12,9 +12,24 @@ export default function Rogue() {
         classId: 1,
         className: "Rogue",
         specData: [
-            { specId: 1, specName: "Assassination", specIcon: first_spec_icon, specBackground: first_spec_background },
-            { specId: 2, specName: "Combat", specIcon: second_spec_icon, specBackground: second_spec_background },
-            { specId: 3, specName: "Subtlety", specIcon: third_spec_icon, specBackground: third_spec_background },
+            {
+                specId: "firstSpec",
+                specName: "Assassination",
+                specIcon: first_spec_icon,
+                specBackground: first_spec_background,
+            },
+            {
+                specId: "secondSpec",
+                specName: "Combat",
+                specIcon: second_spec_icon,
+                specBackground: second_spec_background,
+            },
+            {
+                specId: "thirdSpec",
+                specName: "Subtlety",
+                specIcon: third_spec_icon,
+                specBackground: third_spec_background,
+            },
         ],
     };
 

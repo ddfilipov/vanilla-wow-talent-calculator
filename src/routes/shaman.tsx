@@ -12,9 +12,24 @@ export default function Shaman() {
         classId: 1,
         className: "Shaman",
         specData: [
-            { specId: 1, specName: "Elemental", specIcon: first_spec_icon, specBackground: first_spec_background },
-            { specId: 2, specName: "Enhancement", specIcon: second_spec_icon, specBackground: second_spec_background },
-            { specId: 3, specName: "Restoration", specIcon: third_spec_icon, specBackground: third_spec_background },
+            {
+                specId: "firstSpec",
+                specName: "Elemental",
+                specIcon: first_spec_icon,
+                specBackground: first_spec_background,
+            },
+            {
+                specId: "secondSpec",
+                specName: "Enhancement",
+                specIcon: second_spec_icon,
+                specBackground: second_spec_background,
+            },
+            {
+                specId: "thirdSpec",
+                specName: "Restoration",
+                specIcon: third_spec_icon,
+                specBackground: third_spec_background,
+            },
         ],
     };
 

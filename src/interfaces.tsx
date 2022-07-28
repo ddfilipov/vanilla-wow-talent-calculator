@@ -8,9 +8,10 @@ export interface IClassWrapper {
     ayuda: IClass[]; // TODO: change ayuda into something more creative...
 }
 
+export type SpecIdType = "firstSpec" | "secondSpec" | "thirdSpec";
 
 export interface ISpecData {
-    specId: number;
+    specId: SpecIdType;
     specName: string;
     specIcon: string;
     specBackground: string;

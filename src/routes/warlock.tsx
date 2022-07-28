@@ -12,9 +12,24 @@ export default function Warlock() {
         classId: 1,
         className: "Warlock",
         specData: [
-            { specId: 1, specName: "Affliction", specIcon: first_spec_icon, specBackground: first_spec_background },
-            { specId: 2, specName: "Demonology", specIcon: second_spec_icon, specBackground: second_spec_background },
-            { specId: 3, specName: "Destruction", specIcon: third_spec_icon, specBackground: third_spec_background },
+            {
+                specId: "firstSpec",
+                specName: "Affliction",
+                specIcon: first_spec_icon,
+                specBackground: first_spec_background,
+            },
+            {
+                specId: "secondSpec",
+                specName: "Demonology",
+                specIcon: second_spec_icon,
+                specBackground: second_spec_background,
+            },
+            {
+                specId: "thirdSpec",
+                specName: "Destruction",
+                specIcon: third_spec_icon,
+                specBackground: third_spec_background,
+            },
         ],
     };
 

@@ -8,14 +8,28 @@ import third_spec_icon from "../images/hunter_spec_survival.jpg";
 import { IClassData } from "../interfaces";
 
 export default function Hunter() {
-
     const classData: IClassData = {
         classId: 1,
         className: "Hunter",
         specData: [
-            { specId: 1, specName: "Beast Mastery", specIcon: first_spec_icon, specBackground: first_spec_background },
-            { specId: 2, specName: "Marksmanship", specIcon: second_spec_icon, specBackground: second_spec_background },
-            { specId: 3, specName: "Survival", specIcon: third_spec_icon, specBackground: third_spec_background },
+            {
+                specId: "firstSpec",
+                specName: "Beast Mastery",
+                specIcon: first_spec_icon,
+                specBackground: first_spec_background,
+            },
+            {
+                specId: "secondSpec",
+                specName: "Marksmanship",
+                specIcon: second_spec_icon,
+                specBackground: second_spec_background,
+            },
+            {
+                specId: "thirdSpec",
+                specName: "Survival",
+                specIcon: third_spec_icon,
+                specBackground: third_spec_background,
+            },
         ],
     };
 

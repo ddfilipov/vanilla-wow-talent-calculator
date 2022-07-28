@@ -12,9 +12,9 @@ export default function Warrior() {
         classId: 1,
         className: "Warrior",
         specData: [
-            { specId: 1, specName: "Arms", specIcon: first_spec_icon, specBackground: first_spec_background },
-            { specId: 2, specName: "Fury", specIcon: second_spec_icon, specBackground: second_spec_background },
-            { specId: 3, specName: "Protection", specIcon: third_spec_icon, specBackground: third_spec_background },
+            { specId: "firstSpec", specName: "Arms", specIcon: first_spec_icon, specBackground: first_spec_background },
+            { specId: "secondSpec", specName: "Fury", specIcon: second_spec_icon, specBackground: second_spec_background },
+            { specId: "thirdSpec", specName: "Protection", specIcon: third_spec_icon, specBackground: third_spec_background },
         ],
     };
 
