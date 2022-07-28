@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import { BackgroundImage } from "../molecules/TalentTree";
 import foto from "../../images/warrior_talent_rend.jpg";
+import { SpecIdType } from "../../interfaces";
 
 const Container = styled.div<BackgroundImage>`
     height: 38px;
@@ -22,16 +23,16 @@ const ButtonStyled = styled.button<BackgroundImage>`
 `;
 
 export interface TalentNodeProps {
-    handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({ handleClickNode }) => {
+export const TalentNode: FC<TalentNodeProps> = ({ handleClick }) => {
     return (
         <ButtonContainer>
             <ButtonStyled
                 backgroundImage={foto}
-                onClick={handleClickNode}
-                onContextMenu={handleClickNode}
+                onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleClick(e)}
+                onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => handleClick(e)}
             ></ButtonStyled>
         </ButtonContainer>
     );

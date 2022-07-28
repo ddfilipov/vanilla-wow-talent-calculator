@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecData } from "../../interfaces";
+import { ISpecData, SpecIdType } from "../../interfaces";
 import { TalentTree } from "../molecules/TalentTree";
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
 
 interface TalentTreesProps {
     specData: ISpecData[];
-    handleClickNode: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    handleClickNode: (e: React.MouseEvent<HTMLButtonElement>, spec: SpecIdType) => void;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode }) => {

@@ -1,7 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { IClassData } from "../../interfaces";
+import { IClassData, SpecIdType } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -37,6 +37,10 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
         treeTalentPoints: [0, 0, 0],
     });
 
+    const [firstSpecPoints, setFirstSpecPoints] = useState<number>(0);
+    const [secondSpecPoints, setSecondSpecPoints] = useState<number>(0);
+    const [thirdSpecPoints, setThirdSpecPoints] = useState<number>(0);
+
     useEffect(() => {
         // TODO: convertir esta parte en funcion manageRequiredRemainingPoints o algo así
         setOldRemainingTalentPoints(remainingTalentPoints);
@@ -49,13 +53,14 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
         }
     }, [remainingTalentPoints]);
 
-    const handleClickNode = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleClickNode = (e: React.MouseEvent<HTMLButtonElement>, spec: SpecIdType) => {
+        console.log("clickado checkeo e:", e, "y spec:", spec);
         if (e.type === "click") {
             subirPuntos();
-            subirPuntosSpec();
+            subirPuntosSpec(spec);
         } else if (e.type === "contextmenu") {
             bajarPuntos();
-            bajarPuntosSpec();
+            bajarPuntosSpec(spec);
         }
         e.preventDefault();
     };
@@ -72,9 +77,31 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
         }
     }, [remainingTalentPoints]);
 
-    const subirPuntosSpec = useCallback(() => {}, []);
+    const subirPuntosSpec = useCallback(
+        (spec: SpecIdType) => {
+            if ((spec = "firstSpec")) {
+                setFirstSpecPoints(firstSpecPoints + 1);
+            } else if ((spec = "secondSpec")) {
+                setSecondSpecPoints(secondSpecPoints + 1);
+            } else if ((spec = "thirdSpec")) {
+                setThirdSpecPoints(thirdSpecPoints + 1);
+            }
+        },
+        [remainingTalentPoints]
+    );
 
-    const bajarPuntosSpec = useCallback(() => {}, []);
+    const bajarPuntosSpec = useCallback(
+        (spec: SpecIdType) => {
+            if ((spec = "firstSpec")) {
+                setFirstSpecPoints(firstSpecPoints - 1);
+            } else if ((spec = "secondSpec")) {
+                setSecondSpecPoints(secondSpecPoints - 1);
+            } else if ((spec = "thirdSpec")) {
+                setThirdSpecPoints(thirdSpecPoints - 1);
+            }
+        },
+        [remainingTalentPoints]
+    );
 
     return (
         <Container>
