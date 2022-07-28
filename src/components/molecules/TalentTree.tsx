@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
 
 const Container = styled.div`
@@ -43,6 +44,7 @@ export interface BackgroundImage {
 }
 
 interface TalentTreeProps {
+    specId: SpecIdType;
     backgroundImage: string;
     specImage: string;
     specName: string;

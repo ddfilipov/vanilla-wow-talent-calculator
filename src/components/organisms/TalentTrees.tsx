@@ -20,6 +20,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode })
         <Container>
             {specData.map((spec) => (
                 <TalentTree
+                    specId={spec.specId}
                     backgroundImage={spec.specBackground}
                     specImage={spec.specIcon}
                     specName={spec.specName}
