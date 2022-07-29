@@ -18,16 +18,30 @@ interface TalentAreaProps {
     className: string;
     remainingTalentPoints: number;
     requiredLevel: number;
+    firstSpecPoints: number;
+    secondSpecPoints: number;
+    thirdSpecPoints: number;
 }
 
-export const TopTalentArea: FC<TalentAreaProps> = ({ className, remainingTalentPoints, requiredLevel }) => {
+export const TopTalentArea: FC<TalentAreaProps> = ({
+    className,
+    remainingTalentPoints,
+    requiredLevel,
+    firstSpecPoints,
+    secondSpecPoints,
+    thirdSpecPoints,
+}) => {
     return (
         <Container>
             <ClassChooser />
+            
             <TopInfo
                 className={className}
                 remainingTalentPoints={remainingTalentPoints}
                 requiredLevel={requiredLevel}
+                firstSpecPoints={firstSpecPoints}
+                secondSpecPoints={secondSpecPoints}
+                thirdSpecPoints={thirdSpecPoints}
             />
         </Container>
     );

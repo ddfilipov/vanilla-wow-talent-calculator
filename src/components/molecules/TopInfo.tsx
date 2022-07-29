@@ -15,14 +15,28 @@ interface TalentAreaProps {
     className: string;
     remainingTalentPoints: number;
     requiredLevel: number;
+    firstSpecPoints: number;
+    secondSpecPoints: number;
+    thirdSpecPoints: number;
 }
 
-export const TopInfo: FC<TalentAreaProps> = ({ className, remainingTalentPoints, requiredLevel }) => {
+export const TopInfo: FC<TalentAreaProps> = ({
+    className,
+    remainingTalentPoints,
+    requiredLevel,
+    firstSpecPoints,
+    secondSpecPoints,
+    thirdSpecPoints,
+}) => {
     return (
         <Container>
-            <span>{className} (0/0/0)</span>
+            <span>
+                {className} ({firstSpecPoints}/{secondSpecPoints}/{thirdSpecPoints})
+            </span>
             <span>Required level: {requiredLevel < 10 ? "-" : requiredLevel}</span>
             <span>Remaining Points: {remainingTalentPoints}</span>
         </Container>
     );
 };
+
+//TODO: subir en cualquier rama de talentos solo sube la primera rama!!!!! FIX!!

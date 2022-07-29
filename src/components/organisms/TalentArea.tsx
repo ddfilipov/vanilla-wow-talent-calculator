@@ -54,7 +54,6 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     }, [remainingTalentPoints]);
 
     const handleClickNode = (e: React.MouseEvent<HTMLButtonElement>, spec: SpecIdType) => {
-        console.log("clickado checkeo e:", e, "y spec:", spec);
         if (e.type === "click") {
             subirPuntos();
             subirPuntosSpec(spec);
@@ -79,11 +78,11 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
 
     const subirPuntosSpec = useCallback(
         (spec: SpecIdType) => {
-            if ((spec = "firstSpec")) {
+            if (spec === "firstSpec") {
                 setFirstSpecPoints(firstSpecPoints + 1);
-            } else if ((spec = "secondSpec")) {
+            } else if (spec === "secondSpec") {
                 setSecondSpecPoints(secondSpecPoints + 1);
-            } else if ((spec = "thirdSpec")) {
+            } else if (spec === "thirdSpec") {
                 setThirdSpecPoints(thirdSpecPoints + 1);
             }
         },
@@ -92,12 +91,12 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
 
     const bajarPuntosSpec = useCallback(
         (spec: SpecIdType) => {
-            if ((spec = "firstSpec")) {
-                setFirstSpecPoints(firstSpecPoints - 1);
-            } else if ((spec = "secondSpec")) {
-                setSecondSpecPoints(secondSpecPoints - 1);
-            } else if ((spec = "thirdSpec")) {
-                setThirdSpecPoints(thirdSpecPoints - 1);
+            if (spec === "firstSpec") {
+                firstSpecPoints > MIN_TALENT_POINTS && setFirstSpecPoints(firstSpecPoints - 1);
+            } else if (spec === "secondSpec") {
+                secondSpecPoints > MIN_TALENT_POINTS && setSecondSpecPoints(secondSpecPoints - 1);
+            } else if (spec === "thirdSpec") {
+                thirdSpecPoints > MIN_TALENT_POINTS && setThirdSpecPoints(thirdSpecPoints - 1);
             }
         },
         [remainingTalentPoints]
@@ -109,6 +108,9 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 className={data.className}
                 remainingTalentPoints={remainingTalentPoints}
                 requiredLevel={requiredLevel}
+                firstSpecPoints={firstSpecPoints}
+                secondSpecPoints={secondSpecPoints}
+                thirdSpecPoints={thirdSpecPoints}
             ></TopTalentArea>
             <TalentTrees specData={data.specData} handleClickNode={handleClickNode} />
         </Container>
