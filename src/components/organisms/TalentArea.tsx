@@ -107,7 +107,11 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 requiredLevel={requiredLevel}
                 specTalentPoints={specTalentPoints}
             ></TopTalentArea>
-            <TalentTrees specData={data.specData} handleClickNode={handleClickNode} />
+            <TalentTrees
+                specData={data.specData}
+                handleClickNode={handleClickNode}
+                specTalentPoints={specTalentPoints}
+            />
         </Container>
     );
 };
