@@ -1,7 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { IClassData, SpecIdType } from "../../interfaces";
+import { IClassData, ISpecTalentPoints, SpecIdType } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -17,11 +17,6 @@ interface TalentAreaProps {
     data: IClassData;
 }
 
-interface IPrueba {
-    remainingTalentPoints: number;
-    treeTalentPoints: number[];
-}
-
 export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     const MAX_TALENT_POINTS = 51;
     const MIN_TALENT_POINTS = 0;
@@ -30,16 +25,12 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     const [remainingTalentPoints, setRemainingTalentPoints] = useState<number>(MAX_TALENT_POINTS);
     const [oldRemainingTalentPoints, setOldRemainingTalentPoints] = useState<number>(remainingTalentPoints);
     const [requiredLevel, setRequiredLevel] = useState<number>(STARTING_LEVEL);
-    const [treeTalentPoints, setTreeTalentPoints] = useState<number[]>([0, 0, 0]);
 
-    const [remainingTalentPoints2, setRemainingTalentPoints2] = useState<IPrueba>({
-        remainingTalentPoints: MAX_TALENT_POINTS,
-        treeTalentPoints: [0, 0, 0],
+    const [specTalentPoints, setSpecTalentPoints] = useState<ISpecTalentPoints>({
+        firstSpecPoints: 0,
+        secondSpecPoints: 0,
+        thirdSpecPoints: 0,
     });
-
-    const [firstSpecPoints, setFirstSpecPoints] = useState<number>(0);
-    const [secondSpecPoints, setSecondSpecPoints] = useState<number>(0);
-    const [thirdSpecPoints, setThirdSpecPoints] = useState<number>(0);
 
     useEffect(() => {
         // TODO: convertir esta parte en funcion manageRequiredRemainingPoints o algo así
@@ -79,11 +70,11 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     const subirPuntosSpec = useCallback(
         (spec: SpecIdType) => {
             if (spec === "firstSpec") {
-                setFirstSpecPoints(firstSpecPoints + 1);
+                setSpecTalentPoints({ ...specTalentPoints, firstSpecPoints: specTalentPoints.firstSpecPoints + 1 });
             } else if (spec === "secondSpec") {
-                setSecondSpecPoints(secondSpecPoints + 1);
+                setSpecTalentPoints({ ...specTalentPoints, secondSpecPoints: specTalentPoints.secondSpecPoints + 1 });
             } else if (spec === "thirdSpec") {
-                setThirdSpecPoints(thirdSpecPoints + 1);
+                setSpecTalentPoints({ ...specTalentPoints, thirdSpecPoints: specTalentPoints.thirdSpecPoints + 1 });
             }
         },
         [remainingTalentPoints]
@@ -92,11 +83,17 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
     const bajarPuntosSpec = useCallback(
         (spec: SpecIdType) => {
             if (spec === "firstSpec") {
-                firstSpecPoints > MIN_TALENT_POINTS && setFirstSpecPoints(firstSpecPoints - 1);
+                specTalentPoints.firstSpecPoints > MIN_TALENT_POINTS &&
+                    setSpecTalentPoints({ ...specTalentPoints, firstSpecPoints: specTalentPoints.firstSpecPoints - 1 });
             } else if (spec === "secondSpec") {
-                secondSpecPoints > MIN_TALENT_POINTS && setSecondSpecPoints(secondSpecPoints - 1);
+                specTalentPoints.secondSpecPoints > MIN_TALENT_POINTS &&
+                    setSpecTalentPoints({
+                        ...specTalentPoints,
+                        secondSpecPoints: specTalentPoints.secondSpecPoints - 1,
+                    });
             } else if (spec === "thirdSpec") {
-                thirdSpecPoints > MIN_TALENT_POINTS && setThirdSpecPoints(thirdSpecPoints - 1);
+                specTalentPoints.thirdSpecPoints > MIN_TALENT_POINTS &&
+                    setSpecTalentPoints({ ...specTalentPoints, thirdSpecPoints: specTalentPoints.thirdSpecPoints - 1 });
             }
         },
         [remainingTalentPoints]
@@ -108,9 +105,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 className={data.className}
                 remainingTalentPoints={remainingTalentPoints}
                 requiredLevel={requiredLevel}
-                firstSpecPoints={firstSpecPoints}
-                secondSpecPoints={secondSpecPoints}
-                thirdSpecPoints={thirdSpecPoints}
+                specTalentPoints={specTalentPoints}
             ></TopTalentArea>
             <TalentTrees specData={data.specData} handleClickNode={handleClickNode} />
         </Container>

@@ -1,6 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC } from "react";
 import styled from "styled-components";
+import { ISpecTalentPoints } from "../../interfaces";
 
 const Container = styled.div`
     display: grid;
@@ -15,28 +16,18 @@ interface TalentAreaProps {
     className: string;
     remainingTalentPoints: number;
     requiredLevel: number;
-    firstSpecPoints: number;
-    secondSpecPoints: number;
-    thirdSpecPoints: number;
+    specTalentPoints: ISpecTalentPoints;
 }
 
-export const TopInfo: FC<TalentAreaProps> = ({
-    className,
-    remainingTalentPoints,
-    requiredLevel,
-    firstSpecPoints,
-    secondSpecPoints,
-    thirdSpecPoints,
-}) => {
+export const TopInfo: FC<TalentAreaProps> = ({ className, remainingTalentPoints, requiredLevel, specTalentPoints }) => {
     return (
         <Container>
             <span>
-                {className} ({firstSpecPoints}/{secondSpecPoints}/{thirdSpecPoints})
+                {className} ({specTalentPoints.firstSpecPoints}/{specTalentPoints.secondSpecPoints}/
+                {specTalentPoints.thirdSpecPoints})
             </span>
             <span>Required level: {requiredLevel < 10 ? "-" : requiredLevel}</span>
             <span>Remaining Points: {remainingTalentPoints}</span>
         </Container>
     );
 };
-
-//TODO: subir en cualquier rama de talentos solo sube la primera rama!!!!! FIX!!

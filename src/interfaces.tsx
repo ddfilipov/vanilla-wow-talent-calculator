@@ -22,3 +22,9 @@ export interface IClassData {
     className: string;
     specData: ISpecData[];
 }
+
+export interface ISpecTalentPoints {
+    firstSpecPoints: number;
+    secondSpecPoints: number;
+    thirdSpecPoints: number;
+}

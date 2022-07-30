@@ -1,6 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC } from "react";
 import styled from "styled-components";
+import { ISpecTalentPoints } from "../../interfaces";
 import { ClassChooser } from "../molecules/ClassChooser";
 import { TopInfo } from "../molecules/TopInfo";
 
@@ -18,30 +19,24 @@ interface TalentAreaProps {
     className: string;
     remainingTalentPoints: number;
     requiredLevel: number;
-    firstSpecPoints: number;
-    secondSpecPoints: number;
-    thirdSpecPoints: number;
+    specTalentPoints: ISpecTalentPoints;
 }
 
 export const TopTalentArea: FC<TalentAreaProps> = ({
     className,
     remainingTalentPoints,
     requiredLevel,
-    firstSpecPoints,
-    secondSpecPoints,
-    thirdSpecPoints,
+    specTalentPoints,
 }) => {
     return (
         <Container>
             <ClassChooser />
-            
+
             <TopInfo
                 className={className}
                 remainingTalentPoints={remainingTalentPoints}
                 requiredLevel={requiredLevel}
-                firstSpecPoints={firstSpecPoints}
-                secondSpecPoints={secondSpecPoints}
-                thirdSpecPoints={thirdSpecPoints}
+                specTalentPoints={specTalentPoints}
             />
         </Container>
     );
