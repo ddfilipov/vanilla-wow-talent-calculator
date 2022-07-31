@@ -17,16 +17,16 @@ interface TalentTreesProps {
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode, specTalentPoints }) => {
-    const funcion = (specId: SpecIdType) => {
-        let numerito = 0;
+    const getTreePoints = (specId: SpecIdType) => {
+        let currentPoints = 0;
         if (specId === "firstSpec") {
-            numerito = specTalentPoints.firstSpecPoints;
+            currentPoints = specTalentPoints.firstSpecPoints;
         } else if (specId === "secondSpec") {
-            numerito = specTalentPoints.secondSpecPoints;
+            currentPoints = specTalentPoints.secondSpecPoints;
         } else if (specId === "thirdSpec") {
-            numerito = specTalentPoints.thirdSpecPoints;
+            currentPoints = specTalentPoints.thirdSpecPoints;
         }
-        return numerito;
+        return currentPoints;
     };
 
     return (
@@ -37,7 +37,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode, s
                     backgroundImage={spec.specBackground}
                     specImage={spec.specIcon}
                     specName={spec.specName}
-                    specTalentPoints={funcion(spec.specId)}
+                    specTalentPoints={getTreePoints(spec.specId)}
                     handleClickNode={handleClickNode}
                 />
             ))}
