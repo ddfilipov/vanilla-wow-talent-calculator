@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage } from "../molecules/TalentTree";
 import foto from "../../images/warrior_talent_rend.jpg";
@@ -33,17 +33,30 @@ const NodePoints = styled.span`
 
 export interface TalentNodeProps {
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    maxNodePoints: number;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({ handleClick }) => {
+export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints }) => {
+    const [currentPoints, setCurrentPoints] = useState<number>(0);
+
+    const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setCurrentPoints(currentPoints + 1);
+        handleClick(e);
+    };
+
+    const pointsDown = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setCurrentPoints(currentPoints - 1);
+        handleClick(e);
+    };
+
     return (
         <ButtonContainer>
             <ButtonStyled
                 backgroundImage={foto}
-                onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleClick(e)}
-                onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => handleClick(e)}
+                onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
+                onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
             ></ButtonStyled>
-            <NodePoints>0/3</NodePoints>
+            <NodePoints>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
         </ButtonContainer>
     );
 };

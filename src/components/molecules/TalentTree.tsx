@@ -71,7 +71,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <div>X</div>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
-                <TalentNode handleClick={clickOnNode}></TalentNode>
+                <TalentNode handleClick={clickOnNode} maxNodePoints={3}></TalentNode>
             </TalentTreeStyled>
         </Container>
     );
