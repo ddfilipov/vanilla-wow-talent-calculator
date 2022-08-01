@@ -1,6 +1,5 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-import { BackgroundImage } from "../molecules/TalentTree";
 import foto from "../../images/warrior_talent_rend.jpg";
 
 const ButtonContainer = styled.div`
@@ -9,15 +8,15 @@ const ButtonContainer = styled.div`
     position: relative;
 `;
 
-const ButtonStyled = styled.button<BackgroundImage>`
+const ButtonStyled = styled.button<IBackgroundImage>`
     height: 38px;
     width: 38px;
     background-image: url(${(props) => props.backgroundImage});
     cursor: pointer;
-    border: 2px solid rgba(64, 191, 64, 0.8);
+    border: 2px solid ${(props) => (props.isNodeCapped ? "rgba(255,209,0,0.8)" : "rgba(64, 191, 64, 0.8)")};
 `;
 
-const NodePoints = styled.span`
+const NodePoints = styled.span<INodePoints>`
     bottom: 2px;
     right: 2px;
     font-size: 13px;
@@ -25,7 +24,7 @@ const NodePoints = styled.span`
     position: absolute;
     user-select: none;
     cursor: pointer;
-    color: rgba(64, 191, 64, 0.8);
+    color: ${(props) => (props.isNodeCapped ? "rgba(255,209,0,0.8)" : "rgba(64, 191, 64, 0.8)")};
     z-index: 100;
     background-color: black;
     padding: 0 1px;
@@ -36,8 +35,16 @@ export interface TalentNodeProps {
     maxNodePoints: number;
 }
 
+interface INodePoints {
+    isNodeCapped: boolean;
+}
+interface IBackgroundImage extends INodePoints {
+    backgroundImage: string;
+}
+
 export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
+    const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
         setCurrentPoints(currentPoints + 1);
@@ -49,14 +56,19 @@ export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints }) 
         handleClick(e);
     };
 
+    useEffect(() => {
+        maxNodePoints === currentPoints ? setIsNodeCapped(true) : setIsNodeCapped(false);
+    }, [currentPoints]);
+
     return (
         <ButtonContainer>
             <ButtonStyled
                 backgroundImage={foto}
+                isNodeCapped={isNodeCapped}
                 onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
                 onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
             ></ButtonStyled>
-            <NodePoints>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
+            <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
         </ButtonContainer>
     );
 };
