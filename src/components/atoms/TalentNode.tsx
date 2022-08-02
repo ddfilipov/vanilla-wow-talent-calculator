@@ -47,18 +47,23 @@ export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints }) 
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
-        setCurrentPoints(currentPoints + 1);
-        handleClick(e);
+        if (currentPoints < maxNodePoints) {
+            handleClick(e);
+            setCurrentPoints(currentPoints + 1);
+        }
     };
 
     const pointsDown = (e: React.MouseEvent<HTMLButtonElement>) => {
-        setCurrentPoints(currentPoints - 1);
-        handleClick(e);
+        e.preventDefault();
+        if (currentPoints > 0) {
+            setCurrentPoints(currentPoints - 1);
+            handleClick(e);
+        }
     };
 
     useEffect(() => {
         maxNodePoints === currentPoints ? setIsNodeCapped(true) : setIsNodeCapped(false);
-    }, [currentPoints]);
+    }, [currentPoints, maxNodePoints]);
 
     return (
         <ButtonContainer>
