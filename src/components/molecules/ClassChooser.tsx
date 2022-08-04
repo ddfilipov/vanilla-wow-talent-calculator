@@ -20,7 +20,6 @@ export const ClassChooser: FC = () => {
                     <ClassIcon
                         href={`/${clase.class.name}`}
                         src={clase.class.src}
-                        alt={clase.class.name}
                         key={clase.class.name}
                     />
                 ))}

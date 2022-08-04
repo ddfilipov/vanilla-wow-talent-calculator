@@ -10,5 +10,5 @@ export default {
 const Template: ComponentStory<typeof ClassIcon> = (args) => <ClassIcon {...args} />;
 
 export const ClassIconStory: ComponentStory<typeof ClassIcon> = () => (
-    <ClassIcon alt="alt text" src={warriorIcon} href="/"></ClassIcon>
+    <ClassIcon src={warriorIcon} href="/"></ClassIcon>
 );
