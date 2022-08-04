@@ -19,6 +19,9 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     cursor: pointer;
     border: 2px solid ${(props) => props.href === props.relativePath && "rgba(64, 191, 64, 0.8)"};
     opacity: ${(props) => (props.href === props.relativePath ? 1 : 0.6666)};
+    :hover {
+        opacity: 1;
+    }
 `;
 
 export const ClassIcon: FC<ClassIconProps> = ({ href, src }) => {
