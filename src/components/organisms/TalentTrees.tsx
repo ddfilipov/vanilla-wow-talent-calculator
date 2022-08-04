@@ -39,6 +39,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode, s
                     specName={spec.specName}
                     specTalentPoints={getTreePoints(spec.specId)}
                     handleClickNode={handleClickNode}
+                    key={spec.specId}
                 />
             ))}
         </Container>

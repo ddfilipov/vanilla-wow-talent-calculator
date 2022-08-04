@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 export interface ClassIconProps {
@@ -19,10 +19,13 @@ const ButtonStyled = styled.button<IBackgroundImage>`
 `;
 
 export const ClassIcon: FC<ClassIconProps> = ({ href, src, alt }) => {
+    let params = useParams();
+    console.log("enseñando href:", href, "y src:", src);
+    console.log("params:", params);
     return (
         <Link to={href}>
             {/* <img src={src} alt={alt}></img> */}
-            <ButtonStyled backgroundImage={src} />
+            <ButtonStyled backgroundImage={src} tabIndex={-1} />
         </Link>
     );
 };
