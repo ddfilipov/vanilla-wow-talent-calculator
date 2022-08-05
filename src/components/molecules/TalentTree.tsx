@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import { SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
+import { TalentTreeGrid } from "./TalentTreeGrid";
 
 const Container = styled.div`
     display: grid;
@@ -71,7 +72,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <div>X</div>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
-                <TalentNode handleClick={clickOnNode} maxNodePoints={3}></TalentNode>
+                <TalentTreeGrid>
+                    <TalentNode handleClick={clickOnNode} maxNodePoints={3}></TalentNode>
+                </TalentTreeGrid>
             </TalentTreeStyled>
         </Container>
     );

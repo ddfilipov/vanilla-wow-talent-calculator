@@ -8,4 +8,4 @@ export default {
 
 const Template: ComponentStory<typeof TalentTreeGrid> = (args) => <TalentTreeGrid {...args} />;
 
-export const ClassIconStory: ComponentStory<typeof TalentTreeGrid> = () => <TalentTreeGrid></TalentTreeGrid>;
+export const ClassIconStory: ComponentStory<typeof TalentTreeGrid> = () => <TalentTreeGrid children={<></>}></TalentTreeGrid>;
