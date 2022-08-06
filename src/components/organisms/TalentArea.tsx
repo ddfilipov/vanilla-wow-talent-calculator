@@ -42,7 +42,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 setRequiredLevel(requiredLevel - 1);
             }
         }
-    }, [remainingTalentPoints]);
+    }, [remainingTalentPoints, oldRemainingTalentPoints, requiredLevel]);
 
     const handleClickNode = (e: React.MouseEvent<HTMLButtonElement>, spec: SpecIdType) => {
         if (e.type === "click") {
@@ -77,7 +77,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 setSpecTalentPoints({ ...specTalentPoints, thirdSpecPoints: specTalentPoints.thirdSpecPoints + 1 });
             }
         },
-        [remainingTalentPoints]
+        [specTalentPoints]
     );
 
     const bajarPuntosSpec = useCallback(
@@ -96,7 +96,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                     setSpecTalentPoints({ ...specTalentPoints, thirdSpecPoints: specTalentPoints.thirdSpecPoints - 1 });
             }
         },
-        [remainingTalentPoints]
+        [specTalentPoints]
     );
 
     return (
