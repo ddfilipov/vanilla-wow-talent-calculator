@@ -14,9 +14,15 @@ interface TalentTreesProps {
     specData: ISpecData[];
     handleClickNode: (e: React.MouseEvent<HTMLButtonElement>, spec: SpecIdType) => void;
     specTalentPoints: ISpecTalentPoints;
+    remainingTalentPoints: number;
 }
 
-export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode, specTalentPoints }) => {
+export const TalentTrees: FC<TalentTreesProps> = ({
+    specData,
+    handleClickNode,
+    specTalentPoints,
+    remainingTalentPoints,
+}) => {
     const getTreePoints = (specId: SpecIdType) => {
         let currentPoints = 0;
         if (specId === "firstSpec") {
@@ -40,6 +46,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ specData, handleClickNode, s
                     specTalentPoints={getTreePoints(spec.specId)}
                     handleClickNode={handleClickNode}
                     key={spec.specId}
+                    remainingTalentPoints={remainingTalentPoints}
                 />
             ))}
         </Container>

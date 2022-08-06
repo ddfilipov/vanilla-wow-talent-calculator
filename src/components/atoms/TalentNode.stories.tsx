@@ -9,5 +9,5 @@ export default {
 const Template: ComponentStory<typeof TalentNode> = (args) => <TalentNode {...args} />;
 
 export const ClassIconStory: ComponentStory<typeof TalentNode> = () => (
-    <TalentNode maxNodePoints={3} handleClick={() => {}}></TalentNode>
+    <TalentNode maxNodePoints={3} handleClick={() => {}} remainingTalentPoints={5}></TalentNode>
 );

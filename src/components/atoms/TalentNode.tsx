@@ -33,6 +33,7 @@ const NodePoints = styled.span<INodePoints>`
 export interface TalentNodeProps {
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
     maxNodePoints: number;
+    remainingTalentPoints: number;
 }
 
 interface INodePoints {
@@ -42,12 +43,12 @@ interface IBackgroundImage extends INodePoints {
     backgroundImage: string;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints }) => {
+export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints, remainingTalentPoints }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
-        if (currentPoints < maxNodePoints) {
+        if (currentPoints < maxNodePoints && remainingTalentPoints > 0) {
             handleClick(e);
             setCurrentPoints(currentPoints + 1);
         }
