@@ -1,6 +1,8 @@
+type ClassesType = "druid" | "hunter" | "mage" | "paladin" | "priest" | "rogue" | "shaman" | "warlock" | "warrior";
+
 export interface IClass {
     class: {
-        name: string;
+        name: ClassesType;
         src: string;
     };
 }
@@ -27,8 +29,4 @@ export interface ISpecTalentPoints {
     firstSpecPoints: number;
     secondSpecPoints: number;
     thirdSpecPoints: number;
-}
-
-export interface ITalentNode{
-    
 }
