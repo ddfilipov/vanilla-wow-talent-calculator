@@ -28,3 +28,7 @@ export interface ISpecTalentPoints {
     secondSpecPoints: number;
     thirdSpecPoints: number;
 }
+
+export interface ITalentNode{
+    
+}
