@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Rogue() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 6,
         className: "Rogue",
         specData: [
             {

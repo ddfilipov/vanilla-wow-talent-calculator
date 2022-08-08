@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Paladin() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 4,
         className: "Paladin",
         specData: [
             { specId: "firstSpec", specName: "Holy", specIcon: first_spec_icon, specBackground: first_spec_background },

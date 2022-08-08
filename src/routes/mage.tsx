@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Mage() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 3,
         className: "Mage",
         specData: [
             {

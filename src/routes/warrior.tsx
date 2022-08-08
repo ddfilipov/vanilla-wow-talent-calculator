@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Warrior() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 9,
         className: "Warrior",
         specData: [
             { specId: "firstSpec", specName: "Arms", specIcon: first_spec_icon, specBackground: first_spec_background },

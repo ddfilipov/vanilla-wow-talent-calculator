@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Priest() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 5,
         className: "Priest",
         specData: [
             {

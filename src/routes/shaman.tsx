@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Shaman() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 7,
         className: "Shaman",
         specData: [
             {

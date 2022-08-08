@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Hunter() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 2,
         className: "Hunter",
         specData: [
             {

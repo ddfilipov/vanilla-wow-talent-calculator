@@ -9,7 +9,7 @@ import { IClassData } from "../interfaces";
 
 export default function Warlock() {
     const classData: IClassData = {
-        classId: 1,
+        classId: 8,
         className: "Warlock",
         specData: [
             {
