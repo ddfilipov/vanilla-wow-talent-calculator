@@ -112,6 +112,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 handleClickNode={handleClickNode}
                 specTalentPoints={specTalentPoints}
                 remainingTalentPoints = {remainingTalentPoints}
+                classId={data.classId}
             />
         </Container>
     );

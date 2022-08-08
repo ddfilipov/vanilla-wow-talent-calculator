@@ -52,6 +52,7 @@ interface TalentTreeProps {
     handleClickNode: (e: React.MouseEvent<HTMLButtonElement>, spec: SpecIdType) => void;
     specTalentPoints: number;
     remainingTalentPoints: number;
+    classId: number;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -62,10 +63,16 @@ export const TalentTree: FC<TalentTreeProps> = ({
     specId,
     specTalentPoints,
     remainingTalentPoints,
+    classId,
 }) => {
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
+
+    const getSpecRanks = (classId: number, specId: number) => {
+        
+    };
+
     return (
         <Container>
             <TopPart backgroundImage={specImage}>
