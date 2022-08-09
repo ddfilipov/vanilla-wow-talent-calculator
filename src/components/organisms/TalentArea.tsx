@@ -1,7 +1,7 @@
 // TODO: zero creativitiy with this component's name. Give it a better name later
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { IClassData, ISpecTalentPoints, SpecIdType } from "../../interfaces";
+import { IClassData, ISpecTalentPoints, ITalents, SpecIdType } from "../../interfaces";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -15,9 +15,10 @@ const Container = styled.div`
 
 interface TalentAreaProps {
     data: IClassData;
+    talentRanks?: any; //TODO: fix ITalents, need a working interface
 }
 
-export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
+export const TalentArea: FC<TalentAreaProps> = ({ data, talentRanks }) => {
     const MAX_TALENT_POINTS = 51;
     const MIN_TALENT_POINTS = 0;
     const STARTING_LEVEL = 9;
@@ -111,8 +112,9 @@ export const TalentArea: FC<TalentAreaProps> = ({ data }) => {
                 specData={data.specData}
                 handleClickNode={handleClickNode}
                 specTalentPoints={specTalentPoints}
-                remainingTalentPoints = {remainingTalentPoints}
+                remainingTalentPoints={remainingTalentPoints}
                 classId={data.classId}
+                talentRanks={talentRanks}
             />
         </Container>
     );

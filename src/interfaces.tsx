@@ -36,6 +36,7 @@ interface ITalentNodeRanks {
 }
 
 export interface ITalentNode {
+    // TODO: delete???
     talentNodeId: number;
     classTalent: ClassesType; // this talent is for the class... TODO: should be pointing towards an actual class id, not a type. Fix later
     talentNodeSpec: SpecIdType;
@@ -44,4 +45,26 @@ export interface ITalentNode {
     column: number;
     ranks: ITalentNodeRanks[];
     unlockedBy: number; // this talent depends on another one to be unlocked (arrow thing)
+}
+interface ITalentRanks {
+    rankDescription: string;
+}
+
+interface ISpecTalents {
+    talentNodeName: string;
+    talentNodeId: number;
+    row: number;
+    column: number;
+    ranks: ITalentRanks[];
+}
+
+interface ITalentRankSpecs {
+    specId: SpecIdType;
+    specTalents: ISpecTalents[];
+}
+
+export interface ITalents {
+    classId: number;
+    className: ClassesType;
+    talentSpec: ITalentRankSpecs[];
 }

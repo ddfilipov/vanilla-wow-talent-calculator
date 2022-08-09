@@ -16,13 +16,16 @@ interface TalentTreesProps {
     specTalentPoints: ISpecTalentPoints;
     remainingTalentPoints: number;
     classId: number;
+    talentRanks?: any;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({
     specData,
     handleClickNode,
     specTalentPoints,
-    remainingTalentPoints,classId
+    remainingTalentPoints,
+    classId,
+    talentRanks,
 }) => {
     const getTreePoints = (specId: SpecIdType) => {
         let currentPoints = 0;
@@ -34,6 +37,13 @@ export const TalentTrees: FC<TalentTreesProps> = ({
             currentPoints = specTalentPoints.thirdSpecPoints;
         }
         return currentPoints;
+    };
+
+    const getSpecRanks = (classId: number, specId: number) => {
+        let finalResult: any;
+        // talentRanks.map((talents)=>(
+        //     finalResult = talents;
+        // ))
     };
 
     return (
@@ -48,7 +58,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({
                     handleClickNode={handleClickNode}
                     key={spec.specId}
                     remainingTalentPoints={remainingTalentPoints}
-                    classId= {classId}
+                    classId={classId}
                 />
             ))}
         </Container>
