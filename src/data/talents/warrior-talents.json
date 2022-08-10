@@ -1,83 +1,81 @@
 {
     "classId": 9,
     "className": "warrior",
-    "talentSpecs": {
-        "spec": [
-            {
-                "specId": "firstSpec",
-                "talents": {
-                    "talentNodeName": "Improved Heroic Strike",
-                    "talentNodeId": 1,
-                    "row": 1,
-                    "column": 1,
-                    "ranks": [
-                        {
-                            "rankDescription:": "Reduces hero 1 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 2 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 3 rage"
-                        }
-                    ],
-                    "unlockedBy": ""
-                }
-            },
-            {
-                "specId": "secondSpec",
-                "talents": {
-                    "talentNodeName": "Improved Heroic Strike",
-                    "talentNodeId": 2,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription:": "Increase shout 1%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 2%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 3%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 4%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 5%"
-                        }
-                    ],
-                    "unlockedBy": ""
-                }
-            },
-            {
-                "specId": "thirdSpec",
-                "talents": {
-                    "talentNodeName": "Shield Specialization",
-                    "talentNodeId": 3,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription:": "Increase block 1%"
-                        },
-                        {
-                            "rankDescription:": "Increase block 2%"
-                        },
-                        {
-                            "rankDescription:": "Increase block 3%"
-                        },
-                        {
-                            "rankDescription:": "Increase block 4%"
-                        },
-                        {
-                            "rankDescription:": "Increase block 5%"
-                        }
-                    ],
-                    "unlockedBy": ""
-                }
+    "talentSpecs": [
+        {
+            "specId": "firstSpec",
+            "talents": {
+                "talentNodeName": "Improved Heroic Strike",
+                "talentNodeId": 1,
+                "row": 1,
+                "column": 1,
+                "ranks": [
+                    {
+                        "rankDescription:": "Reduces hero 1 rage"
+                    },
+                    {
+                        "rankDescription:": "Reduces hero 2 rage"
+                    },
+                    {
+                        "rankDescription:": "Reduces hero 3 rage"
+                    }
+                ],
+                "unlockedBy": ""
             }
-        ]
-    }
+        },
+        {
+            "specId": "secondSpec",
+            "talents": {
+                "talentNodeName": "Improved Heroic Strike",
+                "talentNodeId": 2,
+                "row": 1,
+                "column": 2,
+                "ranks": [
+                    {
+                        "rankDescription:": "Increase shout 1%"
+                    },
+                    {
+                        "rankDescription:": "Increase shout 2%"
+                    },
+                    {
+                        "rankDescription:": "Increase shout 3%"
+                    },
+                    {
+                        "rankDescription:": "Increase shout 4%"
+                    },
+                    {
+                        "rankDescription:": "Increase shout 5%"
+                    }
+                ],
+                "unlockedBy": ""
+            }
+        },
+        {
+            "specId": "thirdSpec",
+            "talents": {
+                "talentNodeName": "Shield Specialization",
+                "talentNodeId": 3,
+                "row": 1,
+                "column": 2,
+                "ranks": [
+                    {
+                        "rankDescription:": "Increase block 1%"
+                    },
+                    {
+                        "rankDescription:": "Increase block 2%"
+                    },
+                    {
+                        "rankDescription:": "Increase block 3%"
+                    },
+                    {
+                        "rankDescription:": "Increase block 4%"
+                    },
+                    {
+                        "rankDescription:": "Increase block 5%"
+                    }
+                ],
+                "unlockedBy": ""
+            }
+        }
+    ]
 }

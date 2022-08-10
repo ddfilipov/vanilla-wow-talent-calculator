@@ -66,5 +66,5 @@ interface ITalentRankSpecs {
 export interface ITalents {
     classId: number;
     className: ClassesType;
-    talentSpec: ITalentRankSpecs[];
+    talentSpecs: ITalentRankSpecs[];
 }
