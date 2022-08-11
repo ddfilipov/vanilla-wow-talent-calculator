@@ -29,10 +29,10 @@ export default function Warrior() {
         ],
     };
 
-    const testFunction = new Promise<ITalents>(()=>{
+    const testFunction = new Promise<ITalents>(() => {
         return Promise.resolve(talents);
-    })
+    });
     // const talentRanks: ITalents = testFunction(); //Might have to use a Promise to get the data from the JSON
 
-    return <TalentArea data={classData} talentRanks={talents} />;
+    return <TalentArea data={classData} talentRanks={talents as any} />;
 }
