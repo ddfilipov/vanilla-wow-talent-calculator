@@ -60,7 +60,7 @@ export interface ISpecTalents {
 
 export interface ITalentRankSpecs {
     specId: SpecIdType;
-    talents: ISpecTalents;
+    talents: ISpecTalents; //TODO: this needs to be a list, there's gotat be multiple talents per tree!!!
 }
 
 export interface ITalents {

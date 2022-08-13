@@ -84,6 +84,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentTreeGrid>
+                    {/* TODO: should do a map of ranks specRanks and maybe rename it to SpecTalents */}
                     <TalentNode
                         handleClick={clickOnNode}
                         maxNodePoints={3}
