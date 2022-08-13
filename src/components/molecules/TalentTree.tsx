@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecTalents, ITalentRankSpecs, SpecIdType } from "../../interfaces";
+import { ISpecTalents, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
 import { TalentTreeGrid } from "./TalentTreeGrid";
 
@@ -53,7 +53,7 @@ interface TalentTreeProps {
     specTalentPoints: number;
     remainingTalentPoints: number;
     classId: number;
-    specRanks?: ISpecTalents;
+    specTalents?: ISpecTalents;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -65,15 +65,13 @@ export const TalentTree: FC<TalentTreeProps> = ({
     specTalentPoints,
     remainingTalentPoints,
     classId,
-    specRanks
+    specTalents: specRanks
 }) => {
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
 
-    const getSpecRanks = (classId: number, specId: number) => {
-        
-    };
+    // const getSpecRanks = (classId: number, specId: number) => {    };
     console.log("showing ranks:", specRanks)
     return (
         <Container>

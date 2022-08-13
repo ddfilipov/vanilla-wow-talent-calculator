@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecData, ISpecTalentPoints, ISpecTalents, ITalentRankSpecs, ITalents, SpecIdType } from "../../interfaces";
+import { ISpecData, ISpecTalentPoints, ITalents, SpecIdType } from "../../interfaces";
 import { TalentTree } from "../molecules/TalentTree";
 
 const Container = styled.div`
@@ -39,7 +39,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({
         return currentPoints;
     };
 
-    const getSpecRanks = (specId: SpecIdType) => {
+    const getSpecTalents = (specId: SpecIdType) => {
         const test = talentRanks?.talentSpecs.find((spec)=>spec.specId === specId);
         return test?.talents;
     };
@@ -57,7 +57,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({
                     key={spec.specId}
                     remainingTalentPoints={remainingTalentPoints}
                     classId={classId}
-                    specRanks={getSpecRanks(spec.specId)}
+                    specTalents={getSpecTalents(spec.specId)}
                 />
             ))}
         </Container>
