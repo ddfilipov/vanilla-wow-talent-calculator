@@ -50,7 +50,7 @@ interface ITalentRanks {
     rankDescription: string;
 }
 
-interface ISpecTalents {
+export interface ISpecTalents {
     talentNodeName: string;
     talentNodeId: number;
     row: number;
@@ -58,9 +58,9 @@ interface ISpecTalents {
     ranks: ITalentRanks[];
 }
 
-interface ITalentRankSpecs {
+export interface ITalentRankSpecs {
     specId: SpecIdType;
-    specTalents: ISpecTalents[];
+    talents: ISpecTalents;
 }
 
 export interface ITalents {

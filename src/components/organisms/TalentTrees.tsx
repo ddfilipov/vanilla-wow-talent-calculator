@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecData, ISpecTalentPoints, SpecIdType } from "../../interfaces";
+import { ISpecData, ISpecTalentPoints, ISpecTalents, ITalentRankSpecs, ITalents, SpecIdType } from "../../interfaces";
 import { TalentTree } from "../molecules/TalentTree";
 
 const Container = styled.div`
@@ -16,7 +16,7 @@ interface TalentTreesProps {
     specTalentPoints: ISpecTalentPoints;
     remainingTalentPoints: number;
     classId: number;
-    talentRanks?: any;
+    talentRanks?: ITalents;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({
@@ -39,11 +39,9 @@ export const TalentTrees: FC<TalentTreesProps> = ({
         return currentPoints;
     };
 
-    const getSpecRanks = (classId: number, specId: number) => {
-        let finalResult: any;
-        // talentRanks.map((talents)=>(
-        //     finalResult = talents;
-        // ))
+    const getSpecRanks = (specId: SpecIdType) => {
+        const test = talentRanks?.talentSpecs.find((spec)=>spec.specId === specId);
+        return test?.talents;
     };
 
     return (
@@ -59,6 +57,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({
                     key={spec.specId}
                     remainingTalentPoints={remainingTalentPoints}
                     classId={classId}
+                    specRanks={getSpecRanks(spec.specId)}
                 />
             ))}
         </Container>

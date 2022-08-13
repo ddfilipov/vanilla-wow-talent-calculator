@@ -15,7 +15,7 @@ const Container = styled.div`
 
 interface TalentAreaProps {
     data: IClassData;
-    talentRanks?: ITalents; //TODO: fix ITalents, need a working interface
+    talentRanks?: ITalents;
 }
 
 export const TalentArea: FC<TalentAreaProps> = ({ data, talentRanks }) => {
