@@ -57,7 +57,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({
                     key={spec.specId}
                     remainingTalentPoints={remainingTalentPoints}
                     classId={classId}
-                    specTalents={getSpecTalents(spec.specId)}
+                    specRanks={getSpecTalents(spec.specId)}
                 />
             ))}
         </Container>
