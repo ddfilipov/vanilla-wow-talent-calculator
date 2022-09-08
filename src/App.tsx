@@ -28,7 +28,6 @@ const Container = styled.div`
     gap: 10px;
 `;
 function App() {
-    console.log("loading APP");
     return (
         <MainContainer>
             <Container>
