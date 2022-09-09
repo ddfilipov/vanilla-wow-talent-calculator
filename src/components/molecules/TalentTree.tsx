@@ -83,6 +83,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentTreeGrid>
                     {/* TODO: should do a map of ranks specRanks and maybe rename it to SpecTalents */}
+                    {/* {specRanks.} specRanks is an object, not an array!!! transform the "talents" json node to an array then loop through it in here*/}
                     <TalentNode
                         handleClick={clickOnNode}
                         maxNodePoints={3}
