@@ -39,8 +39,6 @@ export const TalentTrees: FC<TalentTreesProps> = ({
         return currentPoints;
     };
 
-    console.log("calling TalentTrees")
-
     const getSpecTalents = (specId: SpecIdType) => {
         const test = talentRanks?.talentSpecs.find((spec)=>spec.specId === specId);
         return test?.talents;
