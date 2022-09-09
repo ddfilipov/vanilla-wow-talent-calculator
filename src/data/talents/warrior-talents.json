@@ -26,7 +26,7 @@
         {
             "specId": "secondSpec",
             "talents": {
-                "talentNodeName": "Improved Heroic Strike",
+                "talentNodeName": "Booming Voice",
                 "talentNodeId": 2,
                 "row": 1,
                 "column": 2,
