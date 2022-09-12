@@ -15,10 +15,10 @@ const Container = styled.div`
 
 interface TalentAreaProps {
     data: IClassData;
-    talentRanks?: ITalents;
+    talents?: ITalents;
 }
 
-export const TalentArea: FC<TalentAreaProps> = ({ data, talentRanks }) => {
+export const TalentArea: FC<TalentAreaProps> = ({ data, talents: talentRanks }) => {
     const MAX_TALENT_POINTS = 51;
     const MIN_TALENT_POINTS = 0;
     const STARTING_LEVEL = 9;
@@ -114,7 +114,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talentRanks }) => {
                 specTalentPoints={specTalentPoints}
                 remainingTalentPoints={remainingTalentPoints}
                 classId={data.classId}
-                talentRanks={talentRanks}
+                talents={talentRanks}
             />
         </Container>
     );

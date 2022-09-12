@@ -16,7 +16,7 @@ interface TalentTreesProps {
     specTalentPoints: ISpecTalentPoints;
     remainingTalentPoints: number;
     classId: number;
-    talentRanks?: ITalents;
+    talents?: ITalents;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({
@@ -25,7 +25,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({
     specTalentPoints,
     remainingTalentPoints,
     classId,
-    talentRanks,
+    talents,
 }) => {
     const getTreePoints = (specId: SpecIdType) => {
         let currentPoints = 0;
@@ -40,8 +40,8 @@ export const TalentTrees: FC<TalentTreesProps> = ({
     };
 
     const getSpecTalents = (specId: SpecIdType) => {
-        const test = talentRanks?.talentSpecs.find((spec)=>spec.specId === specId);
-        return test?.talents;
+        const talentTree = talents?.talentSpecs.find((specToFind) => specToFind.specId === specId);
+        return talentTree && talentTree.talents;
     };
 
     return (

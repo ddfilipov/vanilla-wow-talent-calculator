@@ -24,33 +24,6 @@ export const TalentTreeGrid: FC<TalentTreeGridProps> = ({ children }) => {
     return (
         <Container>
             {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
-            {children}
         </Container>
     );
 };

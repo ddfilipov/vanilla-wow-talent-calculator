@@ -53,7 +53,7 @@ interface TalentTreeProps {
     specTalentPoints: number;
     remainingTalentPoints: number;
     classId: number;
-    specRanks?: ISpecTalents;
+    specRanks?: ISpecTalents[] | undefined;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -84,11 +84,13 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <TalentTreeGrid>
                     {/* TODO: should do a map of ranks specRanks and maybe rename it to SpecTalents */}
                     {/* {specRanks.} specRanks is an object, not an array!!! transform the "talents" json node to an array then loop through it in here*/}
-                    <TalentNode
-                        handleClick={clickOnNode}
-                        maxNodePoints={3}
-                        remainingTalentPoints={remainingTalentPoints}
-                    ></TalentNode>
+                    {specRanks?.map((node) => (
+                        <TalentNode
+                            handleClick={clickOnNode}
+                            maxNodePoints={node.ranks.length}
+                            remainingTalentPoints={remainingTalentPoints}
+                        ></TalentNode>
+                    ))}
                 </TalentTreeGrid>
             </TalentTreeStyled>
         </Container>

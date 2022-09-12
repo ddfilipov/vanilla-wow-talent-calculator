@@ -29,5 +29,5 @@ export default function Warrior() {
         ],
     };
 
-    return <TalentArea data={classData} talentRanks={talents as any} />;
+    return <TalentArea data={classData} talents={talents as any} />;
 }
