@@ -4,7 +4,7 @@
     "talentSpecs": [
         {
             "specId": "firstSpec",
-            "talents": {
+            "talents": [{
                 "talentNodeName": "Improved Heroic Strike",
                 "talentNodeId": 1,
                 "row": 1,
@@ -21,11 +21,11 @@
                     }
                 ],
                 "unlockedBy": ""
-            }
+            }]
         },
         {
             "specId": "secondSpec",
-            "talents": {
+            "talents": [{
                 "talentNodeName": "Booming Voice",
                 "talentNodeId": 2,
                 "row": 1,
@@ -48,11 +48,11 @@
                     }
                 ],
                 "unlockedBy": ""
-            }
+            }]
         },
         {
             "specId": "thirdSpec",
-            "talents": {
+            "talents": [{
                 "talentNodeName": "Shield Specialization",
                 "talentNodeId": 3,
                 "row": 1,
@@ -75,7 +75,7 @@
                     }
                 ],
                 "unlockedBy": ""
-            }
+            }]
         }
     ]
 }
