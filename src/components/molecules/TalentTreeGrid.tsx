@@ -21,9 +21,5 @@ interface TalentTreeGridProps {
 }
 
 export const TalentTreeGrid: FC<TalentTreeGridProps> = ({ children }) => {
-    return (
-        <Container>
-            {children}
-        </Container>
-    );
+    return <Container>{children}</Container>;
 };
