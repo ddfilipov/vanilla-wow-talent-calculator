@@ -4,81 +4,87 @@
     "talentSpecs": [
         {
             "specId": "firstSpec",
-            "talents": [{
-                "talentNodeName": "Improved Heroic Strike",
-                "talentNodeId": 1,
-                "row": 1,
-                "column": 1,
-                "ranks": [
-                    {
-                        "rankDescription:": "Reduces hero 1 rage"
-                    },
-                    {
-                        "rankDescription:": "Reduces hero 2 rage"
-                    },
-                    {
-                        "rankDescription:": "Reduces hero 3 rage"
-                    }
-                ],
-                "unlockedBy": "",
-                "talentIcon": "../../images/warrior_talent_rend.jpg"
-            }]
+            "talents": [
+                {
+                    "talentNodeName": "Improved Heroic Strike",
+                    "talentNodeId": 1,
+                    "row": 1,
+                    "column": 1,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Reduces hero 1 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 2 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 3 rage"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                }
+            ]
         },
         {
             "specId": "secondSpec",
-            "talents": [{
-                "talentNodeName": "Booming Voice",
-                "talentNodeId": 2,
-                "row": 1,
-                "column": 2,
-                "ranks": [
-                    {
-                        "rankDescription:": "Increase shout 1%"
-                    },
-                    {
-                        "rankDescription:": "Increase shout 2%"
-                    },
-                    {
-                        "rankDescription:": "Increase shout 3%"
-                    },
-                    {
-                        "rankDescription:": "Increase shout 4%"
-                    },
-                    {
-                        "rankDescription:": "Increase shout 5%"
-                    }
-                ],
-                "unlockedBy": "",
-                "talentIcon": "../../images/warrior_talent_improved_shield_block.jpg"
-            }]
+            "talents": [
+                {
+                    "talentNodeName": "Booming Voice",
+                    "talentNodeId": 2,
+                    "row": 1,
+                    "column": 2,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Increase shout 1%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 2%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 3%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 4%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 5%"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                }
+            ]
         },
         {
             "specId": "thirdSpec",
-            "talents": [{
-                "talentNodeName": "Shield Specialization",
-                "talentNodeId": 3,
-                "row": 1,
-                "column": 2,
-                "ranks": [
-                    {
-                        "rankDescription:": "Increase block 1%"
-                    },
-                    {
-                        "rankDescription:": "Increase block 2%"
-                    },
-                    {
-                        "rankDescription:": "Increase block 3%"
-                    },
-                    {
-                        "rankDescription:": "Increase block 4%"
-                    },
-                    {
-                        "rankDescription:": "Increase block 5%"
-                    }
-                ],
-                "unlockedBy": "",
-                "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
-            }]
+            "talents": [
+                {
+                    "talentNodeName": "Shield Specialization",
+                    "talentNodeId": 3,
+                    "row": 1,
+                    "column": 2,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Increase block 1%"
+                        },
+                        {
+                            "rankDescription:": "Increase block 2%"
+                        },
+                        {
+                            "rankDescription:": "Increase block 3%"
+                        },
+                        {
+                            "rankDescription:": "Increase block 4%"
+                        },
+                        {
+                            "rankDescription:": "Increase block 5%"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_improved_shield_block.jpg"
+                }
+            ]
         }
     ]
 }
