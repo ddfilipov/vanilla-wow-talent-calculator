@@ -89,7 +89,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
                             handleClick={clickOnNode}
                             maxNodePoints={node.ranks.length}
                             remainingTalentPoints={remainingTalentPoints}
-                        ></TalentNode>
+                            talentIcon={node.talentIcon}
+                        />
                     ))}
                 </TalentTreeGrid>
             </TalentTreeStyled>

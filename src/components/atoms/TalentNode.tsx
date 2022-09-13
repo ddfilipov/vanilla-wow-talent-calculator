@@ -34,6 +34,7 @@ export interface TalentNodeProps {
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
     maxNodePoints: number;
     remainingTalentPoints: number;
+    talentIcon: string;
 }
 
 interface INodePoints {
@@ -43,7 +44,7 @@ interface IBackgroundImage extends INodePoints {
     backgroundImage: string;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints, remainingTalentPoints }) => {
+export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints, remainingTalentPoints, talentIcon }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
 
@@ -62,6 +63,7 @@ export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints, re
         }
     };
 
+    console.log("talentIcon:", talentIcon);
     useEffect(() => {
         maxNodePoints === currentPoints ? setIsNodeCapped(true) : setIsNodeCapped(false);
     }, [currentPoints, maxNodePoints]);
@@ -69,7 +71,8 @@ export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints, re
     return (
         <ButtonContainer>
             <ButtonStyled
-                backgroundImage={foto}
+                // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
+                backgroundImage={talentIcon}
                 isNodeCapped={isNodeCapped}
                 onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
                 onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}

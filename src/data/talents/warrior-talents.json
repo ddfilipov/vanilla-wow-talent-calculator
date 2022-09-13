@@ -20,7 +20,8 @@
                         "rankDescription:": "Reduces hero 3 rage"
                     }
                 ],
-                "unlockedBy": ""
+                "unlockedBy": "",
+                "talentIcon": "../../images/warrior_talent_rend.jpg"
             }]
         },
         {
@@ -47,7 +48,8 @@
                         "rankDescription:": "Increase shout 5%"
                     }
                 ],
-                "unlockedBy": ""
+                "unlockedBy": "",
+                "talentIcon": "../../images/warrior_talent_improved_shield_block.jpg"
             }]
         },
         {
@@ -74,7 +76,8 @@
                         "rankDescription:": "Increase block 5%"
                     }
                 ],
-                "unlockedBy": ""
+                "unlockedBy": "",
+                "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
             }]
         }
     ]

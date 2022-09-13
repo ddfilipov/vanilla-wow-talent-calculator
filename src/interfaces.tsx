@@ -55,6 +55,7 @@ export interface ISpecTalents {
     talentNodeId: number;
     row: number;
     column: number;
+    talentIcon: string;
     ranks: ITalentRanks[];
 }
 
