@@ -10,5 +10,11 @@ const Template: ComponentStory<typeof TalentNode> = (args) => <TalentNode {...ar
 
 // TODO: talentIcon needs to be smth
 export const ClassIconStory: ComponentStory<typeof TalentNode> = () => (
-    <TalentNode maxNodePoints={3} handleClick={() => {}} remainingTalentPoints={5} talentIcon={""}></TalentNode>
+    <TalentNode
+        maxNodePoints={3}
+        handleClick={() => {}}
+        remainingTalentPoints={5}
+        talentIcon={""}
+        talentNode={null as any} // TODO: fix asap!
+    ></TalentNode>
 );

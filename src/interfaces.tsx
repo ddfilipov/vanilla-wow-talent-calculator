@@ -50,6 +50,7 @@ interface ITalentRanks {
     rankDescription: string;
 }
 
+//TODO: rename as ITalentNode
 export interface ISpecTalents {
     talentNodeName: string;
     talentNodeId: number;

@@ -1,11 +1,22 @@
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import foto from "../../images/warrior_talent_rend.jpg";
+import { ISpecTalents } from "../../interfaces";
 
-const ButtonContainer = styled.div`
+interface INodePosition {
+    row: number;
+    column: number;
+}
+
+const ButtonContainer = styled.div<INodePosition>`
     height: 45px;
     width: 45px;
     position: relative;
+    background-color: blue;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -35,6 +46,7 @@ export interface TalentNodeProps {
     maxNodePoints: number;
     remainingTalentPoints: number;
     talentIcon: string;
+    talentNode: ISpecTalents;
 }
 
 interface INodePoints {
@@ -44,7 +56,13 @@ interface IBackgroundImage extends INodePoints {
     backgroundImage: string;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints, remainingTalentPoints, talentIcon }) => {
+export const TalentNode: FC<TalentNodeProps> = ({
+    handleClick,
+    maxNodePoints,
+    remainingTalentPoints,
+    talentIcon,
+    talentNode,
+}) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
 
@@ -69,7 +87,7 @@ export const TalentNode: FC<TalentNodeProps> = ({ handleClick, maxNodePoints, re
     }, [currentPoints, maxNodePoints]);
 
     return (
-        <ButtonContainer>
+        <ButtonContainer row={talentNode.row} column={talentNode.column}>
             <ButtonStyled
                 // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
                 backgroundImage={talentIcon}
