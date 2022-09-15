@@ -2,13 +2,27 @@ import { FC } from "react";
 import styled from "styled-components";
 import { ISpecTalents, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
-import { TalentTreeGrid } from "./TalentTreeGrid";
 
 const Container = styled.div`
     display: grid;
     grid-template-rows: 2rem auto;
     justify-self: stretch;
     color: white;
+`;
+
+const TalentNodesContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-self: stretch;
+    color: white;
+    border: 1px solid white;
+    place-items: center;
+    padding: 1rem;
+    div {
+        /* border: 1px solid white; */
+    }
 `;
 
 // TODO: change this name, lame
@@ -81,7 +95,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <div>X</div>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
-                <TalentTreeGrid>
+                <TalentNodesContainer>
                     {specRanks?.map((node) => (
                         <TalentNode
                             handleClick={clickOnNode}
@@ -90,7 +104,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                             talentIcon={node.talentIcon}
                         />
                     ))}
-                </TalentTreeGrid>
+                </TalentNodesContainer>
             </TalentTreeStyled>
         </Container>
     );
