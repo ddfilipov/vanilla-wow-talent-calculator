@@ -12,11 +12,10 @@ const ButtonContainer = styled.div<INodePosition>`
     height: 45px;
     width: 45px;
     position: relative;
-    background-color: blue;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-row-start: ${(props) => props.row};
+    grid-row-end: ${(props) => props.row + 1};
+    grid-column-start: ${(props) => props.column};
+    grid-column-end: ${(props) => props.column + 1};
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`

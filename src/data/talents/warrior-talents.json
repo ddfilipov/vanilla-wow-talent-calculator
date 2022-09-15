@@ -25,66 +25,66 @@
                     "talentIcon": "../../images/warrior_talent_rend.jpg"
                 },
                 {
-                    "talentNodeName": "Improved Heroic Strike",
-                    "talentNodeId": 1,
-                    "row": 1,
-                    "column": 1,
-                    "ranks": [
-                        {
-                            "rankDescription:": "Reduces hero 1 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 2 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 3 rage"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_rend.jpg"
-                },
-                {
-                    "talentNodeName": "Improved Heroic Strike",
-                    "talentNodeId": 1,
-                    "row": 1,
-                    "column": 1,
-                    "ranks": [
-                        {
-                            "rankDescription:": "Reduces hero 1 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 2 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 3 rage"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_rend.jpg"
-                },
-                {
-                    "talentNodeName": "Improved Heroic Strike",
-                    "talentNodeId": 1,
-                    "row": 1,
-                    "column": 1,
-                    "ranks": [
-                        {
-                            "rankDescription:": "Reduces hero 1 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 2 rage"
-                        },
-                        {
-                            "rankDescription:": "Reduces hero 3 rage"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_rend.jpg"
-                },
-                {
-                    "talentNodeName": "Booming Voice",
+                    "talentNodeName": "Deflection",
                     "talentNodeId": 2,
                     "row": 1,
+                    "column": 2,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Reduces hero 1 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 2 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 3 rage"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                },
+                {
+                    "talentNodeName": "Improved Rend",
+                    "talentNodeId": 3,
+                    "row": 1,
+                    "column": 3,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Reduces hero 1 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 2 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 3 rage"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                },
+                {
+                    "talentNodeName": "Improved Charge",
+                    "talentNodeId": 4,
+                    "row": 2,
+                    "column": 1,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Reduces hero 1 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 2 rage"
+                        },
+                        {
+                            "rankDescription:": "Reduces hero 3 rage"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                },
+                {
+                    "talentNodeName": "Tactical Mastery",
+                    "talentNodeId": 5,
+                    "row": 2,
                     "column": 2,
                     "ranks": [
                         {
@@ -107,9 +107,59 @@
                     "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
                 },
                 {
-                    "talentNodeName": "Booming Voice",
-                    "talentNodeId": 2,
-                    "row": 1,
+                    "talentNodeName": "Improved Thunderclap",
+                    "talentNodeId": 6,
+                    "row": 2,
+                    "column": 4,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Increase shout 1%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 2%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 3%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 4%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 5%"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                },
+                {
+                    "talentNodeName": "Improved Overpower",
+                    "talentNodeId": 7,
+                    "row": 3,
+                    "column": 1,
+                    "ranks": [
+                        {
+                            "rankDescription:": "Increase shout 1%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 2%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 3%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 4%"
+                        },
+                        {
+                            "rankDescription:": "Increase shout 5%"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                },
+                {
+                    "talentNodeName": "Anger Management",
+                    "talentNodeId": 8,
+                    "row": 3,
                     "column": 2,
                     "ranks": [
                         {
@@ -132,35 +182,10 @@
                     "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
                 },
                 {
-                    "talentNodeName": "Booming Voice",
-                    "talentNodeId": 2,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription:": "Increase shout 1%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 2%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 3%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 4%"
-                        },
-                        {
-                            "rankDescription:": "Increase shout 5%"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
-                },
-                {
-                    "talentNodeName": "Booming Voice",
-                    "talentNodeId": 2,
-                    "row": 1,
-                    "column": 2,
+                    "talentNodeName": "Deep Wounds",
+                    "talentNodeId": 9,
+                    "row": 3,
+                    "column": 3,
                     "ranks": [
                         {
                             "rankDescription:": "Increase shout 1%"
