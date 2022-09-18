@@ -123,12 +123,6 @@
                         },
                         {
                             "rankDescription:": "Improved Thunderclap 3 description"
-                        },
-                        {
-                            "rankDescription:": "Improved Thunderclap 5 description"
-                        },
-                        {
-                            "rankDescription:": "Improved Thunderclap 6 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -141,23 +135,14 @@
                     "column": 1,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Improved Overpower rangonumero description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Improved Overpower rangonumero description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_imrpoved_overpower.jpg"
                 },
                 {
                     "talentNodeName": "Anger Management",
@@ -166,23 +151,11 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Anger Management 1 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_overpower.jpg"
                 },
                 {
                     "talentNodeName": "Deep Wounds",
@@ -191,148 +164,121 @@
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Deep Wounds 1 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Deep Wounds 2 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Deep Wounds 3 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_deep_wounds.jpg"
                 },
                 {
-                    "talentNodeName": "Deep Wounds",
+                    "talentNodeName": "Two-Handed Specialization",
                     "talentNodeId": 10,
-                    "row": 3,
-                    "column": 3,
+                    "row": 4,
+                    "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Two-Handed Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Two-Handed Specialization 2 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Two-Handed Specialization 3 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Two-Handed Specialization 4 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Two-Handed Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_two_handed_specialization.jpg"
                 },
                 {
-                    "talentNodeName": "Deep Wounds",
+                    "talentNodeName": "Impale",
                     "talentNodeId": 11,
-                    "row": 3,
+                    "row": 4,
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Impale 1 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Impale 2 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_impale.jpg"
                 },
                 {
-                    "talentNodeName": "Deep Wounds",
+                    "talentNodeName": "Axe Specialization",
                     "talentNodeId": 12,
-                    "row": 3,
-                    "column": 3,
+                    "row": 5,
+                    "column": 1,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Axe Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Axe Specialization 2 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Axe Specialization 3 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Axe Specialization 4 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Axe Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_axe_specialization.jpg"
                 },
                 {
-                    "talentNodeName": "Deep Wounds",
+                    "talentNodeName": "Sweeping Strikes",
                     "talentNodeId": 13,
-                    "row": 3,
-                    "column": 3,
+                    "row": 5,
+                    "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
-                        },
-                        {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Sweeping Strikes 1 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_sweeping_strikes.jpg"
                 },
                 {
-                    "talentNodeName": "Deep Wounds",
+                    "talentNodeName": "Mace Specialization",
                     "talentNodeId": 14,
-                    "row": 3,
+                    "row": 5,
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Mace Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Mace Specialization 2 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Mace Specialization 3 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Mace Specialization 4 description"
                         },
                         {
-                            "rankDescription:": "palabra rangonumero description"
+                            "rankDescription:": "Mace Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_mace_specialization.jpg"
                 },
                 {
                     "talentNodeName": "Sword Specialization",
