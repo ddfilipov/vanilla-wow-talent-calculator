@@ -22,7 +22,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_rend.jpg"
                 },
                 {
                     "talentNodeName": "Deflection",
@@ -41,7 +41,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_rend.jpg"
                 },
                 {
                     "talentNodeName": "Improved Rend",
@@ -60,7 +60,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_rend.jpg"
                 },
                 {
                     "talentNodeName": "Improved Charge",
@@ -79,7 +79,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_rend.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_rend.jpg"
                 },
                 {
                     "talentNodeName": "Tactical Mastery",
@@ -104,7 +104,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
                     "talentNodeName": "Improved Thunderclap",
@@ -129,7 +129,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
                     "talentNodeName": "Improved Overpower",
@@ -154,7 +154,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
                     "talentNodeName": "Anger Management",
@@ -179,7 +179,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
                     "talentNodeName": "Deep Wounds",
@@ -204,7 +204,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 }
             ]
         },
@@ -234,7 +234,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
                     "talentNodeName": "Booming Voice",
@@ -259,7 +259,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
                     "talentNodeName": "Booming Voice",
@@ -284,7 +284,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_booming_voice.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 }
             ]
         },
@@ -314,7 +314,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
                 },
                 {
                     "talentNodeName": "Shield Specialization",
@@ -339,7 +339,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
                 }
             ]
         }
