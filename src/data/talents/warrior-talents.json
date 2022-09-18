@@ -82,7 +82,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_chagre.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_charge.jpg"
                 },
                 {
                     "talentNodeName": "Tactical Mastery",
@@ -142,7 +142,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_imrpoved_overpower.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_overpower.jpg"
                 },
                 {
                     "talentNodeName": "Anger Management",
