@@ -80,7 +80,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
         }
     };
 
-    console.log("talentIcon:", talentIcon);
     useEffect(() => {
         maxNodePoints === currentPoints ? setIsNodeCapped(true) : setIsNodeCapped(false);
     }, [currentPoints, maxNodePoints]);
