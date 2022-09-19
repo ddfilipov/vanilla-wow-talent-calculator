@@ -155,7 +155,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_overpower.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_anger_management.jpg"
                 },
                 {
                     "talentNodeName": "Deep Wounds",
@@ -308,8 +308,8 @@
                 {
                     "talentNodeName": "Polearm Specialization",
                     "talentNodeId": 16,
-                    "row": 3,
-                    "column": 3,
+                    "row": 6,
+                    "column": 1,
                     "ranks": [
                         {
                             "rankDescription:": "Polearm Specialization 1 description"
