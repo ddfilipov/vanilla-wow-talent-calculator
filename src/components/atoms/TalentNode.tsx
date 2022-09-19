@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import foto from "../../images/warrior_talent_rend.jpg";
 import { ISpecTalents } from "../../interfaces";
+import { NodeTooltip } from "./NodeTooltip";
 
 interface INodePosition {
     row: number;
@@ -100,7 +101,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
             />
             <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
-            {showTooltip && <p>SHOWING NODE TOOLTIP!!!</p>}
+            {showTooltip && <NodeTooltip />}
         </ButtonContainer>
     );
 };
