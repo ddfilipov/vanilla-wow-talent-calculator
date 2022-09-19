@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { NodeDescription } from "./NodeDescription";
+import { NodeTooltip } from "./NodeTooltip";
 import warriorIcon from "../../images/class_warrior.jpg";
 
 export default {
     title: "NodeDescription",
-    component: NodeDescription,
-} as ComponentMeta<typeof NodeDescription>;
+    component: NodeTooltip,
+} as ComponentMeta<typeof NodeTooltip>;
 
-const Template: ComponentStory<typeof NodeDescription> = (args) => <NodeDescription {...args} />;
+const Template: ComponentStory<typeof NodeTooltip> = (args) => <NodeTooltip {...args} />;
 
-export const ClassIconStory: ComponentStory<typeof NodeDescription> = () => <NodeDescription></NodeDescription>;
+export const ClassIconStory: ComponentStory<typeof NodeTooltip> = () => <NodeTooltip></NodeTooltip>;
