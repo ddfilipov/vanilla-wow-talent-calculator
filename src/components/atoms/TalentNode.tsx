@@ -64,6 +64,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
+    const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (currentPoints < maxNodePoints && remainingTalentPoints > 0) {
@@ -85,15 +86,21 @@ export const TalentNode: FC<TalentNodeProps> = ({
     }, [currentPoints, maxNodePoints]);
 
     return (
-        <ButtonContainer row={talentNode.row} column={talentNode.column}>
+        <ButtonContainer
+            row={talentNode.row}
+            column={talentNode.column}
+            onMouseEnter={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
+        >
             <ButtonStyled
                 // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
                 backgroundImage={talentIcon}
                 isNodeCapped={isNodeCapped}
                 onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
                 onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
-            ></ButtonStyled>
+            />
             <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
+            {showTooltip && <p>SHOWING NODE TOOLTIP!!!</p>}
         </ButtonContainer>
     );
 };
