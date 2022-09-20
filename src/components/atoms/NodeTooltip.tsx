@@ -10,10 +10,11 @@ const Container = styled.div`
     z-index: 6;
 `;
 
-interface NodeTooltipProps{
+interface NodeTooltipProps {
     nodeFields: ISpecTalents;
+    currentNodeRank: number;
 }
 
-export const NodeTooltip: FC<NodeTooltipProps> = ({nodeFields}) => {
+export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank }) => {
     return <Container>I'M A TOOLTIP!</Container>;
 };

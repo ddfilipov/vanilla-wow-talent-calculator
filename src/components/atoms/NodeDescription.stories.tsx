@@ -11,5 +11,5 @@ const Template: ComponentStory<typeof NodeTooltip> = (args) => <NodeTooltip {...
 
 export const ClassIconStory: ComponentStory<typeof NodeTooltip> = () => (
     // TODO: fix as any
-    <NodeTooltip nodeFields={null as any}></NodeTooltip>
+    <NodeTooltip nodeFields={null as any} currentNodeRank={0}></NodeTooltip>
 );

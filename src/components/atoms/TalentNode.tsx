@@ -101,7 +101,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
             />
             <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
-            {showTooltip && <NodeTooltip nodeFields={talentNode} />}
+            {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
         </ButtonContainer>
     );
 };
