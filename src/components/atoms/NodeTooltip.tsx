@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
+import { ISpecTalents } from "../../interfaces";
 
 const Container = styled.div`
     border: 1px solid white;
@@ -9,6 +10,10 @@ const Container = styled.div`
     z-index: 6;
 `;
 
-export const NodeTooltip: FC = ({}) => {
+interface NodeTooltipProps{
+    nodeFields: ISpecTalents;
+}
+
+export const NodeTooltip: FC<NodeTooltipProps> = ({nodeFields}) => {
     return <Container>I'M A TOOLTIP!</Container>;
 };

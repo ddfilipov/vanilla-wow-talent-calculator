@@ -9,4 +9,7 @@ export default {
 
 const Template: ComponentStory<typeof NodeTooltip> = (args) => <NodeTooltip {...args} />;
 
-export const ClassIconStory: ComponentStory<typeof NodeTooltip> = () => <NodeTooltip></NodeTooltip>;
+export const ClassIconStory: ComponentStory<typeof NodeTooltip> = () => (
+    // TODO: fix as any
+    <NodeTooltip nodeFields={null as any}></NodeTooltip>
+);
