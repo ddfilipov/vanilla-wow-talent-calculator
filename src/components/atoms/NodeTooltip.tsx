@@ -16,5 +16,10 @@ interface NodeTooltipProps {
 }
 
 export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank }) => {
-    return <Container>I'M A TOOLTIP!</Container>;
+    return (
+        <Container>
+            <div>{nodeFields.talentNodeName}</div>
+            <div>Rank {currentNodeRank + 1}</div>
+        </Container>
+    );
 };
