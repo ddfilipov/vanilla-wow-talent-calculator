@@ -17,11 +17,7 @@ export const ClassChooser: FC = () => {
         <>
             <Container>
                 {classes.ayuda.map((clase) => (
-                    <ClassIcon
-                        href={`/${clase.class.name}`}
-                        src={clase.class.src}
-                        key={clase.class.name}
-                    />
+                    <ClassIcon href={`/${clase.class.name}`} src={clase.class.src} key={clase.class.name} />
                 ))}
             </Container>
         </>
