@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-import { ISpecTalents } from "../../interfaces";
+import { ISpecTalents, ITalentRanks } from "../../interfaces";
 
 interface NodeTooltipStyle {
     maxTalentRanks: number;
@@ -27,15 +27,10 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
     };
 
     const mapCurrentRank = () => {
-        console.log(nodeFields.ranks[0].rankDescription);
-        return <></>
-        // return <p>a</p>;
-        // const currentRankDescription: string = nodeFields.ranks.find((rank) => rank.rankDescription[0]);
-        // return <p>{currentRankDescription}</p>;
-        // return nodeFields.ranks.map((rank, index) => {
-        //     // <p>{rank.rankDescription}</p>;
-        //     console.log("helloooooo", rank)
-        // });
+        const description = nodeFields.ranks.find((talent, index) => index === currentNodeRank );
+        console.log("description?.rankDescription:", description && description.rankDescription);
+        console.log("description:", description);
+        return <div>{description?.rankDescription}</div>;
     };
 
     return (

@@ -46,7 +46,7 @@ export interface ITalentNode {
     ranks: ITalentNodeRanks[];
     unlockedBy: number; // this talent depends on another one to be unlocked (arrow thing)
 }
-interface ITalentRanks {
+export interface ITalentRanks {
     rankDescription: string;
 }
 
