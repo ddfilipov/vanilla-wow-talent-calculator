@@ -27,6 +27,8 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
     };
 
     const mapCurrentRank = () => {
+        console.log(nodeFields.ranks[0].rankDescription);
+        return <></>
         // return <p>a</p>;
         // const currentRankDescription: string = nodeFields.ranks.find((rank) => rank.rankDescription[0]);
         // return <p>{currentRankDescription}</p>;
@@ -41,7 +43,7 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
             <div>{nodeFields.talentNodeName}</div>
             <div>Rank {getNextRank()}</div>
             {/* {mapCurrentRank} if I uncomment this I get an error. Investigade*/}
-            {/* {mapCurrentRank()} */}
+            {mapCurrentRank()}
         </Container>
     );
 };
