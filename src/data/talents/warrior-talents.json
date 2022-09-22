@@ -12,13 +12,13 @@
                     "column": 1,
                     "ranks": [
                         {
-                            "rankDescription:": "Reduces the cost of your Heroic Strike ability by 1 rage point."
+                            "rankDescription": "Reduces the cost of your Heroic Strike ability by 1 rage point."
                         },
                         {
-                            "rankDescription:": "Reduces the cost of your Heroic Strike ability by 2 rage points"
+                            "rankDescription": "Reduces the cost of your Heroic Strike ability by 2 rage points"
                         },
                         {
-                            "rankDescription:": "Reduces the cost of your Heroic Strike ability by 3 rage points"
+                            "rankDescription": "Reduces the cost of your Heroic Strike ability by 3 rage points"
                         }
                     ],
                     "unlockedBy": "",
@@ -31,19 +31,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Deflection 1 description"
+                            "rankDescription": "Deflection 1 description"
                         },
                         {
-                            "rankDescription:": "Deflection 2 description"
+                            "rankDescription": "Deflection 2 description"
                         },
                         {
-                            "rankDescription:": "Deflection 3 description"
+                            "rankDescription": "Deflection 3 description"
                         },
                         {
-                            "rankDescription:": "Deflection 4 description"
+                            "rankDescription": "Deflection 4 description"
                         },
                         {
-                            "rankDescription:": "Deflection 5 description"
+                            "rankDescription": "Deflection 5 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -56,13 +56,13 @@
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "Improved Rend 1 description"
+                            "rankDescription": "Improved Rend 1 description"
                         },
                         {
-                            "rankDescription:": "Improved Rend 2 description"
+                            "rankDescription": "Improved Rend 2 description"
                         },
                         {
-                            "rankDescription:": "Improved Rend 3 description"
+                            "rankDescription": "Improved Rend 3 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -75,10 +75,10 @@
                     "column": 1,
                     "ranks": [
                         {
-                            "rankDescription:": "Improved Charge 1 description"
+                            "rankDescription": "Improved Charge 1 description"
                         },
                         {
-                            "rankDescription:": "Improved Charge 2 description"
+                            "rankDescription": "Improved Charge 2 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -91,19 +91,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Tactical Mastery 1 description"
+                            "rankDescription": "Tactical Mastery 1 description"
                         },
                         {
-                            "rankDescription:": "Tactical Mastery 2 description"
+                            "rankDescription": "Tactical Mastery 2 description"
                         },
                         {
-                            "rankDescription:": "Tactical Mastery 3 description"
+                            "rankDescription": "Tactical Mastery 3 description"
                         },
                         {
-                            "rankDescription:": "Tactical Mastery 4 description"
+                            "rankDescription": "Tactical Mastery 4 description"
                         },
                         {
-                            "rankDescription:": "Tactical Mastery 5 description"
+                            "rankDescription": "Tactical Mastery 5 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -116,13 +116,13 @@
                     "column": 4,
                     "ranks": [
                         {
-                            "rankDescription:": "Improved Thunderclap 1 description"
+                            "rankDescription": "Improved Thunderclap 1 description"
                         },
                         {
-                            "rankDescription:": "Improved Thunderclap 2 description"
+                            "rankDescription": "Improved Thunderclap 2 description"
                         },
                         {
-                            "rankDescription:": "Improved Thunderclap 3 description"
+                            "rankDescription": "Improved Thunderclap 3 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -135,10 +135,10 @@
                     "column": 1,
                     "ranks": [
                         {
-                            "rankDescription:": "Improved Overpower rangonumero description"
+                            "rankDescription": "Improved Overpower rangonumero description"
                         },
                         {
-                            "rankDescription:": "Improved Overpower rangonumero description"
+                            "rankDescription": "Improved Overpower rangonumero description"
                         }
                     ],
                     "unlockedBy": "",
@@ -151,7 +151,7 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Anger Management 1 description"
+                            "rankDescription": "Anger Management 1 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -164,13 +164,13 @@
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "Deep Wounds 1 description"
+                            "rankDescription": "Deep Wounds 1 description"
                         },
                         {
-                            "rankDescription:": "Deep Wounds 2 description"
+                            "rankDescription": "Deep Wounds 2 description"
                         },
                         {
-                            "rankDescription:": "Deep Wounds 3 description"
+                            "rankDescription": "Deep Wounds 3 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -183,19 +183,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Two-Handed Specialization 1 description"
+                            "rankDescription": "Two-Handed Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Two-Handed Specialization 2 description"
+                            "rankDescription": "Two-Handed Specialization 2 description"
                         },
                         {
-                            "rankDescription:": "Two-Handed Specialization 3 description"
+                            "rankDescription": "Two-Handed Specialization 3 description"
                         },
                         {
-                            "rankDescription:": "Two-Handed Specialization 4 description"
+                            "rankDescription": "Two-Handed Specialization 4 description"
                         },
                         {
-                            "rankDescription:": "Two-Handed Specialization 5 description"
+                            "rankDescription": "Two-Handed Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -208,10 +208,10 @@
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "Impale 1 description"
+                            "rankDescription": "Impale 1 description"
                         },
                         {
-                            "rankDescription:": "Impale 2 description"
+                            "rankDescription": "Impale 2 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -224,19 +224,19 @@
                     "column": 1,
                     "ranks": [
                         {
-                            "rankDescription:": "Axe Specialization 1 description"
+                            "rankDescription": "Axe Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Axe Specialization 2 description"
+                            "rankDescription": "Axe Specialization 2 description"
                         },
                         {
-                            "rankDescription:": "Axe Specialization 3 description"
+                            "rankDescription": "Axe Specialization 3 description"
                         },
                         {
-                            "rankDescription:": "Axe Specialization 4 description"
+                            "rankDescription": "Axe Specialization 4 description"
                         },
                         {
-                            "rankDescription:": "Axe Specialization 5 description"
+                            "rankDescription": "Axe Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -249,7 +249,7 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Sweeping Strikes 1 description"
+                            "rankDescription": "Sweeping Strikes 1 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -262,19 +262,19 @@
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "Mace Specialization 1 description"
+                            "rankDescription": "Mace Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Mace Specialization 2 description"
+                            "rankDescription": "Mace Specialization 2 description"
                         },
                         {
-                            "rankDescription:": "Mace Specialization 3 description"
+                            "rankDescription": "Mace Specialization 3 description"
                         },
                         {
-                            "rankDescription:": "Mace Specialization 4 description"
+                            "rankDescription": "Mace Specialization 4 description"
                         },
                         {
-                            "rankDescription:": "Mace Specialization 5 description"
+                            "rankDescription": "Mace Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -287,19 +287,19 @@
                     "column": 4,
                     "ranks": [
                         {
-                            "rankDescription:": "Sword Specialization 1 description"
+                            "rankDescription": "Sword Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Sword Specialization 1 description"
+                            "rankDescription": "Sword Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Sword Specialization 1 description"
+                            "rankDescription": "Sword Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Sword Specialization 1 description"
+                            "rankDescription": "Sword Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Sword Specialization 1 description"
+                            "rankDescription": "Sword Specialization 1 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -312,19 +312,19 @@
                     "column": 1,
                     "ranks": [
                         {
-                            "rankDescription:": "Polearm Specialization 1 description"
+                            "rankDescription": "Polearm Specialization 1 description"
                         },
                         {
-                            "rankDescription:": "Polearm Specialization 2 description"
+                            "rankDescription": "Polearm Specialization 2 description"
                         },
                         {
-                            "rankDescription:": "Polearm Specialization 3 description"
+                            "rankDescription": "Polearm Specialization 3 description"
                         },
                         {
-                            "rankDescription:": "Polearm Specialization 4 description"
+                            "rankDescription": "Polearm Specialization 4 description"
                         },
                         {
-                            "rankDescription:": "Polearm Specialization 5 description"
+                            "rankDescription": "Polearm Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -337,13 +337,13 @@
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription:": "Improved Hamstring 1 description"
+                            "rankDescription": "Improved Hamstring 1 description"
                         },
                         {
-                            "rankDescription:": "Improved Hamstring 2 description"
+                            "rankDescription": "Improved Hamstring 2 description"
                         },
                         {
-                            "rankDescription:": "Improved Hamstring 3 description"
+                            "rankDescription": "Improved Hamstring 3 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -356,7 +356,7 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Mortal Strike 1 description"
+                            "rankDescription": "Mortal Strike 1 description"
                         }
                     ],
                     "unlockedBy": "",
@@ -374,19 +374,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Increase shout 1%"
+                            "rankDescription": "Increase shout 1%"
                         },
                         {
-                            "rankDescription:": "Increase shout 2%"
+                            "rankDescription": "Increase shout 2%"
                         },
                         {
-                            "rankDescription:": "Increase shout 3%"
+                            "rankDescription": "Increase shout 3%"
                         },
                         {
-                            "rankDescription:": "Increase shout 4%"
+                            "rankDescription": "Increase shout 4%"
                         },
                         {
-                            "rankDescription:": "Increase shout 5%"
+                            "rankDescription": "Increase shout 5%"
                         }
                     ],
                     "unlockedBy": "",
@@ -399,19 +399,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Increase shout 1%"
+                            "rankDescription": "Increase shout 1%"
                         },
                         {
-                            "rankDescription:": "Increase shout 2%"
+                            "rankDescription": "Increase shout 2%"
                         },
                         {
-                            "rankDescription:": "Increase shout 3%"
+                            "rankDescription": "Increase shout 3%"
                         },
                         {
-                            "rankDescription:": "Increase shout 4%"
+                            "rankDescription": "Increase shout 4%"
                         },
                         {
-                            "rankDescription:": "Increase shout 5%"
+                            "rankDescription": "Increase shout 5%"
                         }
                     ],
                     "unlockedBy": "",
@@ -424,19 +424,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Increase shout 1%"
+                            "rankDescription": "Increase shout 1%"
                         },
                         {
-                            "rankDescription:": "Increase shout 2%"
+                            "rankDescription": "Increase shout 2%"
                         },
                         {
-                            "rankDescription:": "Increase shout 3%"
+                            "rankDescription": "Increase shout 3%"
                         },
                         {
-                            "rankDescription:": "Increase shout 4%"
+                            "rankDescription": "Increase shout 4%"
                         },
                         {
-                            "rankDescription:": "Increase shout 5%"
+                            "rankDescription": "Increase shout 5%"
                         }
                     ],
                     "unlockedBy": "",
@@ -454,19 +454,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Increase block 1%"
+                            "rankDescription": "Increase block 1%"
                         },
                         {
-                            "rankDescription:": "Increase block 2%"
+                            "rankDescription": "Increase block 2%"
                         },
                         {
-                            "rankDescription:": "Increase block 3%"
+                            "rankDescription": "Increase block 3%"
                         },
                         {
-                            "rankDescription:": "Increase block 4%"
+                            "rankDescription": "Increase block 4%"
                         },
                         {
-                            "rankDescription:": "Increase block 5%"
+                            "rankDescription": "Increase block 5%"
                         }
                     ],
                     "unlockedBy": "",
@@ -479,19 +479,19 @@
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription:": "Increase block 1%"
+                            "rankDescription": "Increase block 1%"
                         },
                         {
-                            "rankDescription:": "Increase block 2%"
+                            "rankDescription": "Increase block 2%"
                         },
                         {
-                            "rankDescription:": "Increase block 3%"
+                            "rankDescription": "Increase block 3%"
                         },
                         {
-                            "rankDescription:": "Increase block 4%"
+                            "rankDescription": "Increase block 4%"
                         },
                         {
-                            "rankDescription:": "Increase block 5%"
+                            "rankDescription": "Increase block 5%"
                         }
                     ],
                     "unlockedBy": "",
