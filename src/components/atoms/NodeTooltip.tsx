@@ -8,8 +8,8 @@ interface NodeTooltipStyle {
 
 const Container = styled.div<NodeTooltipStyle>`
     display: grid;
-    grid-template-columns: [c1-start] 40px [c2] 40px [c3-end];
-    grid-template-rows: [r1-start] 40px [r2] 40px [r3] 40px [r4];
+    grid-template-columns: [c1-start] auto [c2] auto [c3-end];
+    grid-template-rows: [r1-start] auto [r2] auto [r3] auto [r4];
     border: 1px solid white;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
@@ -19,10 +19,34 @@ const Container = styled.div<NodeTooltipStyle>`
 
 const TalentNameStyled = styled.div`
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
     background-color: red;
+`;
+
+const RankStyled = styled.div`
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: blue;
+`;
+
+const DescriptionStyled = styled.div`
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: green;
+`;
+
+const InfoStyled = styled.div`
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: yellow;
 `;
 
 interface NodeTooltipProps {
@@ -39,14 +63,15 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
 
     const mapCurrentRank = () => {
         const description = nodeFields.ranks.find((talent, index) => index === currentNodeRank);
-        return <div>{description?.rankDescription}</div>;
+        return <DescriptionStyled>{description?.rankDescription}</DescriptionStyled>;
     };
 
     return (
         <Container maxTalentRanks={nodeFields.ranks.length}>
             <TalentNameStyled>{nodeFields.talentNodeName}</TalentNameStyled>
-            <div>Rank {getNextRank()}</div>
+            <RankStyled>Rank {getNextRank()}</RankStyled>
             {mapCurrentRank()}
+            <InfoStyled>Click to level up</InfoStyled>
         </Container>
     );
 };
