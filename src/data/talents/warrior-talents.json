@@ -369,7 +369,7 @@
             "talents": [
                 {
                     "talentNodeName": "Improved Heroic Strike",
-                    "talentNodeId": 1,
+                    "talentNodeId": 19,
                     "row": 1,
                     "column": 1,
                     "ranks": [
@@ -388,7 +388,7 @@
                 },
                 {
                     "talentNodeName": "Deflection",
-                    "talentNodeId": 2,
+                    "talentNodeId": 20,
                     "row": 1,
                     "column": 2,
                     "ranks": [
@@ -413,7 +413,7 @@
                 },
                 {
                     "talentNodeName": "Improved Rend",
-                    "talentNodeId": 3,
+                    "talentNodeId": 21,
                     "row": 1,
                     "column": 3,
                     "ranks": [
@@ -432,7 +432,7 @@
                 },
                 {
                     "talentNodeName": "Improved Charge",
-                    "talentNodeId": 4,
+                    "talentNodeId": 22,
                     "row": 2,
                     "column": 1,
                     "ranks": [
@@ -448,7 +448,7 @@
                 },
                 {
                     "talentNodeName": "Tactical Mastery",
-                    "talentNodeId": 5,
+                    "talentNodeId": 23,
                     "row": 2,
                     "column": 2,
                     "ranks": [
@@ -473,7 +473,7 @@
                 },
                 {
                     "talentNodeName": "Improved Thunderclap",
-                    "talentNodeId": 6,
+                    "talentNodeId": 24,
                     "row": 2,
                     "column": 4,
                     "ranks": [
@@ -492,7 +492,7 @@
                 },
                 {
                     "talentNodeName": "Improved Overpower",
-                    "talentNodeId": 7,
+                    "talentNodeId": 25,
                     "row": 3,
                     "column": 1,
                     "ranks": [
@@ -508,7 +508,7 @@
                 },
                 {
                     "talentNodeName": "Anger Management",
-                    "talentNodeId": 8,
+                    "talentNodeId": 26,
                     "row": 3,
                     "column": 2,
                     "ranks": [
@@ -521,7 +521,7 @@
                 },
                 {
                     "talentNodeName": "Deep Wounds",
-                    "talentNodeId": 9,
+                    "talentNodeId": 27,
                     "row": 3,
                     "column": 3,
                     "ranks": [
@@ -540,7 +540,7 @@
                 },
                 {
                     "talentNodeName": "Two-Handed Specialization",
-                    "talentNodeId": 10,
+                    "talentNodeId": 28,
                     "row": 4,
                     "column": 2,
                     "ranks": [
@@ -565,7 +565,7 @@
                 },
                 {
                     "talentNodeName": "Impale",
-                    "talentNodeId": 11,
+                    "talentNodeId": 29,
                     "row": 4,
                     "column": 3,
                     "ranks": [
@@ -581,7 +581,7 @@
                 },
                 {
                     "talentNodeName": "Axe Specialization",
-                    "talentNodeId": 12,
+                    "talentNodeId": 30,
                     "row": 5,
                     "column": 1,
                     "ranks": [
@@ -606,7 +606,7 @@
                 },
                 {
                     "talentNodeName": "Sweeping Strikes",
-                    "talentNodeId": 13,
+                    "talentNodeId": 31,
                     "row": 5,
                     "column": 2,
                     "ranks": [
@@ -619,7 +619,7 @@
                 },
                 {
                     "talentNodeName": "Mace Specialization",
-                    "talentNodeId": 14,
+                    "talentNodeId": 32,
                     "row": 5,
                     "column": 3,
                     "ranks": [
@@ -644,7 +644,7 @@
                 },
                 {
                     "talentNodeName": "Sword Specialization",
-                    "talentNodeId": 15,
+                    "talentNodeId": 33,
                     "row": 5,
                     "column": 4,
                     "ranks": [
@@ -669,7 +669,7 @@
                 },
                 {
                     "talentNodeName": "Polearm Specialization",
-                    "talentNodeId": 16,
+                    "talentNodeId": 34,
                     "row": 6,
                     "column": 1,
                     "ranks": [
@@ -694,7 +694,7 @@
                 },
                 {
                     "talentNodeName": "Improved Hamstring",
-                    "talentNodeId": 17,
+                    "talentNodeId": 35,
                     "row": 6,
                     "column": 3,
                     "ranks": [
@@ -713,7 +713,7 @@
                 },
                 {
                     "talentNodeName": "Mortal Strike",
-                    "talentNodeId": 18,
+                    "talentNodeId": 36,
                     "row": 7,
                     "column": 2,
                     "ranks": [
@@ -731,7 +731,7 @@
             "talents": [
                 {
                     "talentNodeName": "Shield Specialization",
-                    "talentNodeId": 3,
+                    "talentNodeId": 37,
                     "row": 1,
                     "column": 2,
                     "ranks": [
@@ -756,7 +756,7 @@
                 },
                 {
                     "talentNodeName": "Shield Specialization",
-                    "talentNodeId": 3,
+                    "talentNodeId": 38,
                     "row": 1,
                     "column": 2,
                     "ranks": [
