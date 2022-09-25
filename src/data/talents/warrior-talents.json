@@ -360,7 +360,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_mortal_strike.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 }
             ]
         },
@@ -368,7 +368,7 @@
             "specId": "secondSpec",
             "talents": [
                 {
-                    "talentNodeName": "Improved Heroic Strike",
+                    "talentNodeName": "warrior_talent_booming_voice",
                     "talentNodeId": 19,
                     "row": 1,
                     "column": 1,
@@ -384,10 +384,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_heroic_strike.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
-                    "talentNodeName": "Deflection",
+                    "talentNodeName": "warrior_talent_cruelty",
                     "talentNodeId": 20,
                     "row": 1,
                     "column": 2,
@@ -409,10 +409,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_deflection.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_cruelty.jpg"
                 },
                 {
-                    "talentNodeName": "Improved Rend",
+                    "talentNodeName": "warrior_talent_improved_demoralizing_shout",
                     "talentNodeId": 21,
                     "row": 1,
                     "column": 3,
@@ -428,10 +428,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_rend.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_demoralizing_shout.jpg"
                 },
                 {
-                    "talentNodeName": "Improved Charge",
+                    "talentNodeName": "warrior_talent_unbridled_wrath",
                     "talentNodeId": 22,
                     "row": 2,
                     "column": 1,
@@ -444,10 +444,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_charge.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_unbridled_wrath.jpg"
                 },
                 {
-                    "talentNodeName": "Tactical Mastery",
+                    "talentNodeName": "warrior_talent_improved_cleave",
                     "talentNodeId": 23,
                     "row": 2,
                     "column": 2,
@@ -469,10 +469,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_tactical_mastery.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_cleave.jpg"
                 },
                 {
-                    "talentNodeName": "Improved Thunderclap",
+                    "talentNodeName": "warrior_talent_piercing_howl",
                     "talentNodeId": 24,
                     "row": 2,
                     "column": 4,
@@ -488,10 +488,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_thunderclap.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_piercing_howl.jpg"
                 },
                 {
-                    "talentNodeName": "Improved Overpower",
+                    "talentNodeName": "warrior_talent_blood_craze",
                     "talentNodeId": 25,
                     "row": 3,
                     "column": 1,
@@ -504,10 +504,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_overpower.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_blood_craze.jpg"
                 },
                 {
-                    "talentNodeName": "Anger Management",
+                    "talentNodeName": "warrior_talent_battleshout",
                     "talentNodeId": 26,
                     "row": 3,
                     "column": 2,
@@ -517,10 +517,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_anger_management.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_battleshout.jpg"
                 },
                 {
-                    "talentNodeName": "Deep Wounds",
+                    "talentNodeName": "warrior_talent_dual_wield_specialization",
                     "talentNodeId": 27,
                     "row": 3,
                     "column": 3,
@@ -536,10 +536,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_deep_wounds.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_dual_wield_specialization.jpg"
                 },
                 {
-                    "talentNodeName": "Two-Handed Specialization",
+                    "talentNodeName": "warrior_talent_improved_execute",
                     "talentNodeId": 28,
                     "row": 4,
                     "column": 2,
@@ -561,10 +561,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_two_handed_specialization.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_execute.jpg"
                 },
                 {
-                    "talentNodeName": "Impale",
+                    "talentNodeName": "warrior_talent_enrage",
                     "talentNodeId": 29,
                     "row": 4,
                     "column": 3,
@@ -577,10 +577,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_impale.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_enrage.jpg"
                 },
                 {
-                    "talentNodeName": "Axe Specialization",
+                    "talentNodeName": "warrior_talent_improved_slam",
                     "talentNodeId": 30,
                     "row": 5,
                     "column": 1,
@@ -602,10 +602,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_axe_specialization.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_slam.jpg"
                 },
                 {
-                    "talentNodeName": "Sweeping Strikes",
+                    "talentNodeName": "warrior_talent_death_wish",
                     "talentNodeId": 31,
                     "row": 5,
                     "column": 2,
@@ -615,10 +615,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_sweeping_strikes.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_death_wish.jpg"
                 },
                 {
-                    "talentNodeName": "Mace Specialization",
+                    "talentNodeName": "warrior_talent_improved_intercept",
                     "talentNodeId": 32,
                     "row": 5,
                     "column": 3,
@@ -640,10 +640,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_mace_specialization.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_intercept.jpg"
                 },
                 {
-                    "talentNodeName": "Sword Specialization",
+                    "talentNodeName": "warrior_talent_improved_berserker_rage",
                     "talentNodeId": 33,
                     "row": 5,
                     "column": 4,
@@ -665,10 +665,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_sword_specialization.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_berserker_rage.jpg"
                 },
                 {
-                    "talentNodeName": "Polearm Specialization",
+                    "talentNodeName": "warrior_talent_flurry",
                     "talentNodeId": 34,
                     "row": 6,
                     "column": 1,
@@ -690,10 +690,10 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_polearm_specialization.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_flurry.jpg"
                 },
                 {
-                    "talentNodeName": "Improved Hamstring",
+                    "talentNodeName": "warrior_talent_bloodthirst",
                     "talentNodeId": 35,
                     "row": 6,
                     "column": 3,
@@ -709,20 +709,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_hamstring.jpg"
-                },
-                {
-                    "talentNodeName": "Mortal Strike",
-                    "talentNodeId": 36,
-                    "row": 7,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription": "Mortal Strike 1 description"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_mortal_strike.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_bloodthirst.jpg"
                 }
             ]
         },
@@ -731,7 +718,7 @@
             "talents": [
                 {
                     "talentNodeName": "Shield Specialization",
-                    "talentNodeId": 37,
+                    "talentNodeId": 36,
                     "row": 1,
                     "column": 2,
                     "ranks": [
