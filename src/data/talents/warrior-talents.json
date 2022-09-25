@@ -729,29 +729,29 @@
             "specId": "thirdSpec",
             "talents": [
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "Shield Specialization",
                     "talentNodeId": 36,
                     "row": 1,
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
+                            "rankDescription": "Shield Specialization 1 description"
                         },
                         {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
+                            "rankDescription": "Shield Specialization 2 description"
                         },
                         {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
+                            "rankDescription": "Shield Specialization 3 description"
                         },
                         {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
+                            "rankDescription": "Shield Specialization 4 description"
                         },
                         {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
+                            "rankDescription": "Shield Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_shield_specialization.jpg"
                 },
                 {
                     "talentNodeName": "yyyyyyyyyyyyyy",
@@ -1152,7 +1152,7 @@
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
-                },
+                }
             ]
         }
     ]
