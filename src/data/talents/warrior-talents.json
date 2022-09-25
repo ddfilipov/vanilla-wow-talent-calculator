@@ -755,7 +755,7 @@
                 },
                 {
                     "talentNodeName": "Anticipation",
-                    "talentNodeId": 36,
+                    "talentNodeId": 37,
                     "row": 1,
                     "column": 3,
                     "ranks": [
@@ -780,7 +780,7 @@
                 },
                 {
                     "talentNodeName": "Improved Bloodrage",
-                    "talentNodeId": 36,
+                    "talentNodeId": 38,
                     "row": 2,
                     "column": 1,
                     "ranks": [
@@ -796,7 +796,7 @@
                 },
                 {
                     "talentNodeName": "Toughness",
-                    "talentNodeId": 36,
+                    "talentNodeId": 39,
                     "row": 2,
                     "column": 3,
                     "ranks": [
@@ -821,7 +821,7 @@
                 },
                 {
                     "talentNodeName": "Iron Will",
-                    "talentNodeId": 36,
+                    "talentNodeId": 40,
                     "row": 2,
                     "column": 4,
                     "ranks": [
@@ -846,7 +846,7 @@
                 },
                 {
                     "talentNodeName": "Last Stand",
-                    "talentNodeId": 36,
+                    "talentNodeId": 41,
                     "row": 3,
                     "column": 1,
                     "ranks": [
@@ -859,7 +859,7 @@
                 },
                 {
                     "talentNodeName": "Improved Shield Block",
-                    "talentNodeId": 36,
+                    "talentNodeId": 42,
                     "row": 3,
                     "column": 2,
                     "ranks": [
@@ -878,7 +878,7 @@
                 },
                 {
                     "talentNodeName": "Improved Revenge",
-                    "talentNodeId": 36,
+                    "talentNodeId": 43,
                     "row": 3,
                     "column": 3,
                     "ranks": [
@@ -897,7 +897,7 @@
                 },
                 {
                     "talentNodeName": "Defiance",
-                    "talentNodeId": 36,
+                    "talentNodeId": 44,
                     "row": 3,
                     "column": 4,
                     "ranks": [
@@ -922,7 +922,7 @@
                 },
                 {
                     "talentNodeName": "Improved Sunder Armor",
-                    "talentNodeId": 36,
+                    "talentNodeId": 45,
                     "row": 4,
                     "column": 1,
                     "ranks": [
@@ -941,7 +941,7 @@
                 },
                 {
                     "talentNodeName": "Improved Disarm",
-                    "talentNodeId": 36,
+                    "talentNodeId": 46,
                     "row": 4,
                     "column": 2,
                     "ranks": [
@@ -960,7 +960,7 @@
                 },
                 {
                     "talentNodeName": "Improved Taunt",
-                    "talentNodeId": 36,
+                    "talentNodeId": 47,
                     "row": 4,
                     "column": 3,
                     "ranks": [
@@ -976,7 +976,7 @@
                 },
                 {
                     "talentNodeName": "Improved Shield Wall",
-                    "talentNodeId": 36,
+                    "talentNodeId": 48,
                     "row": 5,
                     "column": 1,
                     "ranks": [
@@ -992,7 +992,7 @@
                 },
                 {
                     "talentNodeName": "Concussion Blow",
-                    "talentNodeId": 36,
+                    "talentNodeId": 49,
                     "row": 5,
                     "column": 2,
                     "ranks": [
@@ -1005,7 +1005,7 @@
                 },
                 {
                     "talentNodeName": "Improved Shield Bash",
-                    "talentNodeId": 36,
+                    "talentNodeId": 50,
                     "row": 5,
                     "column": 3,
                     "ranks": [
@@ -1021,7 +1021,7 @@
                 },
                 {
                     "talentNodeName": "One-handed Weapon",
-                    "talentNodeId": 36,
+                    "talentNodeId": 51,
                     "row": 6,
                     "column": 3,
                     "ranks": [
@@ -1046,7 +1046,7 @@
                 },
                 {
                     "talentNodeName": "Shield Slam",
-                    "talentNodeId": 36,
+                    "talentNodeId": 52,
                     "row": 7,
                     "column": 2,
                     "ranks": [
