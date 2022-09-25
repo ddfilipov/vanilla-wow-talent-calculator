@@ -368,10 +368,10 @@
             "specId": "secondSpec",
             "talents": [
                 {
-                    "talentNodeName": "warrior_talent_booming_voice",
+                    "talentNodeName": "Booming Voice",
                     "talentNodeId": 19,
                     "row": 1,
-                    "column": 1,
+                    "column": 2,
                     "ranks": [
                         {
                             "rankDescription": "Reduces the cost of your Heroic Strike ability by 1 rage point."
@@ -381,331 +381,343 @@
                         },
                         {
                             "rankDescription": "Reduces the cost of your Heroic Strike ability by 3 rage points"
+                        },
+                        {
+                            "rankDescription": "Reduces the cost of your Heroic Strike ability by 3 rage points"
+                        },
+                        {
+                            "rankDescription": "Reduces the cost of your Heroic Strike ability by 3 rage points"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_booming_voice.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_cruelty",
+                    "talentNodeName": "Cruelty",
                     "talentNodeId": 20,
                     "row": 1,
-                    "column": 2,
+                    "column": 3,
                     "ranks": [
                         {
-                            "rankDescription": "Deflection 1 description"
+                            "rankDescription": "Cruelty 1 description"
                         },
                         {
-                            "rankDescription": "Deflection 2 description"
+                            "rankDescription": "Cruelty 2 description"
                         },
                         {
-                            "rankDescription": "Deflection 3 description"
+                            "rankDescription": "Cruelty 3 description"
                         },
                         {
-                            "rankDescription": "Deflection 4 description"
+                            "rankDescription": "Cruelty 4 description"
                         },
                         {
-                            "rankDescription": "Deflection 5 description"
+                            "rankDescription": "Cruelty 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_cruelty.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_improved_demoralizing_shout",
+                    "talentNodeName": "Demoralizing Shout",
                     "talentNodeId": 21,
-                    "row": 1,
-                    "column": 3,
+                    "row": 2,
+                    "column": 2,
                     "ranks": [
                         {
-                            "rankDescription": "Improved Rend 1 description"
+                            "rankDescription": "Demoralizing Shout 1 description"
                         },
                         {
-                            "rankDescription": "Improved Rend 2 description"
+                            "rankDescription": "Demoralizing Shout 2 description"
                         },
                         {
-                            "rankDescription": "Improved Rend 3 description"
+                            "rankDescription": "Demoralizing Shout 3 description"
+                        },
+                        {
+                            "rankDescription": "Demoralizing Shout 4 description"
+                        },
+                        {
+                            "rankDescription": "Demoralizing Shout 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_improved_demoralizing_shout.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_unbridled_wrath",
+                    "talentNodeName": "Unbridled Wrath",
                     "talentNodeId": 22,
                     "row": 2,
-                    "column": 1,
+                    "column": 3,
                     "ranks": [
                         {
-                            "rankDescription": "Improved Charge 1 description"
+                            "rankDescription": "Unbridled Wrath 1 description"
                         },
                         {
-                            "rankDescription": "Improved Charge 2 description"
+                            "rankDescription": "Unbridled Wrath 2 description"
+                        },
+                        {
+                            "rankDescription": "Unbridled Wrath 3 description"
+                        },
+                        {
+                            "rankDescription": "Unbridled Wrath 4 description"
+                        },
+                        {
+                            "rankDescription": "Unbridled Wrath 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_unbridled_wrath.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_improved_cleave",
+                    "talentNodeName": "Improved Cleave",
                     "talentNodeId": 23,
-                    "row": 2,
-                    "column": 2,
+                    "row": 3,
+                    "column": 1,
                     "ranks": [
                         {
-                            "rankDescription": "Tactical Mastery 1 description"
+                            "rankDescription": "Improved Cleave 1 description"
                         },
                         {
-                            "rankDescription": "Tactical Mastery 2 description"
+                            "rankDescription": "Improved Cleave 2 description"
                         },
                         {
-                            "rankDescription": "Tactical Mastery 3 description"
+                            "rankDescription": "Improved Cleave 3 description"
                         },
                         {
-                            "rankDescription": "Tactical Mastery 4 description"
+                            "rankDescription": "Improved Cleave 4 description"
                         },
                         {
-                            "rankDescription": "Tactical Mastery 5 description"
+                            "rankDescription": "Improved Cleave 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_improved_cleave.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_piercing_howl",
+                    "talentNodeName": "Piercing Howl",
                     "talentNodeId": 24,
-                    "row": 2,
-                    "column": 4,
+                    "row": 3,
+                    "column": 2,
                     "ranks": [
                         {
-                            "rankDescription": "Improved Thunderclap 1 description"
-                        },
-                        {
-                            "rankDescription": "Improved Thunderclap 2 description"
-                        },
-                        {
-                            "rankDescription": "Improved Thunderclap 3 description"
+                            "rankDescription": "Piercing Howl 1 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_piercing_howl.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_blood_craze",
+                    "talentNodeName": "Blood Craze",
                     "talentNodeId": 25,
                     "row": 3,
-                    "column": 1,
+                    "column": 3,
                     "ranks": [
                         {
-                            "rankDescription": "Improved Overpower rangonumero description"
+                            "rankDescription": "Blood Craze 1 description"
                         },
                         {
-                            "rankDescription": "Improved Overpower rangonumero description"
+                            "rankDescription": "Blood Craze 2 description"
+                        },
+                        {
+                            "rankDescription": "Blood Craze 3 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_blood_craze.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_battleshout",
+                    "talentNodeName": "Improved Battle Shout",
                     "talentNodeId": 26,
                     "row": 3,
-                    "column": 2,
+                    "column": 4,
                     "ranks": [
                         {
-                            "rankDescription": "Anger Management 1 description"
+                            "rankDescription": "Improved Battle Shout 1 description"
+                        },
+                        {
+                            "rankDescription": "Improved Battle Shout 2 description"
+                        },
+                        {
+                            "rankDescription": "Improved Battle Shout 3 description"
+                        },
+                        {
+                            "rankDescription": "Improved Battle Shout 4 description"
+                        },
+                        {
+                            "rankDescription": "Improved Battle Shout 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_battleshout.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_dual_wield_specialization",
+                    "talentNodeName": "Dual Wield Specialization",
                     "talentNodeId": 27,
-                    "row": 3,
-                    "column": 3,
+                    "row": 4,
+                    "column": 1,
                     "ranks": [
                         {
-                            "rankDescription": "Deep Wounds 1 description"
+                            "rankDescription": "Dual Wield Specialization 1 description"
                         },
                         {
-                            "rankDescription": "Deep Wounds 2 description"
+                            "rankDescription": "Dual Wield Specialization 2 description"
                         },
                         {
-                            "rankDescription": "Deep Wounds 3 description"
+                            "rankDescription": "Dual Wield Specialization 3 description"
+                        },
+                        {
+                            "rankDescription": "Dual Wield Specialization 4 description"
+                        },
+                        {
+                            "rankDescription": "Dual Wield Specialization 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_dual_wield_specialization.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_improved_execute",
+                    "talentNodeName": "Improved Execute",
                     "talentNodeId": 28,
                     "row": 4,
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription": "Two-Handed Specialization 1 description"
+                            "rankDescription": "Improved Execute 1 description"
                         },
                         {
-                            "rankDescription": "Two-Handed Specialization 2 description"
+                            "rankDescription": "Improved Execute 2 description"
                         },
                         {
-                            "rankDescription": "Two-Handed Specialization 3 description"
+                            "rankDescription": "Improved Execute 3 description"
                         },
                         {
-                            "rankDescription": "Two-Handed Specialization 4 description"
+                            "rankDescription": "Improved Execute 4 description"
                         },
                         {
-                            "rankDescription": "Two-Handed Specialization 5 description"
+                            "rankDescription": "Improved Execute 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_improved_execute.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_enrage",
+                    "talentNodeName": "Enrage",
                     "talentNodeId": 29,
                     "row": 4,
                     "column": 3,
                     "ranks": [
                         {
-                            "rankDescription": "Impale 1 description"
+                            "rankDescription": "Enrage 1 description"
                         },
                         {
-                            "rankDescription": "Impale 2 description"
+                            "rankDescription": "Enrage 2 description"
+                        },
+                        {
+                            "rankDescription": "Enrage 3 description"
+                        },
+                        {
+                            "rankDescription": "Enrage 4 description"
+                        },
+                        {
+                            "rankDescription": "Enrage 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_enrage.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_improved_slam",
+                    "talentNodeName": "Improved Slam",
                     "talentNodeId": 30,
                     "row": 5,
                     "column": 1,
                     "ranks": [
                         {
-                            "rankDescription": "Axe Specialization 1 description"
+                            "rankDescription": "Improved Slam 1 description"
                         },
                         {
-                            "rankDescription": "Axe Specialization 2 description"
-                        },
-                        {
-                            "rankDescription": "Axe Specialization 3 description"
-                        },
-                        {
-                            "rankDescription": "Axe Specialization 4 description"
-                        },
-                        {
-                            "rankDescription": "Axe Specialization 5 description"
+                            "rankDescription": "Improved Slam 2 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_improved_slam.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_death_wish",
+                    "talentNodeName": "Death Wish",
                     "talentNodeId": 31,
                     "row": 5,
                     "column": 2,
                     "ranks": [
                         {
-                            "rankDescription": "Sweeping Strikes 1 description"
+                            "rankDescription": "Death Wish 1 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_death_wish.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_improved_intercept",
+                    "talentNodeName": "Improved Intercept",
                     "talentNodeId": 32,
                     "row": 5,
-                    "column": 3,
+                    "column": 4,
                     "ranks": [
                         {
-                            "rankDescription": "Mace Specialization 1 description"
+                            "rankDescription": "Improved Intercept 1 description"
                         },
                         {
-                            "rankDescription": "Mace Specialization 2 description"
-                        },
-                        {
-                            "rankDescription": "Mace Specialization 3 description"
-                        },
-                        {
-                            "rankDescription": "Mace Specialization 4 description"
-                        },
-                        {
-                            "rankDescription": "Mace Specialization 5 description"
+                            "rankDescription": "Improved Intercept 2 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_improved_intercept.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_improved_berserker_rage",
+                    "talentNodeName": "Improved Berserker Rage",
                     "talentNodeId": 33,
-                    "row": 5,
-                    "column": 4,
+                    "row": 6,
+                    "column": 1,
                     "ranks": [
                         {
-                            "rankDescription": "Sword Specialization 1 description"
+                            "rankDescription": "Improved Berserker Rage 1 description"
                         },
                         {
-                            "rankDescription": "Sword Specialization 1 description"
-                        },
-                        {
-                            "rankDescription": "Sword Specialization 1 description"
-                        },
-                        {
-                            "rankDescription": "Sword Specialization 1 description"
-                        },
-                        {
-                            "rankDescription": "Sword Specialization 1 description"
+                            "rankDescription": "Improved Berserker Rage 2 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_improved_berserker_rage.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_flurry",
+                    "talentNodeName": "Flurry",
                     "talentNodeId": 34,
                     "row": 6,
-                    "column": 1,
+                    "column": 3,
                     "ranks": [
                         {
-                            "rankDescription": "Polearm Specialization 1 description"
+                            "rankDescription": "Improved Berserker Rage 1 description"
                         },
                         {
-                            "rankDescription": "Polearm Specialization 2 description"
+                            "rankDescription": "Improved Berserker Rage 2 description"
                         },
                         {
-                            "rankDescription": "Polearm Specialization 3 description"
+                            "rankDescription": "Improved Berserker Rage 3 description"
                         },
                         {
-                            "rankDescription": "Polearm Specialization 4 description"
+                            "rankDescription": "Improved Berserker Rage 4 description"
                         },
                         {
-                            "rankDescription": "Polearm Specialization 5 description"
+                            "rankDescription": "Improved Berserker Rage 5 description"
                         }
                     ],
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_flurry.jpg"
                 },
                 {
-                    "talentNodeName": "warrior_talent_bloodthirst",
+                    "talentNodeName": "Bloodthirst",
                     "talentNodeId": 35,
-                    "row": 6,
-                    "column": 3,
+                    "row": 7,
+                    "column": 2,
                     "ranks": [
                         {
-                            "rankDescription": "Improved Hamstring 1 description"
-                        },
-                        {
-                            "rankDescription": "Improved Hamstring 2 description"
-                        },
-                        {
-                            "rankDescription": "Improved Hamstring 3 description"
+                            "rankDescription": "Bloodthirst 1 description"
                         }
                     ],
                     "unlockedBy": "",
