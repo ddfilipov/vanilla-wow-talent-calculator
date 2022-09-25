@@ -754,9 +754,134 @@
                     "talentIcon": "../../images/warrior/warrior_talent_shield_specialization.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_anticipation",
                     "talentNodeId": 36,
                     "row": 1,
+                    "column": 3,
+                    "ranks": [
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior/warrior_talent_anticipation.jpg"
+                },
+                {
+                    "talentNodeName": "warrior_talent_improved_bloodrage",
+                    "talentNodeId": 36,
+                    "row": 2,
+                    "column": 1,
+                    "ranks": [
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_bloodrage.jpg"
+                },
+                {
+                    "talentNodeName": "warrior_talent_toughness",
+                    "talentNodeId": 36,
+                    "row": 2,
+                    "column": 3,
+                    "ranks": [
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior/warrior_talent_toughness.jpg"
+                },
+                {
+                    "talentNodeName": "warrior_talent_iron_will",
+                    "talentNodeId": 36,
+                    "row": 2,
+                    "column": 4,
+                    "ranks": [
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior/warrior_talent_iron_will.jpg"
+                },
+                {
+                    "talentNodeName": "warrior_talent_last_stand",
+                    "talentNodeId": 36,
+                    "row": 3,
+                    "column": 1,
+                    "ranks": [
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
+                        },
+                        {
+                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
+                        }
+                    ],
+                    "unlockedBy": "",
+                    "talentIcon": "../../images/warrior/warrior_talent_last_stand.jpg"
+                },
+                {
+                    "talentNodeName": "warrior_talent_improved_shield_block",
+                    "talentNodeId": 36,
+                    "row": 3,
                     "column": 2,
                     "ranks": [
                         {
@@ -779,10 +904,10 @@
                     "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_improved_revenge",
                     "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
+                    "row": 3,
+                    "column": 3,
                     "ranks": [
                         {
                             "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
@@ -801,13 +926,13 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_revenge.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_defiance",
                     "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
+                    "row": 3,
+                    "column": 4,
                     "ranks": [
                         {
                             "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
@@ -826,13 +951,13 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_defiance.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_improved_sunder_armor",
                     "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
+                    "row": 4,
+                    "column": 1,
                     "ranks": [
                         {
                             "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
@@ -851,12 +976,12 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_sunder_armor.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_improved_disarm",
                     "talentNodeId": 36,
-                    "row": 1,
+                    "row": 4,
                     "column": 2,
                     "ranks": [
                         {
@@ -876,13 +1001,13 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_disarm.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_improved_taunt",
                     "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
+                    "row": 4,
+                    "column": 3,
                     "ranks": [
                         {
                             "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
@@ -901,13 +1026,13 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_taunt.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_improved_shield_wall",
                     "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
+                    "row": 5,
+                    "column": 1,
                     "ranks": [
                         {
                             "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
@@ -926,12 +1051,12 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_wall.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_concussion_blow",
                     "talentNodeId": 36,
-                    "row": 1,
+                    "row": 5,
                     "column": 2,
                     "ranks": [
                         {
@@ -951,13 +1076,13 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_concussion_blow.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_improved_shield_bash",
                     "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
+                    "row": 5,
+                    "column": 3,
                     "ranks": [
                         {
                             "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
@@ -976,13 +1101,13 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_bash.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_one_handed_weapon",
                     "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
+                    "row": 6,
+                    "column": 3,
                     "ranks": [
                         {
                             "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
@@ -1001,12 +1126,12 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_one_handed_weapon.jpg"
                 },
                 {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
+                    "talentNodeName": "warrior_talent_shield_slam",
                     "talentNodeId": 36,
-                    "row": 1,
+                    "row": 7,
                     "column": 2,
                     "ranks": [
                         {
@@ -1026,132 +1151,7 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
-                },
-                {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
-                    "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
-                },
-                {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
-                    "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
-                },
-                {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
-                    "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
-                },
-                {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
-                    "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
-                },
-                {
-                    "talentNodeName": "yyyyyyyyyyyyyy",
-                    "talentNodeId": 36,
-                    "row": 1,
-                    "column": 2,
-                    "ranks": [
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 1 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 2 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 3 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 4 description"
-                        },
-                        {
-                            "rankDescription": "xxxxxxxxxxxxxxxxxx 5 description"
-                        }
-                    ],
-                    "unlockedBy": "",
-                    "talentIcon": "../../images/warrior/warrior_talent_improved_shield_block.jpg"
+                    "talentIcon": "../../images/warrior/warrior_talent_shield_slam.jpg"
                 }
             ]
         }
