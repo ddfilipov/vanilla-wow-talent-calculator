@@ -12,6 +12,7 @@ const Container = styled.div<NodeTooltipStyle>`
     grid-template-rows: [r1-start] auto [r2] auto [r3] auto [r4];
     border: 1px solid white;
     background: rgba(0, 0, 0, 0.5);
+    position: relative;
     z-index: 1000;
     width: 300px;
     height: 150px;
