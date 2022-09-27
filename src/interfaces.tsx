@@ -43,6 +43,7 @@ export interface ITalentNode {
     talentNodeName: string;
     row: number;
     column: number;
+    numberOfRanks: number;
     ranks: ITalentNodeRanks[];
     unlockedBy: number; // this talent depends on another one to be unlocked (arrow thing)
 }
