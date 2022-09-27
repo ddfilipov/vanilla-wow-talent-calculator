@@ -11,11 +11,12 @@ const Container = styled.div<NodeTooltipStyle>`
     grid-template-columns: [c1-start] auto [c2] auto [c3-end];
     grid-template-rows: [r1-start] auto [r2] auto [r3] auto [r4];
     border: 1px solid white;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     position: relative;
     z-index: 1000;
     width: 300px;
     height: 150px;
+    padding: 5px;
 `;
 
 const TalentNameStyled = styled.div`
@@ -23,7 +24,6 @@ const TalentNameStyled = styled.div`
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: red;
 `;
 
 const RankStyled = styled.div`
@@ -31,7 +31,6 @@ const RankStyled = styled.div`
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    background-color: blue;
 `;
 
 const DescriptionStyled = styled.div`
@@ -39,7 +38,6 @@ const DescriptionStyled = styled.div`
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: green;
 `;
 
 const InfoStyled = styled.div`
@@ -47,7 +45,6 @@ const InfoStyled = styled.div`
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-    background-color: yellow;
 `;
 
 interface NodeTooltipProps {
