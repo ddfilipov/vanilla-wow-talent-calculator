@@ -10,7 +10,7 @@
                     "talentNodeId": 1,
                     "row": 1,
                     "column": 1,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Reduces the cost of your Heroic Strike ability by 1 rage point."
@@ -30,7 +30,7 @@
                     "talentNodeId": 2,
                     "row": 1,
                     "column": 2,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Deflection 1 description"
@@ -56,7 +56,7 @@
                     "talentNodeId": 3,
                     "row": 1,
                     "column": 3,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Improved Rend 1 description"
@@ -76,7 +76,7 @@
                     "talentNodeId": 4,
                     "row": 2,
                     "column": 1,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Charge 1 description"
@@ -93,7 +93,7 @@
                     "talentNodeId": 5,
                     "row": 2,
                     "column": 2,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Tactical Mastery 1 description"
@@ -119,7 +119,7 @@
                     "talentNodeId": 6,
                     "row": 2,
                     "column": 4,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Improved Thunderclap 1 description"
@@ -139,7 +139,7 @@
                     "talentNodeId": 7,
                     "row": 3,
                     "column": 1,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Overpower rangonumero description"
@@ -156,7 +156,7 @@
                     "talentNodeId": 8,
                     "row": 3,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Anger Management 1 description"
@@ -170,7 +170,7 @@
                     "talentNodeId": 9,
                     "row": 3,
                     "column": 3,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Deep Wounds 1 description"
@@ -190,7 +190,7 @@
                     "talentNodeId": 10,
                     "row": 4,
                     "column": 2,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Two-Handed Specialization 1 description"
@@ -216,7 +216,7 @@
                     "talentNodeId": 11,
                     "row": 4,
                     "column": 3,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Impale 1 description"
@@ -233,7 +233,7 @@
                     "talentNodeId": 12,
                     "row": 5,
                     "column": 1,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Axe Specialization 1 description"
@@ -259,7 +259,7 @@
                     "talentNodeId": 13,
                     "row": 5,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Sweeping Strikes 1 description"
@@ -273,7 +273,7 @@
                     "talentNodeId": 14,
                     "row": 5,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Mace Specialization 1 description"
@@ -299,7 +299,7 @@
                     "talentNodeId": 15,
                     "row": 5,
                     "column": 4,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Sword Specialization 1 description"
@@ -325,7 +325,7 @@
                     "talentNodeId": 16,
                     "row": 6,
                     "column": 1,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Polearm Specialization 1 description"
@@ -351,7 +351,7 @@
                     "talentNodeId": 17,
                     "row": 6,
                     "column": 3,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Improved Hamstring 1 description"
@@ -371,7 +371,7 @@
                     "talentNodeId": 18,
                     "row": 7,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Mortal Strike 1 description"
@@ -390,7 +390,7 @@
                     "talentNodeId": 19,
                     "row": 1,
                     "column": 2,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Reduces the cost of your Heroic Strike ability by 1 rage point."
@@ -416,7 +416,7 @@
                     "talentNodeId": 20,
                     "row": 1,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Cruelty 1 description"
@@ -442,7 +442,7 @@
                     "talentNodeId": 21,
                     "row": 2,
                     "column": 2,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Demoralizing Shout 1 description"
@@ -468,7 +468,7 @@
                     "talentNodeId": 22,
                     "row": 2,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Unbridled Wrath 1 description"
@@ -494,7 +494,7 @@
                     "talentNodeId": 23,
                     "row": 3,
                     "column": 1,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Improved Cleave 1 description"
@@ -520,7 +520,7 @@
                     "talentNodeId": 24,
                     "row": 3,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Piercing Howl 1 description"
@@ -534,7 +534,7 @@
                     "talentNodeId": 25,
                     "row": 3,
                     "column": 3,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Blood Craze 1 description"
@@ -554,7 +554,7 @@
                     "talentNodeId": 26,
                     "row": 3,
                     "column": 4,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Improved Battle Shout 1 description"
@@ -580,7 +580,7 @@
                     "talentNodeId": 27,
                     "row": 4,
                     "column": 1,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Dual Wield Specialization 1 description"
@@ -606,7 +606,7 @@
                     "talentNodeId": 28,
                     "row": 4,
                     "column": 2,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Improved Execute 1 description"
@@ -632,7 +632,7 @@
                     "talentNodeId": 29,
                     "row": 4,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Enrage 1 description"
@@ -658,7 +658,7 @@
                     "talentNodeId": 30,
                     "row": 5,
                     "column": 1,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Slam 1 description"
@@ -675,7 +675,7 @@
                     "talentNodeId": 31,
                     "row": 5,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Death Wish 1 description"
@@ -689,7 +689,7 @@
                     "talentNodeId": 32,
                     "row": 5,
                     "column": 4,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Intercept 1 description"
@@ -706,7 +706,7 @@
                     "talentNodeId": 33,
                     "row": 6,
                     "column": 1,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Berserker Rage 1 description"
@@ -723,7 +723,7 @@
                     "talentNodeId": 34,
                     "row": 6,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Improved Berserker Rage 1 description"
@@ -749,7 +749,7 @@
                     "talentNodeId": 35,
                     "row": 7,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Bloodthirst 1 description"
@@ -768,7 +768,7 @@
                     "talentNodeId": 36,
                     "row": 1,
                     "column": 2,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Shield Specialization 1 description"
@@ -794,7 +794,7 @@
                     "talentNodeId": 37,
                     "row": 1,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Anticipation 1 description"
@@ -820,7 +820,7 @@
                     "talentNodeId": 38,
                     "row": 2,
                     "column": 1,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Bloodrage 1 description"
@@ -837,7 +837,7 @@
                     "talentNodeId": 39,
                     "row": 2,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Toughness 1 description"
@@ -863,7 +863,7 @@
                     "talentNodeId": 40,
                     "row": 2,
                     "column": 4,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Iron Will 1 description"
@@ -889,7 +889,7 @@
                     "talentNodeId": 41,
                     "row": 3,
                     "column": 1,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Last Stand 1 description"
@@ -903,7 +903,7 @@
                     "talentNodeId": 42,
                     "row": 3,
                     "column": 2,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Improved Shield Block 1 description"
@@ -923,7 +923,7 @@
                     "talentNodeId": 43,
                     "row": 3,
                     "column": 3,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Improved Revenge 1 description"
@@ -943,7 +943,7 @@
                     "talentNodeId": 44,
                     "row": 3,
                     "column": 4,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "Defiance 1 description"
@@ -969,7 +969,7 @@
                     "talentNodeId": 45,
                     "row": 4,
                     "column": 1,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Improved Sunder Armor 1 description"
@@ -989,7 +989,7 @@
                     "talentNodeId": 46,
                     "row": 4,
                     "column": 2,
-                    "numberOfRanks:": 3,
+                    "numberOfRanks": 3,
                     "ranks": [
                         {
                             "rankDescription": "Improved Disarm 1 description"
@@ -1009,7 +1009,7 @@
                     "talentNodeId": 47,
                     "row": 4,
                     "column": 3,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Taunt 1 description"
@@ -1026,7 +1026,7 @@
                     "talentNodeId": 48,
                     "row": 5,
                     "column": 1,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Shield Wall 1 description"
@@ -1043,7 +1043,7 @@
                     "talentNodeId": 49,
                     "row": 5,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Concussion Blow 1 description"
@@ -1057,7 +1057,7 @@
                     "talentNodeId": 50,
                     "row": 5,
                     "column": 3,
-                    "numberOfRanks:": 2,
+                    "numberOfRanks": 2,
                     "ranks": [
                         {
                             "rankDescription": "Improved Shield Bash 1 description"
@@ -1074,7 +1074,7 @@
                     "talentNodeId": 51,
                     "row": 6,
                     "column": 3,
-                    "numberOfRanks:": 5,
+                    "numberOfRanks": 5,
                     "ranks": [
                         {
                             "rankDescription": "One-handed Weapon 1 description"
@@ -1100,7 +1100,7 @@
                     "talentNodeId": 52,
                     "row": 7,
                     "column": 2,
-                    "numberOfRanks:": 1,
+                    "numberOfRanks": 1,
                     "ranks": [
                         {
                             "rankDescription": "Shield Slam 1 description"
