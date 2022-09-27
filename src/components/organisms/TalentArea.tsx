@@ -18,7 +18,7 @@ interface TalentAreaProps {
     talents?: ITalents;
 }
 
-export const TalentArea: FC<TalentAreaProps> = ({ data, talents: talentRanks }) => {
+export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
     const MAX_TALENT_POINTS = 51;
     const MIN_TALENT_POINTS = 0;
     const STARTING_LEVEL = 9;
@@ -114,7 +114,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents: talentRanks }) 
                 specTalentPoints={specTalentPoints}
                 remainingTalentPoints={remainingTalentPoints}
                 classId={data.classId}
-                talents={talentRanks}
+                talents={talents}
             />
         </Container>
     );

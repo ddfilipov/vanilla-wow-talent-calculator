@@ -43,7 +43,6 @@ export interface ITalentNode {
     talentNodeName: string;
     row: number;
     column: number;
-    numberOfRanks: number;
     ranks: ITalentNodeRanks[];
     unlockedBy: number; // this talent depends on another one to be unlocked (arrow thing)
 }
@@ -58,12 +57,13 @@ export interface ISpecTalents {
     row: number;
     column: number;
     talentIcon: string;
+    numberOfRanks: number;
     ranks: ITalentRanks[];
 }
 
 export interface ITalentRankSpecs {
     specId: SpecIdType;
-    talents: ISpecTalents[]; //TODO: this needs to be a list, there's gotat be multiple talents per tree!!!
+    talents: ISpecTalents[];
 }
 
 export interface ITalents {

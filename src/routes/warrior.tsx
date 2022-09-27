@@ -5,7 +5,7 @@ import third_spec_background from "../images/warrior_tree_protection.jpeg";
 import first_spec_icon from "../images/warrior_spec_arms.jpg";
 import second_spec_icon from "../images/warrior_spec_fury.jpg";
 import third_spec_icon from "../images/warrior_spec_protection.jpg";
-import { IClassData, ITalents } from "../interfaces";
+import { IClassData } from "../interfaces";
 import talents from "../data/talents/warrior-talents.json";
 
 export default function Warrior() {
