@@ -8,6 +8,7 @@
                 {
                     "talentNodeName": "Improved Heroic Strike",
                     "talentNodeId": 1,
+                    "treePointsRequiredToLvl": 0,
                     "row": 1,
                     "column": 1,
                     "numberOfRanks": 3,
@@ -28,6 +29,7 @@
                 {
                     "talentNodeName": "Deflection",
                     "talentNodeId": 2,
+                    "treePointsRequiredToLvl": 0,
                     "row": 1,
                     "column": 2,
                     "numberOfRanks": 5,
@@ -54,6 +56,7 @@
                 {
                     "talentNodeName": "Improved Rend",
                     "talentNodeId": 3,
+                    "treePointsRequiredToLvl": 0,
                     "row": 1,
                     "column": 3,
                     "numberOfRanks": 3,
@@ -74,6 +77,7 @@
                 {
                     "talentNodeName": "Improved Charge",
                     "talentNodeId": 4,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 1,
                     "numberOfRanks": 2,
@@ -91,6 +95,7 @@
                 {
                     "talentNodeName": "Tactical Mastery",
                     "talentNodeId": 5,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 2,
                     "numberOfRanks": 5,
@@ -117,6 +122,7 @@
                 {
                     "talentNodeName": "Improved Thunderclap",
                     "talentNodeId": 6,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 4,
                     "numberOfRanks": 3,
@@ -137,6 +143,7 @@
                 {
                     "talentNodeName": "Improved Overpower",
                     "talentNodeId": 7,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 1,
                     "numberOfRanks": 2,
@@ -154,6 +161,7 @@
                 {
                     "talentNodeName": "Anger Management",
                     "talentNodeId": 8,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 2,
                     "numberOfRanks": 1,
@@ -168,6 +176,7 @@
                 {
                     "talentNodeName": "Deep Wounds",
                     "talentNodeId": 9,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 3,
                     "numberOfRanks": 3,
@@ -188,6 +197,7 @@
                 {
                     "talentNodeName": "Two-Handed Specialization",
                     "talentNodeId": 10,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 2,
                     "numberOfRanks": 5,
@@ -214,6 +224,7 @@
                 {
                     "talentNodeName": "Impale",
                     "talentNodeId": 11,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 3,
                     "numberOfRanks": 2,
@@ -231,6 +242,7 @@
                 {
                     "talentNodeName": "Axe Specialization",
                     "talentNodeId": 12,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 1,
                     "numberOfRanks": 5,
@@ -257,6 +269,7 @@
                 {
                     "talentNodeName": "Sweeping Strikes",
                     "talentNodeId": 13,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 2,
                     "numberOfRanks": 1,
@@ -271,6 +284,7 @@
                 {
                     "talentNodeName": "Mace Specialization",
                     "talentNodeId": 14,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -297,6 +311,7 @@
                 {
                     "talentNodeName": "Sword Specialization",
                     "talentNodeId": 15,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 4,
                     "numberOfRanks": 5,
@@ -323,6 +338,7 @@
                 {
                     "talentNodeName": "Polearm Specialization",
                     "talentNodeId": 16,
+                    "treePointsRequiredToLvl": 25,
                     "row": 6,
                     "column": 1,
                     "numberOfRanks": 5,
@@ -349,6 +365,7 @@
                 {
                     "talentNodeName": "Improved Hamstring",
                     "talentNodeId": 17,
+                    "treePointsRequiredToLvl": 25,
                     "row": 6,
                     "column": 3,
                     "numberOfRanks": 3,
@@ -369,6 +386,7 @@
                 {
                     "talentNodeName": "Mortal Strike",
                     "talentNodeId": 18,
+                    "treePointsRequiredToLvl": 30,
                     "row": 7,
                     "column": 2,
                     "numberOfRanks": 1,
@@ -388,6 +406,7 @@
                 {
                     "talentNodeName": "Booming Voice",
                     "talentNodeId": 19,
+                    "treePointsRequiredToLvl": 0,
                     "row": 1,
                     "column": 2,
                     "numberOfRanks": 5,
@@ -414,6 +433,7 @@
                 {
                     "talentNodeName": "Cruelty",
                     "talentNodeId": 20,
+                    "treePointsRequiredToLvl": 0,
                     "row": 1,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -440,6 +460,7 @@
                 {
                     "talentNodeName": "Demoralizing Shout",
                     "talentNodeId": 21,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 2,
                     "numberOfRanks": 5,
@@ -466,6 +487,7 @@
                 {
                     "talentNodeName": "Unbridled Wrath",
                     "talentNodeId": 22,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -492,6 +514,7 @@
                 {
                     "talentNodeName": "Improved Cleave",
                     "talentNodeId": 23,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 1,
                     "numberOfRanks": 5,
@@ -518,6 +541,7 @@
                 {
                     "talentNodeName": "Piercing Howl",
                     "talentNodeId": 24,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 2,
                     "numberOfRanks": 1,
@@ -532,6 +556,7 @@
                 {
                     "talentNodeName": "Blood Craze",
                     "talentNodeId": 25,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 3,
                     "numberOfRanks": 3,
@@ -552,6 +577,7 @@
                 {
                     "talentNodeName": "Improved Battle Shout",
                     "talentNodeId": 26,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 4,
                     "numberOfRanks": 5,
@@ -578,6 +604,7 @@
                 {
                     "talentNodeName": "Dual Wield Specialization",
                     "talentNodeId": 27,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 1,
                     "numberOfRanks": 5,
@@ -604,6 +631,7 @@
                 {
                     "talentNodeName": "Improved Execute",
                     "talentNodeId": 28,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 2,
                     "numberOfRanks": 5,
@@ -630,6 +658,7 @@
                 {
                     "talentNodeName": "Enrage",
                     "talentNodeId": 29,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -656,6 +685,7 @@
                 {
                     "talentNodeName": "Improved Slam",
                     "talentNodeId": 30,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 1,
                     "numberOfRanks": 2,
@@ -673,6 +703,7 @@
                 {
                     "talentNodeName": "Death Wish",
                     "talentNodeId": 31,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 2,
                     "numberOfRanks": 1,
@@ -687,6 +718,7 @@
                 {
                     "talentNodeName": "Improved Intercept",
                     "talentNodeId": 32,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 4,
                     "numberOfRanks": 2,
@@ -704,6 +736,7 @@
                 {
                     "talentNodeName": "Improved Berserker Rage",
                     "talentNodeId": 33,
+                    "treePointsRequiredToLvl": 25,
                     "row": 6,
                     "column": 1,
                     "numberOfRanks": 2,
@@ -721,6 +754,7 @@
                 {
                     "talentNodeName": "Flurry",
                     "talentNodeId": 34,
+                    "treePointsRequiredToLvl": 25,
                     "row": 6,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -747,6 +781,7 @@
                 {
                     "talentNodeName": "Bloodthirst",
                     "talentNodeId": 35,
+                    "treePointsRequiredToLvl": 30,
                     "row": 7,
                     "column": 2,
                     "numberOfRanks": 1,
@@ -766,6 +801,7 @@
                 {
                     "talentNodeName": "Shield Specialization",
                     "talentNodeId": 36,
+                    "treePointsRequiredToLvl": 0,
                     "row": 1,
                     "column": 2,
                     "numberOfRanks": 5,
@@ -792,6 +828,7 @@
                 {
                     "talentNodeName": "Anticipation",
                     "talentNodeId": 37,
+                    "treePointsRequiredToLvl": 0,
                     "row": 1,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -818,6 +855,7 @@
                 {
                     "talentNodeName": "Improved Bloodrage",
                     "talentNodeId": 38,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 1,
                     "numberOfRanks": 2,
@@ -835,6 +873,7 @@
                 {
                     "talentNodeName": "Toughness",
                     "talentNodeId": 39,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -861,6 +900,7 @@
                 {
                     "talentNodeName": "Iron Will",
                     "talentNodeId": 40,
+                    "treePointsRequiredToLvl": 5,
                     "row": 2,
                     "column": 4,
                     "numberOfRanks": 5,
@@ -887,6 +927,7 @@
                 {
                     "talentNodeName": "Last Stand",
                     "talentNodeId": 41,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 1,
                     "numberOfRanks": 1,
@@ -901,6 +942,7 @@
                 {
                     "talentNodeName": "Improved Shield Block",
                     "talentNodeId": 42,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 2,
                     "numberOfRanks": 3,
@@ -921,6 +963,7 @@
                 {
                     "talentNodeName": "Improved Revenge",
                     "talentNodeId": 43,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 3,
                     "numberOfRanks": 3,
@@ -941,6 +984,7 @@
                 {
                     "talentNodeName": "Defiance",
                     "talentNodeId": 44,
+                    "treePointsRequiredToLvl": 10,
                     "row": 3,
                     "column": 4,
                     "numberOfRanks": 5,
@@ -967,6 +1011,7 @@
                 {
                     "talentNodeName": "Improved Sunder Armor",
                     "talentNodeId": 45,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 1,
                     "numberOfRanks": 3,
@@ -987,6 +1032,7 @@
                 {
                     "talentNodeName": "Improved Disarm",
                     "talentNodeId": 46,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 2,
                     "numberOfRanks": 3,
@@ -1007,6 +1053,7 @@
                 {
                     "talentNodeName": "Improved Taunt",
                     "talentNodeId": 47,
+                    "treePointsRequiredToLvl": 15,
                     "row": 4,
                     "column": 3,
                     "numberOfRanks": 2,
@@ -1024,6 +1071,7 @@
                 {
                     "talentNodeName": "Improved Shield Wall",
                     "talentNodeId": 48,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 1,
                     "numberOfRanks": 2,
@@ -1041,6 +1089,7 @@
                 {
                     "talentNodeName": "Concussion Blow",
                     "talentNodeId": 49,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 2,
                     "numberOfRanks": 1,
@@ -1055,6 +1104,7 @@
                 {
                     "talentNodeName": "Improved Shield Bash",
                     "talentNodeId": 50,
+                    "treePointsRequiredToLvl": 20,
                     "row": 5,
                     "column": 3,
                     "numberOfRanks": 2,
@@ -1072,6 +1122,7 @@
                 {
                     "talentNodeName": "One-handed Weapon",
                     "talentNodeId": 51,
+                    "treePointsRequiredToLvl": 25,
                     "row": 6,
                     "column": 3,
                     "numberOfRanks": 5,
@@ -1098,6 +1149,7 @@
                 {
                     "talentNodeName": "Shield Slam",
                     "talentNodeId": 52,
+                    "treePointsRequiredToLvl": 30,
                     "row": 7,
                     "column": 2,
                     "numberOfRanks": 1,
