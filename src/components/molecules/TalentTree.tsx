@@ -85,7 +85,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
         handleClickNode(e, specId);
     };
 
-    // const getSpecRanks = (classId: number, specId: number) => {    };
     return (
         <Container>
             <TopPart backgroundImage={specImage}>
