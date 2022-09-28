@@ -85,14 +85,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
         handleClickNode(e, specId);
     };
 
-    const testFunction = () => {
-        console.log("spec ranks length:", specRanks);
-        specRanks?.map((talent, index) => {});
-        return <></>;
-    };
-
     // const getSpecRanks = (classId: number, specId: number) => {    };
-    console.log("showing ranks:", specRanks);
     return (
         <Container>
             <TopPart backgroundImage={specImage}>
@@ -101,7 +94,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <div>X</div>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
-                {testFunction()}
                 <TalentNodesContainer>
                     {specRanks?.map((node) => (
                         <TalentNode
@@ -110,6 +102,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                             remainingTalentPoints={remainingTalentPoints}
                             talentIcon={node.talentIcon}
                             talentNode={node}
+                            key={node.talentNodeId}
                         />
                     ))}
                 </TalentNodesContainer>
