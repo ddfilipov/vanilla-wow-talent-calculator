@@ -54,6 +54,7 @@ export interface ITalentRanks {
 export interface ISpecTalents {
     talentNodeName: string;
     talentNodeId: number;
+    treePointsRequiredToLvl: number;
     row: number;
     column: number;
     talentIcon: string;
