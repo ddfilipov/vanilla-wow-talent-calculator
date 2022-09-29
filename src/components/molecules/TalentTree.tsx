@@ -84,6 +84,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
+    /* TODO: need to add spent talent points on a tree */
 
     return (
         <Container>

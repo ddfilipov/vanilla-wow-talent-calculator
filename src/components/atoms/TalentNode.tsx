@@ -3,12 +3,13 @@ import styled from "styled-components";
 import { ISpecTalents } from "../../interfaces";
 import { NodeTooltip } from "./NodeTooltip";
 
-interface INodePosition {
+interface INodeStyle {
     row: number;
     column: number;
+    treePointsRequiredToLvl: number;
 }
 
-const ButtonContainer = styled.div<INodePosition>`
+const ButtonContainer = styled.div<INodeStyle>`
     height: 45px;
     width: 45px;
     position: relative;
@@ -17,6 +18,8 @@ const ButtonContainer = styled.div<INodePosition>`
     grid-column-start: ${(props) => props.column};
     grid-column-end: ${(props) => props.column + 1};
     /* filter: grayscale(100%); TODO: this will make the nodes grey when I need it */
+    /* TODO: need to add spent talent points on a tree */
+    /* filter: ${(props) => props.treePointsRequiredToLvl}; */
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -93,6 +96,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
             column={talentNode.column}
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
+            treePointsRequiredToLvl={0}
         >
             <ButtonStyled
                 // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
