@@ -102,6 +102,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                             talentIcon={node.talentIcon}
                             talentNode={node}
                             key={node.talentNodeId}
+                            treePointsRequiredToLvl={node.treePointsRequiredToLvl}
                         />
                     ))}
                 </TalentNodesContainer>

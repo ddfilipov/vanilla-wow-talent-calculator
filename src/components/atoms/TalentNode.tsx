@@ -47,6 +47,7 @@ export interface TalentNodeProps {
     remainingTalentPoints: number;
     talentIcon: string;
     talentNode: ISpecTalents;
+    treePointsRequiredToLvl: number;
 }
 
 interface INodePoints {
