@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-import { ISpecTalents } from "../../interfaces";
+import { ITalentNode } from "../../interfaces";
 import { NodeTooltip } from "./NodeTooltip";
 
 interface INodeStyle {
@@ -49,7 +49,7 @@ export interface TalentNodeProps {
     maxNodePoints: number;
     remainingTalentPoints: number;
     talentIcon: string;
-    talentNode: ISpecTalents;
+    talentNode: ITalentNode;
     treePointsRequiredToLvl: number;
 }
 

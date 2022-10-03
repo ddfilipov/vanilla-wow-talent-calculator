@@ -50,8 +50,7 @@ export interface ITalentRanks {
     rankDescription: string;
 }
 
-//TODO: rename as ITalentNode
-export interface ISpecTalents {
+export interface ITalentNode {
     talentNodeName: string;
     talentNodeId: number;
     treePointsRequiredToLvl: number;
@@ -64,7 +63,7 @@ export interface ISpecTalents {
 
 export interface ITalentRankSpecs {
     specId: SpecIdType;
-    talents: ISpecTalents[];
+    talents: ITalentNode[];
 }
 
 export interface ITalents {

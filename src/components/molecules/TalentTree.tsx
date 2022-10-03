@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecTalents, SpecIdType } from "../../interfaces";
+import { ITalentNode, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
 
 const Container = styled.div`
@@ -67,7 +67,7 @@ interface TalentTreeProps {
     specTalentPoints: number;
     remainingTalentPoints: number;
     classId: number;
-    specRanks?: ISpecTalents[] | undefined;
+    specRanks?: ITalentNode[] | undefined;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({

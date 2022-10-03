@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ISpecTalents } from "../../interfaces";
+import { ITalentNode } from "../../interfaces";
 
 interface NodeTooltipStyle {
     maxTalentRanks: number;
@@ -48,7 +48,7 @@ const InfoStyled = styled.div`
 `;
 
 interface NodeTooltipProps {
-    nodeFields: ISpecTalents;
+    nodeFields: ITalentNode;
     currentNodeRank: number;
 }
 
