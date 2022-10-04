@@ -17,5 +17,6 @@ export const ClassIconStory: ComponentStory<typeof TalentNode> = () => (
         talentIcon={""}
         talentNode={null as any} // TODO: fix asap!
         treePointsRequiredToLvl={0}
+        specTalentPoints={0}
     ></TalentNode>
 );

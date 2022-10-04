@@ -7,6 +7,7 @@ interface INodeStyle {
     row: number;
     column: number;
     treePointsRequiredToLvl: number;
+    pointsSpentOnTree: number;
 }
 
 const ButtonContainer = styled.div<INodeStyle>`
@@ -19,7 +20,7 @@ const ButtonContainer = styled.div<INodeStyle>`
     grid-column-end: ${(props) => props.column + 1};
     /* filter: grayscale(100%); TODO: this will make the nodes grey when I need it */
     /* TODO: need to add spent talent points on a tree */
-    /* filter: ${(props) => props.treePointsRequiredToLvl}; */
+    filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -51,6 +52,7 @@ export interface TalentNodeProps {
     talentIcon: string;
     talentNode: ITalentNode;
     treePointsRequiredToLvl: number;
+    specTalentPoints: number;
 }
 
 interface INodePoints {
@@ -66,10 +68,15 @@ export const TalentNode: FC<TalentNodeProps> = ({
     remainingTalentPoints,
     talentIcon,
     talentNode,
+    treePointsRequiredToLvl,
+    specTalentPoints,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
+
+    console.log("specTalentPoints:", specTalentPoints)
+    console.log("specTalentPoints:", specTalentPoints)
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (currentPoints < maxNodePoints && remainingTalentPoints > 0) {
@@ -96,7 +103,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
             column={talentNode.column}
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
-            treePointsRequiredToLvl={0}
+            treePointsRequiredToLvl={treePointsRequiredToLvl}
+            pointsSpentOnTree={specTalentPoints}
         >
             <ButtonStyled
                 // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????

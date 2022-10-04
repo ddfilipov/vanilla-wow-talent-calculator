@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styled from "styled-components";
 import { ITalentNode, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
@@ -81,6 +81,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     classId,
     specRanks,
 }) => {
+    const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
@@ -104,6 +105,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                             talentNode={node}
                             key={node.talentNodeId}
                             treePointsRequiredToLvl={node.treePointsRequiredToLvl}
+                            specTalentPoints={specTalentPoints}
                         />
                     ))}
                 </TalentNodesContainer>
