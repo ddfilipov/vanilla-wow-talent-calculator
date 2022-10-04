@@ -18,8 +18,6 @@ const ButtonContainer = styled.div<INodeStyle>`
     grid-row-end: ${(props) => props.row + 1};
     grid-column-start: ${(props) => props.column};
     grid-column-end: ${(props) => props.column + 1};
-    /* filter: grayscale(100%); TODO: this will make the nodes grey when I need it */
-    /* TODO: need to add spent talent points on a tree */
     filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
 `;
 
