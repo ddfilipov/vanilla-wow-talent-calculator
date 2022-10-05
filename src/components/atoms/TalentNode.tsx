@@ -73,8 +73,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
-    console.log("specTalentPoints:", specTalentPoints)
-    console.log("specTalentPoints:", specTalentPoints)
+    console.log("specTalentPoints:", specTalentPoints);
+    console.log("specTalentPoints:", specTalentPoints);
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (currentPoints < maxNodePoints && remainingTalentPoints > 0) {
@@ -113,6 +113,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
             />
             <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
+             {/* <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} /> */}
         </ButtonContainer>
     );
 };
