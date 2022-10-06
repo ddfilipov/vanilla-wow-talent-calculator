@@ -26,7 +26,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     width: 38px;
     background-image: url(${(props) => props.backgroundImage});
     cursor: pointer;
-    border: 2px solid ${(props) => (props.isNodeCapped ? "var(--capped-node-color)" : "rgba(64, 191, 64, 0.8)")};
+    border: 2px solid ${(props) => (props.isNodeCapped ? "var(--capped-node-color)" : "var(--uncapped-node-color)")};
 `;
 
 const NodePoints = styled.span<INodePoints>`
@@ -37,7 +37,7 @@ const NodePoints = styled.span<INodePoints>`
     position: absolute;
     user-select: none;
     cursor: pointer;
-    color: ${(props) => (props.isNodeCapped ? "rgba(255,209,0,0.8)" : "rgba(64, 191, 64, 0.8)")};
+    color: ${(props) => (props.isNodeCapped ? "var(--capped-node-color)" : "var(--uncapped-node-color)")};
     z-index: 100;
     background-color: black;
     padding: 0 1px;
