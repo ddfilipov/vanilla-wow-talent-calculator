@@ -10,6 +10,7 @@ import Warrior from "./routes/warrior";
 import Shaman from "./routes/shaman";
 import Mage from "./routes/mage";
 import styled from "styled-components";
+import { GlobalStyle } from "./components/styles/GlobalStyles";
 
 const MainContainer = styled.div`
     display: flex;
@@ -31,6 +32,7 @@ function App() {
     return (
         <MainContainer>
             <Container>
+                <GlobalStyle  />
                 <Routes>
                     <Route path="/" element={<MainPage />} />
                     <Route path="/druid" element={<Druid />} />

@@ -26,7 +26,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     width: 38px;
     background-image: url(${(props) => props.backgroundImage});
     cursor: pointer;
-    border: 2px solid ${(props) => (props.isNodeCapped ? "rgba(255,209,0,0.8)" : "rgba(64, 191, 64, 0.8)")};
+    border: 2px solid ${(props) => (props.isNodeCapped ? "var(--capped-node-color)" : "rgba(64, 191, 64, 0.8)")};
 `;
 
 const NodePoints = styled.span<INodePoints>`
