@@ -2,8 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import { ClassChooser } from "../molecules/ClassChooser";
 
-// TODO: change name!!!
-const Letritas = styled.span`
+const Title = styled.span`
     color: white;
     align-self: center;
     font-size: 2rem;
@@ -12,7 +11,7 @@ const Letritas = styled.span`
 export const MainPage: FC = () => {
     return (
         <>
-            <Letritas>Choose a class:</Letritas>
+            <Title>Choose a class:</Title>
             <ClassChooser />
         </>
     );
