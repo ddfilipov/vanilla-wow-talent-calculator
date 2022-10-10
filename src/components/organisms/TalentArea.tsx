@@ -34,7 +34,6 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
     });
 
     useEffect(() => {
-        // TODO: convertir esta parte en funcion manageRequiredRemainingPoints o algo así
         setOldRemainingTalentPoints(remainingTalentPoints);
         if (oldRemainingTalentPoints !== undefined) {
             if (oldRemainingTalentPoints > remainingTalentPoints) {
