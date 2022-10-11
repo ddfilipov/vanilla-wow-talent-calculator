@@ -32,7 +32,7 @@ function App() {
     return (
         <MainContainer>
             <Container>
-                <GlobalStyle  />
+                <GlobalStyle />
                 <Routes>
                     <Route path="/" element={<MainPage />} />
                     <Route path="/druid" element={<Druid />} />
