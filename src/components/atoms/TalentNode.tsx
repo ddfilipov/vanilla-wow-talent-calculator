@@ -77,7 +77,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     console.log("specTalentPoints:", specTalentPoints);
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
-        if (currentPoints < maxNodePoints && remainingTalentPoints > 0) {
+        if (currentPoints < maxNodePoints && remainingTalentPoints > 0 && talentNode.treePointsRequiredToLvl <= specTalentPoints) {
             handleClick(e);
             setCurrentPoints(currentPoints + 1);
         }
