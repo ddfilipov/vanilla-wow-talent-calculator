@@ -8,6 +8,15 @@ interface INodeStyle {
     column: number;
     treePointsRequiredToLvl: number;
     pointsSpentOnTree: number;
+    // backgroundImage: string;
+    // isNodeCapped: boolean;
+}
+
+interface INodePoints {
+    isNodeCapped: boolean;
+}
+interface IBackgroundImage extends INodePoints {
+    backgroundImage: string;
 }
 
 const ButtonContainer = styled.div<INodeStyle>`
@@ -18,7 +27,12 @@ const ButtonContainer = styled.div<INodeStyle>`
     grid-row-end: ${(props) => props.row + 1};
     grid-column-start: ${(props) => props.column};
     grid-column-end: ${(props) => props.column + 1};
-    filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
+    button {
+        filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
+    }
+    div {
+        filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
+    }
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -53,13 +67,6 @@ export interface TalentNodeProps {
     specTalentPoints: number;
 }
 
-interface INodePoints {
-    isNodeCapped: boolean;
-}
-interface IBackgroundImage extends INodePoints {
-    backgroundImage: string;
-}
-
 export const TalentNode: FC<TalentNodeProps> = ({
     handleClick,
     maxNodePoints,
@@ -77,7 +84,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
     console.log("specTalentPoints:", specTalentPoints);
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
-        if (currentPoints < maxNodePoints && remainingTalentPoints > 0 && talentNode.treePointsRequiredToLvl <= specTalentPoints) {
+        if (
+            currentPoints < maxNodePoints &&
+            remainingTalentPoints > 0 &&
+            talentNode.treePointsRequiredToLvl <= specTalentPoints
+        ) {
             handleClick(e);
             setCurrentPoints(currentPoints + 1);
         }
@@ -113,7 +124,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
             />
             <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
-             {/* <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} /> */}
+            {/* <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} /> */}
         </ButtonContainer>
     );
 };
