@@ -78,9 +78,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
-    console.log("specTalentPoints:", specTalentPoints);
-    console.log("specTalentPoints:", specTalentPoints);
-
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (
             currentPoints < maxNodePoints &&
