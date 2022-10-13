@@ -30,7 +30,7 @@ const ButtonContainer = styled.div<INodeStyle>`
     button {
         filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
     }
-    div {
+    span {
         filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
     }
 `;
