@@ -8,8 +8,6 @@ interface INodeStyle {
     column: number;
     treePointsRequiredToLvl: number;
     pointsSpentOnTree: number;
-    // backgroundImage: string;
-    // isNodeCapped: boolean;
 }
 
 interface INodePoints {
@@ -124,7 +122,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
             />
             <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
-            {/* <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} /> */}
         </ButtonContainer>
     );
 };
