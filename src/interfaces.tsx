@@ -31,10 +31,6 @@ export interface ISpecTalentPoints {
     thirdSpecPoints: number;
 }
 
-interface ITalentNodeRanks {
-    rankDescription: string;
-}
-
 export interface ITalentRanks {
     rankDescription: string;
 }
