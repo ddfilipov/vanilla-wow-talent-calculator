@@ -21,6 +21,8 @@ const ButtonContainer = styled.div<INodeStyle>`
     height: 45px;
     width: 45px;
     position: relative;
+    display: flex;
+    flex-direction: column;
     grid-row-start: ${(props) => props.row};
     grid-row-end: ${(props) => props.row + 1};
     grid-column-start: ${(props) => props.column};
@@ -39,6 +41,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     background-image: url(${(props) => props.backgroundImage});
     cursor: pointer;
     border: 2px solid ${(props) => (props.isNodeCapped ? "var(--capped-node-color)" : "var(--uncapped-node-color)")};
+    order: 2;
 `;
 
 const NodePoints = styled.span<INodePoints>`
@@ -53,6 +56,7 @@ const NodePoints = styled.span<INodePoints>`
     z-index: 100;
     background-color: black;
     padding: 0 1px;
+    order: 3;
 `;
 
 export interface TalentNodeProps {
@@ -119,6 +123,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
             />
             <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
+            {/* {talentNode.talentNodeId === 1 && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />} */}
         </ButtonContainer>
     );
 };
