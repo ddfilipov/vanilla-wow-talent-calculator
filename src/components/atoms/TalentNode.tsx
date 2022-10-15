@@ -21,8 +21,6 @@ const ButtonContainer = styled.div<INodeStyle>`
     height: 45px;
     width: 45px;
     position: relative;
-    display: flex;
-    flex-direction: column;
     grid-row-start: ${(props) => props.row};
     grid-row-end: ${(props) => props.row + 1};
     grid-column-start: ${(props) => props.column};

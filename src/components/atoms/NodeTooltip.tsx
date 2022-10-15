@@ -17,7 +17,6 @@ const Container = styled.div<NodeTooltipStyle>`
     width: 300px;
     height: 150px;
     padding: 5px;
-    order: 1;
 `;
 
 const TalentNameStyled = styled.div`
