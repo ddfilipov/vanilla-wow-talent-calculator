@@ -17,6 +17,8 @@ interface IBackgroundImage extends INodePoints {
     backgroundImage: string;
 }
 
+const ButtonWrapper = styled.div``;
+
 const ButtonContainer = styled.div<INodeStyle>`
     height: 45px;
     width: 45px;
@@ -107,21 +109,28 @@ export const TalentNode: FC<TalentNodeProps> = ({
         <ButtonContainer
             row={talentNode.row}
             column={talentNode.column}
-            onMouseEnter={() => setShowTooltip(true)}
-            onMouseLeave={() => setShowTooltip(false)}
             treePointsRequiredToLvl={treePointsRequiredToLvl}
             pointsSpentOnTree={specTalentPoints}
         >
-            <ButtonStyled
-                // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
-                backgroundImage={talentIcon}
-                isNodeCapped={isNodeCapped}
-                onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
-                onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
-            />
-            <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
+            <div>
+                <ButtonStyled
+                    // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
+                    backgroundImage={talentIcon}
+                    isNodeCapped={isNodeCapped}
+                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
+                    onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
+                    onMouseEnter={() => {
+                        console.log("entro onmouseneter");
+                        return setShowTooltip(true);
+                    }}
+                    onMouseLeave={() => {
+                        console.log("salgo onmouseleave");
+                        return setShowTooltip(false);
+                    }}
+                />
+                <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
+            </div>
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
-            {/* {talentNode.talentNodeId === 1 && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />} */}
         </ButtonContainer>
     );
 };
