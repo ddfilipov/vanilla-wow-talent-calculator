@@ -119,12 +119,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     isNodeCapped={isNodeCapped}
                     onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
                     onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
-                    onMouseEnter={() => {
-                        return setShowTooltip(true);
-                    }}
-                    onMouseLeave={() => {
-                        return setShowTooltip(false);
-                    }}
+                    onMouseEnter={() => setShowTooltip(true)}
+                    onMouseLeave={() => setShowTooltip(false)}
                 />
                 <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
             </div>
