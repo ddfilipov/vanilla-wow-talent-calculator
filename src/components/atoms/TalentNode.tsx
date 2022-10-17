@@ -120,11 +120,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
                     onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
                     onMouseEnter={() => {
-                        console.log("entro onmouseneter");
                         return setShowTooltip(true);
                     }}
                     onMouseLeave={() => {
-                        console.log("salgo onmouseleave");
                         return setShowTooltip(false);
                     }}
                 />
