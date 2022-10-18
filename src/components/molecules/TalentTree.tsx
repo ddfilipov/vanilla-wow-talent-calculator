@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import styled from "styled-components";
-import { ITalentNode, SpecIdType } from "../../interfaces";
+import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
 
 const Container = styled.div`
@@ -20,9 +20,6 @@ const TalentNodesContainer = styled.div`
     border: 1px solid white;
     place-items: center;
     padding: 1rem;
-    div {
-        /* border: 1px solid white; */
-    }
 `;
 
 // TODO: change this name, lame
@@ -54,9 +51,7 @@ const TalentTreeStyled = styled.div<BackgroundImage>`
 `;
 
 // TODO: should be a general interface, move
-export interface BackgroundImage {
-    backgroundImage: string;
-}
+
 
 interface TalentTreeProps {
     specId: SpecIdType;

@@ -56,3 +56,7 @@ export interface ITalents {
     className: ClassesType;
     talentSpecs: ITalentRankSpecs[];
 }
+
+export interface BackgroundImage {
+    backgroundImage: string;
+}
