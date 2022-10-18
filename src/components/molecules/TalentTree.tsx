@@ -50,6 +50,12 @@ const TalentTreeStyled = styled.div<BackgroundImage>`
     padding: 10px;
 `;
 
+// TODO: temporary button til I have a an actual button
+const ResetTreeButtonStyled = styled.div`
+    cursor: pointer;
+    justify-self: center;
+`;
+
 interface TalentTreeProps {
     specId: SpecIdType;
     backgroundImage: string;
@@ -84,7 +90,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             <TopPart backgroundImage={specImage}>
                 <div></div>
                 <div>{`${specName} (${specTalentPoints})`}</div>
-                <div>X</div>
+                <ResetTreeButtonStyled>X</ResetTreeButtonStyled>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
