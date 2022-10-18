@@ -50,9 +50,6 @@ const TalentTreeStyled = styled.div<BackgroundImage>`
     padding: 10px;
 `;
 
-// TODO: should be a general interface, move
-
-
 interface TalentTreeProps {
     specId: SpecIdType;
     backgroundImage: string;
