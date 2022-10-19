@@ -120,6 +120,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
                 remainingTalentPoints={remainingTalentPoints}
                 classId={data.classId}
                 talents={talents}
+                resetTreeTalentPoints={resetTreeTalentPoints}
             />
         </Container>
     );

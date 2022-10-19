@@ -66,6 +66,7 @@ interface TalentTreeProps {
     remainingTalentPoints: number;
     classId: number;
     specRanks?: ITalentNode[] | undefined;
+    resetTreeTalentPoints: (specId: SpecIdType) => void;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -78,6 +79,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     remainingTalentPoints,
     classId,
     specRanks,
+    resetTreeTalentPoints,
 }) => {
     const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -90,7 +92,13 @@ export const TalentTree: FC<TalentTreeProps> = ({
             <TopPart backgroundImage={specImage}>
                 <div></div>
                 <div>{`${specName} (${specTalentPoints})`}</div>
-                <ResetTreeButtonStyled onClick={()=>{}}>X</ResetTreeButtonStyled>
+                <ResetTreeButtonStyled
+                    onClick={() => {
+                        resetTreeTalentPoints(specId);
+                    }}
+                >
+                    X
+                </ResetTreeButtonStyled>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
