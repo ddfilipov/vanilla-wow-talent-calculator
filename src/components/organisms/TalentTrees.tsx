@@ -17,7 +17,7 @@ interface TalentTreesProps {
     remainingTalentPoints: number;
     classId: number;
     talents?: ITalents;
-    resetTreeTalentPoints: (specId: SpecIdType) => void;
+    resetTreeTalentPoints: (specId: SpecIdType, pointsSpentOnTree: number) => void;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({

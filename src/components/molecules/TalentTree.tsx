@@ -66,7 +66,7 @@ interface TalentTreeProps {
     remainingTalentPoints: number;
     classId: number;
     specRanks?: ITalentNode[] | undefined;
-    resetTreeTalentPoints: (specId: SpecIdType) => void;
+    resetTreeTalentPoints: (specId: SpecIdType, pointsSpentOnTree: number) => void;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -94,7 +94,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <div>{`${specName} (${specTalentPoints})`}</div>
                 <ResetTreeButtonStyled
                     onClick={() => {
-                        resetTreeTalentPoints(specId);
+                        resetTreeTalentPoints(specId, specTalentPoints);
                     }}
                 >
                     X
