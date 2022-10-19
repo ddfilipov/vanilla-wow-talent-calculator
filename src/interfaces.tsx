@@ -10,6 +10,7 @@ export interface IClassWrapper {
     ayuda: IClass[]; // TODO: change ayuda into something more creative...
 }
 
+// TODO: should I make this into a Map<number, string> or something?
 export type SpecIdType = "firstSpec" | "secondSpec" | "thirdSpec";
 
 export interface ISpecData {

@@ -99,6 +99,12 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
         [specTalentPoints]
     );
 
+    const resetTreeTalentPoints = (specId: SpecIdType) => {
+        specId === "firstSpec" && setSpecTalentPoints({ ...specTalentPoints, firstSpecPoints: 0 });
+        specId === "secondSpec" && setSpecTalentPoints({ ...specTalentPoints, secondSpecPoints: 0 });
+        specId === "thirdSpec" && setSpecTalentPoints({ ...specTalentPoints, thirdSpecPoints: 0 });
+    };
+
     return (
         <Container>
             <TopTalentArea

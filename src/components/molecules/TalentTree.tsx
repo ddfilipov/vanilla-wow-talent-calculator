@@ -90,7 +90,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             <TopPart backgroundImage={specImage}>
                 <div></div>
                 <div>{`${specName} (${specTalentPoints})`}</div>
-                <ResetTreeButtonStyled>X</ResetTreeButtonStyled>
+                <ResetTreeButtonStyled onClick={()=>{}}>X</ResetTreeButtonStyled>
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
