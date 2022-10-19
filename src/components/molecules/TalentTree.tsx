@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
@@ -85,7 +85,13 @@ export const TalentTree: FC<TalentTreeProps> = ({
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
-    /* TODO: need to add spent talent points on a tree */
+    const childRef = useRef(null);
+    
+    //TODO: make this work!
+    const onClickResetTree = () => {
+        resetTreeTalentPoints(specId, specTalentPoints);
+        // childRef.current && childRef.current.childFunction1();
+    }
 
     return (
         <Container>
@@ -94,7 +100,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <div>{`${specName} (${specTalentPoints})`}</div>
                 <ResetTreeButtonStyled
                     onClick={() => {
-                        resetTreeTalentPoints(specId, specTalentPoints);
+                        onClickResetTree();
+                        
                     }}
                 >
                     X
@@ -112,6 +119,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                             key={node.talentNodeId}
                             treePointsRequiredToLvl={node.treePointsRequiredToLvl}
                             specTalentPoints={specTalentPoints}
+                            ref={childRef}
                         />
                     ))}
                 </TalentNodesContainer>

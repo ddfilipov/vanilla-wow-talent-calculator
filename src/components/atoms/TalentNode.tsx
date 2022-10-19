@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import styled from "styled-components";
 import { ITalentNode } from "../../interfaces";
 import { NodeTooltip } from "./NodeTooltip";
@@ -67,9 +67,10 @@ export interface TalentNodeProps {
     talentNode: ITalentNode;
     treePointsRequiredToLvl: number;
     specTalentPoints: number;
+    ref: any;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({
+export const TalentNode: FC<TalentNodeProps> = forwardRef(({
     handleClick,
     maxNodePoints,
     remainingTalentPoints,
@@ -77,11 +78,17 @@ export const TalentNode: FC<TalentNodeProps> = ({
     talentNode,
     treePointsRequiredToLvl,
     specTalentPoints,
-}) => {
+},ref) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
+    useImperativeHandle(ref, () => ({
+        childFunction1() {
+          console.log('child function 1 called');
+        },
+      }));
+      
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (
             currentPoints < maxNodePoints &&
@@ -127,4 +134,4 @@ export const TalentNode: FC<TalentNodeProps> = ({
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
         </ButtonContainer>
     );
-};
+});
