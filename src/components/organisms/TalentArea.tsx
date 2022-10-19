@@ -101,9 +101,14 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
 
     const resetTreeTalentPoints = (specId: SpecIdType, pointsSpentOnTree: number) => {
         console.log("clicking reset with specId:", specId, "y pointsSpentOnTree:", pointsSpentOnTree);
+        setRequiredLevel(previousReqLvl => previousReqLvl - pointsSpentOnTree);
+        setRemainingTalentPoints(previousRemainingPoins => previousRemainingPoins + pointsSpentOnTree);
         specId === "firstSpec" && setSpecTalentPoints({ ...specTalentPoints, firstSpecPoints: 0 });
         specId === "secondSpec" && setSpecTalentPoints({ ...specTalentPoints, secondSpecPoints: 0 });
         specId === "thirdSpec" && setSpecTalentPoints({ ...specTalentPoints, thirdSpecPoints: 0 });
+        console.log(requiredLevel)
+        console.log(remainingTalentPoints)
+        console.log(oldRemainingTalentPoints)
     };
 
     return (
