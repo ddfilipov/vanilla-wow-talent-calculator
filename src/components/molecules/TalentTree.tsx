@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
@@ -82,6 +82,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
     resetTreeTalentPoints,
 }) => {
     const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
+    // TODO: shouldn't be undefined
+    const [talents, setTalents] = useState<ITalentNode[] | undefined>(specRanks)
+
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
@@ -92,6 +95,10 @@ export const TalentTree: FC<TalentTreeProps> = ({
         resetTreeTalentPoints(specId, specTalentPoints);
         // childRef.current && childRef.current.childFunction1();
     }
+
+    useEffect(()=>{
+        console.log("talents", talents)
+    },[])
 
     return (
         <Container>
