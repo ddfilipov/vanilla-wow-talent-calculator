@@ -1,7 +1,7 @@
 import { FC, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
-import { IAlgo, TalentNode } from "../atoms/TalentNode";
+import { ITalentNodeFunctions, TalentNode } from "../atoms/TalentNode";
 
 const Container = styled.div`
     display: grid;
@@ -86,7 +86,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
-    const childRef = useRef<IAlgo>(null);
+    const childRef = useRef<ITalentNodeFunctions>(null);
 
     //TODO: make this work!
     const onClickResetTree = () => {
