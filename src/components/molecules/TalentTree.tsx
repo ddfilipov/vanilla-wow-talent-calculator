@@ -1,7 +1,7 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
-import { TalentNode } from "../atoms/TalentNode";
+import { IAlgo, TalentNode } from "../atoms/TalentNode";
 
 const Container = styled.div`
     display: grid;
@@ -82,23 +82,17 @@ export const TalentTree: FC<TalentTreeProps> = ({
     resetTreeTalentPoints,
 }) => {
     const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
-    // TODO: shouldn't be undefined
-    const [talents, setTalents] = useState<ITalentNode[] | undefined>(specRanks)
 
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
-    const childRef = useRef(null);
-    
+    const childRef = useRef<IAlgo>(null);
+
     //TODO: make this work!
     const onClickResetTree = () => {
         resetTreeTalentPoints(specId, specTalentPoints);
-        // childRef.current && childRef.current.childFunction1();
-    }
-
-    useEffect(()=>{
-        console.log("talents", talents)
-    },[])
+        childRef.current?.childFunction1();
+    };
 
     return (
         <Container>
@@ -108,7 +102,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <ResetTreeButtonStyled
                     onClick={() => {
                         onClickResetTree();
-                        
                     }}
                 >
                     X
@@ -116,7 +109,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
-                    {talents?.map((node) => (
+                    {specRanks?.map((node) => (
                         <TalentNode
                             handleClick={clickOnNode}
                             maxNodePoints={node.numberOfRanks}

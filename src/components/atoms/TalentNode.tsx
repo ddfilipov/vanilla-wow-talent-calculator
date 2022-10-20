@@ -59,6 +59,10 @@ const NodePoints = styled.span<INodePoints>`
     order: 3;
 `;
 
+export interface IAlgo{
+    childFunction1: () => void;
+}
+
 export interface TalentNodeProps {
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
     maxNodePoints: number;
@@ -70,7 +74,7 @@ export interface TalentNodeProps {
     ref: any;
 }
 
-export const TalentNode: FC<TalentNodeProps> = forwardRef(({
+export const TalentNode: FC<TalentNodeProps> = forwardRef<IAlgo, TalentNodeProps>(({
     handleClick,
     maxNodePoints,
     remainingTalentPoints,
