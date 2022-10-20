@@ -116,7 +116,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
-                    {specRanks?.map((node) => (
+                    {talents?.map((node) => (
                         <TalentNode
                             handleClick={clickOnNode}
                             maxNodePoints={node.numberOfRanks}
