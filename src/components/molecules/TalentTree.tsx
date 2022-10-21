@@ -77,7 +77,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     specId,
     specTalentPoints,
     remainingTalentPoints,
-    classId,
+    classId, //TODO: what was I supposed to do with this??
     specRanks,
     resetTreeTalentPoints,
 }) => {
