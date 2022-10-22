@@ -56,6 +56,11 @@ const ResetTreeButtonStyled = styled.div`
     justify-self: center;
 `;
 
+//TODO: first number should be the id, second one should be the points spent on that talent
+interface ITalentNodesState {
+    node: Map<number, number>;
+}
+
 interface TalentTreeProps {
     specId: SpecIdType;
     backgroundImage: string;
@@ -82,6 +87,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
     resetTreeTalentPoints,
 }) => {
     const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
+
+    const [nodesPoints, setNodesPoints] = useState();
 
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
