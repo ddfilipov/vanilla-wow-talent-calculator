@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
 import { ITalentNodeFunctions, TalentNode } from "../atoms/TalentNode";
@@ -88,8 +88,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
 }) => {
     const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
 
-    const [nodesPoints, setNodesPoints] = useState<ITalentNodesState>();
-
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
@@ -100,6 +98,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
         resetTreeTalentPoints(specId, specTalentPoints);
         childRef.current?.childFunction1();
     };
+
+    const [nodesPoints, setNodesPoints] = useState<ITalentNodesState>();
+    useEffect(() => {
+        // TODO: should set nodePonts based on the specRanks,ranks the skill has. Even better, should pass the 3 of ranks a talent has
+        // setNodesPoints()
+    }, []);
 
     return (
         <Container>
