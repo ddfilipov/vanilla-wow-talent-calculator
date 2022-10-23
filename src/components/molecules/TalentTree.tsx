@@ -88,7 +88,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
 }) => {
     const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
 
-    const [nodesPoints, setNodesPoints] = useState();
+    const [nodesPoints, setNodesPoints] = useState<ITalentNodesState>();
 
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
