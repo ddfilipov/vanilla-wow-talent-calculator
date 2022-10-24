@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { createContext, FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
 import { ITalentNodeFunctions, TalentNode } from "../atoms/TalentNode";
@@ -61,6 +61,12 @@ interface ITalentNodesState {
     node: Map<number, number>;
 }
 
+// TODO: Should have a function inside that's gonna be called in the child component
+interface ITestInterface {
+    funcion: () => void;
+}
+export const UserContext = createContext<ITestInterface | null>(null);
+
 interface TalentTreeProps {
     specId: SpecIdType;
     backgroundImage: string;
@@ -121,17 +127,20 @@ export const TalentTree: FC<TalentTreeProps> = ({
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
                     {specRanks?.map((node) => (
-                        <TalentNode
-                            handleClick={clickOnNode}
-                            maxNodePoints={node.numberOfRanks}
-                            remainingTalentPoints={remainingTalentPoints}
-                            talentIcon={node.talentIcon}
-                            talentNode={node}
-                            key={node.talentNodeId}
-                            treePointsRequiredToLvl={node.treePointsRequiredToLvl}
-                            specTalentPoints={specTalentPoints}
-                            ref={childRef}
-                        />
+                        // <UserContext.Provider value={() => {}}>
+                        <UserContext.Provider value={{ funcion: () => {} }}>
+                            <TalentNode
+                                handleClick={clickOnNode}
+                                maxNodePoints={node.numberOfRanks}
+                                remainingTalentPoints={remainingTalentPoints}
+                                talentIcon={node.talentIcon}
+                                talentNode={node}
+                                key={node.talentNodeId}
+                                treePointsRequiredToLvl={node.treePointsRequiredToLvl}
+                                specTalentPoints={specTalentPoints}
+                                ref={childRef}
+                            />
+                        </UserContext.Provider>
                     ))}
                 </TalentNodesContainer>
             </TalentTreeStyled>
