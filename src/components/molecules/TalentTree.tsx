@@ -92,23 +92,23 @@ export const TalentTree: FC<TalentTreeProps> = ({
     specRanks,
     resetTreeTalentPoints,
 }) => {
-    const [pointsSpentOnTree, setPointsSpentOnTree] = useState();
+    const [treePoints, setTreePoints] = useState<ITalentNode[]>();
 
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
-    const childRef = useRef<ITalentNodeFunctions>(null);
 
     //TODO: make this work!
     const onClickResetTree = () => {
         resetTreeTalentPoints(specId, specTalentPoints);
-        childRef.current?.childFunction1();
     };
 
-    const [nodesPoints, setNodesPoints] = useState<ITalentNodesState>();
+    const [nodesPoints, setNodesPoints] = useState<ITalentNode[]>();
     useEffect(() => {
         // TODO: should set nodePonts based on the specRanks,ranks the skill has. Even better, should pass the 3 of ranks a talent has
         // setNodesPoints()
+
+        setNodesPoints(specRanks);
     }, []);
 
     return (
@@ -126,7 +126,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
-                    {specRanks?.map((node) => (
+                    {nodesPoints?.map((node) => (
                         // <UserContext.Provider value={() => {}}>
                         <UserContext.Provider value={{ funcion: () => {} }}>
                             <TalentNode
@@ -138,7 +138,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 key={node.talentNodeId}
                                 treePointsRequiredToLvl={node.treePointsRequiredToLvl}
                                 specTalentPoints={specTalentPoints}
-                                ref={childRef}
                             />
                         </UserContext.Provider>
                     ))}
