@@ -1,7 +1,7 @@
 import { createContext, FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
-import { ITalentNodeFunctions, TalentNode } from "../atoms/TalentNode";
+import { TalentNode } from "../atoms/TalentNode";
 
 const Container = styled.div`
     display: grid;
@@ -55,17 +55,6 @@ const ResetTreeButtonStyled = styled.div`
     cursor: pointer;
     justify-self: center;
 `;
-
-//TODO: first number should be the id, second one should be the points spent on that talent
-interface ITalentNodesState {
-    node: Map<number, number>;
-}
-
-// TODO: Should have a function inside that's gonna be called in the child component
-interface ITestInterface {
-    funcion: () => void;
-}
-export const UserContext = createContext<ITestInterface | null>(null);
 
 interface TalentTreeProps {
     specId: SpecIdType;
@@ -127,19 +116,16 @@ export const TalentTree: FC<TalentTreeProps> = ({
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
                     {nodesPoints?.map((node) => (
-                        // <UserContext.Provider value={() => {}}>
-                        <UserContext.Provider value={{ funcion: () => {} }}>
-                            <TalentNode
-                                handleClick={clickOnNode}
-                                maxNodePoints={node.numberOfRanks}
-                                remainingTalentPoints={remainingTalentPoints}
-                                talentIcon={node.talentIcon}
-                                talentNode={node}
-                                key={node.talentNodeId}
-                                treePointsRequiredToLvl={node.treePointsRequiredToLvl}
-                                specTalentPoints={specTalentPoints}
-                            />
-                        </UserContext.Provider>
+                        <TalentNode
+                            handleClick={clickOnNode}
+                            maxNodePoints={node.numberOfRanks}
+                            remainingTalentPoints={remainingTalentPoints}
+                            talentIcon={node.talentIcon}
+                            talentNode={node}
+                            key={node.talentNodeId}
+                            treePointsRequiredToLvl={node.treePointsRequiredToLvl}
+                            specTalentPoints={specTalentPoints}
+                        />
                     ))}
                 </TalentNodesContainer>
             </TalentTreeStyled>
