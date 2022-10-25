@@ -1,6 +1,7 @@
-import { FC, forwardRef, useEffect, useImperativeHandle, useState } from "react";
+import { FC, forwardRef, useContext, useEffect, useImperativeHandle, useState } from "react";
 import styled from "styled-components";
 import { ITalentNode } from "../../interfaces";
+import { UserContext } from "../molecules/TalentTree";
 import { NodeTooltip } from "./NodeTooltip";
 
 interface INodeStyle {
@@ -91,11 +92,15 @@ export const TalentNode: FC<TalentNodeProps> = forwardRef<ITalentNodeFunctions, 
         const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
         const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
+        const appContext = useContext(UserContext);
+
         useImperativeHandle(ref, () => ({
             childFunction1() {
                 setCurrentPoints(0);
             },
         }));
+
+        appContext?.funcion();
 
         const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
             if (
