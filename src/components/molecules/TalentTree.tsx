@@ -87,7 +87,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
         handleClickNode(e, specId);
     };
 
-    //TODO: make this work!
+    //TODO: make this work for TalentNodes!
     const onClickResetTree = () => {
         resetTreeTalentPoints(specId, specTalentPoints);
     };
@@ -99,6 +99,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
 
         setNodesPoints(specRanks);
     }, []);
+
+    //TODO: should create something like a Map type that links talentId with current points spent.
 
     return (
         <Container>
