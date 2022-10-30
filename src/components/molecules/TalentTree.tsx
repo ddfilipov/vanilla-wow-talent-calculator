@@ -100,7 +100,11 @@ export const TalentTree: FC<TalentTreeProps> = ({
         setNodesPoints(specRanks);
     }, []);
 
-    //TODO: should create something like a Map type that links talentId with current points spent.
+    useEffect(() => {
+        // TODO: should create something like a Map type that links talentId with current points spent.
+        // need something that has talentId, pointsSpent, maxPoints
+        
+    }, []);
 
     return (
         <Container>
