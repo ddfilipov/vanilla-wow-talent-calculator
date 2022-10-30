@@ -56,6 +56,12 @@ const ResetTreeButtonStyled = styled.div`
     justify-self: center;
 `;
 
+interface INodeData{
+    idTalent: number;
+    pointsSpent: number;
+    maxNumberOfPoints: number;
+}
+
 interface TalentTreeProps {
     specId: SpecIdType;
     backgroundImage: string;
@@ -103,6 +109,11 @@ export const TalentTree: FC<TalentTreeProps> = ({
     useEffect(() => {
         // TODO: should create something like a Map type that links talentId with current points spent.
         // need something that has talentId, pointsSpent, maxPoints
+        let newArray: INodeData[];
+        specRanks?.map((talent,index)=>{
+            console.log(talent);
+            // talent.talentNodeId
+    })
     }, []);
 
     return (
