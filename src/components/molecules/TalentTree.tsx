@@ -109,14 +109,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
     useEffect(() => {
         // TODO: should create something like a Map type that links talentId with current points spent.
         // need something that has talentId, pointsSpent, maxPoints
-        let newArray = specRanks?.map(({ talentNodeId, numberOfRanks }) => ({ talentNodeId, numberOfRanks }));
-        console.log("before (newArray):", newArray);
-        const newArray2 = newArray?.map((element) => ({ ...element, newProp: 0 }));
-        console.log("after (newArray2):", newArray2);
-        //     specRanks?.map((talent,index)=>{
-        //         console.log(talent);
-        //         // newArray.
-        // })
+        let newArray = specRanks?.map(({ talentNodeId, numberOfRanks }) => ({
+            talentNodeId,
+            numberOfRanks,
+            pointsSpent: 0,
+        }));
+        console.log(newArray);
     }, []);
 
     return (
