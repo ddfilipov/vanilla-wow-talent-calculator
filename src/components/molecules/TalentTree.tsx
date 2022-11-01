@@ -57,9 +57,11 @@ const ResetTreeButtonStyled = styled.div`
 `;
 
 interface INodeData {
+    // talentNodeId: number; //idTalent: number;
+    // numberOfRanks: number; //    maxNumberOfPoints: number;
     idTalent: number;
-    pointsSpent: number;
     maxNumberOfPoints: number;
+    pointsSpent: number;
 }
 
 interface TalentTreeProps {
@@ -98,22 +100,15 @@ export const TalentTree: FC<TalentTreeProps> = ({
         resetTreeTalentPoints(specId, specTalentPoints);
     };
 
-    const [nodesPoints, setNodesPoints] = useState<ITalentNode[]>();
+    const [nodesPoints, setNodesPoints] = useState<INodeData[]>();
     useEffect(() => {
-        // TODO: should set nodePonts based on the specRanks,ranks the skill has. Even better, should pass the 3 of ranks a talent has
-        // setNodesPoints()
-
-        setNodesPoints(specRanks);
-    }, []);
-
-    useEffect(() => {
-        // TODO: should create something like a Map type that links talentId with current points spent.
-        // need something that has talentId, pointsSpent, maxPoints
-        let newArray = specRanks?.map(({ talentNodeId, numberOfRanks }) => ({
-            talentNodeId,
-            numberOfRanks,
+        const newArray = specRanks?.map(({ talentNodeId: idTalent, numberOfRanks: maxNumberOfPoints }) => ({
+            idTalent,
+            maxNumberOfPoints,
             pointsSpent: 0,
         }));
+
+        setNodesPoints(newArray);
         console.log(newArray);
     }, []);
 
@@ -132,7 +127,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
-                    {nodesPoints?.map((node) => (
+                    {specRanks?.map((node) => (
                         <TalentNode
                             handleClick={clickOnNode}
                             maxNodePoints={node.numberOfRanks}
