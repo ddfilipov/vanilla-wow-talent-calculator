@@ -62,6 +62,10 @@ interface INodeData {
     pointsSpent: number;
 }
 
+interface INodeData extends ITalentNode {
+    pointsSpent: number;
+}
+
 interface TalentTreeProps {
     specId: SpecIdType;
     backgroundImage: string;
@@ -98,16 +102,23 @@ export const TalentTree: FC<TalentTreeProps> = ({
         resetTreeTalentPoints(specId, specTalentPoints);
     };
 
+    // const [nodesPoints, setNodesPoints] = useState<INodeData[]>();
     const [nodesPoints, setNodesPoints] = useState<INodeData[]>();
     useEffect(() => {
-        const newArray = specRanks?.map(({ talentNodeId: idTalent, numberOfRanks: maxNumberOfPoints }) => ({
-            idTalent,
-            maxNumberOfPoints,
+        // const newArray = specRanks?.map(({ talentNodeId: idTalent, numberOfRanks: maxNumberOfPoints }) => ({
+        //     idTalent,
+        //     maxNumberOfPoints,
+        //     pointsSpent: 0,
+        // }));
+
+        const newArray2 = specRanks?.map((talent) => ({
+            ...talent,
             pointsSpent: 0,
         }));
-
-        setNodesPoints(newArray);
-        console.log(newArray);
+        
+        console.log("specRanks:", specRanks);
+        console.log("newArray2:", newArray2);
+        // setNodesPoints(newArray2);
     }, []);
 
     return (
