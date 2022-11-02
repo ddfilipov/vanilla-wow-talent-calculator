@@ -57,8 +57,6 @@ const ResetTreeButtonStyled = styled.div`
 `;
 
 interface INodeData {
-    // talentNodeId: number; //idTalent: number;
-    // numberOfRanks: number; //    maxNumberOfPoints: number;
     idTalent: number;
     maxNumberOfPoints: number;
     pointsSpent: number;
@@ -130,12 +128,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     {specRanks?.map((node) => (
                         <TalentNode
                             handleClick={clickOnNode}
-                            // maxNodePoints={node.numberOfRanks}
                             remainingTalentPoints={remainingTalentPoints}
-                            // talentIcon={node.talentIcon}
                             talentNode={node}
                             key={node.talentNodeId}
-                            // treePointsRequiredToLvl={node.treePointsRequiredToLvl}
                             specTalentPoints={specTalentPoints}
                         />
                     ))}

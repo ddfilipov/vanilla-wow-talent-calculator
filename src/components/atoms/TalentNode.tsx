@@ -65,11 +65,8 @@ export interface ITalentNodeFunctions {
 
 export interface TalentNodeProps {
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    // maxNodePoints: number;
     remainingTalentPoints: number;
-    // talentIcon: string;
     talentNode: ITalentNode;
-    // treePointsRequiredToLvl: number;
     specTalentPoints: number;
 }
 
