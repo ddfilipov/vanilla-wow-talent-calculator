@@ -65,21 +65,18 @@ export interface ITalentNodeFunctions {
 
 export interface TalentNodeProps {
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    maxNodePoints: number;
+    // maxNodePoints: number;
     remainingTalentPoints: number;
-    talentIcon: string;
+    // talentIcon: string;
     talentNode: ITalentNode;
-    treePointsRequiredToLvl: number;
+    // treePointsRequiredToLvl: number;
     specTalentPoints: number;
 }
 
 export const TalentNode: FC<TalentNodeProps> = ({
     handleClick,
-    maxNodePoints,
     remainingTalentPoints,
-    talentIcon,
     talentNode,
-    treePointsRequiredToLvl,
     specTalentPoints,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
@@ -88,7 +85,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
 
     const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
         if (
-            currentPoints < maxNodePoints &&
+            currentPoints < talentNode.numberOfRanks &&
             remainingTalentPoints > 0 &&
             talentNode.treePointsRequiredToLvl <= specTalentPoints
         ) {
@@ -106,27 +103,27 @@ export const TalentNode: FC<TalentNodeProps> = ({
     };
 
     useEffect(() => {
-        maxNodePoints === currentPoints ? setIsNodeCapped(true) : setIsNodeCapped(false);
-    }, [currentPoints, maxNodePoints]);
+        talentNode.numberOfRanks === currentPoints ? setIsNodeCapped(true) : setIsNodeCapped(false);
+    }, [currentPoints, talentNode.numberOfRanks]);
 
     return (
         <ButtonContainer
             row={talentNode.row}
             column={talentNode.column}
-            treePointsRequiredToLvl={treePointsRequiredToLvl}
+            treePointsRequiredToLvl={talentNode.treePointsRequiredToLvl}
             pointsSpentOnTree={specTalentPoints}
         >
             <div>
                 <ButtonStyled
                     // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
-                    backgroundImage={talentIcon}
+                    backgroundImage={talentNode.talentIcon}
                     isNodeCapped={isNodeCapped}
                     onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
                     onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
                 />
-                <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${maxNodePoints}`}</NodePoints>
+                <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${talentNode.numberOfRanks}`}</NodePoints>
             </div>
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
         </ButtonContainer>

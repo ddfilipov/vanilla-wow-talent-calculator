@@ -130,12 +130,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     {specRanks?.map((node) => (
                         <TalentNode
                             handleClick={clickOnNode}
-                            maxNodePoints={node.numberOfRanks}
+                            // maxNodePoints={node.numberOfRanks}
                             remainingTalentPoints={remainingTalentPoints}
-                            talentIcon={node.talentIcon}
+                            // talentIcon={node.talentIcon}
                             talentNode={node}
                             key={node.talentNodeId}
-                            treePointsRequiredToLvl={node.treePointsRequiredToLvl}
+                            // treePointsRequiredToLvl={node.treePointsRequiredToLvl}
                             specTalentPoints={specTalentPoints}
                         />
                     ))}
