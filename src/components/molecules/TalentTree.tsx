@@ -105,6 +105,15 @@ export const TalentTree: FC<TalentTreeProps> = ({
         setNodesPoints(newArray2);
     }, []);
 
+    const talentUp = (id: number) => {
+        // const newArray = nodesPoints?.find((talent)=>talent.talentNodeId === id)
+        const newArray = nodesPoints?.find((talent) =>
+            talent.talentNodeId === id ? { ...talent, pointsSpent: 1 } : talent
+        );
+        console.log(newArray);
+        // setNodesPoints()
+    };
+
     return (
         <Container>
             <TopPart backgroundImage={specImage}>

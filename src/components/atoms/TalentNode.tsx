@@ -121,9 +121,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
                 />
-                <NodePoints isNodeCapped={isNodeCapped}>{`${currentPoints}/${talentNode.numberOfRanks}`}</NodePoints>
+                <NodePoints
+                    isNodeCapped={isNodeCapped}
+                >{`${talentNode.pointsSpent}/${talentNode.numberOfRanks}`}</NodePoints>
             </div>
-            {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={currentPoints} />}
+            {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
         </ButtonContainer>
     );
 };
