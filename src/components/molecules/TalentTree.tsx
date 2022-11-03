@@ -56,7 +56,7 @@ const ResetTreeButtonStyled = styled.div`
     justify-self: center;
 `;
 
-interface INodeData extends ITalentNode {
+export interface INodeData extends ITalentNode {
     pointsSpent: number;
 }
 
@@ -120,7 +120,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             </TopPart>
             <TalentTreeStyled backgroundImage={backgroundImage}>
                 <TalentNodesContainer>
-                    {specRanks?.map((node) => (
+                    {nodesPoints?.map((node) => (
                         <TalentNode
                             handleClick={clickOnNode}
                             remainingTalentPoints={remainingTalentPoints}

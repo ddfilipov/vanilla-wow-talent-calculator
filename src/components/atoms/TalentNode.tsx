@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import { ITalentNode } from "../../interfaces";
+import { INodeData } from "../molecules/TalentTree";
 import { NodeTooltip } from "./NodeTooltip";
 
 interface INodeStyle {
@@ -66,7 +67,7 @@ export interface ITalentNodeFunctions {
 export interface TalentNodeProps {
     handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
     remainingTalentPoints: number;
-    talentNode: ITalentNode;
+    talentNode: INodeData;
     specTalentPoints: number;
 }
 
