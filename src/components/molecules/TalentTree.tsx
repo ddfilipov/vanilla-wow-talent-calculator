@@ -136,6 +136,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                             talentNode={node}
                             key={node.talentNodeId}
                             specTalentPoints={specTalentPoints}
+                            talentUp={() => talentUp}
                         />
                     ))}
                 </TalentNodesContainer>

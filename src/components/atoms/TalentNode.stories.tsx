@@ -15,5 +15,6 @@ export const ClassIconStory: ComponentStory<typeof TalentNode> = () => (
         remainingTalentPoints={5}
         talentNode={null as any} // TODO: fix asap!
         specTalentPoints={0}
+        talentUp={() => {}}
     ></TalentNode>
 );

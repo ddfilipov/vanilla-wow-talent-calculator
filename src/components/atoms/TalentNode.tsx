@@ -69,6 +69,7 @@ export interface TalentNodeProps {
     remainingTalentPoints: number;
     talentNode: INodeData;
     specTalentPoints: number;
+    talentUp: (id: number) => void;
 }
 
 export const TalentNode: FC<TalentNodeProps> = ({
