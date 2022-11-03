@@ -77,6 +77,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     remainingTalentPoints,
     talentNode,
     specTalentPoints,
+    talentUp,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
@@ -117,7 +118,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
                     backgroundImage={talentNode.talentIcon}
                     isNodeCapped={isNodeCapped}
-                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
+                    // onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
+                    onClick={() => talentUp(talentNode.talentNodeId)}
                     onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
