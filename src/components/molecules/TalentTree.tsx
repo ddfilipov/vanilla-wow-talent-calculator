@@ -109,14 +109,20 @@ export const TalentTree: FC<TalentTreeProps> = ({
         // const newArray = nodesPoints?.find((talent)=>talent.talentNodeId === id)
         console.log("entering talentUp with id:", id);
         console.log(nodesPoints);
-        const newArray = nodesPoints?.find((talent) =>
-            talent.talentNodeId === id ? { ...talent, pointsSpent: 1 } : talent
+        const newArray = nodesPoints?.find(
+            (talent) =>
+                // talent.talentNodeId === id ? { ...talent, pointsSpent: 1 } : talent
+                {
+                    if (talent.talentNodeId === id) {
+                        return talent.pointsSpent = 1;
+                    }
+                }
             // talent.talentNodeId === id
             //     ? console.log("talent.talentNodeId === id")
             //     : console.log("talent.talentNodeId !== id")
         );
         console.log(newArray);
-        // setNodesPoints()
+        // setNodesPoints(newArray)
     };
 
     return (
