@@ -113,12 +113,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
             // talent.talentNodeId === id && (...talentUp, pointsSpent: 0);
             if (talent.talentNodeId === id) {
                 console.log("talent.talentNodeId:", talent.talentNodeId);
-                return { ...talent, pointsSpent: 1 };
+                return { ...talent, pointsSpent: 1};
             }
             return talent;
         });
         console.log("showing newArray:", newArray);
-        !newArray && setNodesPoints(newArray);
+        setNodesPoints(newArray);
     };
 
     return (
