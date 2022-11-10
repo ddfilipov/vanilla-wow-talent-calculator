@@ -153,8 +153,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 <TalentNodesContainer>
                     {nodesPoints?.map((node) => (
                         <TalentNode
-                            handleClick={clickOnNode}
-                            remainingTalentPoints={remainingTalentPoints}
                             talentNode={node}
                             key={node.talentNodeId}
                             specTalentPoints={specTalentPoints}

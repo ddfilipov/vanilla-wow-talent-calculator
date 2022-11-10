@@ -11,8 +11,6 @@ const Template: ComponentStory<typeof TalentNode> = (args) => <TalentNode {...ar
 // TODO: talentIcon needs to be smth
 export const ClassIconStory: ComponentStory<typeof TalentNode> = () => (
     <TalentNode
-        handleClick={() => {}}
-        remainingTalentPoints={5}
         talentNode={null as any} // TODO: fix asap!
         specTalentPoints={0}
         talentUp={() => {}}

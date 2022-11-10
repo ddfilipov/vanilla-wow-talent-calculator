@@ -65,8 +65,6 @@ export interface ITalentNodeFunctions {
 }
 
 export interface TalentNodeProps {
-    handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    remainingTalentPoints: number;
     talentNode: INodeData;
     specTalentPoints: number;
     talentUp: (id: number, e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -74,39 +72,17 @@ export interface TalentNodeProps {
 }
 
 export const TalentNode: FC<TalentNodeProps> = ({
-    handleClick,
-    remainingTalentPoints,
     talentNode,
     specTalentPoints,
     talentUp,
     talentDown,
 }) => {
-    const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
-    const pointsUp = (e: React.MouseEvent<HTMLButtonElement>) => {
-        if (
-            currentPoints < talentNode.numberOfRanks &&
-            remainingTalentPoints > 0 &&
-            talentNode.treePointsRequiredToLvl <= specTalentPoints
-        ) {
-            handleClick(e);
-            setCurrentPoints(currentPoints + 1);
-        }
-    };
-
-    const pointsDown = (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        if (currentPoints > 0) {
-            setCurrentPoints(currentPoints - 1);
-            handleClick(e);
-        }
-    };
-
     useEffect(() => {
-        talentNode.numberOfRanks === currentPoints ? setIsNodeCapped(true) : setIsNodeCapped(false);
-    }, [currentPoints, talentNode.numberOfRanks]);
+        talentNode.numberOfRanks === talentNode.pointsSpent ? setIsNodeCapped(true) : setIsNodeCapped(false);
+    }, [talentNode.pointsSpent, talentNode.numberOfRanks]);
 
     useEffect(() => {
         console.log("hello talentNode.pointsSpent", talentNode.pointsSpent);
