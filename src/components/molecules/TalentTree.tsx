@@ -106,19 +106,14 @@ export const TalentTree: FC<TalentTreeProps> = ({
     }, []);
 
     const talentUp = (id: number) => {
-        console.log("entering talentUp with id:", id);
-        console.log(nodesPoints);
         // TODO: should remove some ifs once this is working
         if (remainingTalentPoints > 0) {
             const newArray = nodesPoints?.map((talent) => {
-                // talent.talentNodeId === id && (...talentUp, pointsSpent: 0);
                 if (talent.talentNodeId === id && talent.pointsSpent < talent.numberOfRanks) {
-                    console.log("talent.talentNodeId:", talent.talentNodeId);
                     return { ...talent, pointsSpent: talent.pointsSpent + 1 };
                 }
                 return talent;
             });
-            console.log("showing newArray:", newArray);
             setNodesPoints(newArray);
         }
     };
