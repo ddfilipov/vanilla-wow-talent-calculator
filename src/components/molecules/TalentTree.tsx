@@ -85,8 +85,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
     specRanks,
     resetTreeTalentPoints,
 }) => {
-    const [treePoints, setTreePoints] = useState<ITalentNode[] | undefined>();
-
     const clickOnNode = (e: React.MouseEvent<HTMLButtonElement>) => {
         handleClickNode(e, specId);
     };
@@ -109,7 +107,11 @@ export const TalentTree: FC<TalentTreeProps> = ({
         // TODO: should remove some ifs once this is working
         if (remainingTalentPoints > 0) {
             const newArray = nodesPoints?.map((talent) => {
-                if (talent.talentNodeId === id && talent.pointsSpent < talent.numberOfRanks && talent.treePointsRequiredToLvl <= specTalentPoints) {
+                if (
+                    talent.talentNodeId === id &&
+                    talent.pointsSpent < talent.numberOfRanks &&
+                    talent.treePointsRequiredToLvl <= specTalentPoints
+                ) {
                     clickOnNode(e);
                     return { ...talent, pointsSpent: talent.pointsSpent + 1 };
                 }
@@ -121,11 +123,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
 
     const talentDown = (id: number, e: React.MouseEvent<HTMLButtonElement>) => {
         // TODO: should remove some ifs once this is working
+        e.preventDefault();
         if (remainingTalentPoints > 0) {
             const newArray = nodesPoints?.map((talent) => {
-                if (talent.talentNodeId === id && talent.pointsSpent < talent.numberOfRanks && talent.treePointsRequiredToLvl <= specTalentPoints) {
+                if (talent.talentNodeId === id && talent.pointsSpent > 0) {
                     clickOnNode(e);
-                    return { ...talent, pointsSpent: talent.pointsSpent + 1 };
+                    return { ...talent, pointsSpent: talent.pointsSpent - 1 };
                 }
                 return talent;
             });
