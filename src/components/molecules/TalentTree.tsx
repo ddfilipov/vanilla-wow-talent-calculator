@@ -114,7 +114,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 // talent.talentNodeId === id && (...talentUp, pointsSpent: 0);
                 if (talent.talentNodeId === id && talent.pointsSpent < talent.numberOfRanks) {
                     console.log("talent.talentNodeId:", talent.talentNodeId);
-                    return { ...talent, pointsSpent: 1 };
+                    return { ...talent, pointsSpent: talent.pointsSpent + 1 };
                 }
                 return talent;
             });
