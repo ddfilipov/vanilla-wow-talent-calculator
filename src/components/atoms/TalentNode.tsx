@@ -69,7 +69,7 @@ export interface TalentNodeProps {
     remainingTalentPoints: number;
     talentNode: INodeData;
     specTalentPoints: number;
-    talentUp: (id: number) => void;
+    talentUp: (id: number, e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const TalentNode: FC<TalentNodeProps> = ({
@@ -123,7 +123,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     backgroundImage={talentNode.talentIcon}
                     isNodeCapped={isNodeCapped}
                     // onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
-                    onClick={() => talentUp(talentNode.talentNodeId)}
+                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => talentUp(talentNode.talentNodeId, e)}
                     onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}

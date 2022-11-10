@@ -105,11 +105,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
         setNodesPoints(newArray2);
     }, []);
 
-    const talentUp = (id: number) => {
+    const talentUp = (id: number, e: React.MouseEvent<HTMLButtonElement>) => {
         // TODO: should remove some ifs once this is working
         if (remainingTalentPoints > 0) {
             const newArray = nodesPoints?.map((talent) => {
-                if (talent.talentNodeId === id && talent.pointsSpent < talent.numberOfRanks) {
+                if (talent.talentNodeId === id && talent.pointsSpent < talent.numberOfRanks && talent.treePointsRequiredToLvl <= specTalentPoints) {
+                    clickOnNode(e);
                     return { ...talent, pointsSpent: talent.pointsSpent + 1 };
                 }
                 return talent;
