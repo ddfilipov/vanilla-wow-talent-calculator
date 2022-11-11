@@ -91,27 +91,27 @@ export const TalentTree: FC<TalentTreeProps> = ({
 
     //TODO: make this work for TalentNodes!
     const onClickResetTree = () => {
-        const newArray2 = specRanks?.map((talent) => ({
+        const auxArray = specRanks?.map((talent) => ({
             ...talent,
             pointsSpent: 0,
         }));
-        setNodesPoints(newArray2);
+        setNodesPoints(auxArray);
         resetTreeTalentPoints(specId, specTalentPoints);
     };
 
     const [nodesPoints, setNodesPoints] = useState<INodeData[]>();
     useEffect(() => {
-        const newArray2 = specRanks?.map((talent) => ({
+        const auxArray = specRanks?.map((talent) => ({
             ...talent,
             pointsSpent: 0,
         }));
-        setNodesPoints(newArray2);
+        setNodesPoints(auxArray);
     }, []);
 
     const talentUp = (id: number, e: React.MouseEvent<HTMLButtonElement>) => {
         // TODO: should remove some ifs once this is working
         if (remainingTalentPoints > 0) {
-            const newArray = nodesPoints?.map((talent) => {
+            const auxArray = nodesPoints?.map((talent) => {
                 if (
                     talent.talentNodeId === id &&
                     talent.pointsSpent < talent.numberOfRanks &&
@@ -122,7 +122,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 }
                 return talent;
             });
-            setNodesPoints(newArray);
+            setNodesPoints(auxArray);
         }
     };
 
@@ -130,14 +130,14 @@ export const TalentTree: FC<TalentTreeProps> = ({
         // TODO: should remove some ifs once this is working
         e.preventDefault();
         if (remainingTalentPoints > 0) {
-            const newArray = nodesPoints?.map((talent) => {
+            const auxArray = nodesPoints?.map((talent) => {
                 if (talent.talentNodeId === id && talent.pointsSpent > 0) {
                     clickOnNode(e);
                     return { ...talent, pointsSpent: talent.pointsSpent - 1 };
                 }
                 return talent;
             });
-            setNodesPoints(newArray);
+            setNodesPoints(auxArray);
         }
     };
 
