@@ -91,6 +91,11 @@ export const TalentTree: FC<TalentTreeProps> = ({
 
     //TODO: make this work for TalentNodes!
     const onClickResetTree = () => {
+        const newArray2 = specRanks?.map((talent) => ({
+            ...talent,
+            pointsSpent: 0,
+        }));
+        setNodesPoints(newArray2);
         resetTreeTalentPoints(specId, specTalentPoints);
     };
 
