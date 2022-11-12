@@ -47,6 +47,7 @@ const InfoStyled = styled.div`
     grid-row-end: 4;
 `;
 
+// TODO: maybe I should pass the max rank so I know where to stop showing descriptions?
 interface NodeTooltipProps {
     nodeFields: ITalentNode;
     currentNodeRank: number;
@@ -60,7 +61,9 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
     };
 
     const mapCurrentRank = () => {
+        console.log("entering mapCurrentRank with currentNodeRank:", currentNodeRank);
         const description = nodeFields.ranks.find((talent, index) => index === currentNodeRank);
+        console.log("description:", description);
         return <DescriptionStyled>{description?.rankDescription}</DescriptionStyled>;
     };
 
