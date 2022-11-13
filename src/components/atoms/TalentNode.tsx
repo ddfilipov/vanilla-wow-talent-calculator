@@ -43,6 +43,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     cursor: pointer;
     border: 2px solid ${(props) => (props.isNodeCapped ? "var(--capped-node-color)" : "var(--uncapped-node-color)")};
     order: 2;
+    border-radius: 4px;
 `;
 
 const NodePoints = styled.span<INodePoints>`
@@ -100,10 +101,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
                     backgroundImage={talentNode.talentIcon}
                     isNodeCapped={isNodeCapped}
-                    // onClick={(e: React.MouseEvent<HTMLButtonElement>) => pointsUp(e)}
                     onClick={(e: React.MouseEvent<HTMLButtonElement>) => talentUp(talentNode.talentNodeId, e)}
                     onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => talentDown(talentNode.talentNodeId, e)}
-                    // onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => pointsDown(e)}talentDown
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
                 />
