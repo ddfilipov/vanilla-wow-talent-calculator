@@ -59,6 +59,7 @@ const NodePoints = styled.span<INodePoints>`
     background-color: black;
     padding: 0 1px;
     order: 3;
+    border-radius: 4px;
 `;
 
 export interface ITalentNodeFunctions {
