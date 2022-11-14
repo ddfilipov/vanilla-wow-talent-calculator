@@ -10,6 +10,7 @@ const Container = styled.div<NodeTooltipStyle>`
     display: flex;
     flex-wrap: wrap;
     border: 1px solid white;
+    border-radius: 4px;
     background: rgba(0, 0, 0, 0.9);
     position: relative;
     z-index: 1000;
