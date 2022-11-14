@@ -19,6 +19,27 @@ const Container = styled.div<NodeTooltipStyle>`
     padding: 5px;
 `;
 
+const ContainerFlex = styled.div<NodeTooltipStyle>`
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.9);
+    position: relative;
+    z-index: 1000;
+    width: 300px;
+    height: 150px;
+    padding: 5px;
+`;
+
+const TalentNameFlexStyled = styled.div`
+    flex-grow: 4;
+`;
+
+const RankFlexStyled = styled.div`
+    flex-grow: 1;
+`;
+const DescriptionFlexStyled = styled.div``;
+
 const TalentNameStyled = styled.div`
     grid-column-start: 1;
     grid-column-end: 2;
@@ -76,11 +97,11 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
     };
 
     return (
-        <Container maxTalentRanks={nodeFields.ranks.length}>
-            <TalentNameStyled>{nodeFields.talentNodeName}</TalentNameStyled>
-            <RankStyled>Rank {getNextRank()}</RankStyled>
+        <ContainerFlex maxTalentRanks={nodeFields.ranks.length}>
+            <TalentNameFlexStyled>{nodeFields.talentNodeName}</TalentNameFlexStyled>
+            <RankFlexStyled>Rank {getNextRank()}</RankFlexStyled>
             {mapCurrentRank()}
             <InfoStyled>Click to level up</InfoStyled>
-        </Container>
+        </ContainerFlex>
     );
 };
