@@ -7,19 +7,6 @@ interface NodeTooltipStyle {
 }
 
 const Container = styled.div<NodeTooltipStyle>`
-    display: grid;
-    grid-template-columns: [c1-start] auto [c2] auto [c3-end];
-    grid-template-rows: [r1-start] auto [r2] auto [r3] auto [r4];
-    border: 1px solid white;
-    background: rgba(0, 0, 0, 0.9);
-    position: relative;
-    z-index: 1000;
-    width: 300px;
-    height: 150px;
-    padding: 5px;
-`;
-
-const ContainerFlex = styled.div<NodeTooltipStyle>`
     display: flex;
     flex-wrap: wrap;
     border: 1px solid white;
@@ -31,41 +18,20 @@ const ContainerFlex = styled.div<NodeTooltipStyle>`
     padding: 5px;
 `;
 
-const TalentNameFlexStyled = styled.div`
+const TalentNameStyled = styled.div`
     flex-grow: 4;
 `;
 
-const RankFlexStyled = styled.div`
-    flex-grow: 1;
-`;
-const DescriptionFlexStyled = styled.div``;
-
-const TalentNameStyled = styled.div`
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-`;
-
 const RankStyled = styled.div`
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    flex-grow: 1;
+    text-align: center;
 `;
-
-const DescriptionStyled = styled.div`
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-`;
+const DescriptionStyled = styled.div``;
 
 const InfoStyled = styled.div`
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    flex-basis: 100%;
+    text-align: right;
+    align-self: center;
 `;
 
 // TODO: maybe I should pass the max rank so I know where to stop showing descriptions?
@@ -97,11 +63,11 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
     };
 
     return (
-        <ContainerFlex maxTalentRanks={nodeFields.ranks.length}>
-            <TalentNameFlexStyled>{nodeFields.talentNodeName}</TalentNameFlexStyled>
-            <RankFlexStyled>Rank {getNextRank()}</RankFlexStyled>
+        <Container maxTalentRanks={nodeFields.ranks.length}>
+            <TalentNameStyled>{nodeFields.talentNodeName}</TalentNameStyled>
+            <RankStyled>Rank {getNextRank()}</RankStyled>
             {mapCurrentRank()}
             <InfoStyled>Click to level up</InfoStyled>
-        </ContainerFlex>
+        </Container>
     );
 };
