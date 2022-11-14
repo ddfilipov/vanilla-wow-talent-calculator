@@ -62,9 +62,17 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
 
     const mapCurrentRank = () => {
         console.log("entering mapCurrentRank with currentNodeRank:", currentNodeRank);
-        const description = nodeFields.ranks.find((talent, index) => index === currentNodeRank);
-        console.log("description:", description);
-        return <DescriptionStyled>{description?.rankDescription}</DescriptionStyled>;
+        console.log("nodeFields.ranks:", nodeFields.ranks);
+        const currentRank = nodeFields.ranks.find((talent, index) => index === currentNodeRank);
+        const nextRank = nodeFields.ranks.find((talent, index) => index === currentNodeRank + 1);
+        console.log("currentRank:", currentRank);
+        console.log("nextRank:", nextRank);
+        return (
+            <>
+                <DescriptionStyled>{currentRank?.rankDescription}</DescriptionStyled>
+                <DescriptionStyled>{nextRank?.rankDescription}</DescriptionStyled>
+            </>
+        );
     };
 
     return (
