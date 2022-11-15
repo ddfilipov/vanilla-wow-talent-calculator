@@ -57,8 +57,18 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
         console.log("nextRank:", nextRank);
         return (
             <>
-                <DescriptionStyled>{previousRank?.rankDescription}</DescriptionStyled>
-                <DescriptionStyled>{nextRank?.rankDescription}</DescriptionStyled>
+                {previousRank?.rankDescription ? (
+                    <>
+                        <DescriptionStyled>{previousRank.rankDescription}</DescriptionStyled>
+                    </>
+                ) : null}
+
+                {nextRank?.rankDescription ? (
+                    <>
+                        <p>Next rank</p>
+                        <DescriptionStyled>{nextRank.rankDescription}</DescriptionStyled>
+                    </>
+                ) : null}
             </>
         );
     };
