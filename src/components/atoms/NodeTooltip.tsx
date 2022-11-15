@@ -59,6 +59,7 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
             <>
                 {previousRank?.rankDescription ? (
                     <>
+                        <p>Current rank</p>
                         <DescriptionStyled>{previousRank.rankDescription}</DescriptionStyled>
                     </>
                 ) : null}
