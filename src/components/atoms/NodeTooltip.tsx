@@ -33,7 +33,9 @@ const RankStyled = styled.div`
     flex-grow: 1;
     text-align: center;
 `;
-const DescriptionStyled = styled.div``;
+const DescriptionStyled = styled.div`
+    color: var(--tooltip-description);
+`;
 
 const InfoStyled = styled.div`
     flex-basis: 100%;
