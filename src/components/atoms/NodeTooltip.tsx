@@ -32,6 +32,7 @@ const TalentNameStyled = styled.div`
 const RankStyled = styled.div`
     flex-grow: 1;
     text-align: center;
+    color: var(--tooltip-rank);
 `;
 const DescriptionStyled = styled.div`
     color: var(--tooltip-description);
