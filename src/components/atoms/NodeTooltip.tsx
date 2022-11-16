@@ -15,7 +15,7 @@ const Container = styled.div<NodeTooltipStyle>`
     position: relative;
     z-index: 1000;
     width: 300px;
-    height: 150px;
+    height: 180px;
     padding: 5px;
 `;
 
@@ -67,17 +67,17 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
         return (
             <>
                 {previousRank?.rankDescription ? (
-                    <>
-                        <p>Current rank</p>
+                    <span>
+                        <span>Current rank</span>
                         <DescriptionStyled>{previousRank.rankDescription}</DescriptionStyled>
-                    </>
+                    </span>
                 ) : null}
 
                 {nextRank?.rankDescription ? (
-                    <>
-                        <p>Next rank</p>
+                    <span>
+                        <span>Next rank:</span>
                         <DescriptionStyled>{nextRank.rankDescription}</DescriptionStyled>
-                    </>
+                    </span>
                 ) : null}
             </>
         );
