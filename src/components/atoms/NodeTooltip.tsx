@@ -19,6 +19,12 @@ const Container = styled.div<NodeTooltipStyle>`
     padding: 5px;
 `;
 
+const UpperPartStyled = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+`;
+
 const TalentNameStyled = styled.div`
     flex-grow: 4;
 `;
@@ -33,6 +39,7 @@ const InfoStyled = styled.div`
     flex-basis: 100%;
     text-align: right;
     align-self: center;
+    color: var(--learnable-talent);
 `;
 
 // TODO: maybe I should pass the max rank so I know where to stop showing descriptions?
@@ -76,8 +83,10 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
 
     return (
         <Container maxTalentRanks={nodeFields.ranks.length}>
-            <TalentNameStyled>{nodeFields.talentNodeName}</TalentNameStyled>
-            <RankStyled>Rank {getNextRank()}</RankStyled>
+            <UpperPartStyled>
+                <TalentNameStyled>{nodeFields.talentNodeName}</TalentNameStyled>
+                <RankStyled>Rank {getNextRank()}</RankStyled>
+            </UpperPartStyled>
             {mapCurrentRank()}
             <InfoStyled>Click to level up</InfoStyled>
         </Container>
