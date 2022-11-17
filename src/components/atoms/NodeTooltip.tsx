@@ -9,13 +9,15 @@ interface NodeTooltipStyle {
 const Container = styled.div<NodeTooltipStyle>`
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 5px;;
     border: 1px solid white;
     border-radius: 4px;
     background: rgba(0, 0, 0, 0.9);
     position: relative;
     z-index: 1000;
-    width: 300px;
-    height: 180px;
+    min-width: 300px;
+    min-height: 100px;
     padding: 5px;
 `;
 
