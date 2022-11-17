@@ -10,7 +10,8 @@ const Container = styled.div<NodeTooltipStyle>`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    row-gap: 5px;;
+    font-size: 0.9rem;
+    row-gap: 5px;
     border: 1px solid white;
     border-radius: 4px;
     background: rgba(0, 0, 0, 0.9);
@@ -18,12 +19,13 @@ const Container = styled.div<NodeTooltipStyle>`
     z-index: 1000;
     min-width: 300px;
     min-height: 100px;
-    padding: 5px;
+    padding: 8px;
 `;
 
 const UpperPartStyled = styled.div`
     display: flex;
     flex-wrap: wrap;
+    font-size: 1rem;
     flex-basis: 100%;
 `;
 
@@ -71,7 +73,7 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
             <>
                 {previousRank?.rankDescription ? (
                     <span>
-                        <span>Current rank</span>
+                        <span>Current rank:</span>
                         <DescriptionStyled>{previousRank.rankDescription}</DescriptionStyled>
                     </span>
                 ) : null}
