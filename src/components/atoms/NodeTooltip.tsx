@@ -40,6 +40,7 @@ const RankStyled = styled.div`
 `;
 const DescriptionStyled = styled.div`
     color: var(--tooltip-description);
+    flex-basis: 100%;
 `;
 
 const InfoStyled = styled.div`
@@ -72,17 +73,17 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
         return (
             <>
                 {previousRank?.rankDescription ? (
-                    <span>
+                    <>
                         <span>Current rank:</span>
                         <DescriptionStyled>{previousRank.rankDescription}</DescriptionStyled>
-                    </span>
+                    </>
                 ) : null}
 
                 {nextRank?.rankDescription ? (
-                    <span>
+                    <>
                         <span>Next rank:</span>
                         <DescriptionStyled>{nextRank.rankDescription}</DescriptionStyled>
-                    </span>
+                    </>
                 ) : null}
             </>
         );

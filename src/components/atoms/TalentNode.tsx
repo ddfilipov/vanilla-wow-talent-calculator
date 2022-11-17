@@ -111,8 +111,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     isNodeCapped={isNodeCapped}
                 >{`${talentNode.pointsSpent}/${talentNode.numberOfRanks}`}</NodePoints>
             </div>
-            {/* {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
-            {talentNode.talentNodeId === 1 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
+            {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
+            {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
         </ButtonContainer>
     );
 };
