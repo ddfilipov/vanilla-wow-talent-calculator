@@ -22,3 +22,7 @@ export const classes: IClassWrapper = {
         { class: { name: "warrior", src: warrior } },
     ],
 };
+
+export const MAX_TALENT_POINTS = 51;
+export const MIN_TALENT_POINTS = 0;
+export const STARTING_LEVEL = 9;

@@ -2,6 +2,7 @@ import { createContext, FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BackgroundImage, ITalentNode, SpecIdType } from "../../interfaces";
 import { TalentNode } from "../atoms/TalentNode";
+import { MAX_TALENT_POINTS } from "../consts";
 
 const Container = styled.div`
     display: grid;
@@ -126,8 +127,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
         }
     };
 
-    // TODO: provision variable, put in in consts.ts and export!!
-    const MAX_TALENT_POINTS = 51;
     const talentDown = (id: number, e: React.MouseEvent<HTMLButtonElement>) => {
         // TODO: should remove some ifs once this is working
         e.preventDefault();

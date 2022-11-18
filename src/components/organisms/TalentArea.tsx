@@ -2,6 +2,7 @@
 import { FC, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import { IClassData, ISpecTalentPoints, ITalents, SpecIdType } from "../../interfaces";
+import { MAX_TALENT_POINTS, MIN_TALENT_POINTS, STARTING_LEVEL } from "../consts";
 import { TalentTrees } from "./TalentTrees";
 import { TopTalentArea } from "./TopTalentArea";
 
@@ -19,9 +20,6 @@ interface TalentAreaProps {
 }
 
 export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
-    const MAX_TALENT_POINTS = 51;
-    const MIN_TALENT_POINTS = 0;
-    const STARTING_LEVEL = 9;
 
     const [remainingTalentPoints, setRemainingTalentPoints] = useState<number>(MAX_TALENT_POINTS);
     const [oldRemainingTalentPoints, setOldRemainingTalentPoints] = useState<number>(remainingTalentPoints);
