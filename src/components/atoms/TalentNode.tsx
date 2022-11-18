@@ -86,10 +86,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
         talentNode.numberOfRanks === talentNode.pointsSpent ? setIsNodeCapped(true) : setIsNodeCapped(false);
     }, [talentNode.pointsSpent, talentNode.numberOfRanks]);
 
-    useEffect(() => {
-        console.log("hello talentNode.pointsSpent", talentNode.pointsSpent);
-    }, [talentNode.pointsSpent]);
-
     return (
         <ButtonContainer
             row={talentNode.row}

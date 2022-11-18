@@ -126,10 +126,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
         }
     };
 
+    // TODO: provision variable, put in in consts.ts and export!!
+    const MAX_TALENT_POINTS = 51;
     const talentDown = (id: number, e: React.MouseEvent<HTMLButtonElement>) => {
         // TODO: should remove some ifs once this is working
         e.preventDefault();
-        if (remainingTalentPoints > 0) {
+        if (remainingTalentPoints <= MAX_TALENT_POINTS) {
             const auxArray = nodesPoints?.map((talent) => {
                 if (talent.talentNodeId === id && talent.pointsSpent > 0) {
                     clickOnNode(e);

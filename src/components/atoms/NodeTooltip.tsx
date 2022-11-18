@@ -64,12 +64,12 @@ export const NodeTooltip: FC<NodeTooltipProps> = ({ nodeFields, currentNodeRank 
     };
 
     const mapCurrentRank = () => {
-        console.log("entering mapCurrentRank with currentNodeRank:", currentNodeRank);
-        console.log("nodeFields.ranks:", nodeFields.ranks);
+        // console.log("entering mapCurrentRank with currentNodeRank:", currentNodeRank);
+        // console.log("nodeFields.ranks:", nodeFields.ranks);
         const previousRank = nodeFields.ranks.find((talent, index) => index === currentNodeRank - 1);
         const nextRank = nodeFields.ranks.find((talent, index) => index === currentNodeRank);
-        console.log("currentRank:", previousRank);
-        console.log("nextRank:", nextRank);
+        // console.log("currentRank:", previousRank);
+        // console.log("nextRank:", nextRank);
         return (
             <>
                 {previousRank?.rankDescription ? (
