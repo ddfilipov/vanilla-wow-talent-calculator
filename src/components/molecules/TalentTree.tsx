@@ -13,8 +13,10 @@ const Container = styled.div`
 
 const TalentNodesContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-rows: repeat(7, 1fr);
     gap: 1rem;
     justify-self: stretch;
     color: white;

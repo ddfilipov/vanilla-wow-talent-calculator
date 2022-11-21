@@ -37,13 +37,15 @@ const ButtonContainer = styled.div<INodeStyle>`
 `;
 
 const ArrowTest = styled.div`
-    width: 15px;
+    width: auto;
+    height: 100%;
     background-color: yellow;
     color: yellow;
     grid-row-start: 1;
-    grid-row-end: span 3;
+    grid-row-end: 3;
     grid-column-start: 3;
-    grid-column-end: span 3;
+    grid-column-end: span 4;
+    border: 3px solid blue;
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -111,8 +113,8 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
                 <NodePoints
                     isNodeCapped={isNodeCapped}
                 >{`${talentNode.pointsSpent}/${talentNode.numberOfRanks}`}</NodePoints>
-                {talentNode.talentNodeId === 3 && <ArrowTest>asd</ArrowTest>}
             </div>
+            {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>}
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
             {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
         </ButtonContainer>
