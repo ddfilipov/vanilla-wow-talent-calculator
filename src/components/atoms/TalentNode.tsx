@@ -39,10 +39,11 @@ const ButtonContainer = styled.div<INodeStyle>`
 const ArrowTest = styled.div`
     width: 15px;
     background-color: yellow;
+    color: yellow;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: span 3;
     grid-column-start: 3;
-    grid-column-end: 3;
+    grid-column-end: span 3;
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
