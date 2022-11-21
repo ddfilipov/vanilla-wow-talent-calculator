@@ -36,6 +36,15 @@ const ButtonContainer = styled.div<INodeStyle>`
     }
 `;
 
+const ArrowTest = styled.div`
+    width: 15px;
+    background-color: yellow;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;
+`;
+
 const ButtonStyled = styled.button<IBackgroundImage>`
     height: 38px;
     width: 38px;
@@ -73,12 +82,7 @@ export interface TalentNodeProps {
     talentDown: (id: number, e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const TalentNode: FC<TalentNodeProps> = ({
-    talentNode,
-    specTalentPoints,
-    talentUp,
-    talentDown,
-}) => {
+export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, talentUp, talentDown }) => {
     const [isNodeCapped, setIsNodeCapped] = useState<boolean>(false);
     const [showTooltip, setShowTooltip] = useState<boolean>(false);
 
@@ -106,6 +110,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 <NodePoints
                     isNodeCapped={isNodeCapped}
                 >{`${talentNode.pointsSpent}/${talentNode.numberOfRanks}`}</NodePoints>
+                {talentNode.talentNodeId === 3 && <ArrowTest>asd</ArrowTest>}
             </div>
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
             {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
