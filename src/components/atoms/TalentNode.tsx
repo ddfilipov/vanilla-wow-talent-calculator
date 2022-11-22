@@ -39,12 +39,11 @@ const ButtonContainer = styled.div<INodeStyle>`
 const ArrowTest = styled.div`
     width: auto;
     height: 100%;
+    width: 10px;
     background-color: yellow;
     color: yellow;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 3;
-    grid-column-end: span 4;
+    grid-row: 1 / 4;
+    grid-column: 3 / 4;
     border: 3px solid blue;
 `;
 
@@ -94,6 +93,7 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
     }, [talentNode.pointsSpent, talentNode.numberOfRanks]);
 
     return (
+        <>
         <ButtonContainer
             row={talentNode.row}
             column={talentNode.column}
@@ -114,9 +114,11 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
                     isNodeCapped={isNodeCapped}
                 >{`${talentNode.pointsSpent}/${talentNode.numberOfRanks}`}</NodePoints>
             </div>
-            {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>}
+            {/* {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>} */}
             {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
             {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
         </ButtonContainer>
+        {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>}
+        </>
     );
 };
