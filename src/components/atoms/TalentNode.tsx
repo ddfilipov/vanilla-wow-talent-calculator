@@ -48,7 +48,6 @@ const ArrowTest = styled.div`
     grid-column: 3 / 4;
     border: 2px solid black;
     margin-bottom: -35px;
-    /* box-shadow: 1px 1px 1px 1px black, 1px 1px 1px 1px black; */
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
