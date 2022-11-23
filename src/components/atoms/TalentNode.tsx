@@ -24,6 +24,8 @@ const ButtonContainer = styled.div<INodeStyle>`
     height: 45px;
     width: 45px;
     position: relative;
+    display: flex;
+    place-items: center;
     grid-row-start: ${(props) => props.row};
     grid-row-end: ${(props) => props.row + 1};
     grid-column-start: ${(props) => props.column};
@@ -42,9 +44,11 @@ const ArrowTest = styled.div`
     width: 10px;
     background-color: yellow;
     color: yellow;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
     grid-column: 3 / 4;
-    border: 3px solid blue;
+    border: 2px solid black;
+    margin-bottom: -35px;
+    /* box-shadow: 1px 1px 1px 1px black, 1px 1px 1px 1px black; */
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -94,31 +98,33 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
 
     return (
         <>
-        <ButtonContainer
-            row={talentNode.row}
-            column={talentNode.column}
-            treePointsRequiredToLvl={talentNode.treePointsRequiredToLvl}
-            pointsSpentOnTree={specTalentPoints}
-        >
-            <div>
-                <ButtonStyled
-                    // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
-                    backgroundImage={talentNode.talentIcon}
-                    isNodeCapped={isNodeCapped}
-                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => talentUp(talentNode.talentNodeId, e)}
-                    onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) => talentDown(talentNode.talentNodeId, e)}
-                    onMouseEnter={() => setShowTooltip(true)}
-                    onMouseLeave={() => setShowTooltip(false)}
-                />
-                <NodePoints
-                    isNodeCapped={isNodeCapped}
-                >{`${talentNode.pointsSpent}/${talentNode.numberOfRanks}`}</NodePoints>
-            </div>
-            {/* {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>} */}
-            {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
-            {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
-        </ButtonContainer>
-        {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>}
+            <ButtonContainer
+                row={talentNode.row}
+                column={talentNode.column}
+                treePointsRequiredToLvl={talentNode.treePointsRequiredToLvl}
+                pointsSpentOnTree={specTalentPoints}
+            >
+                <div>
+                    <ButtonStyled
+                        // TODO: understand how did I pass this route!! ../../ from public/images works but src/images doesnt????
+                        backgroundImage={talentNode.talentIcon}
+                        isNodeCapped={isNodeCapped}
+                        onClick={(e: React.MouseEvent<HTMLButtonElement>) => talentUp(talentNode.talentNodeId, e)}
+                        onContextMenu={(e: React.MouseEvent<HTMLButtonElement>) =>
+                            talentDown(talentNode.talentNodeId, e)
+                        }
+                        onMouseEnter={() => setShowTooltip(true)}
+                        onMouseLeave={() => setShowTooltip(false)}
+                    />
+                    <NodePoints
+                        isNodeCapped={isNodeCapped}
+                    >{`${talentNode.pointsSpent}/${talentNode.numberOfRanks}`}</NodePoints>
+                </div>
+                {/* {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>} */}
+                {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
+                {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
+            </ButtonContainer>
+            {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>}
         </>
     );
 };
