@@ -44,6 +44,8 @@ export interface ITalentNode {
     column: number;
     talentIcon: string;
     numberOfRanks: number;
+    unlocksColumn: number;
+    unlocksRow: number;
     ranks: ITalentRanks[];
 }
 

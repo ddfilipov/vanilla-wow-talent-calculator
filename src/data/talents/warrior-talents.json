@@ -72,8 +72,8 @@
                         }
                     ],
                     "unlockedBy": "",
-                    "unlocks-column": 3,
-                    "unlocks-row": 3,
+                    "unlocksColumn": 3,
+                    "unlocksRow": 3,
                     "talentIcon": "../../images/warrior/warrior_talent_rend.jpg"
                 },
                 {
@@ -193,8 +193,8 @@
                             "rankDescription": "Deep Wounds 3 description"
                         }
                     ],
-                    "unlocks-column": 3,
-                    "unlocks-row": 4,
+                    "unlocksColumn": 3,
+                    "unlocksRow": 4,
                     "unlockedBy": "",
                     "talentIcon": "../../images/warrior/warrior_talent_deep_wounds.jpg"
                 },
