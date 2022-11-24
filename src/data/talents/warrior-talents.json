@@ -283,6 +283,8 @@
                         }
                     ],
                     "unlockedBy": "",
+                    "unlocksColumn": 2,
+                    "unlocksRow": 7,
                     "talentIcon": "../../images/warrior/warrior_talent_sweeping_strikes.jpg"
                 },
                 {
@@ -684,6 +686,8 @@
                         }
                     ],
                     "unlockedBy": "",
+                    "unlocksColumn": 3,
+                    "unlocksRow": 6,
                     "talentIcon": "../../images/warrior/warrior_talent_enrage.jpg"
                 },
                 {
@@ -717,6 +721,8 @@
                         }
                     ],
                     "unlockedBy": "",
+                    "unlocksColumn": 2,
+                    "unlocksRow": 7,
                     "talentIcon": "../../images/warrior/warrior_talent_death_wish.jpg"
                 },
                 {
@@ -827,6 +833,8 @@
                         }
                     ],
                     "unlockedBy": "",
+                    "unlocksColumn": 2,
+                    "unlocksRow": 3,
                     "talentIcon": "../../images/warrior/warrior_talent_shield_specialization.jpg"
                 },
                 {
@@ -1103,6 +1111,8 @@
                         }
                     ],
                     "unlockedBy": "",
+                    "unlocksColumn": 2,
+                    "unlocksRow": 7,
                     "talentIcon": "../../images/warrior/warrior_talent_concussion_blow.jpg"
                 },
                 {
