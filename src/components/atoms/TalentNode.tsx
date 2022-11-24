@@ -2,7 +2,8 @@ import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import { INodeData } from "../molecules/TalentTree";
 import { NodeTooltip } from "./NodeTooltip";
-import downArrow from "../../svg/arrow-down.svg";
+// import downArrow from "../../svg/arrow-down.svg";
+import downArrow from "../../images/down.png";
 
 interface INodeStyle {
     row: number;
@@ -38,7 +39,7 @@ const ButtonContainer = styled.div<INodeStyle>`
     }
 `;
 
-const ArrowTest = styled.div`
+const ArrowTestDiv = styled.div`
     width: auto;
     height: 100%;
     width: 10px;
@@ -48,6 +49,25 @@ const ArrowTest = styled.div`
     grid-column: 3 / 4;
     border: 2px solid black;
     margin-bottom: -35px;
+`;
+const ArrowTestImg = styled.div`
+    background-image: url(${downArrow});
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    img {
+        /* height: 500px; */
+        /* max-width: 100%;
+        max-height: 100%; */
+    }
+    /* width: auto; */
+    height: 100%;
+    width: 13px;
+    /* background-color: yellow; */
+    /* color: yellow; */
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+    /* border: 2px solid black; */
+    margin-bottom: -38px;
 `;
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -123,8 +143,10 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
                 {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
                 {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
             </ButtonContainer>
-            {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>}
-            {talentNode.talentNodeId === 3 && <img src={downArrow} />}
+            {talentNode.talentNodeId === 3 && <ArrowTestImg>{/* <img src={downArrow} /> */}</ArrowTestImg>}
+            {/* <img src="../../images/class_druid.jpg"></img> */}
+            {/* <img src={downArrow} /> */}
+            {/* {talentNode.talentNodeId === 3 && <img src={downArrow} />} */}
         </>
     );
 };
