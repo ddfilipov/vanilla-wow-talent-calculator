@@ -52,18 +52,9 @@ const ArrowTestDiv = styled.div`
 `;
 const ArrowTestImg = styled.div`
     background-image: url(${downArrow});
-    background-repeat: no-repeat;
     background-size: 100% 100%;
-    img {
-        /* height: 500px; */
-        /* max-width: 100%;
-        max-height: 100%; */
-    }
-    /* width: auto; */
     height: 100%;
     width: 13px;
-    /* background-color: yellow; */
-    /* color: yellow; */
     grid-row: 1 / 3;
     grid-column: 3 / 4;
     /* border: 2px solid black; */
