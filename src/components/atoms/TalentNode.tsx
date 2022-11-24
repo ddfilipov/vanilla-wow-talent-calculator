@@ -1,8 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-import { ITalentNode } from "../../interfaces";
 import { INodeData } from "../molecules/TalentTree";
 import { NodeTooltip } from "./NodeTooltip";
+import downArrow from "../../svg/arrow-down.svg";
 
 interface INodeStyle {
     row: number;
@@ -124,6 +124,7 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
                 {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
             </ButtonContainer>
             {talentNode.talentNodeId === 3 && <ArrowTest></ArrowTest>}
+            {talentNode.talentNodeId === 3 && <img src={downArrow} />}
         </>
     );
 };
