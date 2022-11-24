@@ -12,6 +12,13 @@ interface INodeStyle {
     pointsSpentOnTree: number;
 }
 
+interface IArrowStyle {
+    row: number;
+    column: number;
+    unlocksRow: number;
+    unlocksColumn: number;
+}
+
 interface INodePoints {
     isNodeCapped: boolean;
 }
@@ -50,13 +57,30 @@ const ArrowTestDiv = styled.div`
     border: 2px solid black;
     margin-bottom: -35px;
 `;
-const ArrowTestImg = styled.div`
+
+// const ArrowTestImg = styled.div<IArrowStyle>`
+//     background-image: url(${downArrow});
+//     background-size: 100% 100%;
+//     height: 100%;
+//     width: 13px;
+//     grid-row: 1 / 3;
+//     grid-column: 3 / 4;
+//     /* border: 2px solid black; */
+//     margin-bottom: -38px;
+// `;
+
+const ArrowTestImg = styled.div<IArrowStyle>`
     background-image: url(${downArrow});
     background-size: 100% 100%;
     height: 100%;
     width: 13px;
-    grid-row: 1 / 3;
-    grid-column: 3 / 4;
+    /* grid-row: 1 / 3; */
+
+    grid-row-start: ${(props) => props.row};
+    grid-row-end: ${(props) => props.unlocksRow};
+    grid-column-start: ${(props) => props.unlocksColumn};
+    grid-column-end: ${(props) => props.unlocksColumn + 1};
+    /* grid-column: 3 / 4; */
     /* border: 2px solid black; */
     margin-bottom: -38px;
 `;
@@ -134,7 +158,16 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
                 {showTooltip && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />}
                 {/* {talentNode.talentNodeId === 7 && <NodeTooltip nodeFields={talentNode} currentNodeRank={talentNode.pointsSpent} />} */}
             </ButtonContainer>
-            {talentNode.talentNodeId === 3 && <ArrowTestImg>{/* <img src={downArrow} /> */}</ArrowTestImg>}
+            {talentNode.unlocksColumn && (
+                <ArrowTestImg
+                    row={talentNode.row}
+                    column={talentNode.column}
+                    unlocksRow={talentNode.unlocksRow}
+                    unlocksColumn={talentNode.unlocksColumn}
+                >
+                    {/* <img src={downArrow} /> */}
+                </ArrowTestImg>
+            )}
             {/* <img src="../../images/class_druid.jpg"></img> */}
             {/* <img src={downArrow} /> */}
             {/* {talentNode.talentNodeId === 3 && <img src={downArrow} />} */}
