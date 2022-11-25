@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import { INodeData } from "../molecules/TalentTree";
 import { NodeTooltip } from "./NodeTooltip";
-// import downArrow from "../../svg/arrow-down.svg";
 import downArrow from "../../images/down.png";
 
 interface INodeStyle {
