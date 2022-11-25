@@ -58,30 +58,15 @@ const ArrowTestDiv = styled.div`
     margin-bottom: -35px;
 `;
 
-// const ArrowTestImg = styled.div<IArrowStyle>`
-//     background-image: url(${downArrow});
-//     background-size: 100% 100%;
-//     height: 100%;
-//     width: 13px;
-//     grid-row: 1 / 3;
-//     grid-column: 3 / 4;
-//     /* border: 2px solid black; */
-//     margin-bottom: -38px;
-// `;
-
 const ArrowTestImg = styled.div<IArrowStyle>`
     background-image: url(${downArrow});
     background-size: 100% 100%;
     height: 100%;
     width: 13px;
-    /* grid-row: 1 / 3; */
-
     grid-row-start: ${(props) => props.row};
     grid-row-end: ${(props) => props.unlocksRow};
     grid-column-start: ${(props) => props.unlocksColumn};
     grid-column-end: ${(props) => props.unlocksColumn + 1};
-    /* grid-column: 3 / 4; */
-    /* border: 2px solid black; */
     margin-bottom: -38px;
 `;
 
@@ -164,13 +149,8 @@ export const TalentNode: FC<TalentNodeProps> = ({ talentNode, specTalentPoints, 
                     column={talentNode.column}
                     unlocksRow={talentNode.unlocksRow}
                     unlocksColumn={talentNode.unlocksColumn}
-                >
-                    {/* <img src={downArrow} /> */}
-                </ArrowTestImg>
+                />
             )}
-            {/* <img src="../../images/class_druid.jpg"></img> */}
-            {/* <img src={downArrow} /> */}
-            {/* {talentNode.talentNodeId === 3 && <img src={downArrow} />} */}
         </>
     );
 };
