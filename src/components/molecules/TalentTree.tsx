@@ -49,7 +49,7 @@ const TalentTreeStyled = styled.div<BackgroundImage>`
     justify-self: stretch;
     background-image: url(${(props) => props.backgroundImage});
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     padding: 10px;
 `;
 
