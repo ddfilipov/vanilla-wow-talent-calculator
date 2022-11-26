@@ -173,6 +173,8 @@
                         }
                     ],
                     "unlockedBy": "",
+                    "unlocksColumn": 2,
+                    "unlocksRow": 4,
                     "talentIcon": "../../images/warrior/warrior_talent_anger_management.jpg"
                 },
                 {
