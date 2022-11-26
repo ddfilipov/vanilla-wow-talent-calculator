@@ -73,6 +73,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     height: 38px;
     width: 38px;
     background-image: url(${(props) => props.backgroundImage});
+    background-size: contain;
     cursor: pointer;
     border: 2px solid ${(props) => (props.isNodeCapped ? "var(--capped-node-color)" : "var(--uncapped-node-color)")};
     order: 2;
