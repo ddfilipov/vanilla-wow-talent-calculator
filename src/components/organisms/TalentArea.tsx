@@ -44,28 +44,28 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
 
     const handleClickNode = (e: React.MouseEvent<HTMLButtonElement>, spec: SpecIdType) => {
         if (e.type === "click") {
-            subirPuntos();
-            subirPuntosSpec(spec);
+            increasePoints();
+            increaseSpecPoints(spec);
         } else if (e.type === "contextmenu") {
-            bajarPuntos();
+            decreasePoints();
             bajarPuntosSpec(spec);
         }
         e.preventDefault();
     };
 
-    const subirPuntos = useCallback(() => {
+    const increasePoints = useCallback(() => {
         if (remainingTalentPoints > MIN_TALENT_POINTS) {
             setRemainingTalentPoints(remainingTalentPoints - 1);
         }
     }, [remainingTalentPoints]);
 
-    const bajarPuntos = useCallback(() => {
+    const decreasePoints = useCallback(() => {
         if (remainingTalentPoints < MAX_TALENT_POINTS) {
             setRemainingTalentPoints(remainingTalentPoints + 1);
         }
     }, [remainingTalentPoints]);
 
-    const subirPuntosSpec = useCallback(
+    const increaseSpecPoints = useCallback(
         (spec: SpecIdType) => {
             if (spec === "firstSpec") {
                 setSpecTalentPoints({ ...specTalentPoints, firstSpecPoints: specTalentPoints.firstSpecPoints + 1 });

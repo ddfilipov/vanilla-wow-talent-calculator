@@ -882,6 +882,8 @@
                         }
                     ],
                     "unlockedBy": "",
+                    "unlocksColumn": 1,
+                    "unlocksRow": 3,
                     "talentIcon": "../../images/warrior/warrior_talent_improved_bloodrage.jpg"
                 },
                 {
