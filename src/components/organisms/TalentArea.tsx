@@ -48,7 +48,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
             increaseSpecPoints(spec);
         } else if (e.type === "contextmenu") {
             decreasePoints();
-            bajarPuntosSpec(spec);
+            decreaseSpecPoints(spec);
         }
         e.preventDefault();
     };
@@ -78,7 +78,7 @@ export const TalentArea: FC<TalentAreaProps> = ({ data, talents }) => {
         [specTalentPoints]
     );
 
-    const bajarPuntosSpec = useCallback(
+    const decreaseSpecPoints = useCallback(
         (spec: SpecIdType) => {
             if (spec === "firstSpec") {
                 specTalentPoints.firstSpecPoints > MIN_TALENT_POINTS &&
