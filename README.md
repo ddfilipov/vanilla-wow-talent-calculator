@@ -1,6 +1,17 @@
-# Vanilla WoW talent calculator
+# Vanilla WoW Talent Calculator
 
 My own approach of a World of Warcraft talent calculator using nextjs13. This project doesn't intend on profiting on Blizzard's game. Rather, I'm using it as a tool to learn new technologies and build something fun!
+
+## Technologies/tools this project runs on:
+- React
+- Nextjs 13
+
+## TODO list:
+- Turn the project into a monorepo
+- Add api calls (backend) with express (TBD)
+- Add database
+- Add test cases
+
 
 ## How to run the project
 
