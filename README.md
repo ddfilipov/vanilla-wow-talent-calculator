@@ -10,7 +10,7 @@ First of all, make sure you've got node set up then run
 npm i
 ```
 
-ThenFirst, run the development server:
+Then, run the development server:
 
 ```bash
 npm run dev
