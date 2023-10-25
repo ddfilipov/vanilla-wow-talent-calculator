@@ -19,7 +19,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     cursor: pointer;
     border: 2px solid ${(props) => props.href === props.relativePath && "var(--uncapped-node-color)"};
     opacity: ${(props) => (props.href === props.relativePath ? 1 : 0.6666)};
-    :hover {
+    &:hover {
         opacity: 1;
     }
 `;
