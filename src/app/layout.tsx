@@ -18,10 +18,23 @@ const MainContainer = styled.div`
 `;
 
 const Container = styled.div`
+    @media (width < 768px) {
+        min-width: 320px;
+        background-color: red;
+    }
+    @media (width >= 768px) {
+        width: 1200px;
+        height: 700px;
+        margin-top: 100px;
+        background-color: blue;
+    }
+    @media (width >= 1250px) {
+        width: 1200px;
+        height: 700px;
+        margin-top: 100px;
+        background-color: green;
+    }
     border: 1px solid white;
-    width: 1200px;
-    height: 700px;
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
