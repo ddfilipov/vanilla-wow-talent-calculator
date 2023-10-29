@@ -18,6 +18,11 @@ const MainContainer = styled.div`
 `;
 
 const Container = styled.div`
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
     @media (width < 768px) {
         min-width: 320px;
         background-color: red;
@@ -34,11 +39,6 @@ const Container = styled.div`
         margin-top: 100px;
         background-color: green;
     }
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
