@@ -3,6 +3,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import styled from "styled-components";
+import GlobalStyle from "@/styles/GlobalStyles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,13 +33,11 @@ const Container = styled.div`
     @media (width >= 768px) {
         width: 400px;
         min-height: 500px;
-        /* background-color: blue; */
     }
     @media (width >= 1250px) {
         max-width: 1200px;
         min-width: 750px;
-        height: 700px;
-        /* background-color: green; */
+        max-height: 700px;
     }
 `;
 
