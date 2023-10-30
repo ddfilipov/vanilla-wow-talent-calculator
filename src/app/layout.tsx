@@ -12,6 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 const MainContainer = styled.div`
+    height: 100vh;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
