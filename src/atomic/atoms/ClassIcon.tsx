@@ -22,6 +22,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     opacity: ${(props) => (props.href === props.relativePath ? 1 : 0.6666)};
     &:hover {
         opacity: 1;
+        box-shadow: inset 0 0 5px #596e92;
     }
 `;
 
