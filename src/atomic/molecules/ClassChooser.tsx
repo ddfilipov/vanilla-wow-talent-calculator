@@ -8,7 +8,8 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    row-gap: 1rem;
+    column-gap: 1.5rem;
     justify-content: center;
 `;
 
