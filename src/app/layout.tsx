@@ -15,7 +15,6 @@ const MainContainer = styled.div`
 `;
 
 const Container = styled.div`
-    border: 1px solid #212e46;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,6 +22,7 @@ const Container = styled.div`
     background-color: #050c18;
     padding: 1rem;
     border-radius: 0.2rem;
+    border: 1px solid #212e46;
 
     @media (width < 768px) {
         min-width: 280px;
