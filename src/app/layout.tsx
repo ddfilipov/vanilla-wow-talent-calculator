@@ -15,13 +15,14 @@ const MainContainer = styled.div`
 `;
 
 const Container = styled.div`
-    border: 1px solid white;
+    border: 1px solid #212e46;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
     background-color: #050c18;
     padding: 1rem;
+    border-radius: 0.2rem;
 
     @media (width < 768px) {
         min-width: 280px;
@@ -29,15 +30,14 @@ const Container = styled.div`
         min-height: 300px;
     }
     @media (width >= 768px) {
-        width: 1200px;
-        height: 700px;
-        margin-top: 100px;
+        width: 400px;
+        min-height: 500px;
         /* background-color: blue; */
     }
     @media (width >= 1250px) {
-        width: 1200px;
+        max-width: 1200px;
+        min-width: 750px;
         height: 700px;
-        margin-top: 100px;
         /* background-color: green; */
     }
 `;
