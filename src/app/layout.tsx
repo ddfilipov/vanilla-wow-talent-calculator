@@ -1,7 +1,6 @@
 "use client";
 // import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import styled from "styled-components";
 import GlobalStyle from "@/styles/GlobalStyles";
 
@@ -43,12 +42,15 @@ const Container = styled.div`
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
-            <body>
-                <MainContainer>
-                    <Container>{children}</Container>
-                </MainContainer>
-            </body>
-        </html>
+        <>
+            <GlobalStyle />
+            <html lang="en">
+                <body>
+                    <MainContainer>
+                        <Container>{children}</Container>
+                    </MainContainer>
+                </body>
+            </html>
+        </>
     );
 }
