@@ -8,7 +8,6 @@ export interface ClassIconProps {
 }
 interface IBackgroundImage {
     $backgroundImage: string;
-    // $relativePath: string;
     href: string;
 }
 
@@ -18,8 +17,6 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     background-image: url(${(props) => props.$backgroundImage});
     border: 2px solid #212e46;
     cursor: pointer;
-    /* border: 2px solid ${(props) => props.href === props.$relativePath && "var(--uncapped-node-color)"}; */
-    /* opacity: ${(props) => (props.href === props.$relativePath ? 1 : 0.6666)}; */
     opacity: 0.6666;
     &:hover {
         opacity: 1;
@@ -30,7 +27,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
 export const ClassIcon: FC<ClassIconProps> = ({ href, src }) => {
     return (
         <Link href={href}>
-            <ButtonStyled $backgroundImage={src} tabIndex={-1} /*$relativePath={location.pathname}*/ href={href} />
+            <ButtonStyled $backgroundImage={src} tabIndex={-1} href={href} />
         </Link>
     );
 };
