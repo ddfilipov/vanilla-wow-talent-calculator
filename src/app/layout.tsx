@@ -25,7 +25,6 @@ const Container = styled.div`
 
     @media (width < 768px) {
         min-width: 280px;
-        /* background-color: red; */
         min-height: 300px;
     }
     @media (width >= 768px) {

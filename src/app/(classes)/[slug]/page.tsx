@@ -3,7 +3,6 @@ import { PlayableClassesType } from "@/utils/consts";
 import { redirect } from "next/navigation";
 
 export default function ClassPage({ params }: { params: { slug: string } }) {
-    console.log(doesClassExist(params.slug));
     if (!doesClassExist(params.slug)) {
         redirect("/");
     }
