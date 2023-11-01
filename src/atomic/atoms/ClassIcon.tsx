@@ -29,12 +29,10 @@ const ButtonStyled = styled.button<IBackgroundImage>`
 `;
 
 export const ClassIcon: FC<ClassIconProps> = ({ href, src }) => {
-    const router = usePathname();
-    console.log("router:", router);
-    console.log("href:", href);
+    const currentPath = usePathname();
     return (
         <Link href={href}>
-            <ButtonStyled $backgroundImage={src} tabIndex={-1} href={href} $currentPath={router} />
+            <ButtonStyled $backgroundImage={src} tabIndex={-1} href={href} $currentPath={currentPath} />
         </Link>
     );
 };
