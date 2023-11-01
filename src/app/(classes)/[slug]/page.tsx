@@ -1,3 +1,4 @@
+import { TreesComponent } from "@/atomic/organisms/TreesComponent";
 import { PlayableClassesType } from "@/utils/consts";
 import { redirect } from "next/navigation";
 
@@ -6,7 +7,7 @@ export default function ClassPage({ params }: { params: { slug: string } }) {
     if (!doesClassExist(params.slug)) {
         redirect("/");
     }
-    return <h1>{params.slug}</h1>;
+    return <TreesComponent className={params.slug} />;
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
