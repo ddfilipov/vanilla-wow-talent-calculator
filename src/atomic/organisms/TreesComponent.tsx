@@ -2,6 +2,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { ClassChooser } from "../molecules/ClassChooser";
+import { PlayableClassesType } from "@/utils/consts";
 
 const Title = styled.span`
     color: white;
@@ -9,11 +10,15 @@ const Title = styled.span`
     font-size: 2rem;
 `;
 
-export const MainPage: FC = () => {
+interface TreesComponentProps {
+    className: PlayableClassesType;
+}
+
+export const TreesComponent: FC<TreesComponentProps> = ({ className }) => {
     return (
         <>
-            <Title>Choose a class:</Title>
             <ClassChooser />
+            <Title>{className}</Title>
         </>
     );
 };

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { MainPage } from "@/atomic/organisms/MainPage";
+import { RootComponent } from "@/atomic/organisms/RootComponent";
 
 export const metadata: Metadata = {
     title: "Choose a class",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <>
-            <MainPage />
+            <RootComponent />
         </>
     );
 }
