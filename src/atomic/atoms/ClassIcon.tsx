@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { FC } from "react";
 import styled from "styled-components";
 
@@ -9,6 +11,7 @@ export interface ClassIconProps {
 interface IBackgroundImage {
     $backgroundImage: string;
     href: string;
+    $currentPath: string;
 }
 
 const ButtonStyled = styled.button<IBackgroundImage>`
@@ -17,7 +20,8 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     background-image: url(${(props) => props.$backgroundImage});
     border: 2px solid #212e46;
     cursor: pointer;
-    opacity: 0.6666;
+    opacity: ${(props) => (props.href === props.$currentPath ? 1 : 0.6666)};
+    border: 2px solid ${(props) => props.href === props.$currentPath && "var(--uncapped-node-color)"};
     &:hover {
         opacity: 1;
         box-shadow: inset 0 0 5px #596e92;
@@ -25,9 +29,12 @@ const ButtonStyled = styled.button<IBackgroundImage>`
 `;
 
 export const ClassIcon: FC<ClassIconProps> = ({ href, src }) => {
+    const router = usePathname();
+    console.log("router:", router);
+    console.log("href:", href);
     return (
         <Link href={href}>
-            <ButtonStyled $backgroundImage={src} tabIndex={-1} href={href} />
+            <ButtonStyled $backgroundImage={src} tabIndex={-1} href={href} $currentPath={router} />
         </Link>
     );
 };
