@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { FC } from "react";
 import styled from "styled-components";
 
@@ -21,7 +21,9 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     border: 2px solid #212e46;
     cursor: pointer;
     opacity: ${(props) => (props.href === props.$currentPath ? 1 : 0.6666)};
-    border: 2px solid ${(props) => props.href === props.$currentPath && "var(--uncapped-node-color)"};
+    border: 2px solid
+        ${(props) => (props.href === props.$currentPath ? "var(--uncapped-node-color)" : "var(--icon-border-color)")};
+    border-radius: 0.2rem;
     &:hover {
         opacity: 1;
         box-shadow: inset 0 0 5px #596e92;
