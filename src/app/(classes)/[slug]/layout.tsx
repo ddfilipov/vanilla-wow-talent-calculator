@@ -35,21 +35,16 @@ const Container = styled.div`
         max-width: 1200px;
         min-width: 750px;
         max-height: 700px;
-        background-color: red;
+        background-color: green;
     }
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <>
-            <GlobalStyle />
-            <html lang="en">
-                <body>
-                    <MainContainer>
-                        <Container>{children}</Container>
-                    </MainContainer>
-                </body>
-            </html>
+            <MainContainer>
+                <Container>{children}</Container>
+            </MainContainer>
         </>
     );
 }
