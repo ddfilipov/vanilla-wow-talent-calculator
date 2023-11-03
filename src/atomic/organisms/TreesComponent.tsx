@@ -7,15 +7,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 const StyledHeader = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
     gap: 1rem;
     align-items: center;
 `;
 
-const Title = styled.span`
+const Title = styled.h2`
     color: white;
-    font-size: 2rem;
+    text-transform: capitalize;
+    font-size: 1.5rem;
 `;
 
 const Container = styled.div`
@@ -36,10 +37,7 @@ export const TreesComponent: FC<TreesComponentProps> = ({ className }) => {
                 <Link href="/">
                     <Image src="/images/wow-icon.png" width={38} height={38} alt="Picture of the author" />
                 </Link>
-                <Title>
-                    <span style={{ textTransform: "capitalize" }}>{className}</span>
-                    {` Vanilla talent calculator`}
-                </Title>
+                <Title>{`${className} Vanilla Talent Calculator`}</Title>
             </StyledHeader>
             <ClassChooser />
         </Container>
