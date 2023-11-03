@@ -28,13 +28,12 @@ const Container = styled.div`
         min-height: 300px;
     }
     @media (width >= 768px) {
-        width: 400px;
         min-height: 500px;
     }
     @media (width >= 1250px) {
         max-width: 1200px;
         min-width: 750px;
-        max-height: 800px;
+        max-height: 700px;
     }
 `;
 

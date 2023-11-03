@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { PlayableClassesType } from "@/utils/consts";
 
 const Container = styled.div`
-    height: 500px;
+    min-height: 500px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     border: 1px solid white;
