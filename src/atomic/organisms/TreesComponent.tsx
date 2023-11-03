@@ -6,7 +6,6 @@ import { PlayableClassesType } from "@/utils/consts";
 
 const Title = styled.span`
     color: white;
-    align-self: center;
     font-size: 2rem;
 `;
 
@@ -14,7 +13,7 @@ const Container = styled.div`
     height: 800px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 `;
 
 interface TreesComponentProps {
@@ -24,8 +23,11 @@ interface TreesComponentProps {
 export const TreesComponent: FC<TreesComponentProps> = ({ className }) => {
     return (
         <Container>
+            <Title>
+                <span style={{ textTransform: "capitalize" }}>{className}</span>
+                {` Vanilla talent calculator`}
+            </Title>
             <ClassChooser />
-            <Title>{className}</Title>
         </Container>
     );
 };
