@@ -1,4 +1,4 @@
-import { TreesComponent } from "@/atomic/organisms/TreesComponent";
+import { TalentCalculator } from "@/atomic/organisms/TalentCalculator";
 import { PlayableClassesType } from "@/utils/consts";
 import { redirect } from "next/navigation";
 
@@ -6,7 +6,7 @@ export default function ClassPage({ params }: { params: { slug: string } }) {
     if (!doesClassExist(params.slug)) {
         redirect("/");
     }
-    return <TreesComponent className={params.slug} />;
+    return <TalentCalculator className={params.slug} />;
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {

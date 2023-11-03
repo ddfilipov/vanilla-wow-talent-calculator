@@ -5,7 +5,7 @@ import { ClassChooser } from "../molecules/ClassChooser";
 import { PlayableClassesType } from "@/utils/consts";
 import Link from "next/link";
 import Image from "next/image";
-import { TalentTree } from "./TalentTree";
+import { TalentTrees } from "./TalentTrees";
 
 const StyledHeader = styled.div`
     display: grid;
@@ -27,11 +27,11 @@ const Container = styled.div`
     gap: 30px;
 `;
 
-interface TreesComponentProps {
+interface TalentCalculator {
     className: PlayableClassesType;
 }
 
-export const TreesComponent: FC<TreesComponentProps> = ({ className }) => {
+export const TalentCalculator: FC<TalentCalculator> = ({ className }) => {
     return (
         <Container>
             <StyledHeader>
@@ -41,9 +41,7 @@ export const TreesComponent: FC<TreesComponentProps> = ({ className }) => {
                 <Title>{`${className} Vanilla Talent Calculator`}</Title>
             </StyledHeader>
             <ClassChooser />
-            <TalentTree />
-            <TalentTree />
-            <TalentTree />
+            <TalentTrees className={className} />
         </Container>
     );
 };
