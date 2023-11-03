@@ -10,15 +10,22 @@ const Title = styled.span`
     font-size: 2rem;
 `;
 
+const Container = styled.div`
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`;
+
 interface TreesComponentProps {
     className: PlayableClassesType;
 }
 
 export const TreesComponent: FC<TreesComponentProps> = ({ className }) => {
     return (
-        <>
+        <Container>
             <ClassChooser />
             <Title>{className}</Title>
-        </>
+        </Container>
     );
 };
