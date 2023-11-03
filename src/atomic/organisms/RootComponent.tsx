@@ -9,11 +9,18 @@ const Title = styled.span`
     font-size: 2rem;
 `;
 
+const Container = styled.div`
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`;
+
 export const RootComponent: FC = () => {
     return (
-        <>
+        <Container>
             <Title>Choose a class:</Title>
             <ClassChooser />
-        </>
+        </Container>
     );
 };

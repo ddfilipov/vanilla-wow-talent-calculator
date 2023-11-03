@@ -34,8 +34,7 @@ const Container = styled.div`
     @media (width >= 1250px) {
         max-width: 1200px;
         min-width: 750px;
-        max-height: 700px;
-        background-color: red;
+        max-height: 800px;
     }
 `;
 
