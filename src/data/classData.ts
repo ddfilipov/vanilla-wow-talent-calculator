@@ -1,4 +1,14 @@
-export const classData = [
+export interface ClassData {
+    classId: number;
+    className: string;
+    specs: SpecData[];
+}
+
+export interface SpecData {
+    specName: string;
+}
+
+export const classData: ClassData[] = [
     {
         classId: 1,
         className: "druid",

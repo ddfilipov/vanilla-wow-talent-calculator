@@ -32,6 +32,7 @@ const Container = styled.div`
 
 interface TalentCalculator {
     className: PlayableClassesType;
+    classData: any;
 }
 
 export const TalentCalculator: FC<TalentCalculator> = ({ className }) => {
