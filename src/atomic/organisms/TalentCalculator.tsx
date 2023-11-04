@@ -6,6 +6,7 @@ import { PlayableClassesType } from "@/utils/consts";
 import Link from "next/link";
 import Image from "next/image";
 import { TalentTrees } from "./TalentTrees";
+import { ClassData } from "@/data/classData";
 
 const StyledHeader = styled.div`
     display: grid;
@@ -32,10 +33,11 @@ const Container = styled.div`
 
 interface TalentCalculator {
     className: PlayableClassesType;
-    classData: any;
+    classData: ClassData;
 }
 
-export const TalentCalculator: FC<TalentCalculator> = ({ className }) => {
+export const TalentCalculator: FC<TalentCalculator> = ({ className, classData }) => {
+    console.log("I'm in talent calculator, showing classData:", JSON.stringify(classData));
     return (
         <Container>
             <StyledHeader>
