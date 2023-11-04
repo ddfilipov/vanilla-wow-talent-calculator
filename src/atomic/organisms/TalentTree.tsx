@@ -5,10 +5,10 @@ import { PlayableClassesType } from "@/utils/consts";
 
 const Container = styled.div`
     min-height: 500px;
-    min-width: 250px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
+    border: 1px solid var(--main-area-border);
 `;
 
 interface TalentTreeProps {
