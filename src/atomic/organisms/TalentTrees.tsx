@@ -3,6 +3,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import { PlayableClassesType } from "@/utils/consts";
 import { TalentTree } from "./TalentTree";
+import { ClassData } from "@/data/classData";
 
 const Container = styled.div`
     display: grid;
@@ -12,14 +13,15 @@ const Container = styled.div`
 
 interface TalentTreesProps {
     className: PlayableClassesType;
+    classData: ClassData;
 }
 
-export const TalentTrees: FC<TalentTreesProps> = ({ className }) => {
+export const TalentTrees: FC<TalentTreesProps> = ({ className, classData }) => {
     return (
         <Container>
-            <TalentTree />
-            <TalentTree />
-            <TalentTree />
+            {classData?.specs.map((spec) => {
+                return <TalentTree specName={spec.specName} key={spec.specId} />;
+            })}
         </Container>
     );
 };

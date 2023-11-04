@@ -12,9 +12,9 @@ const Container = styled.div`
 `;
 
 interface TalentTreeProps {
-    className?: PlayableClassesType;
+    specName: string;
 }
 
-export const TalentTree: FC<TalentTreeProps> = ({ className }) => {
-    return <Container></Container>;
+export const TalentTree: FC<TalentTreeProps> = ({ specName }) => {
+    return <Container>{specName}</Container>;
 };

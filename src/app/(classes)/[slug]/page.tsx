@@ -7,7 +7,6 @@ export default async function ClassPage({ params }: { params: { slug: PlayableCl
     if (!doesClassExist(params.slug)) {
         redirect("/");
     }
-    //TODO: var must be typed!
     const fetchedClass: ClassData = await getClassData(params.slug);
     return <TalentCalculator className={params.slug} classData={fetchedClass} />;
 }
@@ -35,7 +34,6 @@ function doesClassExist(val: any): val is PlayableClassesType {
     ).includes(val);
 }
 
-//TODO: return must be typed!
 const getClassData = async (className: PlayableClassesType) => {
     return new Promise<ClassData>((resolve: any, reject: any) => {
         setTimeout(() => {

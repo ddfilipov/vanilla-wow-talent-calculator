@@ -31,12 +31,12 @@ const Container = styled.div`
     gap: 30px;
 `;
 
-interface TalentCalculator {
+interface TalentCalculatorProps {
     className: PlayableClassesType;
     classData: ClassData;
 }
 
-export const TalentCalculator: FC<TalentCalculator> = ({ className, classData }) => {
+export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
     console.log("I'm in talent calculator, showing classData:", JSON.stringify(classData));
     return (
         <Container>
@@ -47,7 +47,7 @@ export const TalentCalculator: FC<TalentCalculator> = ({ className, classData })
                 <Title>{`${className} Vanilla Talent Calculator`}</Title>
             </StyledHeader>
             <ClassChooser />
-            <TalentTrees className={className} />
+            <TalentTrees className={className} classData={classData} />
         </Container>
     );
 };

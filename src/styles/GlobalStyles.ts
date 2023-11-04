@@ -55,6 +55,7 @@ const GlobalStyle = styled.createGlobalStyle`
         --learnable-talent: #1eff00;
         --tooltip-description: #ffd100;
         --tooltip-rank: #9d9d9d;
+        color: white;
     }
 `;
 

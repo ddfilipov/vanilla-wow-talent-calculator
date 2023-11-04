@@ -6,6 +6,7 @@ export interface ClassData {
 
 export interface SpecData {
     specName: string;
+    specId: number;
 }
 
 export const classData: ClassData[] = [
@@ -15,12 +16,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "balance",
+                specId: 1,
             },
             {
                 specName: "feral",
+                specId: 2,
             },
             {
                 specName: "restoration",
+                specId: 3,
             },
         ],
     },
@@ -30,12 +34,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "beast mastery",
+                specId: 4,
             },
             {
                 specName: "marksmanship",
+                specId: 5,
             },
             {
                 specName: "survival",
+                specId: 6,
             },
         ],
     },
@@ -45,12 +52,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "arcane",
+                specId: 7,
             },
             {
                 specName: "fire",
+                specId: 8,
             },
             {
                 specName: "frost",
+                specId: 9,
             },
         ],
     },
@@ -60,12 +70,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "holy",
+                specId: 10,
             },
             {
                 specName: "protection",
+                specId: 11,
             },
             {
                 specName: "retribution",
+                specId: 12,
             },
         ],
     },
@@ -75,12 +88,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "discipline",
+                specId: 13,
             },
             {
                 specName: "holy",
+                specId: 14,
             },
             {
                 specName: "shadow",
+                specId: 15,
             },
         ],
     },
@@ -90,12 +106,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "assassination",
+                specId: 16,
             },
             {
                 specName: "combat",
+                specId: 17,
             },
             {
                 specName: "subtely",
+                specId: 18,
             },
         ],
     },
@@ -105,12 +124,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "elemental",
+                specId: 19,
             },
             {
                 specName: "enhancement",
+                specId: 20,
             },
             {
                 specName: "restoration",
+                specId: 21,
             },
         ],
     },
@@ -120,12 +142,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "affliction",
+                specId: 22,
             },
             {
                 specName: "demonology",
+                specId: 23,
             },
             {
                 specName: "destruction",
+                specId: 24,
             },
         ],
     },
@@ -135,12 +160,15 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "arms",
+                specId: 25,
             },
             {
                 specName: "fury",
+                specId: 26,
             },
             {
                 specName: "protection",
+                specId: 27,
             },
         ],
     },
