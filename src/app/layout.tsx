@@ -18,10 +18,10 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    background-color: #050c18;
+    background-color: var(--main-area-background);
     padding: 1rem;
     border-radius: 0.2rem;
-    border: 1px solid #212e46;
+    border: 1px solid var(--main-area-border);
 
     @media (width < 768px) {
         min-width: 280px;

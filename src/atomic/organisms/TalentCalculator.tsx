@@ -12,11 +12,9 @@ const StyledHeader = styled.div`
     grid-template-columns: 2rem 1fr;
     gap: 1rem;
     align-items: center;
-    /* a { */
     img {
         vertical-align: middle;
     }
-    /* } */
 `;
 
 const Title = styled.h2`

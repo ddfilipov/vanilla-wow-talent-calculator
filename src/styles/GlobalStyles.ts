@@ -47,6 +47,8 @@ const GlobalStyle = styled.createGlobalStyle`
     }
 
     * {
+        --main-area-background: #050c18;
+        --main-area-border: #212e46;
         --capped-node-color: rgba(255, 209, 0, 0.8);
         --uncapped-node-color: rgba(64, 191, 64, 0.8);
         --icon-border-color: #717171;
