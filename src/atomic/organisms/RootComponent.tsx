@@ -16,7 +16,12 @@ const Container = styled.div`
     gap: 10px;
 `;
 
-export const RootComponent: FC = () => {
+interface RootComponentProps {
+    fetchedClassData: any;
+}
+
+export const RootComponent: FC<RootComponentProps> = ({ fetchedClassData }) => {
+    console.log("printing stuff on the client:", fetchedClassData);
     return (
         <Container>
             <Title>Choose a class:</Title>
