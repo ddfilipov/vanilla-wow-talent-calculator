@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "Choose a class",
 };
 
-export default async function Home() {
+export default function Home() {
     return (
         <>
             <RootComponent />
