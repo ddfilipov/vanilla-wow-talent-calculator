@@ -20,7 +20,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ className, classData }) => {
     return (
         <Container>
             {classData?.specs.map((spec) => {
-                return <TalentTree specName={spec.specName} key={spec.specId} />;
+                return <TalentTree specName={spec.specName} key={spec.specName.toLocaleLowerCase()} />;
             })}
         </Container>
     );
