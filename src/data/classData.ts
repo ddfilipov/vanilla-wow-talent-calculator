@@ -272,7 +272,7 @@ export const classData: ClassData[] = [
                         ],
                         talentcolumn: 3,
                         talentRow: 1,
-                        talentIcon: "Ability_Druid_DemoralizingRoar",
+                        talentIcon: "Classic_Ability_Druid_DemoralizingRoar",
                     },
                     {
                         talentName: "Feral Instinct",
@@ -822,7 +822,7 @@ export const classData: ClassData[] = [
                         ],
                         talentcolumn: 1,
                         talentRow: 5,
-                        talentIcon: "Ability_Druid_DemoralizingRoar",
+                        talentIcon: "classic_Ability_Druid_DemoralizingRoar",
                     },
                     {
                         talentName: "Intimidation",
@@ -2330,7 +2330,7 @@ export const classData: ClassData[] = [
                         ],
                         talentcolumn: 2,
                         talentRow: 7,
-                        talentIcon: "Spell_Holy_BlessingOfProtection",
+                        talentIcon: "classic_Spell_Holy_BlessingOfProtection",
                     },
                 ],
             },
@@ -4001,7 +4001,7 @@ export const classData: ClassData[] = [
                         ],
                         talentcolumn: 4,
                         talentRow: 4,
-                        talentIcon: "Spell_Fire_ElementalDevastation",
+                        talentIcon: "classic_Spell_Fire_ElementalDevastation",
                     },
                     {
                         talentName: "Storm Reach",
@@ -4433,7 +4433,7 @@ export const classData: ClassData[] = [
                         ],
                         talentcolumn: 1,
                         talentRow: 5,
-                        talentIcon: "Spell_Nature_HealingWay",
+                        talentIcon: "classic_Spell_Nature_HealingWay",
                     },
                     {
                         talentName: "Nature's Swiftness",
