@@ -1,0 +1,636 @@
+[
+    {
+        "specName": "Balance",
+        "specTalents": [
+            {
+                "talentName": "Improved Wrath",
+                "talentId": 762,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Reduces the cast time of your Wrath spell by 0.1 sec.",
+                    "Reduces the cast time of your Wrath spell by 0.2 sec.",
+                    "Reduces the cast time of your Wrath spell by 0.3 sec.",
+                    "Reduces the cast time of your Wrath spell by 0.4 sec.",
+                    "Reduces the cast time of your Wrath spell by 0.5 sec."
+                ],
+                "talentRow": 1,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Nature_AbolishMagic"
+            },
+            {
+                "talentName": "Nature's Grasp",
+                "talentId": 761,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "While active, any time an enemy strikes the caster they have a 35% chance to become afflicted by Entangling Roots (Rank 1).  Only useable outdoors.  1 charge.  Lasts 45 sec."
+                ],
+                "talentRow": 2,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Nature_NaturesWrath"
+            },
+            {
+                "talentName": "Improved Nature's Grasp",
+                "talentId": 921,
+                "ranksNumber": 4,
+                "ranksDescription": [
+                    "Increases the chance for your Nature's Grasp to entangle an enemy by 15%.",
+                    "Increases the chance for your Nature's Grasp to entangle an enemy by 30%.",
+                    "Increases the chance for your Nature's Grasp to entangle an enemy by 45%.",
+                    "Increases the chance for your Nature's Grasp to entangle an enemy by 65%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Nature_NaturesWrath"
+            },
+            {
+                "talentName": "Improved Entangling Roots",
+                "talentId": 787,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Gives you a 40% chance to avoid interruption caused by damage while casting Entangling Roots.",
+                    "Gives you a 70% chance to avoid interruption caused by damage while casting Entangling Roots.",
+                    "Gives you a 100% chance to avoid interruption caused by damage while casting Entangling Roots."
+                ],
+                "talentRow": 1,
+                "talentColumn": 2,
+                "talentIcon": "Spell_Nature_StrangleVines"
+            },
+            {
+                "talentName": "Improved Moonfire",
+                "talentId": 763,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the damage and critical strike chance of your Moonfire spell by 2%.",
+                    "Increases the damage and critical strike chance of your Moonfire spell by 4%.",
+                    "Increases the damage and critical strike chance of your Moonfire spell by 6%.",
+                    "Increases the damage and critical strike chance of your Moonfire spell by 8%.",
+                    "Increases the damage and critical strike chance of your Moonfire spell by 10%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 2,
+                "talentIcon": "Spell_Nature_StarFall"
+            },
+            {
+                "talentName": "Natural Weapons",
+                "talentId": 791,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the damage you deal with physical attacks in all forms by 2%.",
+                    "Increases the damage you deal with physical attacks in all forms by 4%.",
+                    "Increases the damage you deal with physical attacks in all forms by 6%.",
+                    "Increases the damage you deal with physical attacks in all forms by 8%.",
+                    "Increases the damage you deal with physical attacks in all forms by 10%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 2,
+                "talentIcon": "INV_Staff_01"
+            },
+            {
+                "talentName": "Natural Shapeshifter",
+                "talentId": 781,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Reduces the mana cost of all shapeshifting by 10%.",
+                    "Reduces the mana cost of all shapeshifting by 20%.",
+                    "Reduces the mana cost of all shapeshifting by 30%."
+                ],
+                "talentRow": 4,
+                "talentColumn": 2,
+                "talentIcon": "Spell_Nature_WispSplode"
+            },
+            {
+                "talentName": "Improved Thorns",
+                "talentId": 782,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases damage caused by your Thorns spell by 25%.",
+                    "Increases damage caused by your Thorns spell by 50%.",
+                    "Increases damage caused by your Thorns spell by 75%."
+                ],
+                "talentRow": 1,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Nature_Thorns"
+            },
+            {
+                "talentName": "Omen of Clarity",
+                "talentId": 788,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "Imbues the Druid with natural energy.  Each of the Druid's melee attacks has a chance of causing the caster to enter a Clearcasting state.  The Clearcasting state reduces the Mana, Rage or Energy cost of your next damage or healing spell or offensive ability by 100%.  Lasts 10 min."
+                ],
+                "talentRow": 3,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Nature_CrystalBall"
+            },
+            {
+                "talentName": "Nature's Reach",
+                "talentId": 764,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases the range of your Wrath, Entangling Roots, Faerie Fire, Moonfire, Starfire, and Hurricane spells by 10%.",
+                    "Increases the range of your Wrath, Entangling Roots, Faerie Fire, Moonfire, Starfire, and Hurricane spells by 20%."
+                ],
+                "talentRow": 4,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Nature_NatureTouchGrow"
+            },
+            {
+                "talentName": "Vengeance",
+                "talentId": 792,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 20%.",
+                    "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 40%.",
+                    "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 60%.",
+                    "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 80%.",
+                    "Increases the critical strike damage bonus of your Starfire, Moonfire, and Wrath spells by 100%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 4,
+                "talentIcon": "Spell_Nature_Purge"
+            },
+            {
+                "talentName": "Improved Starfire",
+                "talentId": 784,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Reduces the cast time of Starfire by 0.1 sec and has a 3% chance to stun the target for 3 sec.",
+                    "Reduces the cast time of Starfire by 0.2 sec and has a 6% chance to stun the target for 3 sec.",
+                    "Reduces the cast time of Starfire by 0.3 sec and has a 9% chance to stun the target for 3 sec.",
+                    "Reduces the cast time of Starfire by 0.4 sec and has a 12% chance to stun the target for 3 sec.",
+                    "Reduces the cast time of Starfire by 0.5 sec and has a 15% chance to stun the target for 3 sec."
+                ],
+                "talentRow": 3,
+                "talentColumn": 4,
+                "talentIcon": "Spell_Arcane_StarFire"
+            },
+            {
+                "talentName": "Nature's Grace",
+                "talentId": 789,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "All spell criticals grace you with a blessing of nature, reducing the casting time of your next spell by 0.5 sec."
+                ],
+                "talentRow": 2,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Nature_NaturesBlessing"
+            },
+            {
+                "talentName": "Moonglow",
+                "talentId": 783,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth and Rejuvenation spells by 3%.",
+                    "Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth and Rejuvenation spells by 6%.",
+                    "Reduces the Mana cost of your Moonfire, Starfire, Wrath, Healing Touch, Regrowth and Rejuvenation spells by 9%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Nature_Sentinal"
+            },
+            {
+                "talentName": "Moonfury",
+                "talentId": 790,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the damage done by your Starfire, Moonfire and Wrath spells by 2%.",
+                    "Increases the damage done by your Starfire, Moonfire and Wrath spells by 4%.",
+                    "Increases the damage done by your Starfire, Moonfire and Wrath spells by 6%.",
+                    "Increases the damage done by your Starfire, Moonfire and Wrath spells by 8%.",
+                    "Increases the damage done by your Starfire, Moonfire and Wrath spells by 10%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 6,
+                "talentIcon": "Spell_Nature_MoonGlow"
+            },
+            {
+                "talentName": "Moonkin Form",
+                "talentId": 793,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "Transforms the Druid into Moonkin Form.  While in this form the armor contribution from items is increased by 360% and all party members within 30 yards have their spell critical chance increased by 3%.  The Moonkin can only cast Balance spells while shapeshifted.<br /><br />The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+                ],
+                "talentRow": 2,
+                "talentColumn": 7,
+                "talentIcon": "Spell_Nature_ForceOfNature"
+            }
+        ]
+    },
+    {
+        "specName": "Feral Combat",
+        "specTalents": [
+            {
+                "talentName": "Ferocity",
+                "talentId": 796,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 1 Rage or Energy.",
+                    "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 2 Rage or Energy.",
+                    "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 3 Rage or Energy.",
+                    "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 4 Rage or Energy.",
+                    "Reduces the cost of your Maul, Swipe, Claw, and Rake abilities by 5 Rage or Energy."
+                ],
+                "talentRow": 2,
+                "talentColumn": 1,
+                "talentIcon": "Ability_Hunter_Pet_Hyena"
+            },
+            {
+                "talentName": "Feral Aggression",
+                "talentId": 795,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the Attack Power reduction of your Demoralizing Roar by 8% and the damage caused by your Ferocious Bite by 3%.",
+                    "Increases the Attack Power reduction of your Demoralizing Roar by 16% and the damage caused by your Ferocious Bite by 6%.",
+                    "Increases the Attack Power reduction of your Demoralizing Roar by 24% and the damage caused by your Ferocious Bite by 9%.",
+                    "Increases the Attack Power reduction of your Demoralizing Roar by 32% and the damage caused by your Ferocious Bite by 12%.",
+                    "Increases the Attack Power reduction of your Demoralizing Roar by 40% and the damage caused by your Ferocious Bite by 15%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 1,
+                "talentIcon": "Ability_Druid_DemoralizingRoar"
+            },
+            {
+                "talentName": "Feral Instinct",
+                "talentId": 799,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases threat caused in Bear and Dire Bear Form by 3% and reduces the chance enemies have to detect you while Prowling.",
+                    "Increases threat caused in Bear and Dire Bear Form by 6% and reduces the chance enemies have to detect you while Prowling.",
+                    "Increases threat caused in Bear and Dire Bear Form by 9% and reduces the chance enemies have to detect you while Prowling.",
+                    "Increases threat caused in Bear and Dire Bear Form by 12% and reduces the chance enemies have to detect you while Prowling.",
+                    "Increases threat caused in Bear and Dire Bear Form by 15% and reduces the chance enemies have to detect you while Prowling."
+                ],
+                "talentRow": 1,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Ambush"
+            },
+            {
+                "talentName": "Brutal Impact",
+                "talentId": 797,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases the stun duration of your Bash and Pounce abilities by 0.5 sec.",
+                    "Increases the stun duration of your Bash and Pounce abilities by 1 sec."
+                ],
+                "talentRow": 2,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Druid_Bash"
+            },
+            {
+                "talentName": "Thick Hide",
+                "talentId": 794,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your Armor contribution from items by 2%.",
+                    "Increases your Armor contribution from items by 4%.",
+                    "Increases your Armor contribution from items by 6%.",
+                    "Increases your Armor contribution from items by 8%.",
+                    "Increases your Armor contribution from items by 10%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 2,
+                "talentIcon": "INV_Misc_Pelt_Bear_03"
+            },
+            {
+                "talentName": "Feline Swiftness",
+                "talentId": 807,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases your movement speed by 15% while outdoors in Cat Form and increases your chance to dodge while in Cat Form by 2%.",
+                    "Increases your movement speed by 30% while outdoors in Cat Form and increases your chance to dodge while in Cat Form by 4%."
+                ],
+                "talentRow": 1,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Nature_SpiritWolf"
+            },
+            {
+                "talentName": "Feral Charge",
+                "talentId": 804,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "Causes you to charge an enemy, immobilizing and interrupting any spell being cast for 4 sec."
+                ],
+                "talentRow": 2,
+                "talentColumn": 3,
+                "talentIcon": "Ability_Hunter_Pet_Bear"
+            },
+            {
+                "talentName": "Sharpened Claws",
+                "talentId": 798,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases your critical strike chance while in Bear, Dire Bear or Cat Form by 2%.",
+                    "Increases your critical strike chance while in Bear, Dire Bear or Cat Form by 4%.",
+                    "Increases your critical strike chance while in Bear, Dire Bear or Cat Form by 6%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 3,
+                "talentIcon": "INV_Misc_MonsterClaw_04"
+            },
+            {
+                "talentName": "Improved Shred",
+                "talentId": 802,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Reduces the Energy cost of your Shred ability by 6.",
+                    "Reduces the Energy cost of your Shred ability by 12."
+                ],
+                "talentRow": 1,
+                "talentColumn": 4,
+                "talentIcon": "Spell_Shadow_VampiricAura"
+            },
+            {
+                "talentName": "Predatory Strikes",
+                "talentId": 803,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases your melee attack power in Cat, Bear and Dire Bear Forms by 50% of your level.",
+                    "Increases your melee attack power in Cat, Bear and Dire Bear Forms by 100% of your level.",
+                    "Increases your melee attack power in Cat, Bear and Dire Bear Forms by 150% of your level."
+                ],
+                "talentRow": 2,
+                "talentColumn": 4,
+                "talentIcon": "Ability_Hunter_Pet_Cat"
+            },
+            {
+                "talentName": "Blood Frenzy",
+                "talentId": 800,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Your critical strikes from Cat Form abilities that add combo points  have a 50% chance to add an additional combo point.",
+                    "Your critical strikes from Cat Form abilities that add combo points  have a 100% chance to add an additional combo point."
+                ],
+                "talentRow": 3,
+                "talentColumn": 4,
+                "talentIcon": "Ability_GhoulFrenzy"
+            },
+            {
+                "talentName": "Primal Fury",
+                "talentId": 801,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Gives you a 50% chance to gain an additional 5 Rage anytime you get a critical strike while in Bear and Dire Bear Form.",
+                    "Gives you a 100% chance to gain an additional 5 Rage anytime you get a critical strike while in Bear and Dire Bear Form."
+                ],
+                "talentRow": 4,
+                "talentColumn": 4,
+                "talentIcon": "Ability_Racial_Cannibalize"
+            },
+            {
+                "talentName": "Savage Fury",
+                "talentId": 805,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases the damage caused by your Claw, Rake, Maul and Swipe abilities by 10%.",
+                    "Increases the damage caused by your Claw, Rake, Maul and Swipe abilities by 20%."
+                ],
+                "talentRow": 1,
+                "talentColumn": 5,
+                "talentIcon": "Ability_Druid_Ravage"
+            },
+            {
+                "talentName": "Faerie Fire (Feral)",
+                "talentId": 1162,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "Decrease the armor of the target by 175 for 40 sec.  While affected, the target cannot stealth or turn invisible."
+                ],
+                "talentRow": 3,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Nature_FaerieFire"
+            },
+            {
+                "talentName": "Heart of the Wild",
+                "talentId": 808,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your Intellect by 4%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 4% and while in Cat Form your Strength is increased by 4%.",
+                    "Increases your Intellect by 8%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 8% and while in Cat Form your Strength is increased by 8%.",
+                    "Increases your Intellect by 12%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 12% and while in Cat Form your Strength is increased by 12%.",
+                    "Increases your Intellect by 16%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 16% and while in Cat Form your Strength is increased by 16%.",
+                    "Increases your Intellect by 20%.  In addition, while in Bear or Dire Bear Form your Stamina is increased by 20% and while in Cat Form your Strength is increased by 20%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 6,
+                "talentIcon": "Spell_Holy_BlessingOfAgility"
+            },
+            {
+                "talentName": "Leader of the Pack",
+                "talentId": 809,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "While in Cat, Bear or Dire Bear Form, the Leader of the Pack increases ranged and melee critical chance of all party members within 45 yards by 3%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 7,
+                "talentIcon": "Spell_Nature_UnyeildingStamina"
+            }
+        ]
+    },
+    {
+        "specName": "Restoration",
+        "specTalents": [
+            {
+                "talentName": "Improved Mark of the Wild",
+                "talentId": 821,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the effects of your Mark of the Wild and Gift of the Wild spells by 7%.",
+                    "Increases the effects of your Mark of the Wild and Gift of the Wild spells by 14%.",
+                    "Increases the effects of your Mark of the Wild and Gift of the Wild spells by 21%.",
+                    "Increases the effects of your Mark of the Wild and Gift of the Wild spells by 28%.",
+                    "Increases the effects of your Mark of the Wild and Gift of the Wild spells by 35%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Nature_Regeneration"
+            },
+            {
+                "talentName": "Furor",
+                "talentId": 822,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Gives you 20% chance to gain 10 Rage when you shapeshift into Bear and Dire Bear Form or 40 Energy when you shapeshift into Cat Form.",
+                    "Gives you 40% chance to gain 10 Rage when you shapeshift into Bear and Dire Bear Form or 40 Energy when you shapeshift into Cat Form.",
+                    "Gives you 60% chance to gain 10 Rage when you shapeshift into Bear and Dire Bear Form or 40 Energy when you shapeshift into Cat Form.",
+                    "Gives you 80% chance to gain 10 Rage when you shapeshift into Bear and Dire Bear Form or 40 Energy when you shapeshift into Cat Form.",
+                    "Gives you 100% chance to gain 10 Rage when you shapeshift into Bear and Dire Bear Form or 40 Energy when you shapeshift into Cat Form."
+                ],
+                "talentRow": 3,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Holy_BlessingOfStamina"
+            },
+            {
+                "talentName": "Improved Healing Touch",
+                "talentId": 824,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Reduces the cast time of your Healing Touch spell by 0.1 sec.",
+                    "Reduces the cast time of your Healing Touch spell by 0.2 sec.",
+                    "Reduces the cast time of your Healing Touch spell by 0.3 sec.",
+                    "Reduces the cast time of your Healing Touch spell by 0.4 sec.",
+                    "Reduces the cast time of your Healing Touch spell by 0.5 sec."
+                ],
+                "talentRow": 1,
+                "talentColumn": 2,
+                "talentIcon": "Spell_Nature_HealingTouch"
+            },
+            {
+                "talentName": "Nature's Focus",
+                "talentId": 823,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Gives you a 14% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells.",
+                    "Gives you a 28% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells.",
+                    "Gives you a 42% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells.",
+                    "Gives you a 56% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells.",
+                    "Gives you a 70% chance to avoid interruption caused by damage while casting the Healing Touch, Regrowth and Tranquility spells."
+                ],
+                "talentRow": 2,
+                "talentColumn": 2,
+                "talentIcon": "Spell_Nature_HealingWaveGreater"
+            },
+            {
+                "talentName": "Improved Enrage",
+                "talentId": 826,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "The Enrage ability now instantly generates 5 Rage.",
+                    "The Enrage ability now instantly generates 10 Rage."
+                ],
+                "talentRow": 3,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Druid_Enrage"
+            },
+            {
+                "talentName": "Reflection",
+                "talentId": 829,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Allows 5% of your Mana regeneration to continue while casting.",
+                    "Allows 10% of your Mana regeneration to continue while casting.",
+                    "Allows 15% of your Mana regeneration to continue while casting."
+                ],
+                "talentRow": 2,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Frost_WindWalkOn"
+            },
+            {
+                "talentName": "Insect Swarm",
+                "talentId": 827,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "The enemy target is swarmed by insects, decreasing their chance to hit by 2% and causing 66 Nature damage over 12 sec."
+                ],
+                "talentRow": 3,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Nature_InsectSwarm"
+            },
+            {
+                "talentName": "Subtlety",
+                "talentId": 841,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Reduces the threat generated by your Healing spells by 4%.",
+                    "Reduces the threat generated by your Healing spells by 8%.",
+                    "Reduces the threat generated by your Healing spells by 12%.",
+                    "Reduces the threat generated by your Healing spells by 16%.",
+                    "Reduces the threat generated by your Healing spells by 20%."
+                ],
+                "talentRow": 4,
+                "talentColumn": 3,
+                "talentIcon": "Ability_EyeOfTheOwl"
+            },
+            {
+                "talentName": "Tranquil Spirit",
+                "talentId": 843,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Reduces the mana cost of your Healing Touch and Tranquility spells by 2%.",
+                    "Reduces the mana cost of your Healing Touch and Tranquility spells by 4%.",
+                    "Reduces the mana cost of your Healing Touch and Tranquility spells by 6%.",
+                    "Reduces the mana cost of your Healing Touch and Tranquility spells by 8%.",
+                    "Reduces the mana cost of your Healing Touch and Tranquility spells by 10%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 4,
+                "talentIcon": "Spell_Holy_ElunesGrace"
+            },
+            {
+                "talentName": "Improved Rejuvenation",
+                "talentId": 830,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases the effect of your Rejuvenation spell by 5%.",
+                    "Increases the effect of your Rejuvenation spell by 10%.",
+                    "Increases the effect of your Rejuvenation spell by 15%."
+                ],
+                "talentRow": 4,
+                "talentColumn": 4,
+                "talentIcon": "Spell_Nature_Rejuvenation"
+            },
+            {
+                "talentName": "Nature's Swiftness",
+                "talentId": 831,
+                "ranksNumber": 1,
+                "ranksDescription": ["When activated, your next Nature spell becomes an instant cast spell."],
+                "talentRow": 1,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Nature_RavenForm"
+            },
+            {
+                "talentName": "Gift of Nature",
+                "talentId": 828,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the effect of all healing spells by 2%.",
+                    "Increases the effect of all healing spells by 4%.",
+                    "Increases the effect of all healing spells by 6%.",
+                    "Increases the effect of all healing spells by 8%.",
+                    "Increases the effect of all healing spells by 10%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Nature_ProtectionformNature"
+            },
+            {
+                "talentName": "Improved Tranquility",
+                "talentId": 842,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Reduces threat caused by Tranquility by 50%.",
+                    "Reduces threat caused by Tranquility by 100%."
+                ],
+                "talentRow": 4,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Nature_Tranquility"
+            },
+            {
+                "talentName": "Improved Regrowth",
+                "talentId": 825,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the critical effect chance of your Regrowth spell by 10%.",
+                    "Increases the critical effect chance of your Regrowth spell by 20%.",
+                    "Increases the critical effect chance of your Regrowth spell by 30%.",
+                    "Increases the critical effect chance of your Regrowth spell by 40%.",
+                    "Increases the critical effect chance of your Regrowth spell by 50%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 6,
+                "talentIcon": "Spell_Nature_ResistNature"
+            },
+            {
+                "talentName": "Swiftmend",
+                "talentId": 844,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "Consumes a Rejuvenation or Regrowth effect on a friendly target to instantly heal them an amount equal to 12 sec. of Rejuvenation or 18 sec. of Regrowth."
+                ],
+                "talentRow": 2,
+                "talentColumn": 7,
+                "talentIcon": "INV_Relics_IdolofRejuvenation"
+            }
+        ]
+    }
+]
