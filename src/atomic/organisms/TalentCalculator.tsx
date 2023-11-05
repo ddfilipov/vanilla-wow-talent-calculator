@@ -37,7 +37,6 @@ interface TalentCalculatorProps {
 }
 
 export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
-    console.log("I'm in talent calculator, showing classData:", JSON.stringify(classData));
     return (
         <Container>
             <StyledHeader>
