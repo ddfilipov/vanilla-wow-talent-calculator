@@ -32,7 +32,7 @@ interface TalentTreeProps {
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({ specName, specData }) => {
-    console.log("hello this is specData in TalentTree:", specName, JSON.stringify(specData));
+    // console.log("hello this is specData in TalentTree:", specName, JSON.stringify(specData));
     return (
         <MainContainer>
             <Header>{specName}</Header>
@@ -42,7 +42,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData }) => {
                         <TalentNode
                             src={node.talentIcon.toLocaleLowerCase()}
                             talentRow={node.talentRow}
-                            talentColumn={node.talentColumn}
+                            talentColumn={node.talentcolumn}
                             key={node.talentId}
                         />
                     );
