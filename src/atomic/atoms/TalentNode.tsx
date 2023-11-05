@@ -25,15 +25,7 @@ const ButtonStyled = styled.button<IStyledNode>`
         box-shadow: inset 0 0 5px #596e92;
     }
     grid-row-start: ${(props) => props.$talentRow};
-    /* grid-row-end: ${(props) => props.$talentRow + 1}; */
     grid-column-start: ${(props) => props.$talentColumn};
-    /* grid-column-end: ${(props) => props.$talentColumn + 1}; */
-
-    /* grid-column: {
-        ${(props) => props.$talentColumn / props.$talentColumn + 1}
-    /* } */
-    /* grid-area: ${(props) =>
-        props.$talentRow + "/" + props.$talentRow + 1 + "/" + props.$talentColumn + "/" + props.$talentColumn + 1}; */
 `;
 
 export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn }) => {
