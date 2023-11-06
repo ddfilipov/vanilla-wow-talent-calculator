@@ -6,6 +6,7 @@ export interface ClassData {
 
 export interface SpecData {
     specName: string;
+    specIcon: string;
     specTalents: SpecTalent[];
 }
 
@@ -26,6 +27,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Balance",
+                specIcon: "ability_hunter_beasttaming",
                 specTalents: [
                     {
                         talentName: "Improved Wrath",
@@ -243,6 +245,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Feral Combat",
+                specIcon: "ability_racial_bearform",
                 specTalents: [
                     {
                         talentName: "Ferocity",
@@ -454,6 +457,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Restoration",
+                specIcon: "spell_nature_healingtouch",
                 specTalents: [
                     {
                         talentName: "Improved Mark of the Wild",
@@ -666,6 +670,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Beast Mastery",
+                specIcon: "ability_hunter_beasttaming",
                 specTalents: [
                     {
                         talentName: "Improved Aspect of the Hawk",
@@ -877,6 +882,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Marksmanship",
+                specIcon: "ability_marksmanship",
                 specTalents: [
                     {
                         talentName: "Improved Concussive Shot",
@@ -1072,6 +1078,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Survival",
+                specIcon: "ability_hunter_swiftstrike",
                 specTalents: [
                     {
                         talentName: "Monster Slaying",
@@ -1289,6 +1296,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Arcane",
+                specIcon: "spell_holy_magicalsentry",
                 specTalents: [
                     {
                         talentName: "Arcane Subtlety",
@@ -1499,6 +1507,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Fire",
+                specIcon: "spell_fire_firebolt02",
                 specTalents: [
                     {
                         talentName: "Improved Fireball",
@@ -1710,6 +1719,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Frost",
+                specIcon: "spell_frost_frostbolt02",
                 specTalents: [
                     {
                         talentName: "Frost Warding",
@@ -1941,6 +1951,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Holy",
+                specIcon: "spell_holy_holybolt",
                 specTalents: [
                     {
                         talentName: "Divine Strength",
@@ -2131,6 +2142,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Protection",
+                specIcon: "spell_holy_devotionaura",
                 specTalents: [
                     {
                         talentName: "Improved Devotion Aura",
@@ -2336,6 +2348,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Retribution",
+                specIcon: "spell_holy_auraoflight",
                 specTalents: [
                     {
                         talentName: "Improved Blessing of Might",
@@ -2542,6 +2555,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Discipline",
+                specIcon: "spell_holy_wordfortitude",
                 specTalents: [
                     {
                         talentName: "Unbreakable Will",
@@ -2743,6 +2757,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Holy",
+                specIcon: "spell_holy_holybolt",
                 specTalents: [
                     {
                         talentName: "Healing Focus",
@@ -2956,6 +2971,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Shadow",
+                specIcon: "spell_shadow_shadowwordpain",
                 specTalents: [
                     {
                         talentName: "Spirit Tap",
@@ -3173,6 +3189,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Assassination",
+                specIcon: "ability_rogue_eviscerate",
                 specTalents: [
                     {
                         talentName: "Improved Eviscerate",
@@ -3372,6 +3389,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Combat",
+                specIcon: "ability_backstab",
                 specTalents: [
                     {
                         talentName: "Improved Gouge",
@@ -3627,6 +3645,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Subtlety",
+                specIcon: "ability_stealth",
                 specTalents: [
                     {
                         talentName: "Master of Deception",
@@ -3855,6 +3874,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Elemental",
+                specIcon: "spell_nature_lightning",
                 specTalents: [
                     {
                         talentName: "Convection",
@@ -4056,6 +4076,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Enhancement",
+                specIcon: "spell_nature_lightningshield",
                 specTalents: [
                     {
                         talentName: "Ancestral Knowledge",
@@ -4269,6 +4290,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Restoration",
+                specIcon: "spell_nature_magicimmunity",
                 specTalents: [
                     {
                         talentName: "Improved Healing Wave",
@@ -4482,6 +4504,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Affliction",
+                specIcon: "spell_shadow_deathcoil",
                 specTalents: [
                     {
                         talentName: "Suppression",
@@ -4704,6 +4727,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Demonology",
+                specIcon: "spell_shadow_metamorphosis",
                 specTalents: [
                     {
                         talentName: "Improved Healthstone",
@@ -4931,6 +4955,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Destruction",
+                specIcon: "spell_shadow_rainoffire",
                 specTalents: [
                     {
                         talentName: "Improved Shadow Bolt",
@@ -5155,6 +5180,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Arms",
+                specIcon: "ability_rogue_eviscerate",
                 specTalents: [
                     {
                         talentName: "Improved Heroic Strike",
@@ -5397,6 +5423,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Fury",
+                specIcon: "ability_warrior_innerrage",
                 specTalents: [
                     {
                         talentName: "Booming Voice",
@@ -5632,6 +5659,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Protection",
+                specIcon: "inv_shield_06.jpg",
                 specTalents: [
                     {
                         talentName: "Shield Specialization",
