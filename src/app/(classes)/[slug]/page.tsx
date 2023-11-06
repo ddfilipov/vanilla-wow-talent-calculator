@@ -39,6 +39,6 @@ const getClassData = async (className: PlayableClassesType) => {
         setTimeout(() => {
             const fetchedClass = classData.find((classinfo) => classinfo.className === className);
             resolve(fetchedClass);
-        }, 1000);
+        }, 500);
     });
 };
