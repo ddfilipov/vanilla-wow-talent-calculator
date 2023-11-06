@@ -1,6 +1,7 @@
 export interface ClassData {
     classId: number;
     className: string;
+    classIcon: string;
     specs: SpecData[];
 }
 
@@ -24,6 +25,7 @@ export const classData: ClassData[] = [
     {
         classId: 1,
         className: "druid",
+        classIcon: "class_druid",
         specs: [
             {
                 specName: "Balance",
@@ -667,6 +669,7 @@ export const classData: ClassData[] = [
     {
         classId: 2,
         className: "hunter",
+        classIcon: "class_hunter",
         specs: [
             {
                 specName: "Beast Mastery",
@@ -1293,6 +1296,7 @@ export const classData: ClassData[] = [
     {
         classId: 3,
         className: "mage",
+        classIcon: "class_mage",
         specs: [
             {
                 specName: "Arcane",
@@ -1948,6 +1952,7 @@ export const classData: ClassData[] = [
     {
         classId: 4,
         className: "paladin",
+        classIcon: "class_paladin",
         specs: [
             {
                 specName: "Holy",
@@ -2552,6 +2557,7 @@ export const classData: ClassData[] = [
     {
         classId: 5,
         className: "priest",
+        classIcon: "class_priest",
         specs: [
             {
                 specName: "Discipline",
@@ -3186,6 +3192,7 @@ export const classData: ClassData[] = [
     {
         classId: 6,
         className: "rogue",
+        classIcon: "class_rogue",
         specs: [
             {
                 specName: "Assassination",
@@ -3871,6 +3878,7 @@ export const classData: ClassData[] = [
     {
         classId: 7,
         className: "shaman",
+        classIcon: "class_shaman",
         specs: [
             {
                 specName: "Elemental",
@@ -4501,6 +4509,7 @@ export const classData: ClassData[] = [
     {
         classId: 8,
         className: "warlock",
+        classIcon: "class_warlock",
         specs: [
             {
                 specName: "Affliction",
@@ -5177,6 +5186,7 @@ export const classData: ClassData[] = [
     {
         classId: 9,
         className: "warrior",
+        classIcon: "class_warrior",
         specs: [
             {
                 specName: "Arms",

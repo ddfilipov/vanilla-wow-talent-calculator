@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { TalentTrees } from "./TalentTrees";
 import { ClassData } from "@/data/classData";
+import { PointsSpentHeader } from "../molecules/PointsSpentHeader";
 
 const StyledHeader = styled.div`
     display: grid;
@@ -46,6 +47,7 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                 <Title>{`${className} Vanilla Talent Calculator`}</Title>
             </StyledHeader>
             <ClassChooser />
+            <PointsSpentHeader className={className} classIcon={classData.classIcon.toLowerCase()} />
             <TalentTrees className={className} classData={classData} />
         </Container>
     );
