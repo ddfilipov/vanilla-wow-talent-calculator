@@ -31,7 +31,16 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
 }) => {
     return (
         <Container>
-            <Image src={`/images/class-icons/${classIcon}.jpg`} width={26} height={22} alt="Picture of the author" />
+            <Image
+                src={`/images/class-icons/${classIcon}.jpg`}
+                width={26}
+                height={26}
+                style={{
+                    width: 28,
+                    height: 28,
+                }}
+                alt="Picture of the author"
+            />
             <h2>{className}</h2>
         </Container>
     );
