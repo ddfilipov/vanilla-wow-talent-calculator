@@ -5,6 +5,10 @@ import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
 import Image from "next/image";
 
+interface IStyledContainer {
+    $backgroundImage: string;
+}
+
 const MainContainer = styled.div`
     min-height: 500px;
     min-width: 300px;
@@ -25,11 +29,13 @@ const Header = styled.div`
     }
 `;
 
-const TalentGrid = styled.div`
+const TalentGrid = styled.div<IStyledContainer>`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
     place-items: center;
+    background-image: url(${(props) => props.$backgroundImage});
+    background-size: 100% 100%;
     div {
         border: 1px solid var(--main-area-border);
     }
@@ -38,12 +44,13 @@ const TalentGrid = styled.div`
 interface TalentTreeProps {
     specName: string;
     specIcon: string;
+    specBackground: string;
     specData: SpecTalent[];
 }
 
-export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon }) => {
+export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, specBackground }) => {
     if (specName === "Beast Mastery") {
-        console.log("asd");
+        console.log("specBackground:", specBackground);
     }
     return (
         <MainContainer>
@@ -56,7 +63,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon }
                 />
                 <h3>{specName}</h3>
             </Header>
-            <TalentGrid>
+            <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                 {specData.map((node) => {
                     return (
                         <TalentNode

@@ -26,6 +26,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ className, classData }) => {
                         key={spec.specName.toLocaleLowerCase()}
                         specData={spec.specTalents}
                         specIcon={spec.specIcon?.toLocaleLowerCase()}
+                        specBackground={spec.specBackground}
                     />
                 );
             })}
