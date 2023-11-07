@@ -58,7 +58,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                 <Image
                     src={`/images/talent-icons/${specIcon}.jpg`}
                     width={26}
-                    height={22}
+                    height={26}
                     alt="Picture of the author"
                 />
                 <h3>{specName}</h3>
