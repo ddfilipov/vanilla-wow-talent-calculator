@@ -2,6 +2,7 @@ export interface ClassData {
     classId: number;
     className: string;
     classIcon: string;
+    classNameColor: string;
     specs: SpecData[];
 }
 
@@ -27,6 +28,7 @@ export const classData: ClassData[] = [
         classId: 1,
         className: "druid",
         classIcon: "class_druid",
+        classNameColor: "#ff7c0a",
         specs: [
             {
                 specName: "Balance",
@@ -674,6 +676,7 @@ export const classData: ClassData[] = [
         classId: 2,
         className: "hunter",
         classIcon: "class_hunter",
+        classNameColor: "#aad372",
         specs: [
             {
                 specName: "Beast Mastery",
@@ -1304,6 +1307,7 @@ export const classData: ClassData[] = [
         classId: 3,
         className: "mage",
         classIcon: "class_mage",
+        classNameColor: "#3fc7eb",
         specs: [
             {
                 specName: "Arcane",
@@ -1963,6 +1967,7 @@ export const classData: ClassData[] = [
         classId: 4,
         className: "paladin",
         classIcon: "class_paladin",
+        classNameColor: "#f48cba",
         specs: [
             {
                 specName: "Holy",
@@ -2571,6 +2576,7 @@ export const classData: ClassData[] = [
         classId: 5,
         className: "priest",
         classIcon: "class_priest",
+        classNameColor: "#fff",
         specs: [
             {
                 specName: "Discipline",
@@ -3209,6 +3215,7 @@ export const classData: ClassData[] = [
         classId: 6,
         className: "rogue",
         classIcon: "class_rogue",
+        classNameColor: "#fff468",
         specs: [
             {
                 specName: "Assassination",
@@ -3898,6 +3905,7 @@ export const classData: ClassData[] = [
         classId: 7,
         className: "shaman",
         classIcon: "class_shaman",
+        classNameColor: "#0070dd",
         specs: [
             {
                 specName: "Elemental",
@@ -4532,6 +4540,7 @@ export const classData: ClassData[] = [
         classId: 8,
         className: "warlock",
         classIcon: "class_warlock",
+        classNameColor: "#8788ee",
         specs: [
             {
                 specName: "Affliction",
@@ -5212,6 +5221,7 @@ export const classData: ClassData[] = [
         classId: 9,
         className: "warrior",
         classIcon: "class_warrior",
+        classNameColor: "#c69b6d",
         specs: [
             {
                 specName: "Arms",
