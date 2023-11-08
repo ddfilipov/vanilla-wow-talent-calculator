@@ -48,6 +48,26 @@ interface TalentTreeProps {
     specData: SpecTalent[];
 }
 
+const StyledVerticalTestArrow = styled.div`
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    background-color: yellow;
+    width: 10px;
+    height: 100%;
+`;
+
+const StyledHorizontalTestArrow = styled.div`
+    grid-row-start: 5;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: yellow;
+    width: 100%;
+    height: 10px;
+`;
+
 export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, specBackground }) => {
     if (specName === "Beast Mastery") {
         console.log("specBackground:", specBackground);
@@ -74,6 +94,8 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                         />
                     );
                 })}
+                <StyledVerticalTestArrow> </StyledVerticalTestArrow>
+                <StyledHorizontalTestArrow> </StyledHorizontalTestArrow>
             </TalentGrid>
         </MainContainer>
     );
