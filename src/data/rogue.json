@@ -1,0 +1,678 @@
+[
+    {
+        "specName": "Assassination",
+        "specTalents": [
+            {
+                "talentName": "Improved Eviscerate",
+                "talentId": 276,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases the damage done by your Eviscerate ability by 5%.",
+                    "Increases the damage done by your Eviscerate ability by 10%.",
+                    "Increases the damage done by your Eviscerate ability by 15%."
+                ],
+                "talentRow": 1,
+                "talentColumn": 1,
+                "talentIcon": "Ability_Rogue_Eviscerate"
+            },
+            {
+                "talentName": "Remorseless Attacks",
+                "talentId": 272,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "After killing an opponent that yields experience or honor, gives you a 20% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec.",
+                    "After killing an opponent that yields experience or honor, gives you a 40% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, or Ghostly Strike.  Lasts 20 sec."
+                ],
+                "talentRow": 2,
+                "talentColumn": 1,
+                "talentIcon": "Ability_FiegnDead"
+            },
+            {
+                "talentName": "Malice",
+                "talentId": 270,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your critical strike chance by 1%.",
+                    "Increases your critical strike chance by 2%.",
+                    "Increases your critical strike chance by 3%.",
+                    "Increases your critical strike chance by 4%.",
+                    "Increases your critical strike chance by 5%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 1,
+                "talentIcon": "Ability_Racial_BloodRage"
+            },
+            {
+                "talentName": "Ruthlessness",
+                "talentId": 273,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Gives your finishing moves a 20% chance to add a combo point to your target.",
+                    "Gives your finishing moves a 40% chance to add a combo point to your target.",
+                    "Gives your finishing moves a 60% chance to add a combo point to your target."
+                ],
+                "talentRow": 1,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Druid_Disembowel"
+            },
+            {
+                "talentName": "Murder",
+                "talentId": 274,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by 1%.",
+                    "Increases all damage caused against Humanoid, Giant, Beast and Dragonkin targets by 2%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 2,
+                "talentIcon": "Spell_Shadow_DeathScream"
+            },
+            {
+                "talentName": "Improved Slice and Dice",
+                "talentId": 277,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases the duration of your Slice and Dice ability by 15%.",
+                    "Increases the duration of your Slice and Dice ability by 30%.",
+                    "Increases the duration of your Slice and Dice ability by 45%."
+                ],
+                "talentRow": 4,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Rogue_SliceDice"
+            },
+            {
+                "talentName": "Relentless Strikes",
+                "talentId": 281,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "Your finishing moves have a 1101000000% chance per combo point to restore 25 energy."
+                ],
+                "talentRow": 1,
+                "talentColumn": 3,
+                "talentIcon": "Ability_Warrior_DecisiveStrike"
+            },
+            {
+                "talentName": "Improved Expose Armor",
+                "talentId": 278,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases the armor reduced by your Expose Armor ability by 25%.",
+                    "Increases the armor reduced by your Expose Armor ability by 50%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 3,
+                "talentIcon": "Ability_Warrior_Riposte"
+            },
+            {
+                "talentName": "Lethality",
+                "talentId": 269,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 6%.",
+                    "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 12%.",
+                    "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 18%.",
+                    "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 24%.",
+                    "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Ghostly Strike, and Hemorrhage abilities by 30%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 3,
+                "talentIcon": "Ability_CriticalStrike"
+            },
+            {
+                "talentName": "Vile Poisons",
+                "talentId": 682,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the damage dealt by your poisons by 4% and gives your poisons an additional 8% chance to resist dispel effects.",
+                    "Increases the damage dealt by your poisons by 8% and gives your poisons an additional 16% chance to resist dispel effects.",
+                    "Increases the damage dealt by your poisons by 12% and gives your poisons an additional 24% chance to resist dispel effects.",
+                    "Increases the damage dealt by your poisons by 16% and gives your poisons an additional 32% chance to resist dispel effects.",
+                    "Increases the damage dealt by your poisons by 20% and gives your poisons an additional 40% chance to resist dispel effects."
+                ],
+                "talentRow": 2,
+                "talentColumn": 4,
+                "talentIcon": "Ability_Rogue_FeignDeath"
+            },
+            {
+                "talentName": "Improved Poisons",
+                "talentId": 268,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the chance to apply poisons to your target by 2%.",
+                    "Increases the chance to apply poisons to your target by 4%.",
+                    "Increases the chance to apply poisons to your target by 6%.",
+                    "Increases the chance to apply poisons to your target by 8%.",
+                    "Increases the chance to apply poisons to your target by 10%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 4,
+                "talentIcon": "Ability_Poisons"
+            },
+            {
+                "talentName": "Cold Blood",
+                "talentId": 280,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, or Eviscerate by 100%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Ice_Lament"
+            },
+            {
+                "talentName": "Improved Kidney Shot",
+                "talentId": 279,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "While affected by your Kidney Shot ability, the target receives an additional 3% damage from all sources.",
+                    "While affected by your Kidney Shot ability, the target receives an additional 6% damage from all sources.",
+                    "While affected by your Kidney Shot ability, the target receives an additional 9% damage from all sources."
+                ],
+                "talentRow": 3,
+                "talentColumn": 5,
+                "talentIcon": "Ability_Rogue_KidneyShot"
+            },
+            {
+                "talentName": "Seal Fate",
+                "talentId": 283,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Your critical strikes from abilities that add combo points  have a 20% chance to add an additional combo point.",
+                    "Your critical strikes from abilities that add combo points  have a 40% chance to add an additional combo point.",
+                    "Your critical strikes from abilities that add combo points  have a 60% chance to add an additional combo point.",
+                    "Your critical strikes from abilities that add combo points  have a 80% chance to add an additional combo point.",
+                    "Your critical strikes from abilities that add combo points  have a 100% chance to add an additional combo point."
+                ],
+                "talentRow": 2,
+                "talentColumn": 6,
+                "talentIcon": "Spell_Shadow_ChillTouch"
+            },
+            {
+                "talentName": "Vigor",
+                "talentId": 382,
+                "ranksNumber": 1,
+                "ranksDescription": ["Increases your maximum Energy by 10."],
+                "talentRow": 2,
+                "talentColumn": 7,
+                "talentIcon": "Spell_Nature_EarthBindTotem"
+            }
+        ]
+    },
+    {
+        "specName": "Combat",
+        "specTalents": [
+            {
+                "talentName": "Improved Gouge",
+                "talentId": 203,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases the effect duration of your Gouge ability by 0.5 sec.",
+                    "Increases the effect duration of your Gouge ability by 1 sec.",
+                    "Increases the effect duration of your Gouge ability by 1.5 sec."
+                ],
+                "talentRow": 1,
+                "talentColumn": 1,
+                "talentIcon": "Ability_Gouge"
+            },
+            {
+                "talentName": "Improved Sinister Strike",
+                "talentId": 201,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Reduces the Energy cost of your Sinister Strike ability by 3.",
+                    "Reduces the Energy cost of your Sinister Strike ability by 5."
+                ],
+                "talentRow": 2,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Shadow_RitualOfSacrifice"
+            },
+            {
+                "talentName": "Lightning Reflexes",
+                "talentId": 186,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your Dodge chance by 1%.",
+                    "Increases your Dodge chance by 2%.",
+                    "Increases your Dodge chance by 3%.",
+                    "Increases your Dodge chance by 4%.",
+                    "Increases your Dodge chance by 5%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Nature_Invisibilty"
+            },
+            {
+                "talentName": "Improved Backstab",
+                "talentId": 202,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases the critical strike chance of your Backstab ability by 10%.",
+                    "Increases the critical strike chance of your Backstab ability by 20%.",
+                    "Increases the critical strike chance of your Backstab ability by 30%."
+                ],
+                "talentRow": 1,
+                "talentColumn": 2,
+                "talentIcon": "Ability_BackStab"
+            },
+            {
+                "talentName": "Deflection",
+                "talentId": 187,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your Parry chance by 1%.",
+                    "Increases your Parry chance by 2%.",
+                    "Increases your Parry chance by 3%.",
+                    "Increases your Parry chance by 4%.",
+                    "Increases your Parry chance by 5%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Parry"
+            },
+            {
+                "talentName": "Precision",
+                "talentId": 181,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your chance to hit with melee weapons by 1%.",
+                    "Increases your chance to hit with melee weapons by 2%.",
+                    "Increases your chance to hit with melee weapons by 3%.",
+                    "Increases your chance to hit with melee weapons by 4%.",
+                    "Increases your chance to hit with melee weapons by 5%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Marksmanship"
+            },
+            {
+                "talentName": "Endurance",
+                "talentId": 204,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Reduces the cooldown of your Sprint and Evasion abilities by 45 sec.",
+                    "Reduces the cooldown of your Sprint and Evasion abilities by 1.5 min."
+                ],
+                "talentRow": 1,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Shadow_ShadowWard"
+            },
+            {
+                "talentName": "Riposte",
+                "talentId": 301,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "A strike that becomes active after parrying an opponent's attack.  This attack deals 150% weapon damage and disarms the target for 6 sec."
+                ],
+                "talentRow": 2,
+                "talentColumn": 3,
+                "talentIcon": "Ability_Warrior_Challange"
+            },
+            {
+                "talentName": "Improved Sprint",
+                "talentId": 222,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Gives a 50% chance to remove all movement impairing effects when you activate your Sprint ability.",
+                    "Gives a 100% chance to remove all movement impairing effects when you activate your Sprint ability."
+                ],
+                "talentRow": 4,
+                "talentColumn": 3,
+                "talentIcon": "Ability_Rogue_Sprint"
+            },
+            {
+                "talentName": "Improved Kick",
+                "talentId": 206,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Gives your Kick ability a 50% chance to silence the target for 2 sec.",
+                    "Gives your Kick ability a 100% chance to silence the target for 2 sec."
+                ],
+                "talentRow": 1,
+                "talentColumn": 4,
+                "talentIcon": "Ability_Kick"
+            },
+            {
+                "talentName": "Dagger Specialization",
+                "talentId": 182,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your chance to get a critical strike with Daggers by 1%.",
+                    "Increases your chance to get a critical strike with Daggers by 2%.",
+                    "Increases your chance to get a critical strike with Daggers by 3%.",
+                    "Increases your chance to get a critical strike with Daggers by 4%.",
+                    "Increases your chance to get a critical strike with Daggers by 5%."
+                ],
+                "talentRow": 2,
+                "talentColumn": 4,
+                "talentIcon": "INV_Weapon_ShortBlade_05"
+            },
+            {
+                "talentName": "Dual Wield Specialization",
+                "talentId": 221,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the damage done by your offhand weapon by 10%.",
+                    "Increases the damage done by your offhand weapon by 20%.",
+                    "Increases the damage done by your offhand weapon by 30%.",
+                    "Increases the damage done by your offhand weapon by 40%.",
+                    "Increases the damage done by your offhand weapon by 50%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 4,
+                "talentIcon": "Ability_DualWield"
+            },
+            {
+                "talentName": "Mace Specialization",
+                "talentId": 184,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your skill with Maces by 1, and gives you a 1% chance to stun your target for 3 sec with a mace.",
+                    "Increases your skill with Maces by 2, and gives you a 2% chance to stun your target for 3 sec with a mace.",
+                    "Increases your skill with Maces by 3, and gives you a 3% chance to stun your target for 3 sec with a mace.",
+                    "Increases your skill with Maces by 4, and gives you a 4% chance to stun your target for 3 sec with a mace.",
+                    "Increases your skill with Maces by 5, and gives you a 6% chance to stun your target for 3 sec with a mace."
+                ],
+                "talentRow": 1,
+                "talentColumn": 5,
+                "talentIcon": "INV_Mace_01"
+            },
+            {
+                "talentName": "Blade Flurry",
+                "talentId": 223,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "Increases your attack speed by 20%.  In addition, attacks strike an additional nearby opponent.  Lasts 15 sec."
+                ],
+                "talentRow": 2,
+                "talentColumn": 5,
+                "talentIcon": "Ability_Warrior_PunishingBlow"
+            },
+            {
+                "talentName": "Sword Specialization",
+                "talentId": 242,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Gives you a 1% chance to get an extra attack on the same target after dealing damage with your Sword.",
+                    "Gives you a 2% chance to get an extra attack on the same target after dealing damage with your Sword.",
+                    "Gives you a 3% chance to get an extra attack on the same target after dealing damage with your Sword.",
+                    "Gives you a 4% chance to get an extra attack on the same target after dealing damage with your Sword.",
+                    "Gives you a 5% chance to get an extra attack on the same target after dealing damage with your Sword."
+                ],
+                "talentRow": 3,
+                "talentColumn": 5,
+                "talentIcon": "INV_Sword_27"
+            },
+            {
+                "talentName": "Fist Weapon Specialization",
+                "talentId": 183,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your chance to get a critical strike with Fist Weapons by 1%.",
+                    "Increases your chance to get a critical strike with Fist Weapons by 2%.",
+                    "Increases your chance to get a critical strike with Fist Weapons by 3%.",
+                    "Increases your chance to get a critical strike with Fist Weapons by 4%.",
+                    "Increases your chance to get a critical strike with Fist Weapons by 5%."
+                ],
+                "talentRow": 4,
+                "talentColumn": 5,
+                "talentIcon": "INV_Gauntlets_04"
+            },
+            {
+                "talentName": "Weapon Expertise",
+                "talentId": 1703,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases your skill with Sword, Fist and Dagger weapons by 3.",
+                    "Increases your skill with Sword, Fist and Dagger weapons by 5."
+                ],
+                "talentRow": 2,
+                "talentColumn": 6,
+                "talentIcon": "Spell_Holy_BlessingOfStrength"
+            },
+            {
+                "talentName": "Aggression",
+                "talentId": 1122,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases the damage of your Sinister Strike and Eviscerate abilities by 2%.",
+                    "Increases the damage of your Sinister Strike and Eviscerate abilities by 4%.",
+                    "Increases the damage of your Sinister Strike and Eviscerate abilities by 6%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 6,
+                "talentIcon": "Ability_Racial_Avatar"
+            },
+            {
+                "talentName": "Adrenaline Rush",
+                "talentId": 205,
+                "ranksNumber": 1,
+                "ranksDescription": ["Increases your Energy regeneration rate by 100% for 15 sec."],
+                "talentRow": 2,
+                "talentColumn": 7,
+                "talentIcon": "Spell_Shadow_ShadowWordDominate"
+            }
+        ]
+    },
+    {
+        "specName": "Subtlety",
+        "specTalents": [
+            {
+                "talentName": "Master of Deception",
+                "talentId": 241,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Reduces the chance enemies have to detect you while in Stealth mode.",
+                    "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 1).",
+                    "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 2).",
+                    "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 3).",
+                    "Reduces the chance enemies have to detect you while in Stealth mode.  More effective than Master of Deception (Rank 4)."
+                ],
+                "talentRow": 2,
+                "talentColumn": 1,
+                "talentIcon": "Spell_Shadow_Charm"
+            },
+            {
+                "talentName": "Opportunity",
+                "talentId": 261,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 4%.",
+                    "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 8%.",
+                    "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 12%.",
+                    "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 16%.",
+                    "Increases the damage dealt when striking from behind with your Backstab, Garrote, or Ambush abilities by 20%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 1,
+                "talentIcon": "Ability_Warrior_WarCry"
+            },
+            {
+                "talentName": "Sleight of Hand",
+                "talentId": 1700,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Reduces the chance you are critically hit by melee and ranged attacks by 1% and increases the threat reduction of your Feint ability by 10%.",
+                    "Reduces the chance you are critically hit by melee and ranged attacks by 2% and increases the threat reduction of your Feint ability by 20%."
+                ],
+                "talentRow": 1,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Rogue_Feint"
+            },
+            {
+                "talentName": "Elusiveness",
+                "talentId": 247,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Reduces the cooldown of your Vanish and Blind abilities by 45 sec.",
+                    "Reduces the cooldown of your Vanish and Blind abilities by 1.5 min."
+                ],
+                "talentRow": 2,
+                "talentColumn": 2,
+                "talentIcon": "Spell_Magic_LesserInvisibilty"
+            },
+            {
+                "talentName": "Camouflage",
+                "talentId": 244,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your speed while stealthed by 3% and reduces the cooldown of your Stealth ability by 1 sec.",
+                    "Increases your speed while stealthed by 6% and reduces the cooldown of your Stealth ability by 2 sec.",
+                    "Increases your speed while stealthed by 9% and reduces the cooldown of your Stealth ability by 3 sec.",
+                    "Increases your speed while stealthed by 12% and reduces the cooldown of your Stealth ability by 4 sec.",
+                    "Increases your speed while stealthed by 15% and reduces the cooldown of your Stealth ability by 5 sec."
+                ],
+                "talentRow": 3,
+                "talentColumn": 2,
+                "talentIcon": "Ability_Stealth"
+            },
+            {
+                "talentName": "Initiative",
+                "talentId": 245,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Gives you a 25% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+                    "Gives you a 50% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability.",
+                    "Gives you a 75% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability."
+                ],
+                "talentRow": 1,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Shadow_Fumble"
+            },
+            {
+                "talentName": "Ghostly Strike",
+                "talentId": 303,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "A strike that deals 125% weapon damage and increases your chance to dodge by 15% for 7 sec.  Awards 1 combo point."
+                ],
+                "talentRow": 2,
+                "talentColumn": 3,
+                "talentIcon": "Spell_Shadow_Curse"
+            },
+            {
+                "talentName": "Improved Ambush",
+                "talentId": 263,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Increases the critical strike chance of your Ambush ability by 15%.",
+                    "Increases the critical strike chance of your Ambush ability by 30%.",
+                    "Increases the critical strike chance of your Ambush ability by 45%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 3,
+                "talentIcon": "Ability_Rogue_Ambush"
+            },
+            {
+                "talentName": "Setup",
+                "talentId": 246,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Gives you a 15% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
+                    "Gives you a 30% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells.",
+                    "Gives you a 45% chance to add a combo point to your target after dodging their attack or fully resisting one of their spells."
+                ],
+                "talentRow": 1,
+                "talentColumn": 4,
+                "talentIcon": "Spell_Nature_MirrorImage"
+            },
+            {
+                "talentName": "Improved Sap",
+                "talentId": 262,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Gives you a 30% chance to return to stealth mode after using your Sap ability.",
+                    "Gives you a 60% chance to return to stealth mode after using your Sap ability.",
+                    "Gives you a 90% chance to return to stealth mode after using your Sap ability."
+                ],
+                "talentRow": 2,
+                "talentColumn": 4,
+                "talentIcon": "Ability_Sap"
+            },
+            {
+                "talentName": "Serrated Blades",
+                "talentId": 1123,
+                "ranksNumber": 3,
+                "ranksDescription": [
+                    "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 10%.  The amount of Armor reduced increases with your level.",
+                    "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 20%.  The amount of Armor reduced increases with your level.",
+                    "Causes your attacks to ignore 0 of your target's Armor and increases the damage dealt by your Rupture ability by 30%.  The amount of Armor reduced increases with your level."
+                ],
+                "talentRow": 3,
+                "talentColumn": 4,
+                "talentIcon": "INV_Sword_17"
+            },
+            {
+                "talentName": "Heightened Senses",
+                "talentId": 1701,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Increases your Stealth detection and reduces the chance you are hit by spells and ranged attacks by 2%.",
+                    "Increases your Stealth detection and reduces the chance you are hit by spells and ranged attacks by 4%.  More effective than Heightened Senses (Rank 1)."
+                ],
+                "talentRow": 1,
+                "talentColumn": 5,
+                "talentIcon": "Ability_Ambush"
+            },
+            {
+                "talentName": "Preparation",
+                "talentId": 284,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "When activated, this ability immediately finishes the cooldown on your other Rogue abilities."
+                ],
+                "talentRow": 2,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Shadow_AntiShadow"
+            },
+            {
+                "talentName": "Dirty Deeds",
+                "talentId": 265,
+                "ranksNumber": 2,
+                "ranksDescription": [
+                    "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 10.",
+                    "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 20."
+                ],
+                "talentRow": 3,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Shadow_SummonSuccubus"
+            },
+            {
+                "talentName": "Hemorrhage",
+                "talentId": 681,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "An instant strike that damages the opponent and causes the target to hemorrhage, increasing any Physical damage dealt to the target by up to 3.  Lasts 30 charges or 15 sec.  Awards 1 combo point."
+                ],
+                "talentRow": 4,
+                "talentColumn": 5,
+                "talentIcon": "Spell_Shadow_LifeDrain"
+            },
+            {
+                "talentName": "Deadliness",
+                "talentId": 1702,
+                "ranksNumber": 5,
+                "ranksDescription": [
+                    "Increases your Attack Power by 2%.",
+                    "Increases your Attack Power by 4%.",
+                    "Increases your Attack Power by 6%.",
+                    "Increases your Attack Power by 8%.",
+                    "Increases your Attack Power by 10%."
+                ],
+                "talentRow": 3,
+                "talentColumn": 6,
+                "talentIcon": "INV_Weapon_Crossbow_11"
+            },
+            {
+                "talentName": "Premeditation",
+                "talentId": 381,
+                "ranksNumber": 1,
+                "ranksDescription": [
+                    "When used, adds 2 combo points to your target.  You must add to or use those combo points within 10 sec or the combo points are lost. "
+                ],
+                "talentRow": 2,
+                "talentColumn": 7,
+                "talentIcon": "Spell_Shadow_Possession"
+            }
+        ]
+    }
+]

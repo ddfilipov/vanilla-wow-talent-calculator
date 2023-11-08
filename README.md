@@ -1,8 +1,30 @@
-In order to have to project running in your computer run:
+# Vanilla WoW Talent Calculator
 
-### `npm install`
+My own approach of a World of Warcraft talent calculator using nextjs13. This project doesn't intend on profiting on Blizzard's game. Rather, I'm using it as a tool to learn new technologies and build something fun!
 
-### `npm start`
+## Technologies/tools this project runs on:
+- React
+- Nextjs 13
 
-I'm using a local json as a DDBB and the only class that has got talent nodes is the warrior for now. 
-The idea is that once the frontend is in a good state I would delve into the api and ddbb creation.
+## TODO list:
+- Turn the project into a monorepo
+- Add api calls (backend) with express (TBD)
+- Add database
+- Add test cases
+
+
+## How to run the project
+
+First of all, make sure you've got node set up then run
+
+```bash
+npm i
+```
+
+Then, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
