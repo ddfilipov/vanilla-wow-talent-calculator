@@ -21,6 +21,7 @@ export interface SpecTalent {
     talentcolumn: number;
     talentRow: number;
     talentIcon: string;
+    unlocks?: number[];
 }
 
 export const classData: ClassData[] = [
@@ -60,6 +61,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 1,
                         talentIcon: "Spell_Nature_NaturesWrath",
+                        unlocks: [1, 3],
                     },
                     {
                         talentName: "Improved Nature's Grasp",
@@ -102,6 +104,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_StarFall",
+                        unlocks: [4, 2],
                     },
                     {
                         talentName: "Natural Weapons",
@@ -117,6 +120,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 2,
                         talentIcon: "INV_Staff_01",
+                        unlocks: [3, 3],
                     },
                     {
                         talentName: "Natural Shapeshifter",

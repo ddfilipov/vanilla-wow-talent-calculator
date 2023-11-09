@@ -68,6 +68,22 @@ const StyledHorizontalTestArrow = styled.div`
     height: 10px;
 `;
 
+interface IArrow {
+    $startingRow: number;
+    $endingRow: number;
+    $startingColumn: number;
+    $endingColumn: number;
+}
+const StyledTestArrow = styled.div<IArrow>`
+    grid-row-start: ${(props) => props.$startingRow};
+    grid-row-end: ${(props) => props.$endingRow};
+    grid-column-start: ${(props) => props.$startingColumn};
+    grid-column-end: ${(props) => props.$endingColumn};
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+`;
+
 export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, specBackground }) => {
     if (specName === "Beast Mastery") {
         console.log("specBackground:", specBackground);
@@ -86,16 +102,26 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                 {specData.map((node) => {
                     return (
-                        <TalentNode
-                            src={node.talentIcon.toLocaleLowerCase()}
-                            talentRow={node.talentRow}
-                            talentColumn={node.talentcolumn}
-                            key={node.talentId}
-                        />
+                        <>
+                            <TalentNode
+                                src={node.talentIcon.toLocaleLowerCase()}
+                                talentRow={node.talentRow}
+                                talentColumn={node.talentcolumn}
+                                key={node.talentId}
+                            />
+                            {node.unlocks && node.unlocks?.length > 0 ? (
+                                <StyledTestArrow
+                                    $startingRow={node.talentRow}
+                                    $endingRow={node.talentRow + 1}
+                                    $startingColumn={node.talentcolumn}
+                                    $endingColumn={node.talentcolumn + 1}
+                                />
+                            ) : null}
+                        </>
                     );
                 })}
-                <StyledVerticalTestArrow> </StyledVerticalTestArrow>
-                <StyledHorizontalTestArrow> </StyledHorizontalTestArrow>
+
+                {/* <StyledHorizontalTestArrow> </StyledHorizontalTestArrow> */}
             </TalentGrid>
         </MainContainer>
     );
