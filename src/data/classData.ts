@@ -33,7 +33,7 @@ export const classData: ClassData[] = [
         specs: [
             {
                 specName: "Balance",
-                specIcon: "ability_hunter_beasttaming",
+                specIcon: "spell_nature_starfall",
                 specBackground: "283",
                 specTalents: [
                     {
