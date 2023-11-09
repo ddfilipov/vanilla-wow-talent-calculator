@@ -120,7 +120,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 2,
                         talentIcon: "INV_Staff_01",
-                        unlocks: [3, 3],
+                        unlocks: [2, 4],
                     },
                     {
                         talentName: "Natural Shapeshifter",

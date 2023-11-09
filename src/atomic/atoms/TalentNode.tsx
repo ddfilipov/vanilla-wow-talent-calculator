@@ -26,6 +26,7 @@ const ButtonStyled = styled.button<IStyledNode>`
     }
     grid-row-start: ${(props) => props.$talentRow};
     grid-column-start: ${(props) => props.$talentColumn};
+    z-index: 1;
 `;
 
 export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn }) => {

@@ -76,12 +76,12 @@ interface IArrow {
 }
 const StyledTestArrow = styled.div<IArrow>`
     grid-row-start: ${(props) => props.$startingRow};
-    grid-row-end: ${(props) => props.$endingRow};
+    grid-row-end: ${(props) => props.$endingRow + 1};
     grid-column-start: ${(props) => props.$startingColumn};
-    grid-column-end: ${(props) => props.$endingColumn};
+    grid-column-end: ${(props) => props.$endingColumn + 1};
     background-color: yellow;
     width: 100%;
-    height: 100%;
+    height: 50%;
 `;
 
 export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, specBackground }) => {
@@ -112,9 +112,9 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                             {node.unlocks && node.unlocks?.length > 0 ? (
                                 <StyledTestArrow
                                     $startingRow={node.talentRow}
-                                    $endingRow={node.talentRow + 1}
+                                    $endingRow={node.unlocks[0]}
                                     $startingColumn={node.talentcolumn}
-                                    $endingColumn={node.talentcolumn + 1}
+                                    $endingColumn={node.unlocks[1]}
                                 />
                             ) : null}
                         </>
