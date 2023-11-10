@@ -365,6 +365,8 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "INV_Misc_MonsterClaw_04",
+                        // TODO: trickiest node of them all, has two arrows coming from itself and one has a 90º turn.
+                        unlocks: [4, 3],
                     },
                     {
                         talentName: "Improved Shred",
@@ -390,6 +392,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Ability_Hunter_Pet_Cat",
+                        unlocks: [6, 2],
                     },
                     {
                         talentName: "Blood Frenzy",
@@ -515,6 +518,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 1,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_HealingTouch",
+                        unlocks: [5, 1],
                     },
                     {
                         talentName: "Nature's Focus",
@@ -566,6 +570,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "Spell_Nature_InsectSwarm",
+                        unlocks: [5, 3],
                     },
                     {
                         talentName: "Subtlety",
@@ -596,6 +601,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Spell_Holy_ElunesGrace",
+                        unlocks: [7, 2],
                     },
                     {
                         talentName: "Improved Rejuvenation",
