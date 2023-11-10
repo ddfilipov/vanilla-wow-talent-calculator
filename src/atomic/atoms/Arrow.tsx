@@ -23,8 +23,8 @@ const StyledTestArrow = styled.div<IArrow>`
     grid-column-start: ${(props) => props.$startingColumn};
     grid-column-end: ${(props) => props.$endingColumn + 1};
     background-color: #ffd100;
-    width: ${(props) => (props.$isVericalArrow ? "15%" : "50%")};
-    height: ${(props) => (props.$isVericalArrow ? "50%" : "15%")};
+    width: ${(props) => (props.$isVericalArrow ? "15%" : "calc(100% - 38px)")};
+    height: ${(props) => (props.$isVericalArrow ? "calc(100% - 38px)" : "15%")};
 `;
 
 export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, endingColumn }) => {
