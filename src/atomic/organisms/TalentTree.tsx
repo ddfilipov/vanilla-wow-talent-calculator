@@ -74,14 +74,26 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                                 talentColumn={node.talentcolumn}
                                 key={node.talentId}
                             />
-                            {node.unlocks && node.unlocks?.length > 0 ? (
-                                <Arrow
-                                    startingRow={node.talentRow}
-                                    endingRow={node.unlocks[0].row}
-                                    startingColumn={node.talentcolumn}
-                                    endingColumn={node.unlocks[0].column}
-                                />
-                            ) : null}
+                            {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
+                            {node.unlocks && node.unlocks?.length > 0
+                                ? node.unlocks.map((arrow, index) => {
+                                      return index <= 1 ? (
+                                          <Arrow
+                                              startingRow={node.talentRow}
+                                              endingRow={arrow.row}
+                                              startingColumn={node.talentcolumn}
+                                              endingColumn={arrow.column}
+                                          />
+                                      ) : (
+                                          <Arrow
+                                              startingRow={node.unlocks?.[1].row as number}
+                                              endingRow={arrow.row}
+                                              startingColumn={node.unlocks?.[1].column as number}
+                                              endingColumn={arrow.column}
+                                          />
+                                      );
+                                  })
+                                : null}
                         </>
                     );
                 })}

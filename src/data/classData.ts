@@ -391,6 +391,14 @@ export const classData: ClassData[] = [
                                 row: 4,
                                 column: 3,
                             },
+                            {
+                                row: 3,
+                                column: 4,
+                            },
+                            {
+                                row: 4,
+                                column: 4,
+                            },
                         ],
                     },
                     {
