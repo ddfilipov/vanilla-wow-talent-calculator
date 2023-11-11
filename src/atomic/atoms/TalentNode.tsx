@@ -17,9 +17,10 @@ const ButtonStyled = styled.button<IStyledNode>`
     height: 38px;
     width: 38px;
     background-image: url(${(props) => props.$backgroundImage});
-    border: 2px solid #212e46;
+    //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
+    border: 2px solid var(--main-area-border);
     cursor: pointer;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
     &:hover {
         opacity: 1;
         box-shadow: inset 0 0 5px #596e92;
