@@ -77,9 +77,9 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                             {node.unlocks && node.unlocks?.length > 0 ? (
                                 <Arrow
                                     startingRow={node.talentRow}
-                                    endingRow={node.unlocks[0]}
+                                    endingRow={node.unlocks[0].row}
                                     startingColumn={node.talentcolumn}
-                                    endingColumn={node.unlocks[1]}
+                                    endingColumn={node.unlocks[0].column}
                                 />
                             ) : null}
                         </>

@@ -13,6 +13,11 @@ export interface SpecData {
     specTalents: SpecTalent[];
 }
 
+export interface ICoords {
+    row: number;
+    column: number;
+}
+
 export interface SpecTalent {
     talentName: string;
     talentId: number;
@@ -21,7 +26,7 @@ export interface SpecTalent {
     talentcolumn: number;
     talentRow: number;
     talentIcon: string;
-    unlocks?: number[];
+    unlocks?: ICoords[];
 }
 
 export const classData: ClassData[] = [
@@ -61,7 +66,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 1,
                         talentIcon: "Spell_Nature_NaturesWrath",
-                        unlocks: [1, 3],
+                        unlocks: [
+                            {
+                                row: 1,
+                                column: 3,
+                            },
+                        ],
                     },
                     {
                         talentName: "Improved Nature's Grasp",
@@ -104,7 +114,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_StarFall",
-                        unlocks: [4, 2],
+                        unlocks: [
+                            {
+                                row: 4,
+                                column: 2,
+                            },
+                        ],
                     },
                     {
                         talentName: "Natural Weapons",
@@ -120,7 +135,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 2,
                         talentIcon: "INV_Staff_01",
-                        unlocks: [2, 4],
+                        unlocks: [
+                            {
+                                row: 2,
+                                column: 4,
+                            },
+                        ],
                     },
                     {
                         talentName: "Natural Shapeshifter",
@@ -366,7 +386,12 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "INV_Misc_MonsterClaw_04",
                         // TODO: trickiest node of them all, has two arrows coming from itself and one has a 90º turn.
-                        unlocks: [4, 3],
+                        unlocks: [
+                            {
+                                row: 4,
+                                column: 3,
+                            },
+                        ],
                     },
                     {
                         talentName: "Improved Shred",
@@ -392,7 +417,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Ability_Hunter_Pet_Cat",
-                        unlocks: [6, 2],
+                        unlocks: [
+                            {
+                                row: 6,
+                                column: 2,
+                            },
+                        ],
                     },
                     {
                         talentName: "Blood Frenzy",
@@ -518,7 +548,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 1,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_HealingTouch",
-                        unlocks: [5, 1],
+                        unlocks: [
+                            {
+                                row: 5,
+                                column: 1,
+                            },
+                        ],
                     },
                     {
                         talentName: "Nature's Focus",
@@ -570,7 +605,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "Spell_Nature_InsectSwarm",
-                        unlocks: [5, 3],
+                        unlocks: [
+                            {
+                                row: 5,
+                                column: 3,
+                            },
+                        ],
                     },
                     {
                         talentName: "Subtlety",
@@ -601,7 +641,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Spell_Holy_ElunesGrace",
-                        unlocks: [7, 2],
+                        unlocks: [
+                            {
+                                row: 7,
+                                column: 2,
+                            },
+                        ],
                     },
                     {
                         talentName: "Improved Rejuvenation",
