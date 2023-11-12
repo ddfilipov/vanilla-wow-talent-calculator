@@ -6,8 +6,10 @@ import { TalentTree } from "./TalentTree";
 import { ClassData } from "@/data/classData";
 
 const Container = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 `;
 

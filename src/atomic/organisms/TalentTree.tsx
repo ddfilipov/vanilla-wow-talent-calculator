@@ -12,7 +12,7 @@ interface IStyledContainer {
 
 const MainContainer = styled.div`
     min-height: 500px;
-    min-width: 300px;
+    min-width: 280px;
     display: grid;
     grid-template-rows: 2.5rem 1fr;
     border: 1px solid var(--main-area-border);

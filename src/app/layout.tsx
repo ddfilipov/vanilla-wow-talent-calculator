@@ -25,16 +25,13 @@ const Container = styled.div`
     border: 1px solid var(--main-area-border);
 
     @media ((${breakpoints.mobile})) {
-        background-color: green;
         min-width: 280px;
         min-height: 300px;
     }
     @media ((${breakpoints.tablet})) {
-        background-color: blue;
         min-height: 500px;
     }
     @media ((${breakpoints.desktop})) {
-        background-color: red;
         max-width: 1200px;
         min-width: 750px;
         max-height: 800px;
