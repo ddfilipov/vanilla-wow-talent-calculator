@@ -1,5 +1,5 @@
 "use client";
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import styled from "styled-components";
 import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
@@ -67,12 +67,11 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                 {specData.map((node) => {
                     return (
-                        <>
+                        <Fragment key={node.talentId}>
                             <TalentNode
                                 src={node.talentIcon.toLocaleLowerCase()}
                                 talentRow={node.talentRow}
                                 talentColumn={node.talentcolumn}
-                                key={node.talentId}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0
@@ -94,7 +93,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                                       );
                                   })
                                 : null}
-                        </>
+                        </Fragment>
                     );
                 })}
             </TalentGrid>
