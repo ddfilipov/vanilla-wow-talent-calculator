@@ -14,7 +14,7 @@ interface IArrow {
     $endingRow: number;
     $startingColumn: number;
     $endingColumn: number;
-    $isVericalArrow: boolean;
+    $isVerticalArrow: boolean;
 }
 
 const StyledTestArrow = styled.div<IArrow>`
@@ -23,20 +23,19 @@ const StyledTestArrow = styled.div<IArrow>`
     grid-column-start: ${(props) => props.$startingColumn};
     grid-column-end: ${(props) => props.$endingColumn + 1};
     background-color: #ffd100;
-    width: ${(props) => (props.$isVericalArrow ? "15%" : "calc(85% - 38px)")};
-    height: ${(props) => (props.$isVericalArrow ? "calc(85% - 38px)" : "15%")};
+    width: ${(props) => (props.$isVerticalArrow ? "15%" : "calc(85% - 38px)")};
+    height: ${(props) => (props.$isVerticalArrow ? "calc(85% - 38px)" : "15%")};
 `;
 
 export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, endingColumn }) => {
     const isVericalArrow = startingColumn - endingColumn === 0;
-    console.log("isVericalArrow:", isVericalArrow);
     return (
         <StyledTestArrow
             $startingRow={startingRow}
             $endingRow={endingRow}
             $startingColumn={startingColumn}
             $endingColumn={endingColumn}
-            $isVericalArrow={isVericalArrow}
+            $isVerticalArrow={isVericalArrow}
         />
     );
 };

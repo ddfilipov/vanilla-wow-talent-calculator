@@ -82,6 +82,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                                               endingRow={arrow.row}
                                               startingColumn={node.talentcolumn}
                                               endingColumn={arrow.column}
+                                              key={index}
                                           />
                                       ) : (
                                           <Arrow
@@ -89,6 +90,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                                               endingRow={arrow.row}
                                               startingColumn={node.unlocks?.[1].column as number}
                                               endingColumn={arrow.column}
+                                              key={index}
                                           />
                                       );
                                   })
