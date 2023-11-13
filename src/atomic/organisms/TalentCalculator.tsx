@@ -47,7 +47,11 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                 <Title>{`${className} Vanilla Talent Calculator`}</Title>
             </StyledHeader>
             <ClassChooser />
-            <PointsSpentHeader className={className} classIcon={classData.classIcon.toLowerCase()} />
+            <PointsSpentHeader
+                className={className}
+                classIcon={classData.classIcon.toLowerCase()}
+                classNameColor={classData.classNameColor}
+            />
             <TalentTrees className={className} classData={classData} />
         </Container>
     );

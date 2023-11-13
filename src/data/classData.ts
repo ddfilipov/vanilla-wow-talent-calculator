@@ -2,6 +2,7 @@ export interface ClassData {
     classId: number;
     className: string;
     classIcon: string;
+    classNameColor: string;
     specs: SpecData[];
 }
 
@@ -12,6 +13,11 @@ export interface SpecData {
     specTalents: SpecTalent[];
 }
 
+export interface ICoords {
+    row: number;
+    column: number;
+}
+
 export interface SpecTalent {
     talentName: string;
     talentId: number;
@@ -20,6 +26,7 @@ export interface SpecTalent {
     talentcolumn: number;
     talentRow: number;
     talentIcon: string;
+    unlocks?: ICoords[];
 }
 
 export const classData: ClassData[] = [
@@ -27,10 +34,11 @@ export const classData: ClassData[] = [
         classId: 1,
         className: "druid",
         classIcon: "class_druid",
+        classNameColor: "#ff7c0a",
         specs: [
             {
                 specName: "Balance",
-                specIcon: "ability_hunter_beasttaming",
+                specIcon: "spell_nature_starfall",
                 specBackground: "283",
                 specTalents: [
                     {
@@ -58,6 +66,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 1,
                         talentIcon: "Spell_Nature_NaturesWrath",
+                        unlocks: [
+                            {
+                                row: 1,
+                                column: 3,
+                            },
+                        ],
                     },
                     {
                         talentName: "Improved Nature's Grasp",
@@ -100,6 +114,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_StarFall",
+                        unlocks: [
+                            {
+                                row: 4,
+                                column: 2,
+                            },
+                        ],
                     },
                     {
                         talentName: "Natural Weapons",
@@ -115,6 +135,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 2,
                         talentIcon: "INV_Staff_01",
+                        unlocks: [
+                            {
+                                row: 2,
+                                column: 4,
+                            },
+                        ],
                     },
                     {
                         talentName: "Natural Shapeshifter",
@@ -359,6 +385,21 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "INV_Misc_MonsterClaw_04",
+                        // TODO: trickiest node of them all, has two arrows coming from itself and one has a 90º turn.
+                        unlocks: [
+                            {
+                                row: 4,
+                                column: 3,
+                            },
+                            {
+                                row: 3,
+                                column: 4,
+                            },
+                            {
+                                row: 4,
+                                column: 4,
+                            },
+                        ],
                     },
                     {
                         talentName: "Improved Shred",
@@ -384,6 +425,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Ability_Hunter_Pet_Cat",
+                        unlocks: [
+                            {
+                                row: 6,
+                                column: 2,
+                            },
+                        ],
                     },
                     {
                         talentName: "Blood Frenzy",
@@ -509,6 +556,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 1,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_HealingTouch",
+                        unlocks: [
+                            {
+                                row: 5,
+                                column: 1,
+                            },
+                        ],
                     },
                     {
                         talentName: "Nature's Focus",
@@ -560,6 +613,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "Spell_Nature_InsectSwarm",
+                        unlocks: [
+                            {
+                                row: 5,
+                                column: 3,
+                            },
+                        ],
                     },
                     {
                         talentName: "Subtlety",
@@ -590,6 +649,12 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Spell_Holy_ElunesGrace",
+                        unlocks: [
+                            {
+                                row: 7,
+                                column: 2,
+                            },
+                        ],
                     },
                     {
                         talentName: "Improved Rejuvenation",
@@ -674,6 +739,7 @@ export const classData: ClassData[] = [
         classId: 2,
         className: "hunter",
         classIcon: "class_hunter",
+        classNameColor: "#aad372",
         specs: [
             {
                 specName: "Beast Mastery",
@@ -1304,6 +1370,7 @@ export const classData: ClassData[] = [
         classId: 3,
         className: "mage",
         classIcon: "class_mage",
+        classNameColor: "#3fc7eb",
         specs: [
             {
                 specName: "Arcane",
@@ -1963,6 +2030,7 @@ export const classData: ClassData[] = [
         classId: 4,
         className: "paladin",
         classIcon: "class_paladin",
+        classNameColor: "#f48cba",
         specs: [
             {
                 specName: "Holy",
@@ -2571,6 +2639,7 @@ export const classData: ClassData[] = [
         classId: 5,
         className: "priest",
         classIcon: "class_priest",
+        classNameColor: "#fff",
         specs: [
             {
                 specName: "Discipline",
@@ -3209,6 +3278,7 @@ export const classData: ClassData[] = [
         classId: 6,
         className: "rogue",
         classIcon: "class_rogue",
+        classNameColor: "#fff468",
         specs: [
             {
                 specName: "Assassination",
@@ -3898,6 +3968,7 @@ export const classData: ClassData[] = [
         classId: 7,
         className: "shaman",
         classIcon: "class_shaman",
+        classNameColor: "#0070dd",
         specs: [
             {
                 specName: "Elemental",
@@ -4532,6 +4603,7 @@ export const classData: ClassData[] = [
         classId: 8,
         className: "warlock",
         classIcon: "class_warlock",
+        classNameColor: "#8788ee",
         specs: [
             {
                 specName: "Affliction",
@@ -5212,6 +5284,7 @@ export const classData: ClassData[] = [
         classId: 9,
         className: "warrior",
         classIcon: "class_warrior",
+        classNameColor: "#c69b6d",
         specs: [
             {
                 specName: "Arms",
