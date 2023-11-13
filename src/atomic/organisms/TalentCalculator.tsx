@@ -37,8 +37,17 @@ interface TalentCalculatorProps {
     classData: ClassData;
 }
 
+export type RemainingPointsActionType = "lvlUp" | "lvlDown" | "reset";
+
 export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
-    const [remainingPoinst, setRemainingPoinst] = useState<number>(MAX_TALENT_POINTS);
+    const [remainingPoints, setRemainingPoints] = useState<number>(MAX_TALENT_POINTS);
+    const handleRemainingPoints = (action: RemainingPointsActionType) => {
+        if (action === "lvlUp" && remainingPoints > 0) {
+            setRemainingPoints(remainingPoints - 1);
+        } else if (action === "lvlDown" && remainingPoints < MAX_TALENT_POINTS) {
+            setRemainingPoints(remainingPoints + 1);
+        }
+    };
     return (
         <Container>
             <StyledHeader>
@@ -52,9 +61,9 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                 className={className}
                 classIcon={classData.classIcon.toLowerCase()}
                 classNameColor={classData.classNameColor}
-                remainingPoints={remainingPoinst}
+                remainingPoints={remainingPoints}
             />
-            <TalentTrees className={className} classData={classData} />
+            <TalentTrees className={className} classData={classData} handleRemainingPoints={handleRemainingPoints} />
         </Container>
     );
 };

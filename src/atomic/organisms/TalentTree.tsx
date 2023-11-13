@@ -5,6 +5,7 @@ import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
 import Image from "next/image";
 import { Arrow } from "../atoms/Arrow";
+import { RemainingPointsActionType } from "./TalentCalculator";
 
 interface IStyledContainer {
     $backgroundImage: string;
@@ -47,9 +48,16 @@ interface TalentTreeProps {
     specIcon: string;
     specBackground: string;
     specData: SpecTalent[];
+    handleRemainingPoints: (action: RemainingPointsActionType) => void;
 }
 
-export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, specBackground }) => {
+export const TalentTree: FC<TalentTreeProps> = ({
+    specName,
+    specData,
+    specIcon,
+    specBackground,
+    handleRemainingPoints,
+}) => {
     if (specName === "Beast Mastery") {
         console.log("specBackground:", specBackground);
     }
@@ -72,6 +80,7 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                                 src={node.talentIcon.toLocaleLowerCase()}
                                 talentRow={node.talentRow}
                                 talentColumn={node.talentcolumn}
+                                handleRemainingPoints={handleRemainingPoints}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0

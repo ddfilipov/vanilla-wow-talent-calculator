@@ -1,11 +1,13 @@
 "use client";
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import styled from "styled-components";
+import { RemainingPointsActionType } from "../organisms/TalentCalculator";
 
 export interface TalentNodeProps {
     src: string;
     talentRow: number;
     talentColumn: number;
+    handleRemainingPoints: (action: RemainingPointsActionType) => void;
 }
 interface IStyledNode {
     $backgroundImage: string;
@@ -30,12 +32,24 @@ const ButtonStyled = styled.button<IStyledNode>`
     z-index: 1;
 `;
 
-export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn }) => {
+export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, handleRemainingPoints }) => {
+    const handleClick = (event: MouseEvent<HTMLElement>) => {
+        event.preventDefault();
+
+        if (event.type === "click") {
+            handleRemainingPoints("lvlUp");
+        } else if (event.type === "contextmenu") {
+            handleRemainingPoints("lvlDown");
+        }
+    };
+
     return (
         <ButtonStyled
             $talentRow={talentRow}
             $talentColumn={talentColumn}
             $backgroundImage={`/images/talent-icons/${src}.jpg`}
+            onClick={handleClick}
+            onContextMenu={handleClick}
         />
     );
 };
