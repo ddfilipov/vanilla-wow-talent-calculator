@@ -1,9 +1,10 @@
 "use client";
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import styled from "styled-components";
 import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
 import Image from "next/image";
+import { Arrow } from "../atoms/Arrow";
 
 interface IStyledContainer {
     $backgroundImage: string;
@@ -11,7 +12,7 @@ interface IStyledContainer {
 
 const MainContainer = styled.div`
     min-height: 500px;
-    min-width: 300px;
+    min-width: 280px;
     display: grid;
     grid-template-rows: 2.5rem 1fr;
     border: 1px solid var(--main-area-border);
@@ -66,12 +67,35 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                 {specData.map((node) => {
                     return (
-                        <TalentNode
-                            src={node.talentIcon.toLocaleLowerCase()}
-                            talentRow={node.talentRow}
-                            talentColumn={node.talentcolumn}
-                            key={node.talentId}
-                        />
+                        <Fragment key={node.talentId}>
+                            <TalentNode
+                                src={node.talentIcon.toLocaleLowerCase()}
+                                talentRow={node.talentRow}
+                                talentColumn={node.talentcolumn}
+                            />
+                            {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
+                            {node.unlocks && node.unlocks?.length > 0
+                                ? node.unlocks.map((arrow, index) => {
+                                      return index <= 1 ? (
+                                          <Arrow
+                                              startingRow={node.talentRow}
+                                              endingRow={arrow.row}
+                                              startingColumn={node.talentcolumn}
+                                              endingColumn={arrow.column}
+                                              key={index}
+                                          />
+                                      ) : (
+                                          <Arrow
+                                              startingRow={node.unlocks?.[1].row as number}
+                                              endingRow={arrow.row}
+                                              startingColumn={node.unlocks?.[1].column as number}
+                                              endingColumn={arrow.column}
+                                              key={index}
+                                          />
+                                      );
+                                  })
+                                : null}
+                        </Fragment>
                     );
                 })}
             </TalentGrid>

@@ -2,10 +2,13 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { PlayableClassesType } from "@/utils/consts";
-import { ClassData } from "@/data/classData";
 import Image from "next/image";
 
-const Container = styled.div`
+interface IStyledContainer {
+    $classNameColor: string;
+}
+
+const Container = styled.div<IStyledContainer>`
     display: flex;
     gap: 10px;
     padding: 5px;
@@ -14,6 +17,9 @@ const Container = styled.div`
     img {
         border-radius: 1rem;
     }
+    h2 {
+        color: ${(props) => props.$classNameColor};
+    }
 `;
 
 interface PointsSpentHeaderProps {
@@ -21,6 +27,7 @@ interface PointsSpentHeaderProps {
     classIcon: string;
     pointsDistribution?: any; // TODO: type
     pointsLeft?: number;
+    classNameColor: string;
 }
 
 export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
@@ -28,9 +35,10 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
     classIcon,
     pointsDistribution,
     pointsLeft,
+    classNameColor,
 }) => {
     return (
-        <Container>
+        <Container $classNameColor={classNameColor}>
             <Image
                 src={`/images/class-icons/${classIcon}.jpg`}
                 width={26}
