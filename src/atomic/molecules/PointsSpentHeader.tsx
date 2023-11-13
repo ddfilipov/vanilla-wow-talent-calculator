@@ -10,6 +10,7 @@ interface IStyledContainer {
 
 const Container = styled.div<IStyledContainer>`
     display: flex;
+    align-items: center;
     gap: 10px;
     padding: 5px;
     text-transform: capitalize;
@@ -20,13 +21,16 @@ const Container = styled.div<IStyledContainer>`
     h2 {
         color: ${(props) => props.$classNameColor};
     }
+    :last-child {
+        margin-left: auto;
+    }
 `;
 
 interface PointsSpentHeaderProps {
     className: PlayableClassesType;
     classIcon: string;
     pointsDistribution?: any; // TODO: type
-    pointsLeft?: number;
+    remainingPoints?: number;
     classNameColor: string;
 }
 
@@ -34,7 +38,7 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
     className,
     classIcon,
     pointsDistribution,
-    pointsLeft,
+    remainingPoints,
     classNameColor,
 }) => {
     return (
@@ -47,9 +51,10 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
                     width: 28,
                     height: 28,
                 }}
-                alt="Picture of the author"
+                alt={className}
             />
             <h2>{className}</h2>
+            <span style={{ justifySelf: "flex-end" }}>Remaining points: {remainingPoints}</span>
         </Container>
     );
 };

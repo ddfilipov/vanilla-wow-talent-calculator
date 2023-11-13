@@ -1,8 +1,8 @@
 "use client";
-import { FC } from "react";
+import { FC, useState } from "react";
 import styled from "styled-components";
 import { ClassChooser } from "../molecules/ClassChooser";
-import { PlayableClassesType } from "@/utils/consts";
+import { MAX_TALENT_POINTS, PlayableClassesType } from "@/utils/consts";
 import Link from "next/link";
 import Image from "next/image";
 import { TalentTrees } from "./TalentTrees";
@@ -38,7 +38,7 @@ interface TalentCalculatorProps {
 }
 
 export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
-    
+    const [remainingPoinst, setRemainingPoinst] = useState<number>(MAX_TALENT_POINTS);
     return (
         <Container>
             <StyledHeader>
@@ -52,6 +52,7 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                 className={className}
                 classIcon={classData.classIcon.toLowerCase()}
                 classNameColor={classData.classNameColor}
+                remainingPoints={remainingPoinst}
             />
             <TalentTrees className={className} classData={classData} />
         </Container>
