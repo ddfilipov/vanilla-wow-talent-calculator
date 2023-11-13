@@ -38,6 +38,7 @@ interface TalentCalculatorProps {
 }
 
 export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
+    
     return (
         <Container>
             <StyledHeader>
