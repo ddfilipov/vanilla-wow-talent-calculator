@@ -47,17 +47,19 @@ interface IStyledPointsContainer {}
 const StyledPointsContainer = styled.div<IStyledPointsContainer>`
     display: flex;
     position: relative;
-    height: 10px;
-    width: 20px;
+    height: 14px;
+    width: 22px;
     bottom: 5px;
-    left: 18px;
-    background-color: red;
+    left: 25px;
+    background-color: black;
+    padding: 1px;
     justify-content: right;
-    //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
+    border-radius: 0.3rem;
     z-index: 1;
     span {
         position: relative;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
+        right: 1px;
     }
 `;
 
