@@ -49,7 +49,7 @@ const StyledPointsContainer = styled.div<IStyledPointsContainer>`
     position: relative;
     height: 14px;
     width: 22px;
-    bottom: 5px;
+    bottom: 6px;
     left: 25px;
     background-color: black;
     padding: 1px;
@@ -57,6 +57,7 @@ const StyledPointsContainer = styled.div<IStyledPointsContainer>`
     border-radius: 0.3rem;
     z-index: 1;
     span {
+        color: var(--uncapped-node-color);
         position: relative;
         font-size: 0.7rem;
         right: 1px;
