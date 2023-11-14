@@ -38,9 +38,6 @@ const TalentGrid = styled.div<IStyledContainer>`
     place-items: center;
     background-image: url(${(props) => props.$backgroundImage});
     background-size: 100% 100%;
-    div {
-        border: 1px solid var(--main-area-border);
-    }
 `;
 
 interface TalentTreeProps {
