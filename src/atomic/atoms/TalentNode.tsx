@@ -14,6 +14,7 @@ interface IStyledNode {
 }
 
 const ButtonStyled = styled.button<IStyledNode>`
+    display: flex;
     height: 38px;
     width: 100%;
     background-image: url(${(props) => props.$backgroundImage});
@@ -41,6 +42,24 @@ const Container = styled.div<IStyledContainer>`
     grid-column-start: ${(props) => props.$talentColumn};
     z-index: 1;
 `;
+interface IStyledPointsContainer {}
+
+const StyledPointsContainer = styled.div<IStyledPointsContainer>`
+    display: flex;
+    position: relative;
+    height: 10px;
+    width: 20px;
+    bottom: 5px;
+    left: 18px;
+    background-color: red;
+    justify-content: right;
+    //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
+    z-index: 1;
+    span {
+        position: relative;
+        font-size: 0.6rem;
+    }
+`;
 
 export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, handleRemainingPoints }) => {
     const handleClick = (event: MouseEvent<HTMLElement>) => {
@@ -60,7 +79,9 @@ export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, 
                 onClick={handleClick}
                 onContextMenu={handleClick}
             />
-            {/* <span>a</span> */}
+            <StyledPointsContainer>
+                <span>0/5</span>
+            </StyledPointsContainer>
         </Container>
     );
 };
