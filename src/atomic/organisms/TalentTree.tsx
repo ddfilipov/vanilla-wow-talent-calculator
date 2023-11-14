@@ -78,6 +78,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 talentRow={node.talentRow}
                                 talentColumn={node.talentcolumn}
                                 handleRemainingPoints={handleRemainingPoints}
+                                maxPoints={node.ranksNumber}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0

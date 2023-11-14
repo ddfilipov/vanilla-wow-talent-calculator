@@ -9,6 +9,7 @@ export interface TalentNodeProps {
     talentRow: number;
     talentColumn: number;
     handleRemainingPoints: (action: RemainingPointsActionType) => void;
+    maxPoints: number;
 }
 interface IStyledNode {
     $backgroundImage: string;
@@ -43,29 +44,8 @@ const Container = styled.div<IStyledContainer>`
     grid-column-start: ${(props) => props.$talentColumn};
     z-index: 1;
 `;
-interface IStyledPointsContainer {}
 
-const StyledPointsContainer = styled.div<IStyledPointsContainer>`
-    display: flex;
-    position: relative;
-    height: 14px;
-    width: 22px;
-    bottom: 6px;
-    left: 25px;
-    background-color: black;
-    padding: 1px;
-    justify-content: right;
-    border-radius: 0.3rem;
-    z-index: 1;
-    span {
-        color: var(--uncapped-node-color);
-        position: relative;
-        font-size: 0.7rem;
-        right: 1px;
-    }
-`;
-
-export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, handleRemainingPoints }) => {
+export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, handleRemainingPoints, maxPoints }) => {
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
 
@@ -83,7 +63,7 @@ export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, 
                 onClick={handleClick}
                 onContextMenu={handleClick}
             />
-            <TalentNodePoints currentPoints={0} maxPoints={5} />
+            <TalentNodePoints currentPoints={0} maxPoints={maxPoints} />
         </Container>
     );
 };
