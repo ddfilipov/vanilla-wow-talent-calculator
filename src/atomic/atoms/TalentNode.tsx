@@ -2,6 +2,7 @@
 import { FC, MouseEvent } from "react";
 import styled from "styled-components";
 import { RemainingPointsActionType } from "../organisms/TalentCalculator";
+import { TalentNodePoints } from "./TalentNodePoints";
 
 export interface TalentNodeProps {
     src: string;
@@ -82,9 +83,7 @@ export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, 
                 onClick={handleClick}
                 onContextMenu={handleClick}
             />
-            <StyledPointsContainer>
-                <span>0/5</span>
-            </StyledPointsContainer>
+            <TalentNodePoints currentPoints={0} maxPoints={5} />
         </Container>
     );
 };
