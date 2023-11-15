@@ -29,6 +29,16 @@ const Header = styled.div`
     img {
         border-radius: 1rem;
     }
+    :last-child {
+        margin-left: auto;
+        background-color: transparent;
+        color: var(--red-reset-color);
+        font-weight: bold;
+        border-radius: 0.3rem;
+        padding: 0.2rem 0.4rem;
+        border-width: 1px;
+        border-color: #121822;
+    }
 `;
 
 const TalentGrid = styled.div<IStyledContainer>`
@@ -68,6 +78,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     alt="Picture of the author"
                 />
                 <h3>{specName}</h3>
+                <button type="button">X</button>
             </Header>
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                 {specData.map((node) => {
