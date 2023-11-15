@@ -29,6 +29,7 @@ const Header = styled.div`
     img {
         border-radius: 1rem;
     }
+    /* TODO: maybe use a styled component instead of :last-child? */
     :last-child {
         margin-left: auto;
         background-color: transparent;
@@ -37,7 +38,11 @@ const Header = styled.div`
         border-radius: 0.3rem;
         padding: 0.2rem 0.4rem;
         border-width: 1px;
-        border-color: #121822;
+        border-color: #121822; //TODO: should use a var
+        cursor: pointer;
+        &:hover {
+            box-shadow: inset 0 0 5px #596e92;
+        }
     }
 `;
 
