@@ -29,7 +29,7 @@ const Container = styled.div<IStyledContainer>`
 interface PointsSpentHeaderProps {
     className: PlayableClassesType;
     classIcon: string;
-    pointsDistribution?: any; // TODO: type
+    pointsDistribution?: number[];
     remainingPoints?: number;
     classNameColor: string;
 }
@@ -41,6 +41,7 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
     remainingPoints,
     classNameColor,
 }) => {
+    console.log(pointsDistribution);
     return (
         <Container $classNameColor={classNameColor}>
             <Image
@@ -54,7 +55,8 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
                 alt={className}
             />
             <h2>{className}</h2>
-            <span style={{ justifySelf: "flex-end" }}>Remaining points: {remainingPoints}</span>
+            <div>{pointsDistribution?.join(" / ")}</div>
+            <span>Remaining points: {remainingPoints}</span>
         </Container>
     );
 };
