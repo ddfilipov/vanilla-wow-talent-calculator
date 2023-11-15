@@ -17,13 +17,13 @@ const Container = styled.div`
 interface TalentTreesProps {
     className: PlayableClassesType;
     classData: ClassData;
-    handleRemainingPoints: (action: RemainingPointsActionType) => void;
+    handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({ className, classData, handleRemainingPoints }) => {
     return (
         <Container>
-            {classData?.specs.map((spec) => {
+            {classData?.specs.map((spec, specIndex) => {
                 return (
                     <TalentTree
                         specName={spec.specName}
@@ -32,6 +32,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ className, classData, handle
                         specIcon={spec.specIcon?.toLocaleLowerCase()}
                         specBackground={spec.specBackground}
                         handleRemainingPoints={handleRemainingPoints}
+                        specIndex={specIndex}
                     />
                 );
             })}

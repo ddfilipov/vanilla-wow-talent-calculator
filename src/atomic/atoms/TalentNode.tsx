@@ -8,8 +8,9 @@ export interface TalentNodeProps {
     src: string;
     talentRow: number;
     talentColumn: number;
-    handleRemainingPoints: (action: RemainingPointsActionType) => void;
+    handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
     maxPoints: number;
+    specIndex: number;
 }
 interface IStyledNode {
     $backgroundImage: string;
@@ -45,14 +46,21 @@ const Container = styled.div<IStyledContainer>`
     z-index: 1;
 `;
 
-export const TalentNode: FC<TalentNodeProps> = ({ src, talentRow, talentColumn, handleRemainingPoints, maxPoints }) => {
+export const TalentNode: FC<TalentNodeProps> = ({
+    src,
+    talentRow,
+    talentColumn,
+    handleRemainingPoints,
+    maxPoints,
+    specIndex,
+}) => {
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
 
         if (event.type === "click") {
-            handleRemainingPoints("lvlUp");
+            handleRemainingPoints("lvlUp", specIndex);
         } else if (event.type === "contextmenu") {
-            handleRemainingPoints("lvlDown");
+            handleRemainingPoints("lvlDown", specIndex);
         }
     };
 

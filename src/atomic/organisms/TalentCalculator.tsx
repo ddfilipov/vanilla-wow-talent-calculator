@@ -41,13 +41,18 @@ export type RemainingPointsActionType = "lvlUp" | "lvlDown" | "reset";
 
 export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
     const [remainingPoints, setRemainingPoints] = useState<number>(MAX_TALENT_POINTS);
-    const [pointsDistribution, setPointsDistribution] = useState<number[]>([0,0,0])
+    const [pointsDistribution, setPointsDistribution] = useState<number[]>([0, 0, 0]);
 
-    const handleRemainingPoints = (action: RemainingPointsActionType) => {
+    const handleRemainingPoints = (action: RemainingPointsActionType, pointsDistributionIndex: number) => {
+        const newPointsDistribution = [...pointsDistribution];
         if (action === "lvlUp" && remainingPoints > 0) {
             setRemainingPoints(remainingPoints - 1);
+            newPointsDistribution[pointsDistributionIndex] += 1;
+            setPointsDistribution(newPointsDistribution);
         } else if (action === "lvlDown" && remainingPoints < MAX_TALENT_POINTS) {
+            newPointsDistribution[pointsDistributionIndex] -= 1;
             setRemainingPoints(remainingPoints + 1);
+            setPointsDistribution(newPointsDistribution);
         }
     };
     return (

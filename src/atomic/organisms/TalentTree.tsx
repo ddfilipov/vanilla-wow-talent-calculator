@@ -55,7 +55,8 @@ interface TalentTreeProps {
     specIcon: string;
     specBackground: string;
     specData: SpecTalent[];
-    handleRemainingPoints: (action: RemainingPointsActionType) => void;
+    handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
+    specIndex: number;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -64,6 +65,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     specIcon,
     specBackground,
     handleRemainingPoints,
+    specIndex,
 }) => {
     if (specName === "Beast Mastery") {
         console.log("specBackground:", specBackground);
@@ -90,6 +92,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 talentColumn={node.talentcolumn}
                                 handleRemainingPoints={handleRemainingPoints}
                                 maxPoints={node.ranksNumber}
+                                specIndex={specIndex}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0
