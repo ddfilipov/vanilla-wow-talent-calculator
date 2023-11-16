@@ -1,5 +1,5 @@
 "use client";
-import { FC, Fragment } from "react";
+import { FC, Fragment, useState } from "react";
 import styled from "styled-components";
 import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
@@ -72,9 +72,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
     handleRemainingPoints,
     specIndex,
 }) => {
-    if (specName === "Beast Mastery") {
-        console.log("specBackground:", specBackground);
-    }
+    const [resetCounter, setResetCounter] = useState<number>(0);
+
+    const handleReset = () => {
+        // Increment the counter to signal a reset
+        setResetCounter((prevCounter) => prevCounter + 1);
+    };
     return (
         <MainContainer>
             <Header>
@@ -85,7 +88,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     alt="Picture of the author"
                 />
                 <h3>{specName}</h3>
-                <button type="button">X</button>
+                <button type="button" onClick={handleReset}>
+                    X
+                </button>
             </Header>
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                 {specData.map((node) => {
@@ -98,6 +103,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 handleRemainingPoints={handleRemainingPoints}
                                 maxPoints={node.ranksNumber}
                                 specIndex={specIndex}
+                                resetSignal={resetCounter}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0

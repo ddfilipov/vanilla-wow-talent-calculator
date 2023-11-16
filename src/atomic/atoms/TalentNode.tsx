@@ -1,5 +1,5 @@
 "use client";
-import { FC, MouseEvent, useState } from "react";
+import { FC, MouseEvent, useEffect, useState } from "react";
 import styled from "styled-components";
 import { RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
@@ -11,6 +11,7 @@ export interface TalentNodeProps {
     handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
     maxPoints: number;
     specIndex: number;
+    resetSignal: number;
 }
 interface IStyledNode {
     $backgroundImage: string;
@@ -53,6 +54,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     handleRemainingPoints,
     maxPoints,
     specIndex,
+    resetSignal,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
 
@@ -71,6 +73,10 @@ export const TalentNode: FC<TalentNodeProps> = ({
             }
         }
     };
+
+    useEffect(() => {
+        setCurrentPoints(0);
+    }, [resetSignal]);
 
     return (
         <Container $talentRow={talentRow} $talentColumn={talentColumn}>
