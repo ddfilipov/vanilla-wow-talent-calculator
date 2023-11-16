@@ -1,5 +1,5 @@
 "use client";
-import { FC, MouseEvent } from "react";
+import { FC, MouseEvent, useState } from "react";
 import styled from "styled-components";
 import { RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
@@ -54,13 +54,21 @@ export const TalentNode: FC<TalentNodeProps> = ({
     maxPoints,
     specIndex,
 }) => {
+    const [currentPoints, setCurrentPoints] = useState<number>(0);
+
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
 
         if (event.type === "click") {
-            handleRemainingPoints("lvlUp", specIndex);
+            if (currentPoints < maxPoints) {
+                handleRemainingPoints("lvlUp", specIndex);
+                setCurrentPoints(currentPoints + 1);
+            }
         } else if (event.type === "contextmenu") {
-            handleRemainingPoints("lvlDown", specIndex);
+            if (currentPoints > 0) {
+                handleRemainingPoints("lvlDown", specIndex);
+                setCurrentPoints(currentPoints - 1);
+            }
         }
     };
 
@@ -71,7 +79,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 onClick={handleClick}
                 onContextMenu={handleClick}
             />
-            <TalentNodePoints currentPoints={0} maxPoints={maxPoints} />
+            <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
         </Container>
     );
 };
