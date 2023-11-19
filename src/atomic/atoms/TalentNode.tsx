@@ -12,6 +12,7 @@ export interface TalentNodeProps {
     maxPoints: number;
     specIndex: number;
     resetSignal: number;
+    pointsSpentOnTree: number;
 }
 interface IStyledNode {
     $backgroundImage: string;
@@ -35,7 +36,8 @@ const ButtonStyled = styled.button<IStyledNode>`
 interface IStyledContainer {
     $talentRow: number;
     $talentColumn: number;
-    $remainingPoints: number;
+    $pointsSpentOnTree: number;
+    $maxPoints: number;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -48,7 +50,10 @@ const Container = styled.div<IStyledContainer>`
     z-index: 1;
 
     button {
-        filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
+        filter: ${(props) => (props.$pointsSpentOnTree < props.$maxPoints ? "grayscale(100%)" : "default")};
+    }
+    span {
+        filter: ${(props) => (props.$pointsSpentOnTree < props.$maxPoints ? "grayscale(100%)" : "default")};
     }
 `;
 
@@ -60,6 +65,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     maxPoints,
     specIndex,
     resetSignal,
+    pointsSpentOnTree,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const remainingPoints: number = useContext(PointsLeftContext);

@@ -110,6 +110,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 maxPoints={node.ranksNumber}
                                 specIndex={specIndex}
                                 resetSignal={resetCounter}
+                                pointsSpentOnTree={pointsSpentOnTree}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0
