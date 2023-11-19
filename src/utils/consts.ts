@@ -34,3 +34,8 @@ export const playableClasses: IClass[] = [
     { name: "warlock", src: warlock.src },
     { name: "warrior", src: warrior.src },
 ];
+
+// TODO: this should change when I implement tbc and wotlk talents
+export const MAX_TALENT_POINTS: number = 51;
+export const MIN_LEVEL: number = 10;
+export const MAX_LEVEL: number = 60;

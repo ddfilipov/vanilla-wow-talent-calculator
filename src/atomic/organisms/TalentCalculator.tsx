@@ -1,8 +1,8 @@
 "use client";
-import { FC } from "react";
+import { FC, createContext, useState } from "react";
 import styled from "styled-components";
 import { ClassChooser } from "../molecules/ClassChooser";
-import { PlayableClassesType } from "@/utils/consts";
+import { MAX_TALENT_POINTS, PlayableClassesType } from "@/utils/consts";
 import Link from "next/link";
 import Image from "next/image";
 import { TalentTrees } from "./TalentTrees";
@@ -37,22 +37,59 @@ interface TalentCalculatorProps {
     classData: ClassData;
 }
 
+export type RemainingPointsActionType = "lvlUp" | "lvlDown" | "reset";
+
+export const PointsLeftContext = createContext<number>(MAX_TALENT_POINTS);
+
 export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
+    const [remainingPoints, setRemainingPoints] = useState<number>(10);
+    const [pointsDistribution, setPointsDistribution] = useState<number[]>([0, 0, 0]);
+
+    const handleRemainingPoints = (action: RemainingPointsActionType, pointsDistributionIndex: number) => {
+        const newPointsDistribution = [...pointsDistribution];
+        if (action === "lvlUp" && remainingPoints > 0) {
+            setRemainingPoints(remainingPoints - 1);
+            newPointsDistribution[pointsDistributionIndex] += 1;
+            setPointsDistribution(newPointsDistribution);
+        } else if (action === "lvlDown" && remainingPoints < MAX_TALENT_POINTS) {
+            newPointsDistribution[pointsDistributionIndex] -= 1;
+            setRemainingPoints(remainingPoints + 1);
+            setPointsDistribution(newPointsDistribution);
+        }
+    };
+
+    const resetSpecPoints = (pointsDistributionIndex: number) => {
+        const newPointsDistribution = [...pointsDistribution];
+        const currentSpecPoints = newPointsDistribution[pointsDistributionIndex];
+        setRemainingPoints(remainingPoints + currentSpecPoints);
+        newPointsDistribution[pointsDistributionIndex] = 0;
+        setPointsDistribution(newPointsDistribution);
+    };
+
     return (
-        <Container>
-            <StyledHeader>
-                <Link href="/">
-                    <Image src="/images/wow-icon.png" width={38} height={38} alt="Picture of the author" />
-                </Link>
-                <Title>{`${className} Vanilla Talent Calculator`}</Title>
-            </StyledHeader>
-            <ClassChooser />
-            <PointsSpentHeader
-                className={className}
-                classIcon={classData.classIcon.toLowerCase()}
-                classNameColor={classData.classNameColor}
-            />
-            <TalentTrees className={className} classData={classData} />
-        </Container>
+        <PointsLeftContext.Provider value={remainingPoints}>
+            <Container>
+                <StyledHeader>
+                    <Link href="/">
+                        <Image src="/images/wow-icon.png" width={38} height={38} alt="Picture of the author" />
+                    </Link>
+                    <Title>{`${className} Vanilla Talent Calculator`}</Title>
+                </StyledHeader>
+                <ClassChooser />
+                <PointsSpentHeader
+                    className={className}
+                    classIcon={classData.classIcon.toLowerCase()}
+                    classNameColor={classData.classNameColor}
+                    remainingPoints={remainingPoints}
+                    pointsDistribution={pointsDistribution}
+                />
+                <TalentTrees
+                    className={className}
+                    classData={classData}
+                    handleRemainingPoints={handleRemainingPoints}
+                    resetSpecPoints={resetSpecPoints}
+                />
+            </Container>
+        </PointsLeftContext.Provider>
     );
 };
