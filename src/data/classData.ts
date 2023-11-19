@@ -5769,7 +5769,7 @@ export const classData: ClassData[] = [
             },
             {
                 specName: "Protection",
-                specIcon: "inv_shield_06.jpg",
+                specIcon: "inv_shield_06",
                 specBackground: "163",
                 specTalents: [
                     {
