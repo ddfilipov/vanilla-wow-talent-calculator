@@ -1,10 +1,11 @@
 "use client";
-import { FC, Fragment } from "react";
+import { FC, Fragment, useState } from "react";
 import styled from "styled-components";
 import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
 import Image from "next/image";
 import { Arrow } from "../atoms/Arrow";
+import { RemainingPointsActionType } from "./TalentCalculator";
 
 interface IStyledContainer {
     $backgroundImage: string;
@@ -28,6 +29,21 @@ const Header = styled.div`
     img {
         border-radius: 1rem;
     }
+    /* TODO: maybe use a styled component instead of :last-child? */
+    :last-child {
+        margin-left: auto;
+        background-color: transparent;
+        color: var(--red-reset-color);
+        font-weight: bold;
+        border-radius: 0.3rem;
+        padding: 0.2rem 0.4rem;
+        border-width: 1px;
+        border-color: #121822; //TODO: should use a var
+        cursor: pointer;
+        &:hover {
+            box-shadow: inset 0 0 5px #596e92;
+        }
+    }
 `;
 
 const TalentGrid = styled.div<IStyledContainer>`
@@ -37,9 +53,6 @@ const TalentGrid = styled.div<IStyledContainer>`
     place-items: center;
     background-image: url(${(props) => props.$backgroundImage});
     background-size: 100% 100%;
-    div {
-        border: 1px solid var(--main-area-border);
-    }
 `;
 
 interface TalentTreeProps {
@@ -47,12 +60,26 @@ interface TalentTreeProps {
     specIcon: string;
     specBackground: string;
     specData: SpecTalent[];
+    handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
+    specIndex: number;
+    resetSpecPoints: (pointsDistributionIndex: number) => void;
 }
 
-export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, specBackground }) => {
-    if (specName === "Beast Mastery") {
-        console.log("specBackground:", specBackground);
-    }
+export const TalentTree: FC<TalentTreeProps> = ({
+    specName,
+    specData,
+    specIcon,
+    specBackground,
+    handleRemainingPoints,
+    specIndex,
+    resetSpecPoints,
+}) => {
+    const [resetCounter, setResetCounter] = useState<number>(0);
+
+    const handleReset = () => {
+        setResetCounter((prevCounter) => prevCounter + 1);
+        resetSpecPoints(specIndex);
+    };
     return (
         <MainContainer>
             <Header>
@@ -63,6 +90,9 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                     alt="Picture of the author"
                 />
                 <h3>{specName}</h3>
+                <button type="button" onClick={handleReset}>
+                    X
+                </button>
             </Header>
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                 {specData.map((node) => {
@@ -72,6 +102,10 @@ export const TalentTree: FC<TalentTreeProps> = ({ specName, specData, specIcon, 
                                 src={node.talentIcon.toLocaleLowerCase()}
                                 talentRow={node.talentRow}
                                 talentColumn={node.talentcolumn}
+                                handleRemainingPoints={handleRemainingPoints}
+                                maxPoints={node.ranksNumber}
+                                specIndex={specIndex}
+                                resetSignal={resetCounter}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0

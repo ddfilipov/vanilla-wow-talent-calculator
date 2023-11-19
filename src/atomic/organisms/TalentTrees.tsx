@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { PlayableClassesType } from "@/utils/consts";
 import { TalentTree } from "./TalentTree";
 import { ClassData } from "@/data/classData";
+import { RemainingPointsActionType } from "./TalentCalculator";
 
 const Container = styled.div`
     display: flex;
@@ -16,12 +17,14 @@ const Container = styled.div`
 interface TalentTreesProps {
     className: PlayableClassesType;
     classData: ClassData;
+    handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
+    resetSpecPoints: (pointsDistributionIndex: number) => void;
 }
 
-export const TalentTrees: FC<TalentTreesProps> = ({ className, classData }) => {
+export const TalentTrees: FC<TalentTreesProps> = ({ className, classData, handleRemainingPoints, resetSpecPoints }) => {
     return (
         <Container>
-            {classData?.specs.map((spec) => {
+            {classData?.specs.map((spec, specIndex) => {
                 return (
                     <TalentTree
                         specName={spec.specName}
@@ -29,6 +32,9 @@ export const TalentTrees: FC<TalentTreesProps> = ({ className, classData }) => {
                         specData={spec.specTalents}
                         specIcon={spec.specIcon?.toLocaleLowerCase()}
                         specBackground={spec.specBackground}
+                        handleRemainingPoints={handleRemainingPoints}
+                        specIndex={specIndex}
+                        resetSpecPoints={resetSpecPoints}
                     />
                 );
             })}
