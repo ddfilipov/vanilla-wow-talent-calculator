@@ -58,6 +58,8 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
 
     const resetSpecPoints = (pointsDistributionIndex: number) => {
         const newPointsDistribution = [...pointsDistribution];
+        const currentSpecPoints = newPointsDistribution[pointsDistributionIndex];
+        setRemainingPoints(remainingPoints + currentSpecPoints);
         newPointsDistribution[pointsDistributionIndex] = 0;
         setPointsDistribution(newPointsDistribution);
     };
@@ -83,7 +85,7 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                 remainingPoints={remainingPoints}
                 pointsDistribution={pointsDistribution}
             />
-            <TalentTrees className={className} classData={classData} handleRemainingPoints={handleRemainingPoints} />
+            <TalentTrees className={className} classData={classData} handleRemainingPoints={handleRemainingPoints} resetSpecPoints={resetSpecPoints}/>
         </Container>
     );
 };

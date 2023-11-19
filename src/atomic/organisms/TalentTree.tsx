@@ -62,6 +62,7 @@ interface TalentTreeProps {
     specData: SpecTalent[];
     handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
     specIndex: number;
+    resetSpecPoints: (pointsDistributionIndex: number) => void;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -71,12 +72,13 @@ export const TalentTree: FC<TalentTreeProps> = ({
     specBackground,
     handleRemainingPoints,
     specIndex,
+    resetSpecPoints,
 }) => {
     const [resetCounter, setResetCounter] = useState<number>(0);
 
     const handleReset = () => {
-        // Increment the counter to signal a reset
         setResetCounter((prevCounter) => prevCounter + 1);
+        resetSpecPoints(specIndex);
     };
     return (
         <MainContainer>

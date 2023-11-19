@@ -18,9 +18,10 @@ interface TalentTreesProps {
     className: PlayableClassesType;
     classData: ClassData;
     handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
+    resetSpecPoints: (pointsDistributionIndex: number) => void;
 }
 
-export const TalentTrees: FC<TalentTreesProps> = ({ className, classData, handleRemainingPoints }) => {
+export const TalentTrees: FC<TalentTreesProps> = ({ className, classData, handleRemainingPoints, resetSpecPoints }) => {
     return (
         <Container>
             {classData?.specs.map((spec, specIndex) => {
@@ -33,6 +34,7 @@ export const TalentTrees: FC<TalentTreesProps> = ({ className, classData, handle
                         specBackground={spec.specBackground}
                         handleRemainingPoints={handleRemainingPoints}
                         specIndex={specIndex}
+                        resetSpecPoints={resetSpecPoints}
                     />
                 );
             })}
