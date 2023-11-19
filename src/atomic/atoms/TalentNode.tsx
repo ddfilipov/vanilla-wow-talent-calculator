@@ -1,7 +1,7 @@
 "use client";
-import { FC, MouseEvent, useEffect, useState } from "react";
+import { FC, MouseEvent, useContext, useEffect, useState } from "react";
 import styled from "styled-components";
-import { RemainingPointsActionType } from "../organisms/TalentCalculator";
+import { PointsLeftContext, RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
 
 export interface TalentNodeProps {
@@ -57,11 +57,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
     resetSignal,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
-
+    const remainingPoints: number = useContext(PointsLeftContext);
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
 
-        if (event.type === "click") {
+        if (event.type === "click" && remainingPoints > 0) {
             if (currentPoints < maxPoints) {
                 handleRemainingPoints("lvlUp", specIndex);
                 setCurrentPoints(currentPoints + 1);
