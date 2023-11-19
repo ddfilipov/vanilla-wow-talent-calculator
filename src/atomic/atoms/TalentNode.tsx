@@ -13,6 +13,7 @@ export interface TalentNodeProps {
     specIndex: number;
     resetSignal: number;
     pointsSpentOnTree: number;
+    pointsNeededToUnluck: number;
 }
 interface IStyledNode {
     $backgroundImage: string;
@@ -37,7 +38,7 @@ interface IStyledContainer {
     $talentRow: number;
     $talentColumn: number;
     $pointsSpentOnTree: number;
-    $maxPoints: number;
+    $pointsNeededToUnluck: number;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -50,10 +51,10 @@ const Container = styled.div<IStyledContainer>`
     z-index: 1;
 
     button {
-        filter: ${(props) => (props.$pointsSpentOnTree < props.$maxPoints ? "grayscale(100%)" : "default")};
+        filter: ${(props) => (props.$pointsSpentOnTree < props.$pointsNeededToUnluck ? "grayscale(100%)" : "default")};
     }
     span {
-        filter: ${(props) => (props.$pointsSpentOnTree < props.$maxPoints ? "grayscale(100%)" : "default")};
+        filter: ${(props) => (props.$pointsSpentOnTree < props.$pointsNeededToUnluck ? "grayscale(100%)" : "default")};
     }
 `;
 
@@ -66,6 +67,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     specIndex,
     resetSignal,
     pointsSpentOnTree,
+    pointsNeededToUnluck,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const remainingPoints: number = useContext(PointsLeftContext);
@@ -90,7 +92,12 @@ export const TalentNode: FC<TalentNodeProps> = ({
     }, [resetSignal]);
 
     return (
-        <Container $talentRow={talentRow} $talentColumn={talentColumn}>
+        <Container
+            $talentRow={talentRow}
+            $talentColumn={talentColumn}
+            $pointsNeededToUnluck={pointsNeededToUnluck}
+            $pointsSpentOnTree={pointsSpentOnTree}
+        >
             <ButtonStyled
                 $backgroundImage={`/images/talent-icons/${src}.jpg`}
                 onClick={handleClick}
