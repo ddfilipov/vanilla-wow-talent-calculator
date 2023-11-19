@@ -55,6 +55,18 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
             setPointsDistribution(newPointsDistribution);
         }
     };
+
+    const resetSpecPoints = (pointsDistributionIndex: number) => {
+        const newPointsDistribution = [...pointsDistribution];
+        newPointsDistribution[pointsDistributionIndex] = 0;
+        setPointsDistribution(newPointsDistribution);
+    };
+
+    const resetAllPoints = () => {
+        setRemainingPoints(0);
+        setPointsDistribution([0, 0, 0]);
+    };
+
     return (
         <Container>
             <StyledHeader>
