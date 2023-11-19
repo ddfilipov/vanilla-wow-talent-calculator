@@ -35,6 +35,7 @@ const ButtonStyled = styled.button<IStyledNode>`
 interface IStyledContainer {
     $talentRow: number;
     $talentColumn: number;
+    $remainingPoints: number;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -45,6 +46,10 @@ const Container = styled.div<IStyledContainer>`
     grid-row-start: ${(props) => props.$talentRow};
     grid-column-start: ${(props) => props.$talentColumn};
     z-index: 1;
+
+    button {
+        filter: ${(props) => (props.pointsSpentOnTree < props.treePointsRequiredToLvl ? "grayscale(100%)" : "default")};
+    }
 `;
 
 export const TalentNode: FC<TalentNodeProps> = ({

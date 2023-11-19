@@ -63,6 +63,7 @@ interface TalentTreeProps {
     handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
     specIndex: number;
     resetSpecPoints: (pointsDistributionIndex: number) => void;
+    pointsSpentOnTree: number;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -73,6 +74,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     handleRemainingPoints,
     specIndex,
     resetSpecPoints,
+    pointsSpentOnTree,
 }) => {
     const [resetCounter, setResetCounter] = useState<number>(0);
 
@@ -89,7 +91,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     height={26}
                     alt="Picture of the author"
                 />
-                <h3>{specName}</h3>
+                <h3>
+                    {specName} ({pointsSpentOnTree})
+                </h3>
                 <button type="button" onClick={handleReset}>
                     X
                 </button>

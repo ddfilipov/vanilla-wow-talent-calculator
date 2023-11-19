@@ -88,6 +88,7 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                     classData={classData}
                     handleRemainingPoints={handleRemainingPoints}
                     resetSpecPoints={resetSpecPoints}
+                    pointsDistribution={pointsDistribution}
                 />
             </Container>
         </PointsLeftContext.Provider>
