@@ -59,16 +59,21 @@ const Container = styled.div<IStyledContainer>`
         filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
     }
     border: ${(props) =>
-        handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)};
+        `1px solid ${handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)}`};
+
+    span {
+        color: ${(props) =>
+            handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)};
+    }
 `;
 
 const handleColorType = (remainingPoints: number, cappedNode: boolean, currentPoints: number, grayed: boolean) => {
     if (grayed) {
-        return "1px solid gray";
+        return "gray";
     } else if (cappedNode) {
-        return "1px solid var(--capped-node-color)";
+        return "var(--capped-node-color)";
     } else if (remainingPoints > 0 || (remainingPoints === 0 && currentPoints >= 0)) {
-        return "1px solid var(--uncapped-node-color)";
+        return "var(--uncapped-node-color)";
     }
 };
 
