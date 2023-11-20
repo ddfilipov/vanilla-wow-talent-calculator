@@ -44,7 +44,7 @@ interface IStyledContainer {
 }
 
 const Container = styled.div<IStyledContainer>`
-    height: 38px;
+    height: 40px;
     width: 38px;
     //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
     border-radius: 0.3rem;

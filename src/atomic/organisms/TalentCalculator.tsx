@@ -42,7 +42,7 @@ export type RemainingPointsActionType = "lvlUp" | "lvlDown" | "reset";
 export const PointsLeftContext = createContext<number>(MAX_TALENT_POINTS);
 
 export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classData }) => {
-    const [remainingPoints, setRemainingPoints] = useState<number>(12);
+    const [remainingPoints, setRemainingPoints] = useState<number>(MAX_TALENT_POINTS);
     const [pointsDistribution, setPointsDistribution] = useState<number[]>([0, 0, 0]);
 
     const handleRemainingPoints = (action: RemainingPointsActionType, pointsDistributionIndex: number) => {
