@@ -91,9 +91,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     height={26}
                     alt="Picture of the author"
                 />
-                <h3>
-                    {specName} ({pointsSpentOnTree})
-                </h3>
+                <h3>{specName}</h3>
+                <span style={{ color: "gray" }}>({pointsSpentOnTree})</span>
                 <button type="button" onClick={handleReset}>
                     X
                 </button>
