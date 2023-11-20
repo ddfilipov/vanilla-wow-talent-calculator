@@ -99,7 +99,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 setCurrentPoints(currentPoints + 1);
             }
         } else if (event.type === "contextmenu") {
-            if (currentPoints > 0) {
+            if (currentPoints > 0 && pointsNeededToUnluck < pointsSpentOnTree) {
                 handleRemainingPoints("lvlDown", specIndex);
                 setCurrentPoints(currentPoints - 1);
             }
