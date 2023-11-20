@@ -41,7 +41,6 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
     remainingPoints,
     classNameColor,
 }) => {
-    console.log(pointsDistribution);
     return (
         <Container $classNameColor={classNameColor}>
             <Image
