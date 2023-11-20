@@ -103,7 +103,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 onClick={handleClick}
                 onContextMenu={handleClick}
             />
-            <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
+            {remainingPoints > 0 || currentPoints > 0 ? (
+                <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
+            ) : null}
         </Container>
     );
 };
