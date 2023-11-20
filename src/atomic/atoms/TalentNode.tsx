@@ -37,9 +37,10 @@ const ButtonStyled = styled.button<IStyledNode>`
 interface IStyledContainer {
     $talentRow: number;
     $talentColumn: number;
-    $pointsSpentOnTree: number;
-    $pointsNeededToUnluck: number;
+    $remainingPoints: number;
+    $currentPoints: number;
     $grayed: boolean;
+    $cappedNode: boolean;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -57,7 +58,19 @@ const Container = styled.div<IStyledContainer>`
     span {
         filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
     }
+    border: ${(props) =>
+        handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)};
 `;
+
+const handleColorType = (remainingPoints: number, cappedNode: boolean, currentPoints: number, grayed: boolean) => {
+    if (grayed) {
+        return "1px solid gray";
+    } else if (cappedNode) {
+        return "1px solid var(--capped-node-color)";
+    } else if (remainingPoints > 0 || (remainingPoints === 0 && currentPoints >= 0)) {
+        return "1px solid var(--uncapped-node-color)";
+    }
+};
 
 export const TalentNode: FC<TalentNodeProps> = ({
     src,
@@ -96,9 +109,10 @@ export const TalentNode: FC<TalentNodeProps> = ({
         <Container
             $talentRow={talentRow}
             $talentColumn={talentColumn}
-            $pointsNeededToUnluck={pointsNeededToUnluck}
-            $pointsSpentOnTree={pointsSpentOnTree}
+            $cappedNode={currentPoints === maxPoints}
             $grayed={pointsSpentOnTree < pointsNeededToUnluck || (remainingPoints === 0 && currentPoints === 0)}
+            $remainingPoints={remainingPoints}
+            $currentPoints={currentPoints}
         >
             <ButtonStyled
                 $backgroundImage={`/images/talent-icons/${src}.jpg`}
