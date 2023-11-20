@@ -94,7 +94,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
         event.preventDefault();
 
         if (event.type === "click" && remainingPoints > 0) {
-            if (currentPoints < maxPoints) {
+            if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
                 handleRemainingPoints("lvlUp", specIndex);
                 setCurrentPoints(currentPoints + 1);
             }
