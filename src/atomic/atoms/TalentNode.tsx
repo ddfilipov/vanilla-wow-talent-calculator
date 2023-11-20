@@ -39,6 +39,7 @@ interface IStyledContainer {
     $talentColumn: number;
     $pointsSpentOnTree: number;
     $pointsNeededToUnluck: number;
+    $grayed: boolean;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -51,10 +52,10 @@ const Container = styled.div<IStyledContainer>`
     z-index: 1;
 
     button {
-        filter: ${(props) => (props.$pointsSpentOnTree < props.$pointsNeededToUnluck ? "grayscale(100%)" : "default")};
+        filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
     }
     span {
-        filter: ${(props) => (props.$pointsSpentOnTree < props.$pointsNeededToUnluck ? "grayscale(100%)" : "default")};
+        filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
     }
 `;
 
@@ -97,6 +98,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
             $talentColumn={talentColumn}
             $pointsNeededToUnluck={pointsNeededToUnluck}
             $pointsSpentOnTree={pointsSpentOnTree}
+            $grayed={pointsSpentOnTree < pointsNeededToUnluck || (remainingPoints === 0 && currentPoints === 0)}
         >
             <ButtonStyled
                 $backgroundImage={`/images/talent-icons/${src}.jpg`}
