@@ -3,6 +3,7 @@ import { FC, MouseEvent, useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { PointsLeftContext, RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
+import { TalentTooltip } from "./TalentTooltip";
 
 export interface TalentNodeProps {
     src: string;
