@@ -1,5 +1,5 @@
 "use client";
-import { FC, MouseEvent, useContext, useEffect, useState } from "react";
+import { FC, MouseEvent, useContext, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { PointsLeftContext, RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
@@ -77,6 +77,10 @@ const handleColorType = (remainingPoints: number, cappedNode: boolean, currentPo
         return "var(--uncapped-node-color)";
     }
 };
+export interface TooltipStyle {
+    top: number;
+    left: number;
+}
 
 export const TalentNode: FC<TalentNodeProps> = ({
     src,
@@ -92,6 +96,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
+    const nodeRef = useRef<HTMLDivElement>(null);
+    const [tooltipStyle, setTooltipStyle] = useState<TooltipStyle>({ top: 0, left: 0 });
+
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
 
@@ -108,6 +115,17 @@ export const TalentNode: FC<TalentNodeProps> = ({
         }
     };
 
+    const handleOnMouseEnter = () => {
+        setIsHovered(true);
+        if (nodeRef.current) {
+            const rect = nodeRef.current.getBoundingClientRect();
+            setTooltipStyle({
+                top: rect.top + window.scrollY,
+                left: rect.left + rect.width + window.scrollX, // Adjust as needed
+            });
+        }
+    };
+
     useEffect(() => {
         setCurrentPoints(0);
     }, [resetSignal]);
@@ -121,6 +139,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 $grayed={pointsSpentOnTree < pointsNeededToUnluck || (remainingPoints === 0 && currentPoints === 0)}
                 $remainingPoints={remainingPoints}
                 $currentPoints={currentPoints}
+                onMouseEnter={handleOnMouseEnter}
+                onMouseLeave={() => setIsHovered(false)}
+                ref={nodeRef}
             >
                 <ButtonStyled
                     $backgroundImage={`/images/talent-icons/${src}.jpg`}
@@ -131,7 +152,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
             </Container>
-            {isHovered ? <TalentTooltip /> : null}
+            {isHovered ? <TalentTooltip tooltipStyle={tooltipStyle} /> : null}
         </>
     );
 };

@@ -1,21 +1,31 @@
 "use client";
 import { FC } from "react";
 import styled from "styled-components";
+import { TooltipStyle } from "./TalentNode";
 
-export interface TalentTooltipProps {}
+export interface TalentTooltipProps {
+    tooltipStyle: TooltipStyle;
+}
 
-// interface IArrow {
-//     $startingRow: number;
-//     $endingRow: number;
-//     $startingColumn: number;
-//     $endingColumn: number;
-//     $isVerticalArrow: boolean;
-// }
+interface ITooltipStyle {
+    $top: number;
+    $left: number;
+}
 
-const Container = styled.div`
+const Container = styled.div<ITooltipStyle>`
+    position: absolute;
     background-color: red;
+    white-space: nowrap;
+    transform: translate(-50%, -100%);
+    z-index: 3;
+    top: ${(props) => `${props.$left}px`};
+    left: ${(props) => `${props.$top}px`};
 `;
 
-export const TalentTooltip: FC<TalentTooltipProps> = ({}) => {
-    return <Container>Hello I'm a tooltip</Container>;
+export const TalentTooltip: FC<TalentTooltipProps> = ({ tooltipStyle }) => {
+    return (
+        <Container $top={tooltipStyle.top} $left={tooltipStyle.left}>
+            Hello I'm a tooltip
+        </Container>
+    );
 };
