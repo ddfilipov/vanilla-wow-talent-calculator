@@ -89,6 +89,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     pointsNeededToUnluck,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
+    const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
@@ -111,22 +112,25 @@ export const TalentNode: FC<TalentNodeProps> = ({
     }, [resetSignal]);
 
     return (
-        <Container
-            $talentRow={talentRow}
-            $talentColumn={talentColumn}
-            $cappedNode={currentPoints === maxPoints}
-            $grayed={pointsSpentOnTree < pointsNeededToUnluck || (remainingPoints === 0 && currentPoints === 0)}
-            $remainingPoints={remainingPoints}
-            $currentPoints={currentPoints}
-        >
-            <ButtonStyled
-                $backgroundImage={`/images/talent-icons/${src}.jpg`}
-                onClick={handleClick}
-                onContextMenu={handleClick}
-            />
-            {remainingPoints > 0 || currentPoints > 0 ? (
-                <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
-            ) : null}
-        </Container>
+        <>
+            <Container
+                $talentRow={talentRow}
+                $talentColumn={talentColumn}
+                $cappedNode={currentPoints === maxPoints}
+                $grayed={pointsSpentOnTree < pointsNeededToUnluck || (remainingPoints === 0 && currentPoints === 0)}
+                $remainingPoints={remainingPoints}
+                $currentPoints={currentPoints}
+            >
+                <ButtonStyled
+                    $backgroundImage={`/images/talent-icons/${src}.jpg`}
+                    onClick={handleClick}
+                    onContextMenu={handleClick}
+                />
+                {remainingPoints > 0 || currentPoints > 0 ? (
+                    <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
+                ) : null}
+            </Container>
+            {isHovered ? <TalentTooltip /> : null}
+        </>
     );
 };
