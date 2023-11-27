@@ -151,9 +151,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 {remainingPoints > 0 || currentPoints > 0 ? (
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
+                {isHovered ? <TalentTooltip tooltipStyle={tooltipStyle} /> : null}
             </Container>
             {/* {isHovered ?  */}
-            {src === "classic_ability_druid_demoralizingroar" ? <TalentTooltip tooltipStyle={tooltipStyle} /> : null}
 
             {/* // : null} */}
         </>
