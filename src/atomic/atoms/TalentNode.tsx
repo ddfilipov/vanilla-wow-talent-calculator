@@ -97,7 +97,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
     const nodeRef = useRef<HTMLDivElement>(null);
-    const [tooltipStyle, setTooltipStyle] = useState<TooltipStyle>({ top: 0, left: 0 });
 
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
@@ -117,13 +116,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
 
     const handleOnMouseEnter = () => {
         setIsHovered(true);
-        if (nodeRef.current) {
-            const rect = nodeRef.current.getBoundingClientRect();
-            setTooltipStyle({
-                top: rect.top + window.scrollY,
-                left: rect.left + rect.width + window.scrollX, // Adjust as needed
-            });
-        }
     };
 
     useEffect(() => {
@@ -151,11 +143,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 {remainingPoints > 0 || currentPoints > 0 ? (
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
-                {isHovered ? <TalentTooltip tooltipStyle={tooltipStyle} /> : null}
+                {isHovered ? <TalentTooltip prop1={"a"} /> : null}
             </Container>
-            {/* {isHovered ?  */}
-
-            {/* // : null} */}
         </>
     );
 };
