@@ -18,8 +18,10 @@ const Container = styled.div<ITooltipStyle>`
     white-space: nowrap;
     transform: translate(-50%, -100%);
     z-index: 3;
-    top: ${(props) => `${props.$left}px`};
-    left: ${(props) => `${props.$top}px`};
+    /* top: ${(props) => `${props.$left}px`};
+    left: ${(props) => `${props.$top}px`}; */
+    top: 0px;
+    left: 0px;
 `;
 
 export const TalentTooltip: FC<TalentTooltipProps> = ({ tooltipStyle }) => {
