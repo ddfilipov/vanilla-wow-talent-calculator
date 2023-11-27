@@ -129,7 +129,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     useEffect(() => {
         setCurrentPoints(0);
     }, [resetSignal]);
-
+    console.log(src);
     return (
         <>
             <Container
@@ -152,7 +152,10 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
             </Container>
-            {isHovered ? <TalentTooltip tooltipStyle={tooltipStyle} /> : null}
+            {/* {isHovered ?  */}
+            {src === "classic_ability_druid_demoralizingroar" ? <TalentTooltip tooltipStyle={tooltipStyle} /> : null}
+
+            {/* // : null} */}
         </>
     );
 };

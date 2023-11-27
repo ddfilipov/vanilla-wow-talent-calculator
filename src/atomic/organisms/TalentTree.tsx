@@ -98,7 +98,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 </button>
             </Header>
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
-                {specData.map((node) => {
+                {specData.map((node, indice) => {
                     return (
                         <Fragment key={node.talentId}>
                             <TalentNode
