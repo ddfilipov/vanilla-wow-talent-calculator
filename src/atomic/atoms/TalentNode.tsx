@@ -25,7 +25,6 @@ const Container = styled.div<IStyledContainer>`
     border-radius: 0.3rem;
     grid-row-start: ${(props) => props.$talentRow};
     grid-column-start: ${(props) => props.$talentColumn};
-    z-index: 1;
     button {
         filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
     }

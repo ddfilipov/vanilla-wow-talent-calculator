@@ -10,29 +10,58 @@ export interface TalentTooltipProps {
 const Container = styled.div`
     position: absolute;
     display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
     bottom: 40px;
     left: 40px;
-    z-index: 3;
-    background-color: var(--main-area-background);
+    z-index: 3; //TODO: other talent nodes are on top of the tooltip wtf!
+    /* background-color: var(--main-area-background); */
+    background-color: rgba(5, 12, 24, 0.8);
     border: 1px solid var(--main-area-border);
     border-radius: 0.3rem;
-    padding: 5px;
-    opacity: 0.8;
+    padding: 8px;
     white-space: normal;
     min-width: 250px;
     word-wrap: break-word;
+    text-align: justify;
 `;
 
-const TalentName = styled.div``;
-const CurrentRank = styled.div``;
-const RankDescription = styled.div``;
-const LearnableNode = styled.div``; //TODO: if no ranks: "Click to learn" if max ranked: "Right-click to unlearn"
+const Background = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+`;
+const TalentName = styled.div`
+    flex-basis: 100%;
+    font-size: 1rem;
+`;
+const CurrentRank = styled.div`
+    flex-basis: 100%;
+    font-size: 0.9rem;
+`;
+const RankDescription = styled.div`
+    flex-basis: 100%;
+    font-size: 0.9rem;
+    color: var(--tooltip-description);
+`;
+const LearnableNode = styled.div`
+    flex-basis: 100%;
+`; //TODO: if no ranks: "Click to learn" if max ranked: "Right-click to unlearn"
 
 export const TalentTooltip: FC<TalentTooltipProps> = () => {
     return (
         <Container>
-            Hello this is a long text and it's not occupying 150px, it's occupying way less occupying way lessoccupying
-            way less occupying way less
+            <Background />
+            <TalentName>Talent Name</TalentName>
+            <CurrentRank>Rank 0/5</CurrentRank>
+            <RankDescription>
+                Hello this is a long text and it's not occupying 150px, it's occupying way less occupying way
+                lessoccupying way less occupying way less
+            </RankDescription>
+            {/* <LearnableNode></LearnableNode> */}
         </Container>
     );
 };
