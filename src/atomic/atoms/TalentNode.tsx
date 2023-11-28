@@ -16,6 +16,31 @@ export interface TalentNodeProps {
     pointsSpentOnTree: number;
     pointsNeededToUnluck: number;
 }
+
+const Container = styled.div<IStyledContainer>`
+    position: relative;
+    height: 40px;
+    width: 38px;
+    //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
+    border-radius: 0.3rem;
+    grid-row-start: ${(props) => props.$talentRow};
+    grid-column-start: ${(props) => props.$talentColumn};
+    z-index: 1;
+    button {
+        filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
+    }
+    span {
+        filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
+    }
+    border: ${(props) =>
+        `1px solid ${handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)}`};
+
+    span {
+        color: ${(props) =>
+            handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)};
+    }
+`;
+
 interface IStyledNode {
     $backgroundImage: string;
 }
@@ -43,31 +68,6 @@ interface IStyledContainer {
     $grayed: boolean;
     $cappedNode: boolean;
 }
-
-const Container = styled.div<IStyledContainer>`
-    height: 40px;
-    width: 38px;
-    //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
-    border-radius: 0.3rem;
-    grid-row-start: ${(props) => props.$talentRow};
-    grid-column-start: ${(props) => props.$talentColumn};
-    z-index: 1;
-
-    button {
-        filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
-    }
-    span {
-        filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
-    }
-    border: ${(props) =>
-        `1px solid ${handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)}`};
-
-    span {
-        color: ${(props) =>
-            handleColorType(props.$remainingPoints, props.$cappedNode, props.$currentPoints, props.$grayed)};
-    }
-`;
-
 const handleColorType = (remainingPoints: number, cappedNode: boolean, currentPoints: number, grayed: boolean) => {
     if (grayed) {
         return "gray";
@@ -143,7 +143,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 {remainingPoints > 0 || currentPoints > 0 ? (
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
-                {isHovered ? <TalentTooltip prop1={"a"} /> : null}
+                {src === "classic_ability_druid_demoralizingroar" ? <TalentTooltip prop1={"a"} /> : null}
             </Container>
         </>
     );
