@@ -10,15 +10,23 @@ export interface TalentTooltipProps {
 const Container = styled.div`
     position: absolute;
     display: flex;
-    background-color: red;
-    white-space: normal;
-    /* transform: translate(30%, -200%); */
     bottom: 40px;
     left: 40px;
     z-index: 3;
-    min-width: 150px;
+    background-color: var(--main-area-background);
+    border: 1px solid var(--main-area-border);
+    border-radius: 0.3rem;
+    padding: 5px;
+    opacity: 0.8;
+    white-space: normal;
+    min-width: 250px;
     word-wrap: break-word;
 `;
+
+const TalentName = styled.div``;
+const CurrentRank = styled.div``;
+const RankDescription = styled.div``;
+const LearnableNode = styled.div``; //TODO: if no ranks: "Click to learn" if max ranked: "Right-click to unlearn"
 
 export const TalentTooltip: FC<TalentTooltipProps> = () => {
     return (
