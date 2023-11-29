@@ -56,6 +56,7 @@ const GlobalStyle = styled.createGlobalStyle`
         --tooltip-description: #ffd100;
         --tooltip-rank: #9d9d9d;
         --red-reset-color: #c0392b;
+        --unlearn-talent-color: #cc3120;
         color: white;
     }
 `;

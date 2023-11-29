@@ -63,6 +63,7 @@ interface TalentTreeProps {
     handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
     specIndex: number;
     resetSpecPoints: (pointsDistributionIndex: number) => void;
+    pointsSpentOnTree: number;
 }
 
 export const TalentTree: FC<TalentTreeProps> = ({
@@ -73,6 +74,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     handleRemainingPoints,
     specIndex,
     resetSpecPoints,
+    pointsSpentOnTree,
 }) => {
     const [resetCounter, setResetCounter] = useState<number>(0);
 
@@ -90,12 +92,13 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     alt="Picture of the author"
                 />
                 <h3>{specName}</h3>
+                <span style={{ color: "gray" }}>({pointsSpentOnTree})</span>
                 <button type="button" onClick={handleReset}>
                     X
                 </button>
             </Header>
             <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
-                {specData.map((node) => {
+                {specData.map((node, indice) => {
                     return (
                         <Fragment key={node.talentId}>
                             <TalentNode
@@ -106,6 +109,10 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 maxPoints={node.ranksNumber}
                                 specIndex={specIndex}
                                 resetSignal={resetCounter}
+                                pointsSpentOnTree={pointsSpentOnTree}
+                                pointsNeededToUnluck={node.pointsNeededToUnlock}
+                                ranksDescription={node.ranksDescription}
+                                talentName={node.talentName}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0
