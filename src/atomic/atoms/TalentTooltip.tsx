@@ -1,7 +1,6 @@
 "use client";
 import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
-import { TooltipStyle } from "./TalentNode";
 
 export interface TalentTooltipProps {
     currentPoints: number;
@@ -17,8 +16,7 @@ const Container = styled.div`
     gap: 0.2rem;
     bottom: 40px;
     left: 40px;
-    z-index: 3; //TODO: other talent nodes are on top of the tooltip wtf!
-    /* background-color: var(--main-area-background); */
+    z-index: 3; 
     background-color: rgba(5, 12, 24, 0.8);
     border: 1px solid var(--main-area-border);
     border-radius: 0.3rem;
@@ -53,7 +51,7 @@ const RankDescription = styled.div`
 
 const LearnableNode = styled.div<{ isNodeLearnable: boolean }>`
     color: ${(props) => (props.isNodeLearnable ? "var(--learnable-talent)" : "var(--red-reset-color)")};
-`; //TODO: if no ranks: "Click to learn" if max ranked: "Right-click to unlearn"
+`;
 
 export const TalentTooltip: FC<TalentTooltipProps> = ({ currentPoints, maxPoints, isCapped, isUntrained }) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
