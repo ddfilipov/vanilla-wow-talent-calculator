@@ -3,10 +3,12 @@ import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 
 export interface TalentTooltipProps {
+    talentName: string;
     currentPoints: number;
     maxPoints: number;
     isUntrained: boolean;
     isCapped: boolean;
+    ranksDescription: string[];
 }
 
 const Container = styled.div`
@@ -16,7 +18,7 @@ const Container = styled.div`
     gap: 0.2rem;
     bottom: 40px;
     left: 40px;
-    z-index: 3; 
+    z-index: 3;
     background-color: rgba(5, 12, 24, 0.8);
     border: 1px solid var(--main-area-border);
     border-radius: 0.3rem;
@@ -24,7 +26,6 @@ const Container = styled.div`
     white-space: normal;
     min-width: 250px;
     word-wrap: break-word;
-    text-align: justify;
 `;
 
 const Background = styled.div`
@@ -50,10 +51,17 @@ const RankDescription = styled.div`
 `;
 
 const LearnableNode = styled.div<{ isNodeLearnable: boolean }>`
-    color: ${(props) => (props.isNodeLearnable ? "var(--learnable-talent)" : "var(--red-reset-color)")};
+    color: ${(props) => (props.isNodeLearnable ? "var(--learnable-talent)" : "red")};
 `;
 
-export const TalentTooltip: FC<TalentTooltipProps> = ({ currentPoints, maxPoints, isCapped, isUntrained }) => {
+export const TalentTooltip: FC<TalentTooltipProps> = ({
+    currentPoints,
+    maxPoints,
+    isCapped,
+    isUntrained,
+    ranksDescription,
+    talentName,
+}) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
 
     useEffect(() => {
@@ -68,12 +76,16 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({ currentPoints, maxPoints
     return (
         <Container>
             <Background />
-            <TalentName>Talent Name</TalentName>
+            <TalentName>{talentName}</TalentName>
             <CurrentRank>{`Rank ${currentPoints}/${maxPoints}`}</CurrentRank>
-            <RankDescription>
-                Hello this is a long text and it's not occupying 150px, it's occupying way less occupying way
-                lessoccupying way less occupying way less
-            </RankDescription>
+            {ranksDescription?.[0]?.length > 0 ? <RankDescription>{ranksDescription[0]}</RankDescription> : null}
+
+            {ranksDescription?.[1]?.length > 0 ? (
+                <>
+                    {currentPoints > 0 ? <div style={{ fontSize: "0.9rem", marginTop: "10px" }}>Next rank:</div> : null}
+                    <RankDescription>{ranksDescription[1]}</RankDescription>
+                </>
+            ) : null}
             {isCapped || isUntrained ? (
                 <LearnableNode isNodeLearnable={isUntrained}>{actionDescription}</LearnableNode>
             ) : null}

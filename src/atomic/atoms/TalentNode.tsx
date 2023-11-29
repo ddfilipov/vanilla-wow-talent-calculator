@@ -15,6 +15,8 @@ export interface TalentNodeProps {
     resetSignal: number;
     pointsSpentOnTree: number;
     pointsNeededToUnluck: number;
+    ranksDescription: string[];
+    talentName: string;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -91,6 +93,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
     resetSignal,
     pointsSpentOnTree,
     pointsNeededToUnluck,
+    ranksDescription,
+    talentName,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -148,6 +152,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                         maxPoints={maxPoints}
                         isCapped={currentPoints === maxPoints}
                         isUntrained={currentPoints === 0}
+                        ranksDescription={[ranksDescription[currentPoints - 1], ranksDescription[currentPoints]]}
+                        talentName={talentName}
                     />
                 ) : null}
             </Container>

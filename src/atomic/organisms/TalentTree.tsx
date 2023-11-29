@@ -111,6 +111,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 resetSignal={resetCounter}
                                 pointsSpentOnTree={pointsSpentOnTree}
                                 pointsNeededToUnluck={node.pointsNeededToUnlock}
+                                ranksDescription={node.ranksDescription}
+                                talentName={node.talentName}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0
