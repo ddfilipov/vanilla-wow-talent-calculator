@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { TooltipStyle } from "./TalentNode";
 
 export interface TalentTooltipProps {
-    prop1: any;
+    currentPoints: number;
+    maxPoints: number;
 }
 
 const Container = styled.div`
@@ -51,12 +52,12 @@ const LearnableNode = styled.div`
     flex-basis: 100%;
 `; //TODO: if no ranks: "Click to learn" if max ranked: "Right-click to unlearn"
 
-export const TalentTooltip: FC<TalentTooltipProps> = () => {
+export const TalentTooltip: FC<TalentTooltipProps> = ({ currentPoints, maxPoints }) => {
     return (
         <Container>
             <Background />
             <TalentName>Talent Name</TalentName>
-            <CurrentRank>Rank 0/5</CurrentRank>
+            <CurrentRank>{`Rank ${currentPoints}/${maxPoints}`}</CurrentRank>
             <RankDescription>
                 Hello this is a long text and it's not occupying 150px, it's occupying way less occupying way
                 lessoccupying way less occupying way less
