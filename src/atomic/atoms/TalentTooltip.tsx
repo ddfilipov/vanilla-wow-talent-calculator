@@ -1,11 +1,13 @@
 "use client";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import { TooltipStyle } from "./TalentNode";
 
 export interface TalentTooltipProps {
     currentPoints: number;
     maxPoints: number;
+    isUntrained: boolean;
+    isCapped: boolean;
 }
 
 const Container = styled.div`
@@ -48,11 +50,23 @@ const RankDescription = styled.div`
     font-size: 0.9rem;
     color: var(--tooltip-description);
 `;
-const LearnableNode = styled.div`
-    flex-basis: 100%;
+
+const LearnableNode = styled.div<{ isNodeLearnable: boolean }>`
+    color: ${(props) => (props.isNodeLearnable ? "var(--learnable-talent)" : "var(--red-reset-color)")};
 `; //TODO: if no ranks: "Click to learn" if max ranked: "Right-click to unlearn"
 
-export const TalentTooltip: FC<TalentTooltipProps> = ({ currentPoints, maxPoints }) => {
+export const TalentTooltip: FC<TalentTooltipProps> = ({ currentPoints, maxPoints, isCapped, isUntrained }) => {
+    const [actionDescription, setActionDescription] = useState<string>("Click to learn");
+
+    useEffect(() => {
+        if (isCapped) {
+            setActionDescription("Right-click to unlearn");
+            return;
+        }
+        if (isUntrained) {
+            setActionDescription("Click to learn");
+        }
+    }, [isCapped, isUntrained]);
     return (
         <Container>
             <Background />
@@ -62,7 +76,9 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({ currentPoints, maxPoints
                 Hello this is a long text and it's not occupying 150px, it's occupying way less occupying way
                 lessoccupying way less occupying way less
             </RankDescription>
-            {/* <LearnableNode></LearnableNode> */}
+            {isCapped || isUntrained ? (
+                <LearnableNode isNodeLearnable={isUntrained}>{actionDescription}</LearnableNode>
+            ) : null}
         </Container>
     );
 };

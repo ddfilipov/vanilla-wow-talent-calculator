@@ -142,7 +142,14 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 {remainingPoints > 0 || currentPoints > 0 ? (
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
-                {isHovered ? <TalentTooltip currentPoints={currentPoints} maxPoints={maxPoints}/> : null}
+                {isHovered ? (
+                    <TalentTooltip
+                        currentPoints={currentPoints}
+                        maxPoints={maxPoints}
+                        isCapped={currentPoints === maxPoints}
+                        isUntrained={currentPoints === 0}
+                    />
+                ) : null}
             </Container>
         </>
     );
