@@ -124,7 +124,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     useEffect(() => {
         setCurrentPoints(0);
     }, [resetSignal]);
-    console.log(src);
+
     return (
         <>
             <Container

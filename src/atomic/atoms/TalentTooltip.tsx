@@ -51,7 +51,7 @@ const RankDescription = styled.div`
 `;
 
 const LearnableNode = styled.div<{ isNodeLearnable: boolean }>`
-    color: ${(props) => (props.isNodeLearnable ? "var(--learnable-talent)" : "red")};
+    color: ${(props) => (props.isNodeLearnable ? "var(--learnable-talent)" : "var(--unlearn-talent-color)")};
 `;
 
 export const TalentTooltip: FC<TalentTooltipProps> = ({
