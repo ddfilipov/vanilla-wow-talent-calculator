@@ -72,6 +72,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_NaturesWrath",
                         unlocks: [{ row: 1, column: 3 }],
                         pointsNeededToUnlock: 0,
+                        unlocksId: 921,
                     },
                     {
                         talentName: "Improved Nature's Grasp",
@@ -87,6 +88,7 @@ export const classData: ClassData[] = [
                         talentRow: 1,
                         talentIcon: "Spell_Nature_NaturesWrath",
                         pointsNeededToUnlock: 0,
+                        unlockedById: 761,
                     },
                     {
                         talentName: "Improved Entangling Roots",
@@ -118,7 +120,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_StarFall",
                         unlocks: [{ row: 4, column: 2 }],
                         pointsNeededToUnlock: 5,
-                        unlocksId: 792
+                        unlocksId: 792,
                     },
                     {
                         talentName: "Natural Weapons",
@@ -205,7 +207,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Spell_Nature_Purge",
                         pointsNeededToUnlock: 15,
-                        unlockedById: 763
+                        unlockedById: 763,
                     },
                     {
                         talentName: "Improved Starfire",
