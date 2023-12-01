@@ -6,8 +6,8 @@ export interface TalentTooltipProps {
     talentName: string;
     currentPoints: number;
     maxPoints: number;
-    isUntrained: boolean;
-    isCapped: boolean;
+    isNodeUntouched: boolean;
+    isNodeCapped: boolean;
     ranksDescription: string[];
 }
 
@@ -57,22 +57,22 @@ const LearnableNode = styled.div<{ isNodeLearnable: boolean }>`
 export const TalentTooltip: FC<TalentTooltipProps> = ({
     currentPoints,
     maxPoints,
-    isCapped,
-    isUntrained,
+    isNodeCapped,
+    isNodeUntouched,
     ranksDescription,
     talentName,
 }) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
 
     useEffect(() => {
-        if (isCapped) {
+        if (isNodeCapped) {
             setActionDescription("Right-click to unlearn");
             return;
         }
-        if (isUntrained) {
+        if (isNodeUntouched) {
             setActionDescription("Click to learn");
         }
-    }, [isCapped, isUntrained]);
+    }, [isNodeCapped, isNodeUntouched]);
     return (
         <Container>
             <Background />
@@ -86,8 +86,8 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
                     <RankDescription>{ranksDescription[1]}</RankDescription>
                 </>
             ) : null}
-            {isCapped || isUntrained ? (
-                <LearnableNode isNodeLearnable={isUntrained}>{actionDescription}</LearnableNode>
+            {isNodeCapped || isNodeUntouched ? (
+                <LearnableNode isNodeLearnable={isNodeUntouched}>{actionDescription}</LearnableNode>
             ) : null}
         </Container>
     );

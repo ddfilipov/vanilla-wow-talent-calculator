@@ -150,8 +150,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     <TalentTooltip
                         currentPoints={currentPoints}
                         maxPoints={maxPoints}
-                        isCapped={currentPoints === maxPoints}
-                        isUntrained={currentPoints === 0}
+                        isNodeCapped={currentPoints === maxPoints}
+                        isNodeUntouched={currentPoints === 0}
                         ranksDescription={[ranksDescription[currentPoints - 1], ranksDescription[currentPoints]]}
                         talentName={talentName}
                     />
