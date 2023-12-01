@@ -142,8 +142,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 onMouseLeave={() => setIsHovered(false)}
                 ref={nodeRef}
             >
-                {unlocksId}
-                {unlockedBy}
+                {/* {unlocksId}
+                {unlockedBy} */}
                 <ButtonStyled
                     $backgroundImage={`/images/talent-icons/${src}.jpg`}
                     onClick={handleClick}
