@@ -17,8 +17,8 @@ export interface TalentNodeProps {
     pointsNeededToUnluck: number;
     ranksDescription: string[];
     talentName: string;
-    unlocksId: number;
-    unlockedBy: number;
+    unlocksId: number | undefined;
+    unlockedBy: number | undefined;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -142,6 +142,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 onMouseLeave={() => setIsHovered(false)}
                 ref={nodeRef}
             >
+                {unlocksId}
+                {unlockedBy}
                 <ButtonStyled
                     $backgroundImage={`/images/talent-icons/${src}.jpg`}
                     onClick={handleClick}
