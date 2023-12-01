@@ -27,6 +27,8 @@ export interface SpecTalent {
     talentRow: number;
     talentIcon: string;
     unlocks?: ICoords[];
+    unlocksId?: number;
+    unlockedById?: number;
     pointsNeededToUnlock: number;
 }
 
@@ -116,6 +118,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_StarFall",
                         unlocks: [{ row: 4, column: 2 }],
                         pointsNeededToUnlock: 5,
+                        unlocksId: 792
                     },
                     {
                         talentName: "Natural Weapons",
@@ -202,6 +205,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Spell_Nature_Purge",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 763
                     },
                     {
                         talentName: "Improved Starfire",

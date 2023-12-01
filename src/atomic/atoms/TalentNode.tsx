@@ -17,6 +17,8 @@ export interface TalentNodeProps {
     pointsNeededToUnluck: number;
     ranksDescription: string[];
     talentName: string;
+    unlocksId: number;
+    unlockedBy: number;
 }
 
 const Container = styled.div<IStyledContainer>`
@@ -95,6 +97,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
     pointsNeededToUnluck,
     ranksDescription,
     talentName,
+    unlocksId,
+    unlockedBy,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);

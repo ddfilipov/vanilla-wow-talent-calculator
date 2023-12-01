@@ -113,6 +113,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 pointsNeededToUnluck={node.pointsNeededToUnlock}
                                 ranksDescription={node.ranksDescription}
                                 talentName={node.talentName}
+                                unlocksId={node.unlocksId}
+                                unlockedBy={node.unlockedById}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0
