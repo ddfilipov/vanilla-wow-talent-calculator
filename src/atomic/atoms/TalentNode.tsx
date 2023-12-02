@@ -43,7 +43,7 @@ const ButtonStyled = styled.button<IStyledNode>`
     border-radius: 0.3rem;
     &:hover {
         opacity: 1;
-        box-shadow: inset 0 0 5px #596e92;
+        box-shadow: inset 0 0 8px #596e92;
     }
 `;
 
