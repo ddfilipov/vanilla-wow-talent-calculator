@@ -1,5 +1,5 @@
 "use client";
-import { FC, Fragment, useState } from "react";
+import { FC, Fragment, useMemo, useState } from "react";
 import styled from "styled-components";
 import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
@@ -82,6 +82,23 @@ export const TalentTree: FC<TalentTreeProps> = ({
         setResetCounter((prevCounter) => prevCounter + 1);
         resetSpecPoints(specIndex);
     };
+
+    const unlockableNodes = useMemo(() => {
+        const prueba = specData
+            .map((node) => {
+                if (node.unlockedById || node.unlocksId) {
+                    return {
+                        id: node.talentId,
+                        unlockedById: node.unlockedById,
+                        unlocksId: node.unlocksId,
+                        pointsSpent: 0,
+                    };
+                }
+            })
+            .filter((node) => node);
+        return prueba;
+    }, []);
+
     return (
         <MainContainer>
             <Header>

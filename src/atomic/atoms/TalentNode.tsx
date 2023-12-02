@@ -103,7 +103,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
-    const nodeRef = useRef<HTMLDivElement>(null);
+
+    if (unlockedBy || unlocksId){
+
+        const [currentPoints2, setCurrentPoints2] = useState<number>(0);
+    }
 
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
@@ -140,7 +144,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 $currentPoints={currentPoints}
                 onMouseEnter={handleOnMouseEnter}
                 onMouseLeave={() => setIsHovered(false)}
-                ref={nodeRef}
             >
                 {/* {unlocksId}
                 {unlockedBy} */}
