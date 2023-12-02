@@ -1,5 +1,5 @@
 "use client";
-import { FC, Fragment, useMemo, useState } from "react";
+import { FC, Fragment, createContext, useMemo, useState } from "react";
 import styled from "styled-components";
 import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
@@ -62,6 +62,10 @@ interface IUnlockableNodes {
     pointsSpent: number;
 }
 
+export const UnlockableNodesContext = createContext<{ unlockableNodes: (IUnlockableNodes | undefined)[] }>({
+    unlockableNodes: [undefined],
+});
+
 interface TalentTreeProps {
     specName: string;
     specIcon: string;
@@ -114,66 +118,69 @@ export const TalentTree: FC<TalentTreeProps> = ({
         );
     };
     return (
-        <MainContainer>
-            <Header>
-                <Image
-                    src={`/images/talent-icons/${specIcon}.jpg`}
-                    width={26}
-                    height={26}
-                    alt="Picture of the author"
-                />
-                <h3>{specName}</h3>
-                <span style={{ color: "gray" }}>({pointsSpentOnTree})</span>
-                <button type="button" onClick={handleReset}>
-                    X
-                </button>
-            </Header>
-            <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
-                {specData.map((node, indice) => {
-                    return (
-                        <Fragment key={node.talentId}>
-                            <TalentNode
-                                src={node.talentIcon.toLocaleLowerCase()}
-                                talentRow={node.talentRow}
-                                talentColumn={node.talentcolumn}
-                                handleRemainingPoints={handleRemainingPoints}
-                                maxPoints={node.ranksNumber}
-                                specIndex={specIndex}
-                                resetSignal={resetCounter}
-                                pointsSpentOnTree={pointsSpentOnTree}
-                                pointsNeededToUnluck={node.pointsNeededToUnlock}
-                                ranksDescription={node.ranksDescription}
-                                talentName={node.talentName}
-                                unlocksId={node.unlocksId}
-                                unlockedBy={node.unlockedById}
-                                handleUnlockableNodes={handleUnlockableNodes}
-                            />
-                            {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
-                            {node.unlocks && node.unlocks?.length > 0
-                                ? node.unlocks.map((arrow, index) => {
-                                      return index <= 1 ? (
-                                          <Arrow
-                                              startingRow={node.talentRow}
-                                              endingRow={arrow.row}
-                                              startingColumn={node.talentcolumn}
-                                              endingColumn={arrow.column}
-                                              key={index}
-                                          />
-                                      ) : (
-                                          <Arrow
-                                              startingRow={node.unlocks?.[1].row as number}
-                                              endingRow={arrow.row}
-                                              startingColumn={node.unlocks?.[1].column as number}
-                                              endingColumn={arrow.column}
-                                              key={index}
-                                          />
-                                      );
-                                  })
-                                : null}
-                        </Fragment>
-                    );
-                })}
-            </TalentGrid>
-        </MainContainer>
+        <UnlockableNodesContext.Provider value={{ unlockableNodes: unlockableNodes }}>
+            <MainContainer>
+                <Header>
+                    <Image
+                        src={`/images/talent-icons/${specIcon}.jpg`}
+                        width={26}
+                        height={26}
+                        alt="Picture of the author"
+                    />
+                    <h3>{specName}</h3>
+                    <span style={{ color: "gray" }}>({pointsSpentOnTree})</span>
+                    <button type="button" onClick={handleReset}>
+                        X
+                    </button>
+                </Header>
+                <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
+                    {specData.map((node, indice) => {
+                        return (
+                            <Fragment key={node.talentId}>
+                                <TalentNode
+                                    src={node.talentIcon.toLocaleLowerCase()}
+                                    talentRow={node.talentRow}
+                                    talentColumn={node.talentcolumn}
+                                    handleRemainingPoints={handleRemainingPoints}
+                                    maxPoints={node.ranksNumber}
+                                    specIndex={specIndex}
+                                    resetSignal={resetCounter}
+                                    pointsSpentOnTree={pointsSpentOnTree}
+                                    pointsNeededToUnluck={node.pointsNeededToUnlock}
+                                    ranksDescription={node.ranksDescription}
+                                    talentName={node.talentName}
+                                    unlocksId={node.unlocksId}
+                                    unlockedBy={node.unlockedById}
+                                    handleUnlockableNodes={handleUnlockableNodes}
+                                    nodeId={node.talentId}
+                                />
+                                {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
+                                {node.unlocks && node.unlocks?.length > 0
+                                    ? node.unlocks.map((arrow, index) => {
+                                          return index <= 1 ? (
+                                              <Arrow
+                                                  startingRow={node.talentRow}
+                                                  endingRow={arrow.row}
+                                                  startingColumn={node.talentcolumn}
+                                                  endingColumn={arrow.column}
+                                                  key={index}
+                                              />
+                                          ) : (
+                                              <Arrow
+                                                  startingRow={node.unlocks?.[1].row as number}
+                                                  endingRow={arrow.row}
+                                                  startingColumn={node.unlocks?.[1].column as number}
+                                                  endingColumn={arrow.column}
+                                                  key={index}
+                                              />
+                                          );
+                                      })
+                                    : null}
+                            </Fragment>
+                        );
+                    })}
+                </TalentGrid>
+            </MainContainer>
+        </UnlockableNodesContext.Provider>
     );
 };

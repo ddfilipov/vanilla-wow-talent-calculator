@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { PointsLeftContext, RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
 import { TalentTooltip } from "./TalentTooltip";
+import { UnlockableNodesContext } from "../organisms/TalentTree";
 
 const Container = styled.div<IStyledContainer>`
     position: relative;
@@ -69,6 +70,7 @@ export interface TooltipStyle {
 }
 
 export interface TalentNodeProps {
+    nodeId: number;
     src: string;
     talentRow: number;
     talentColumn: number;
@@ -85,6 +87,7 @@ export interface TalentNodeProps {
     handleUnlockableNodes: (nodeId: number) => void;
 }
 export const TalentNode: FC<TalentNodeProps> = ({
+    nodeId,
     src,
     talentRow,
     talentColumn,
@@ -103,6 +106,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
+    const { unlockableNodes } = useContext(UnlockableNodesContext);
 
     if (unlockedBy || unlocksId) {
         const [currentPoints2, setCurrentPoints2] = useState<number>(0);
@@ -110,7 +114,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
 
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
-
+        const prueba = unlockableNodes.some((node) => node?.nodeId === nodeId);
+        console.log("a mem prueba:", prueba);
         if (event.type === "click" && remainingPoints > 0) {
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
                 if (unlockedBy || unlocksId) {
