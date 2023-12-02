@@ -55,6 +55,13 @@ const TalentGrid = styled.div<IStyledContainer>`
     background-size: 100% 100%;
 `;
 
+interface IUnlockableNodes {
+    id: number;
+    unlockedById: number | undefined;
+    unlocksId: number | undefined;
+    pointsSpent: number;
+}
+
 interface TalentTreeProps {
     specName: string;
     specIcon: string;
@@ -83,8 +90,8 @@ export const TalentTree: FC<TalentTreeProps> = ({
         resetSpecPoints(specIndex);
     };
 
-    const unlockableNodes = useMemo(() => {
-        const prueba = specData
+    const defaultUnlockableNodes: (IUnlockableNodes | undefined)[] = useMemo(() => {
+        const filteredNodes = specData
             .map((node) => {
                 if (node.unlockedById || node.unlocksId) {
                     return {
@@ -96,8 +103,10 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 }
             })
             .filter((node) => node);
-        return prueba;
+        return filteredNodes;
     }, []);
+
+    const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
 
     return (
         <MainContainer>
