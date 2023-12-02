@@ -114,11 +114,19 @@ export const TalentTree: FC<TalentTreeProps> = ({
         return filteredNodes;
     }, []);
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
-    console.log(JSON.stringify(defaultUnlockableNodes));
+    console.log(JSON.stringify(unlockableNodes));
     const handleUnlockableNodes = (nodeId: number) => {
+        setUnlockableNodes((nodes) =>
+            nodes.map((node) => {
+                if (node?.nodeId === nodeId) {
+                    return { ...node, pointsSpent: node.pointsSpent + 1 };
+                }
+                return node;
+            })
+        );
         console.log(
             "did I find a coincidence?",
-            unlockableNodes.some((node) => node?.nodeId === nodeId)
+            unlockableNodes.find((node) => node?.nodeId === nodeId)
         );
     };
     return (

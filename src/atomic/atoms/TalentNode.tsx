@@ -114,7 +114,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
         event.preventDefault();
         if (event.type === "click" && remainingPoints > 0) {
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
-                if (unlockedBy) {
+                if (unlockedBy || unlocksId) {
                     console.log("parriba");
                     const prueba = unlockableNodes.find((node) => node?.unlocksId === nodeId)?.pointsSpent === 0;
                     if (prueba) {
