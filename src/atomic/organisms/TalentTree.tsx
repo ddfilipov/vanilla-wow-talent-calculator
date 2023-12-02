@@ -56,7 +56,7 @@ const TalentGrid = styled.div<IStyledContainer>`
 `;
 
 interface IUnlockableNodes {
-    id: number;
+    nodeId: number;
     unlockedById: number | undefined;
     unlocksId: number | undefined;
     pointsSpent: number;
@@ -95,7 +95,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             .map((node) => {
                 if (node.unlockedById || node.unlocksId) {
                     return {
-                        id: node.talentId,
+                        nodeId: node.talentId,
                         unlockedById: node.unlockedById,
                         unlocksId: node.unlocksId,
                         pointsSpent: 0,
@@ -105,9 +105,14 @@ export const TalentTree: FC<TalentTreeProps> = ({
             .filter((node) => node);
         return filteredNodes;
     }, []);
-
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
 
+    const handleUnlockableNodes = (nodeId: number) => {
+        console.log(
+            "did I find a coincidence?",
+            unlockableNodes.some((node) => node?.nodeId === nodeId)
+        );
+    };
     return (
         <MainContainer>
             <Header>
@@ -141,6 +146,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 talentName={node.talentName}
                                 unlocksId={node.unlocksId}
                                 unlockedBy={node.unlockedById}
+                                handleUnlockableNodes={handleUnlockableNodes}
                             />
                             {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                             {node.unlocks && node.unlocks?.length > 0

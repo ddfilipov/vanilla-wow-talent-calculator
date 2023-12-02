@@ -5,27 +5,10 @@ import { PointsLeftContext, RemainingPointsActionType } from "../organisms/Talen
 import { TalentNodePoints } from "./TalentNodePoints";
 import { TalentTooltip } from "./TalentTooltip";
 
-export interface TalentNodeProps {
-    src: string;
-    talentRow: number;
-    talentColumn: number;
-    handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
-    maxPoints: number;
-    specIndex: number;
-    resetSignal: number;
-    pointsSpentOnTree: number;
-    pointsNeededToUnluck: number;
-    ranksDescription: string[];
-    talentName: string;
-    unlocksId: number | undefined;
-    unlockedBy: number | undefined;
-}
-
 const Container = styled.div<IStyledContainer>`
     position: relative;
     height: 40px;
     width: 38px;
-    //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
     border-radius: 0.3rem;
     grid-row-start: ${(props) => props.$talentRow};
     grid-column-start: ${(props) => props.$talentColumn};
@@ -85,6 +68,22 @@ export interface TooltipStyle {
     left: number;
 }
 
+export interface TalentNodeProps {
+    src: string;
+    talentRow: number;
+    talentColumn: number;
+    handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
+    maxPoints: number;
+    specIndex: number;
+    resetSignal: number;
+    pointsSpentOnTree: number;
+    pointsNeededToUnluck: number;
+    ranksDescription: string[];
+    talentName: string;
+    unlocksId: number | undefined;
+    unlockedBy: number | undefined;
+    handleUnlockableNodes: (nodeId: number) => void;
+}
 export const TalentNode: FC<TalentNodeProps> = ({
     src,
     talentRow,
@@ -99,13 +98,13 @@ export const TalentNode: FC<TalentNodeProps> = ({
     talentName,
     unlocksId,
     unlockedBy,
+    handleUnlockableNodes,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
 
-    if (unlockedBy || unlocksId){
-
+    if (unlockedBy || unlocksId) {
         const [currentPoints2, setCurrentPoints2] = useState<number>(0);
     }
 
@@ -114,11 +113,17 @@ export const TalentNode: FC<TalentNodeProps> = ({
 
         if (event.type === "click" && remainingPoints > 0) {
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
+                if (unlockedBy || unlocksId) {
+                    console.log("parriba");
+                }
                 handleRemainingPoints("lvlUp", specIndex);
                 setCurrentPoints(currentPoints + 1);
             }
         } else if (event.type === "contextmenu") {
             if (currentPoints > 0 && pointsNeededToUnluck < pointsSpentOnTree) {
+                if (unlockedBy || unlocksId) {
+                    console.log("pabajo");
+                }
                 handleRemainingPoints("lvlDown", specIndex);
                 setCurrentPoints(currentPoints - 1);
             }
@@ -133,6 +138,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
         setCurrentPoints(0);
     }, [resetSignal]);
 
+    useEffect(() => {
+        setCurrentPoints(0);
+    }, [resetSignal]);
     return (
         <>
             <Container
