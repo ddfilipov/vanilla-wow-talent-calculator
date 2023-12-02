@@ -112,13 +112,15 @@ export const TalentNode: FC<TalentNodeProps> = ({
 
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
-        const prueba = unlockableNodes.some((node) => node?.nodeId === nodeId);
-        console.log("a mem prueba:", prueba);
         if (event.type === "click" && remainingPoints > 0) {
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
-                if (unlockedBy || unlocksId) {
+                if (unlockedBy) {
                     console.log("parriba");
-                    // const prueba = unlockableNodes.some((node) => node?.nodeId === nodeId);
+                    const prueba = unlockableNodes.find((node) => node?.unlocksId === nodeId)?.pointsSpent === 0;
+                    if (prueba) {
+                        return;
+                    }
+                    console.log("pruebaaaaa:", prueba);
                     handleUnlockableNodes(nodeId);
                 }
                 handleRemainingPoints("lvlUp", specIndex);
@@ -143,9 +145,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
         setCurrentPoints(0);
     }, [resetSignal]);
 
-    useEffect(() => {
-        setCurrentPoints(0);
-    }, [resetSignal]);
     return (
         <>
             <Container
@@ -158,13 +157,16 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 onMouseEnter={handleOnMouseEnter}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                {/* {unlocksId}
-                {unlockedBy} */}
                 <ButtonStyled
                     $backgroundImage={`/images/talent-icons/${src}.jpg`}
                     onClick={handleClick}
                     onContextMenu={handleClick}
                 />
+                <div style={{ position: "absolute", color: "yellow", zIndex: "333" }}>
+                    <div style={{ color: "yellow", fontSize: "10px" }}>nodeId:{nodeId}</div>
+                    <div style={{ color: "red", fontSize: "10px" }}>unlocksId:{unlocksId}</div>
+                    <div style={{ color: "orange", fontSize: "10px" }}>unlockedBy:{unlockedBy}</div>
+                </div>
                 {remainingPoints > 0 || currentPoints > 0 ? (
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
