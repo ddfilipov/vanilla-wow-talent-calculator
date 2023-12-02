@@ -117,7 +117,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
         return filteredNodes;
     }, []);
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
-    console.log(JSON.stringify(unlockableNodes));
     const handleUnlockableNodes = (action: RemainingPointsActionType, nodeId: number) => {
         const numberToAdd = action === "lvlUp" ? 1 : -1;
         setUnlockableNodes((nodes) =>
@@ -133,6 +132,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             unlockableNodes.find((node) => node?.nodeId === nodeId)
         );
     };
+
     return (
         <UnlockableNodesContext.Provider
             value={{ unlockableNodes: unlockableNodes, handleUnlockableNodes: handleUnlockableNodes }}

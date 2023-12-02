@@ -119,7 +119,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
         if (event.type === "click" && remainingPoints > 0) {
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
                 if (unlockedBy || unlocksId) {
-                    // const parentNode = unlockableNodes.find((node) => node?.unlocksId === nodeId);
                     if (parentNode && parentNode?.pointsSpent < parentNode?.maxPoints) {
                         return;
                     }
@@ -130,7 +129,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
             }
         } else if (event.type === "contextmenu") {
             if (currentPoints > 0 && pointsNeededToUnluck < pointsSpentOnTree) {
-                // const childNode = unlockableNodes.find((node) => node?.unlockedById === nodeId);
                 if (unlockedBy || unlocksId) {
                     if (childNode && childNode?.pointsSpent > 0) {
                         return;
