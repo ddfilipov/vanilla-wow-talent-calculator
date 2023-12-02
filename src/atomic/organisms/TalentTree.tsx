@@ -96,6 +96,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     const handleReset = () => {
         setResetCounter((prevCounter) => prevCounter + 1);
         resetSpecPoints(specIndex);
+        setUnlockableNodes(defaultUnlockableNodes);
     };
 
     const defaultUnlockableNodes: (IUnlockableNodes | undefined)[] = useMemo(() => {
