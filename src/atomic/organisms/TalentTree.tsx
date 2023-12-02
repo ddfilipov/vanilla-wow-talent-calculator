@@ -62,8 +62,12 @@ interface IUnlockableNodes {
     pointsSpent: number;
 }
 
-export const UnlockableNodesContext = createContext<{ unlockableNodes: (IUnlockableNodes | undefined)[] }>({
+export const UnlockableNodesContext = createContext<{
+    unlockableNodes: (IUnlockableNodes | undefined)[];
+    handleUnlockableNodes: (nodeId: number) => void;
+}>({
     unlockableNodes: [undefined],
+    handleUnlockableNodes: (nodeId: number) => {},
 });
 
 interface TalentTreeProps {
@@ -110,7 +114,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
         return filteredNodes;
     }, []);
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
-
+    console.log(JSON.stringify(defaultUnlockableNodes));
     const handleUnlockableNodes = (nodeId: number) => {
         console.log(
             "did I find a coincidence?",
@@ -118,7 +122,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
         );
     };
     return (
-        <UnlockableNodesContext.Provider value={{ unlockableNodes: unlockableNodes }}>
+        <UnlockableNodesContext.Provider
+            value={{ unlockableNodes: unlockableNodes, handleUnlockableNodes: handleUnlockableNodes }}
+        >
             <MainContainer>
                 <Header>
                     <Image
@@ -151,7 +157,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                     talentName={node.talentName}
                                     unlocksId={node.unlocksId}
                                     unlockedBy={node.unlockedById}
-                                    handleUnlockableNodes={handleUnlockableNodes}
                                     nodeId={node.talentId}
                                 />
                                 {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}

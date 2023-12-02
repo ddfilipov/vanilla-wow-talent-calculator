@@ -84,7 +84,6 @@ export interface TalentNodeProps {
     talentName: string;
     unlocksId: number | undefined;
     unlockedBy: number | undefined;
-    handleUnlockableNodes: (nodeId: number) => void;
 }
 export const TalentNode: FC<TalentNodeProps> = ({
     nodeId,
@@ -101,12 +100,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
     talentName,
     unlocksId,
     unlockedBy,
-    handleUnlockableNodes,
 }) => {
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
-    const { unlockableNodes } = useContext(UnlockableNodesContext);
+    const { unlockableNodes, handleUnlockableNodes } = useContext(UnlockableNodesContext);
 
     if (unlockedBy || unlocksId) {
         const [currentPoints2, setCurrentPoints2] = useState<number>(0);
@@ -120,6 +118,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
                 if (unlockedBy || unlocksId) {
                     console.log("parriba");
+                    // const prueba = unlockableNodes.some((node) => node?.nodeId === nodeId);
+                    handleUnlockableNodes(nodeId);
                 }
                 handleRemainingPoints("lvlUp", specIndex);
                 setCurrentPoints(currentPoints + 1);
