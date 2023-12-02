@@ -112,20 +112,26 @@ export const TalentNode: FC<TalentNodeProps> = ({
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
                 if (unlockedBy || unlocksId) {
                     console.log("parriba");
-                    const prueba = unlockableNodes.find((node) => node?.unlocksId === nodeId)?.pointsSpent === 0;
-                    if (prueba) {
+                    const parentNode = unlockableNodes.find((node) => node?.unlocksId === nodeId);
+                    console.log("parentNodeparentNodeparentNodeparentNode:", parentNode);
+                    if (parentNode && parentNode?.pointsSpent < parentNode?.maxPoints) {
                         return;
                     }
-                    console.log("pruebaaaaa:", prueba);
-                    handleUnlockableNodes(nodeId);
+                    handleUnlockableNodes("lvlUp", nodeId);
                 }
                 handleRemainingPoints("lvlUp", specIndex);
                 setCurrentPoints(currentPoints + 1);
             }
         } else if (event.type === "contextmenu") {
+            console.log("pabajo");
             if (currentPoints > 0 && pointsNeededToUnluck < pointsSpentOnTree) {
+                const childNode = unlockableNodes.find((node) => node?.unlockedById === nodeId);
+                console.log("childNodechildNodechildNodechildNodechildNode:", childNode);
                 if (unlockedBy || unlocksId) {
-                    console.log("pabajo");
+                    if (childNode && childNode?.pointsSpent > 0) {
+                        return;
+                    }
+                    handleUnlockableNodes("lvlDown", nodeId);
                 }
                 handleRemainingPoints("lvlDown", specIndex);
                 setCurrentPoints(currentPoints - 1);

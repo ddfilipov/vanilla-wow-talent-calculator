@@ -55,19 +55,20 @@ const TalentGrid = styled.div<IStyledContainer>`
     background-size: 100% 100%;
 `;
 
-interface IUnlockableNodes {
+export interface IUnlockableNodes {
     nodeId: number;
     unlockedById: number | undefined;
     unlocksId: number | undefined;
     pointsSpent: number;
+    maxPoints: number;
 }
 
 export const UnlockableNodesContext = createContext<{
     unlockableNodes: (IUnlockableNodes | undefined)[];
-    handleUnlockableNodes: (nodeId: number) => void;
+    handleUnlockableNodes: (action: RemainingPointsActionType, nodeId: number) => void;
 }>({
     unlockableNodes: [undefined],
-    handleUnlockableNodes: (nodeId: number) => {},
+    handleUnlockableNodes: (action: RemainingPointsActionType, nodeId: number) => {},
 });
 
 interface TalentTreeProps {
@@ -108,6 +109,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                         unlockedById: node.unlockedById,
                         unlocksId: node.unlocksId,
                         pointsSpent: 0,
+                        maxPoints: node.ranksNumber,
                     };
                 }
             })
@@ -116,11 +118,12 @@ export const TalentTree: FC<TalentTreeProps> = ({
     }, []);
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
     console.log(JSON.stringify(unlockableNodes));
-    const handleUnlockableNodes = (nodeId: number) => {
+    const handleUnlockableNodes = (action: RemainingPointsActionType, nodeId: number) => {
+        const numberToAdd = action === "lvlUp" ? 1 : -1;
         setUnlockableNodes((nodes) =>
             nodes.map((node) => {
                 if (node?.nodeId === nodeId) {
-                    return { ...node, pointsSpent: node.pointsSpent + 1 };
+                    return { ...node, pointsSpent: node.pointsSpent + numberToAdd };
                 }
                 return node;
             })
