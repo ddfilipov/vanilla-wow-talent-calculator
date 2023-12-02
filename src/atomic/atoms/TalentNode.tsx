@@ -1,5 +1,5 @@
 "use client";
-import { FC, MouseEvent, useContext, useEffect, useRef, useState } from "react";
+import { FC, MouseEvent, useContext, useEffect, useMemo, useRef, useState } from "react";
 import styled from "styled-components";
 import { PointsLeftContext, RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
@@ -106,14 +106,20 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const remainingPoints: number = useContext(PointsLeftContext);
     const { unlockableNodes, handleUnlockableNodes } = useContext(UnlockableNodesContext);
 
+    const parentNode = useMemo(() => {
+        return unlockableNodes.find((node) => node?.unlocksId === nodeId);
+    }, [unlockableNodes, resetSignal]);
+
+    const childNode = useMemo(() => {
+        return unlockableNodes.find((node) => node?.unlockedById === nodeId);
+    }, [unlockableNodes, resetSignal]);
+
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
         if (event.type === "click" && remainingPoints > 0) {
             if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
                 if (unlockedBy || unlocksId) {
-                    console.log("parriba");
-                    const parentNode = unlockableNodes.find((node) => node?.unlocksId === nodeId);
-                    console.log("parentNodeparentNodeparentNodeparentNode:", parentNode);
+                    // const parentNode = unlockableNodes.find((node) => node?.unlocksId === nodeId);
                     if (parentNode && parentNode?.pointsSpent < parentNode?.maxPoints) {
                         return;
                     }
@@ -123,10 +129,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 setCurrentPoints(currentPoints + 1);
             }
         } else if (event.type === "contextmenu") {
-            console.log("pabajo");
             if (currentPoints > 0 && pointsNeededToUnluck < pointsSpentOnTree) {
-                const childNode = unlockableNodes.find((node) => node?.unlockedById === nodeId);
-                console.log("childNodechildNodechildNodechildNodechildNode:", childNode);
+                // const childNode = unlockableNodes.find((node) => node?.unlockedById === nodeId);
                 if (unlockedBy || unlocksId) {
                     if (childNode && childNode?.pointsSpent > 0) {
                         return;
@@ -153,7 +157,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 $talentRow={talentRow}
                 $talentColumn={talentColumn}
                 $cappedNode={currentPoints === maxPoints}
-                $grayed={pointsSpentOnTree < pointsNeededToUnluck || (remainingPoints === 0 && currentPoints === 0)}
+                $grayed={
+                    pointsSpentOnTree < pointsNeededToUnluck ||
+                    (remainingPoints === 0 && currentPoints === 0) ||
+                    ((parentNode && (parentNode?.pointsSpent < parentNode?.maxPoints ?? false)) ?? false)
+                }
                 $remainingPoints={remainingPoints}
                 $currentPoints={currentPoints}
                 onMouseEnter={handleOnMouseEnter}
@@ -164,11 +172,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     onClick={handleClick}
                     onContextMenu={handleClick}
                 />
-                <div style={{ position: "absolute", color: "yellow", zIndex: "333" }}>
+                {/* <div style={{ position: "absolute", color: "yellow", zIndex: "333" }}>
                     <div style={{ color: "yellow", fontSize: "10px" }}>nodeId:{nodeId}</div>
                     <div style={{ color: "red", fontSize: "10px" }}>unlocksId:{unlocksId}</div>
                     <div style={{ color: "orange", fontSize: "10px" }}>unlockedBy:{unlockedBy}</div>
-                </div>
+                </div> */}
                 {remainingPoints > 0 || currentPoints > 0 ? (
                     <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
                 ) : null}
