@@ -106,10 +106,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const remainingPoints: number = useContext(PointsLeftContext);
     const { unlockableNodes, handleUnlockableNodes } = useContext(UnlockableNodesContext);
 
-    if (unlockedBy || unlocksId) {
-        const [currentPoints2, setCurrentPoints2] = useState<number>(0);
-    }
-
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
         if (event.type === "click" && remainingPoints > 0) {
