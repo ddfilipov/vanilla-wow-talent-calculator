@@ -22,10 +22,13 @@ const Container = styled.div<IContainer>`
     border-radius: 0.3rem;
     z-index: 1;
     span {
-        /* color: var(--uncapped-node-color); */
         position: relative;
         font-size: 0.7rem;
         right: 1px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 `;
 
