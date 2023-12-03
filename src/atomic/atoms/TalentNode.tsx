@@ -122,8 +122,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     if (parentNode && parentNode?.pointsSpent < parentNode?.maxPoints) {
                         return;
                     }
-                    handleUnlockableNodes("lvlUp", nodeId);
                 }
+                handleUnlockableNodes("lvlUp", nodeId);
                 handleRemainingPoints("lvlUp", specIndex);
                 setCurrentPoints(currentPoints + 1);
             }
@@ -133,8 +133,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     if (childNode && childNode?.pointsSpent > 0) {
                         return;
                     }
-                    handleUnlockableNodes("lvlDown", nodeId);
                 }
+                handleUnlockableNodes("lvlDown", nodeId);
                 handleRemainingPoints("lvlDown", specIndex);
                 setCurrentPoints(currentPoints - 1);
             }

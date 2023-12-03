@@ -103,20 +103,20 @@ export const TalentTree: FC<TalentTreeProps> = ({
     const defaultUnlockableNodes: (IUnlockableNodes | undefined)[] = useMemo(() => {
         const filteredNodes = specData
             .map((node) => {
-                if (node.unlockedById || node.unlocksId) {
-                    return {
-                        nodeId: node.talentId,
-                        unlockedById: node.unlockedById,
-                        unlocksId: node.unlocksId,
-                        pointsSpent: 0,
-                        maxPoints: node.ranksNumber,
-                    };
-                }
+                return {
+                    nodeId: node.talentId,
+                    unlockedById: node.unlockedById,
+                    unlocksId: node.unlocksId,
+                    pointsSpent: 0,
+                    maxPoints: node.ranksNumber,
+                    pointsNeededToUnlock: node.pointsNeededToUnlock,
+                };
             })
             .filter((node) => node);
         return filteredNodes;
     }, []);
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
+    console.log(JSON.stringify(unlockableNodes));
     const handleUnlockableNodes = (action: RemainingPointsActionType, nodeId: number) => {
         const numberToAdd = action === "lvlUp" ? 1 : -1;
         setUnlockableNodes((nodes) =>
