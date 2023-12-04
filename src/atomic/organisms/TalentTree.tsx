@@ -1,5 +1,5 @@
 "use client";
-import { FC, Fragment, createContext, useMemo, useState } from "react";
+import { FC, Fragment, createContext, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import { SpecTalent } from "@/data/classData";
 import { TalentNode } from "../atoms/TalentNode";
@@ -116,7 +116,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
         return filteredNodes;
     }, []);
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
-    console.log(JSON.stringify(unlockableNodes));
+    // console.log(JSON.stringify(unlockableNodes));
     const handleUnlockableNodes = (action: RemainingPointsActionType, nodeId: number) => {
         const numberToAdd = action === "lvlUp" ? 1 : -1;
         setUnlockableNodes((nodes) =>
@@ -127,11 +127,18 @@ export const TalentTree: FC<TalentTreeProps> = ({
                 return node;
             })
         );
-        console.log(
-            "did I find a coincidence?",
-            unlockableNodes.find((node) => node?.nodeId === nodeId)
-        );
     };
+
+    useEffect(() => {
+        // console.log(JSON.stringify(unlockableNodes));
+        const reversed = [...unlockableNodes.reverse()];
+        console.log("normal:", JSON.stringify(unlockableNodes[0]));
+        console.log("reversed:", JSON.stringify(reversed[0]));
+        // const highestMilestone = unlockableNodes.reverse().find((node) => node?.pointsSpent > 0)?.nodeId;
+        // console.log("highestMilestone:::");
+        // console.log(JSON.stringify(highestMilestone));
+        // const highrestMilestone = unlockableNodes.
+    }, [unlockableNodes]);
 
     return (
         <UnlockableNodesContext.Provider
