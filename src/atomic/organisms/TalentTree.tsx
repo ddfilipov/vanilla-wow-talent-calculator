@@ -67,9 +67,11 @@ export interface IUnlockableNodes {
 export const UnlockableNodesContext = createContext<{
     unlockableNodes: (IUnlockableNodes | undefined)[];
     handleUnlockableNodes: (action: RemainingPointsActionType, nodeId: number) => void;
+    highestMilestone: number;
 }>({
     unlockableNodes: [undefined],
     handleUnlockableNodes: (action: RemainingPointsActionType, nodeId: number) => {},
+    highestMilestone: 0,
 });
 
 interface TalentTreeProps {
@@ -94,6 +96,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     pointsSpentOnTree,
 }) => {
     const [resetCounter, setResetCounter] = useState<number>(0);
+    const [highestMilestone, setHighestMilestone] = useState<number>(0);
 
     const handleReset = () => {
         setResetCounter((prevCounter) => prevCounter + 1);
@@ -136,12 +139,17 @@ export const TalentTree: FC<TalentTreeProps> = ({
         const highestMilestone = reversedNodes.find((node) => node?.pointsSpent > 0)?.pointsNeededToUnlock;
         console.log("highestMilestone:::");
         console.log(JSON.stringify(highestMilestone));
+        setHighestMilestone(highestMilestone as number);
         // const highrestMilestone = unlockableNodes.
     }, [unlockableNodes]);
 
     return (
         <UnlockableNodesContext.Provider
-            value={{ unlockableNodes: unlockableNodes, handleUnlockableNodes: handleUnlockableNodes }}
+            value={{
+                unlockableNodes: unlockableNodes,
+                handleUnlockableNodes: handleUnlockableNodes,
+                highestMilestone: highestMilestone,
+            }}
         >
             <MainContainer>
                 <Header>
