@@ -104,7 +104,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const [currentPoints, setCurrentPoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
-    const { unlockableNodes, handleUnlockableNodes } = useContext(UnlockableNodesContext);
+    const { unlockableNodes, handleUnlockableNodes, highestMilestone } = useContext(UnlockableNodesContext);
 
     const parentNode = useMemo(() => {
         return unlockableNodes.find((node) => node?.unlocksId === nodeId);
@@ -128,7 +128,13 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 setCurrentPoints(currentPoints + 1);
             }
         } else if (event.type === "contextmenu") {
-            if (currentPoints > 0 && pointsNeededToUnluck < pointsSpentOnTree) {
+            console.log("pointsNeededToUnluck:", pointsNeededToUnluck);
+            console.log("highestMilestone:", highestMilestone);
+            if (
+                currentPoints > 0 &&
+                pointsNeededToUnluck < pointsSpentOnTree &&
+                pointsNeededToUnluck < highestMilestone + 1
+            ) {
                 if (unlockedBy || unlocksId) {
                     if (childNode && childNode?.pointsSpent > 0) {
                         return;
@@ -149,6 +155,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
         setCurrentPoints(0);
     }, [resetSignal]);
 
+    console.log("HIGHEST:", highestMilestone);
     return (
         <>
             <Container
