@@ -61,6 +61,7 @@ export interface IUnlockableNodes {
     unlocksId: number | undefined;
     pointsSpent: number;
     maxPoints: number;
+    pointsNeededToUnlock: number;
 }
 
 export const UnlockableNodesContext = createContext<{
@@ -101,7 +102,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
     };
 
     const defaultUnlockableNodes: (IUnlockableNodes | undefined)[] = useMemo(() => {
-        const filteredNodes = specData
+        const filteredNodes: IUnlockableNodes[] = specData
             .map((node) => {
                 return {
                     nodeId: node.talentId,
@@ -131,12 +132,10 @@ export const TalentTree: FC<TalentTreeProps> = ({
 
     useEffect(() => {
         // console.log(JSON.stringify(unlockableNodes));
-        const reversed = [...unlockableNodes.reverse()];
-        console.log("normal:", JSON.stringify(unlockableNodes[0]));
-        console.log("reversed:", JSON.stringify(reversed[0]));
-        // const highestMilestone = unlockableNodes.reverse().find((node) => node?.pointsSpent > 0)?.nodeId;
-        // console.log("highestMilestone:::");
-        // console.log(JSON.stringify(highestMilestone));
+        const reversedNodes = [...unlockableNodes].reverse();
+        const highestMilestone = reversedNodes.find((node) => node?.pointsSpent > 0)?.pointsNeededToUnlock;
+        console.log("highestMilestone:::");
+        console.log(JSON.stringify(highestMilestone));
         // const highrestMilestone = unlockableNodes.
     }, [unlockableNodes]);
 
