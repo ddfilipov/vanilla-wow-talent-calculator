@@ -130,10 +130,15 @@ export const TalentNode: FC<TalentNodeProps> = ({
         } else if (event.type === "contextmenu") {
             console.log("pointsNeededToUnluck:", pointsNeededToUnluck);
             console.log("highestMilestone:", highestMilestone);
+            console.log("pointsSpentOnTree:", pointsSpentOnTree);
+            console.log("pointsSpentOnTree <= highestMilestone:", pointsSpentOnTree <= highestMilestone);
+            console.log("pointsNeededToUnluck < highestMilestone + 1:", pointsNeededToUnluck < highestMilestone);
+            console.log("pointsNeededToUnluck === highestMilestone:", pointsNeededToUnluck === highestMilestone);
             if (
                 currentPoints > 0 &&
                 pointsNeededToUnluck < pointsSpentOnTree &&
-                pointsNeededToUnluck < highestMilestone + 1
+                (pointsNeededToUnluck === highestMilestone ||
+                    (pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone))
             ) {
                 if (unlockedBy || unlocksId) {
                     if (childNode && childNode?.pointsSpent > 0) {
@@ -155,7 +160,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
         setCurrentPoints(0);
     }, [resetSignal]);
 
-    console.log("HIGHEST:", highestMilestone);
     return (
         <>
             <Container
