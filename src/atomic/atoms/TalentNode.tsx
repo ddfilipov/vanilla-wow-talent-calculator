@@ -131,13 +131,21 @@ export const TalentNode: FC<TalentNodeProps> = ({
             console.log("pointsNeededToUnluck:", pointsNeededToUnluck);
             console.log("highestMilestone:", highestMilestone);
             console.log("pointsSpentOnTree:", pointsSpentOnTree);
-            console.log("pointsSpentOnTree <= highestMilestone:", pointsSpentOnTree <= highestMilestone);
-            console.log("pointsNeededToUnluck < highestMilestone + 1:", pointsNeededToUnluck < highestMilestone);
             console.log("pointsNeededToUnluck === highestMilestone:", pointsNeededToUnluck === highestMilestone);
+            console.log(
+                "pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone:",
+                pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone
+            );
+            console.log(
+                "pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone:",
+                pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone
+            );
             if (
                 currentPoints > 0 &&
                 pointsNeededToUnluck < pointsSpentOnTree &&
                 (pointsNeededToUnluck === highestMilestone ||
+                    // (pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone) ||
+                    //TODO: do something with a +5 on pointsNeedetToUnlock??
                     (pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone))
             ) {
                 if (unlockedBy || unlocksId) {

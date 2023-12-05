@@ -137,8 +137,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
         // console.log(JSON.stringify(unlockableNodes));
         const reversedNodes = [...unlockableNodes].reverse();
         const highestMilestone = reversedNodes.find((node) => node?.pointsSpent > 0)?.pointsNeededToUnlock;
-        console.log("highestMilestone:::");
-        console.log(JSON.stringify(highestMilestone));
         setHighestMilestone(highestMilestone as number);
         // const highrestMilestone = unlockableNodes.
     }, [unlockableNodes]);
