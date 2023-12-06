@@ -101,7 +101,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     unlocksId,
     unlockedBy,
 }) => {
-    const [currentPoints, setCurrentPoints] = useState<number>(0);
+    const [currentNodePoints, setCurrentNodePoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
     const remainingPoints: number = useContext(PointsLeftContext);
     const { unlockableNodes, handleUnlockableNodes, highestMilestone } = useContext(UnlockableNodesContext);
@@ -117,7 +117,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
         if (event.type === "click" && remainingPoints > 0) {
-            if (currentPoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
+            if (currentNodePoints < maxPoints && pointsSpentOnTree >= pointsNeededToUnluck) {
                 if (unlockedBy || unlocksId) {
                     if (parentNode && parentNode?.pointsSpent < parentNode?.maxPoints) {
                         return;
@@ -125,7 +125,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 }
                 handleUnlockableNodes("lvlUp", nodeId);
                 handleRemainingPoints("lvlUp", specIndex);
-                setCurrentPoints(currentPoints + 1);
+                setCurrentNodePoints(currentNodePoints + 1);
             }
         } else if (event.type === "contextmenu") {
             console.log("pointsNeededToUnluck:", pointsNeededToUnluck);
@@ -141,8 +141,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone
             );
             if (
-                currentPoints > 0 &&
-                pointsNeededToUnluck < pointsSpentOnTree &&
+                currentNodePoints > 0 && // can't lvl down unless I've put at least 1 point on this node
+                pointsNeededToUnluck < pointsSpentOnTree && // can't lvl down unless I've spent one point on this tree
                 (pointsNeededToUnluck === highestMilestone ||
                     // (pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone) ||
                     //TODO: do something with a +5 on pointsNeedetToUnlock??
@@ -155,7 +155,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 }
                 handleUnlockableNodes("lvlDown", nodeId);
                 handleRemainingPoints("lvlDown", specIndex);
-                setCurrentPoints(currentPoints - 1);
+                setCurrentNodePoints(currentNodePoints - 1);
             }
         }
     };
@@ -165,7 +165,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     };
 
     useEffect(() => {
-        setCurrentPoints(0);
+        setCurrentNodePoints(0);
     }, [resetSignal]);
 
     return (
@@ -173,14 +173,14 @@ export const TalentNode: FC<TalentNodeProps> = ({
             <Container
                 $talentRow={talentRow}
                 $talentColumn={talentColumn}
-                $cappedNode={currentPoints === maxPoints}
+                $cappedNode={currentNodePoints === maxPoints}
                 $grayed={
                     pointsSpentOnTree < pointsNeededToUnluck ||
-                    (remainingPoints === 0 && currentPoints === 0) ||
+                    (remainingPoints === 0 && currentNodePoints === 0) ||
                     ((parentNode && (parentNode?.pointsSpent < parentNode?.maxPoints ?? false)) ?? false)
                 }
                 $remainingPoints={remainingPoints}
-                $currentPoints={currentPoints}
+                $currentPoints={currentNodePoints}
                 onMouseEnter={handleOnMouseEnter}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -194,16 +194,19 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     <div style={{ color: "red", fontSize: "10px" }}>unlocksId:{unlocksId}</div>
                     <div style={{ color: "orange", fontSize: "10px" }}>unlockedBy:{unlockedBy}</div>
                 </div> */}
-                {remainingPoints > 0 || currentPoints > 0 ? (
-                    <TalentNodePoints currentPoints={currentPoints} maxPoints={maxPoints} />
+                {remainingPoints > 0 || currentNodePoints > 0 ? (
+                    <TalentNodePoints currentPoints={currentNodePoints} maxPoints={maxPoints} />
                 ) : null}
                 {isHovered ? (
                     <TalentTooltip
-                        currentPoints={currentPoints}
+                        currentPoints={currentNodePoints}
                         maxPoints={maxPoints}
-                        isNodeCapped={currentPoints === maxPoints}
-                        isNodeUntouched={currentPoints === 0}
-                        ranksDescription={[ranksDescription[currentPoints - 1], ranksDescription[currentPoints]]}
+                        isNodeCapped={currentNodePoints === maxPoints}
+                        isNodeUntouched={currentNodePoints === 0}
+                        ranksDescription={[
+                            ranksDescription[currentNodePoints - 1],
+                            ranksDescription[currentNodePoints],
+                        ]}
                         talentName={talentName}
                     />
                 ) : null}
