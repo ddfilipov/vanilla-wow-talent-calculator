@@ -142,16 +142,23 @@ export const TalentNode: FC<TalentNodeProps> = ({
             );
             if (
                 currentNodePoints > 0 && // can't lvl down unless I've put at least 1 point on this node
-                pointsNeededToUnluck < pointsSpentOnTree && // can't lvl down unless I've spent one point on this tree
-                (pointsNeededToUnluck === highestMilestone ||
-                    // (pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone) ||
-                    //TODO: do something with a +5 on pointsNeedetToUnlock??
-                    (pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone))
+                pointsNeededToUnluck < pointsSpentOnTree // can't lvl down unless I've spent one point on this tree
+                // can't lvl down a previous tier than the current max tier I've spent a point into,
+                // (eg. spent pts on tier 3, I can't lvl down tier 2, or 1) unless...
             ) {
                 if (unlockedBy || unlocksId) {
                     if (childNode && childNode?.pointsSpent > 0) {
                         return;
                     }
+                }
+                if (pointsNeededToUnluck < highestMilestone && pointsSpentOnTree <= highestMilestone + 1) {
+                    console.log("1111");
+                    return;
+                }
+
+                if (pointsNeededToUnluck < highestMilestone) {
+                    console.log("2222");
+                    return;
                 }
                 handleUnlockableNodes("lvlDown", nodeId);
                 handleRemainingPoints("lvlDown", specIndex);
