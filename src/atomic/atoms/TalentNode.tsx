@@ -128,24 +128,25 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 setCurrentNodePoints(currentNodePoints + 1);
             }
         } else if (event.type === "contextmenu") {
-            console.log("pointsNeededToUnluck:", pointsNeededToUnluck);
-            console.log("highestMilestone:", highestMilestone);
-            console.log("pointsSpentOnTree:", pointsSpentOnTree);
-            console.log("pointsNeededToUnluck === highestMilestone:", pointsNeededToUnluck === highestMilestone);
-            console.log(
-                "pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone:",
-                pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone
-            );
-            console.log(
-                "pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone:",
-                pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone
-            );
+            // console.log("pointsNeededToUnluck:", pointsNeededToUnluck);
+            // console.log("highestMilestone:", highestMilestone);
+            // console.log("pointsSpentOnTree:", pointsSpentOnTree);
+            // console.log("pointsNeededToUnluck === highestMilestone:", pointsNeededToUnluck === highestMilestone);
+            // console.log(
+            //     "pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone:",
+            //     pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone
+            // );
+            // console.log(
+            //     "pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone:",
+            //     pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone
+            // );
             if (
                 currentNodePoints > 0 && // can't lvl down unless I've put at least 1 point on this node
                 pointsNeededToUnluck < pointsSpentOnTree // can't lvl down unless I've spent one point on this tree
                 // can't lvl down a previous tier than the current max tier I've spent a point into,
                 // (eg. spent pts on tier 3, I can't lvl down tier 2, or 1) unless...
             ) {
+                console.log(JSON.stringify(unlockableNodes));
                 if (unlockedBy || unlocksId) {
                     if (childNode && childNode?.pointsSpent > 0) {
                         return;
@@ -156,10 +157,10 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     return;
                 }
 
-                if (pointsNeededToUnluck < highestMilestone) {
-                    console.log("2222");
-                    return;
-                }
+                // if (pointsNeededToUnluck < highestMilestone) {
+                //     console.log("2222");
+                //     return;
+                // }
                 handleUnlockableNodes("lvlDown", nodeId);
                 handleRemainingPoints("lvlDown", specIndex);
                 setCurrentNodePoints(currentNodePoints - 1);
