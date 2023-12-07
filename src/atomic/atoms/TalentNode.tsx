@@ -5,7 +5,7 @@ import { PointsLeftContext, RemainingPointsActionType } from "../organisms/Talen
 import { TalentNodePoints } from "./TalentNodePoints";
 import { TalentTooltip } from "./TalentTooltip";
 import { IUnlockableNodes, UnlockableNodesContext } from "../organisms/TalentTree";
-import { isThisNodeLvlDowneable } from "@/utils/sharedFunctions";
+import { nodeCantLvlDown } from "@/utils/sharedFunctions";
 
 const Container = styled.div<IStyledContainer>`
     position: relative;
@@ -133,7 +133,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 currentNodePoints > 0 && // can't lvl down unless I've put at least 1 point on this node
                 pointsNeededToUnluck < pointsSpentOnTree // can't lvl down unless I've spent one point on this tree
             ) {
-                console.log(JSON.stringify(unlockableNodes));
                 if (unlockedBy || unlocksId) {
                     if (childNode && childNode?.pointsSpent > 0) {
                         return;
@@ -141,7 +140,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 }
 
                 if (pointsNeededToUnluck < highestMilestone) {
-                    const test = isThisNodeLvlDowneable(unlockableNodes as IUnlockableNodes[], pointsNeededToUnluck);
+                    const test = nodeCantLvlDown(
+                        unlockableNodes as IUnlockableNodes[],
+                        pointsNeededToUnluck,
+                        highestMilestone
+                    );
                     if (test) {
                         return;
                     }
