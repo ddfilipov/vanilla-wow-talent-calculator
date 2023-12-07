@@ -5,7 +5,7 @@ import { PointsLeftContext, RemainingPointsActionType } from "../organisms/Talen
 import { TalentNodePoints } from "./TalentNodePoints";
 import { TalentTooltip } from "./TalentTooltip";
 import { IUnlockableNodes, UnlockableNodesContext } from "../organisms/TalentTree";
-import { getSumOfSameTierNodes, isThisNodeLvlDowneable } from "@/utils/sharedFunctions";
+import { isThisNodeLvlDowneable } from "@/utils/sharedFunctions";
 
 const Container = styled.div<IStyledContainer>`
     position: relative;
@@ -129,23 +129,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 setCurrentNodePoints(currentNodePoints + 1);
             }
         } else if (event.type === "contextmenu") {
-            // console.log("pointsNeededToUnluck:", pointsNeededToUnluck);
-            // console.log("highestMilestone:", highestMilestone);
-            // console.log("pointsSpentOnTree:", pointsSpentOnTree);
-            // console.log("pointsNeededToUnluck === highestMilestone:", pointsNeededToUnluck === highestMilestone);
-            // console.log(
-            //     "pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone:",
-            //     pointsSpentOnTree > highestMilestone && pointsNeededToUnluck < highestMilestone
-            // );
-            // console.log(
-            //     "pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone:",
-            //     pointsSpentOnTree <= highestMilestone && pointsNeededToUnluck < highestMilestone
-            // );
             if (
                 currentNodePoints > 0 && // can't lvl down unless I've put at least 1 point on this node
                 pointsNeededToUnluck < pointsSpentOnTree // can't lvl down unless I've spent one point on this tree
-                // can't lvl down a previous tier than the current max tier I've spent a point into,
-                // (eg. spent pts on tier 3, I can't lvl down tier 2, or 1) unless...
             ) {
                 console.log(JSON.stringify(unlockableNodes));
                 if (unlockedBy || unlocksId) {
@@ -153,10 +139,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
                         return;
                     }
                 }
-                // if (pointsNeededToUnluck < highestMilestone && pointsSpentOnTree <= highestMilestone + 1) {
-                //     console.log("1111");
-                //     return;
-                // }
 
                 if (pointsNeededToUnluck < highestMilestone) {
                     const test = isThisNodeLvlDowneable(unlockableNodes as IUnlockableNodes[], pointsNeededToUnluck);
