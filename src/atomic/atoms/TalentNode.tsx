@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { PointsLeftContext, RemainingPointsActionType } from "../organisms/TalentCalculator";
 import { TalentNodePoints } from "./TalentNodePoints";
 import { TalentTooltip } from "./TalentTooltip";
-import { UnlockableNodesContext } from "../organisms/TalentTree";
+import { IUnlockableNodes, UnlockableNodesContext } from "../organisms/TalentTree";
+import { getSumOfSameTierNodes, isThisNodeLvlDowneable } from "@/utils/sharedFunctions";
 
 const Container = styled.div<IStyledContainer>`
     position: relative;
@@ -152,15 +153,17 @@ export const TalentNode: FC<TalentNodeProps> = ({
                         return;
                     }
                 }
-                if (pointsNeededToUnluck < highestMilestone && pointsSpentOnTree <= highestMilestone + 1) {
-                    console.log("1111");
-                    return;
-                }
-
-                // if (pointsNeededToUnluck < highestMilestone) {
-                //     console.log("2222");
+                // if (pointsNeededToUnluck < highestMilestone && pointsSpentOnTree <= highestMilestone + 1) {
+                //     console.log("1111");
                 //     return;
                 // }
+
+                if (pointsNeededToUnluck < highestMilestone) {
+                    const test = isThisNodeLvlDowneable(unlockableNodes as IUnlockableNodes[], pointsNeededToUnluck);
+                    if (test) {
+                        return;
+                    }
+                }
                 handleUnlockableNodes("lvlDown", nodeId);
                 handleRemainingPoints("lvlDown", specIndex);
                 setCurrentNodePoints(currentNodePoints - 1);
