@@ -9,13 +9,12 @@ export function nodeCantLvlDown(
     console.log("pointsNeededToUnlock:", pointsNeededToUnlock);
     console.log("highestMilestone:", highestMilestone);
     console.log("sum:", sum);
-    if (sum <= pointsNeededToUnlock + 5) {
+    if (sum <= highestMilestone) {
         console.log("TRUE, we can't lvl down");
-        
+
         return true;
     }
-    if (""){
-        
+    if ("") {
     }
     console.log("FALSE, we can lvl down");
     return false;
