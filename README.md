@@ -7,10 +7,10 @@ My own approach of a World of Warcraft talent calculator using nextjs13. This pr
 - Nextjs 13
 
 ## TODO list:
-- Turn the project into a monorepo
-- Add api calls (backend) with express (TBD)
-- Add database
-- Add test cases
+- [ ] Turn the project into a monorepo
+- [ ] Add api calls (backend) with express (TBD)
+- [ ] Add database
+- [ ] Add test cases
 
 
 ## How to run the project
