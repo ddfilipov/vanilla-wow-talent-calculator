@@ -120,7 +120,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
         return filteredNodes;
     }, []);
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
-    // console.log(JSON.stringify(unlockableNodes));
     const handleUnlockableNodes = (action: RemainingPointsActionType, nodeId: number) => {
         const numberToAdd = action === "lvlUp" ? 1 : -1;
         setUnlockableNodes((nodes) =>
@@ -134,7 +133,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
     };
 
     useEffect(() => {
-        // console.log(JSON.stringify(unlockableNodes));
         const reversedNodes = [...unlockableNodes].reverse();
         const highestMilestone = reversedNodes.find(
             (node) => node?.pointsSpent && node?.pointsSpent > 0
