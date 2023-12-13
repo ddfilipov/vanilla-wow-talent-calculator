@@ -185,11 +185,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     onClick={handleClick}
                     onContextMenu={handleClick}
                 />
-                {/* <div style={{ position: "absolute", color: "yellow", zIndex: "333" }}>
-                    <div style={{ color: "yellow", fontSize: "10px" }}>nodeId:{nodeId}</div>
-                    <div style={{ color: "red", fontSize: "10px" }}>unlocksId:{unlocksId}</div>
-                    <div style={{ color: "orange", fontSize: "10px" }}>unlockedBy:{unlockedBy}</div>
-                </div> */}
                 {remainingPoints > 0 || currentNodePoints > 0 ? (
                     <TalentNodePoints currentPoints={currentNodePoints} maxPoints={maxPoints} />
                 ) : null}
