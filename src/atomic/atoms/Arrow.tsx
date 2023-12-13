@@ -28,19 +28,20 @@ const StyledTestArrow = styled.div<IArrow>`
     /* width: 100%; width of the rectangle part */
     /* height: 50px; height of the rectangle part */
 
-    width: ${(props) => (props.$isVerticalArrow ? "12%" : "calc(85% - 38px)")};
-    height: ${(props) => (props.$isVerticalArrow ? "calc(85% - 38px)" : "12%")};
+    width: ${(props) => (props.$isVerticalArrow ? "12%" : "calc(72% - 38px)")};
+    height: ${(props) => (props.$isVerticalArrow ? "calc(72% - 38px)" : "12%")};
 `;
 const ArrowHead = styled.div<{ $isVerticalArrow: boolean }>`
     position: absolute;
-    right: -10px; /* position the arrowhead */
+    right: ${(props) => (props.$isVerticalArrow ? "-5px" : "-10px")}; /* position the arrowhead */
     top: ${(props) => (props.$isVerticalArrow ? "100%" : "50%")};
     width: 0;
     height: 0;
-    border-left: 10px solid #ffd100; /* size and color of the arrowhead */
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    transform: translateY(-50%); /* center the arrowhead */
+    border-top: ${(props) => (props.$isVerticalArrow ? "10px solid #ffd100" : "10px solid transparent")};
+    border-right: ${(props) => (props.$isVerticalArrow ? "9px solid transparent" : "none")};
+    border-bottom: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : "10px solid transparent")};
+    border-left: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : "10px solid #ffd100")};
+    transform: ${(props) => (props.$isVerticalArrow ? "inherit" : "translateY(-50%)")};
 `;
 
 export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, endingColumn }) => {
