@@ -57,7 +57,7 @@ export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, 
             $endingColumn={endingColumn}
             $isVerticalArrow={isVericalArrow}
         >
-            <ArrowHead $isVerticalArrow={isVericalArrow} />
+            {/* <ArrowHead $isVerticalArrow={isVericalArrow} /> */}
         </StyledTestArrow>
     );
 };
