@@ -25,11 +25,12 @@ const StyledTestArrow = styled.div<IArrow>`
     background-color: #ffd100;
     z-index: 4;
     position: relative;
+    align-self: center;
     /* width: 100%; width of the rectangle part */
     /* height: 50px; height of the rectangle part */
 
-    width: ${(props) => (props.$isVerticalArrow ? "12%" : "calc(72% - 38px)")};
-    height: ${(props) => (props.$isVerticalArrow ? "calc(72% - 38px)" : "12%")};
+    width: ${(props) => (props.$isVerticalArrow ? "12%" : "90%")};
+    height: ${(props) => (props.$isVerticalArrow ? "90%" : "12%")};
 `;
 const ArrowHead = styled.div<{ $isVerticalArrow: boolean }>`
     position: absolute;
