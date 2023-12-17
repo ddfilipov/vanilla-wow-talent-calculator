@@ -61,7 +61,7 @@ export const Arrow: FC<ArrowProps> = ({
     startingColumn,
     endingColumn,
     arrowIndex,
-    hasArrowhead,
+    hasArrowhead = false,
 }) => {
     const isVericalArrow = startingColumn - endingColumn === 0;
     return (
