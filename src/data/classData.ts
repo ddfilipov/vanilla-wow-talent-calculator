@@ -910,6 +910,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "INV_Misc_MonsterClaw_04",
                         pointsNeededToUnlock: 15,
+                        unlocks: [{ row: 6, column: 3 }],
                     },
                     {
                         talentName: "Spirit Bond",
@@ -935,6 +936,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Ability_Devour",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Bestial Discipline",
@@ -1047,6 +1049,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Ability_SearingArrow",
                         pointsNeededToUnlock: 5,
+                        unlocks: [{ row: 4, column: 3 }],
                     },
                     {
                         talentName: "Aimed Shot",
@@ -1145,6 +1148,8 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Ability_UpgradeMoonGlaive",
                         pointsNeededToUnlock: 20,
+
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Improved Scorpid Sting",
@@ -1322,6 +1327,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Ability_Whirlwind",
                         pointsNeededToUnlock: 10,
+                        unlocks: [{ row: 5, column: 3 }],
                     },
                     {
                         talentName: "Trap Mastery",
@@ -1376,6 +1382,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Holy_BlessingOfStamina",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Counterattack",
