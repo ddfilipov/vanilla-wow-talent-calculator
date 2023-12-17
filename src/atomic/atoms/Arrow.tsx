@@ -60,8 +60,6 @@ export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, 
             $arrowIndex={arrowIndex}
         >
             {arrowIndex !== 1 ? <ArrowHead $isVerticalArrow={isVericalArrow} $arrowIndex={arrowIndex} /> : null}
-
-            {arrowIndex}
         </StyledTestArrow>
     );
 };
