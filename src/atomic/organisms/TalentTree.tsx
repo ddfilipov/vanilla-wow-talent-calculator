@@ -192,6 +192,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                   endingRow={arrow.row}
                                                   startingColumn={node.talentcolumn}
                                                   endingColumn={arrow.column}
+                                                  arrowIndex={index}
                                                   key={index}
                                               />
                                           ) : (
@@ -200,6 +201,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                   endingRow={arrow.row}
                                                   startingColumn={node.unlocks?.[1].column as number}
                                                   endingColumn={arrow.column}
+                                                  arrowIndex={index}
                                                   key={index}
                                               />
                                           );

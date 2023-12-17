@@ -7,6 +7,7 @@ export interface ArrowProps {
     endingRow: number;
     startingColumn: number;
     endingColumn: number;
+    arrowIndex: number;
 }
 
 interface IArrow {
@@ -15,6 +16,7 @@ interface IArrow {
     $startingColumn: number;
     $endingColumn: number;
     $isVerticalArrow: boolean;
+    $arrowIndex: number;
 }
 
 const StyledTestArrow = styled.div<IArrow>`
@@ -26,13 +28,12 @@ const StyledTestArrow = styled.div<IArrow>`
     z-index: 4;
     position: relative;
     align-self: center;
-    /* width: 100%; width of the rectangle part */
     bottom: ${(props) => (props.$isVerticalArrow ? "5px" : "0")};
     right: ${(props) => (props.$isVerticalArrow ? "0" : "5px")};
     width: ${(props) => (props.$isVerticalArrow ? "12%" : "calc(100% - 102px)")};
     height: ${(props) => (props.$isVerticalArrow ? "calc(100% - 102px)" : "12%")};
 `;
-const ArrowHead = styled.div<{ $isVerticalArrow: boolean }>`
+const ArrowHead = styled.div<{ $isVerticalArrow: boolean; $arrowIndex: number }>`
     position: absolute;
     right: ${(props) => (props.$isVerticalArrow ? "-5px" : "-10px")}; /* position the arrowhead */
     top: ${(props) => (props.$isVerticalArrow ? "100% " : "50%")};
@@ -45,10 +46,8 @@ const ArrowHead = styled.div<{ $isVerticalArrow: boolean }>`
     transform: ${(props) => (props.$isVerticalArrow ? "inherit" : "translateY(-50%)")};
 `;
 
-export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, endingColumn }) => {
+export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, endingColumn, arrowIndex }) => {
     const isVericalArrow = startingColumn - endingColumn === 0;
-    console.log("startingColumn:", startingColumn);
-    console.log("endingColumn:", endingColumn);
     return (
         <StyledTestArrow
             $startingRow={startingRow}
@@ -56,8 +55,11 @@ export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, 
             $startingColumn={startingColumn}
             $endingColumn={endingColumn}
             $isVerticalArrow={isVericalArrow}
+            $arrowIndex={arrowIndex}
         >
-            <ArrowHead $isVerticalArrow={isVericalArrow} />
+            {arrowIndex !== 1 ? <ArrowHead $isVerticalArrow={isVericalArrow} $arrowIndex={arrowIndex} /> : null}
+            
+            {arrowIndex}
         </StyledTestArrow>
     );
 };
