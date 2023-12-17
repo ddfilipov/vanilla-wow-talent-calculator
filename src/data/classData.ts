@@ -1565,6 +1565,8 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Spell_Arcane_ArcaneResilience",
                         pointsNeededToUnlock: 10,
+
+                        unlocks: [{ row: 5, column: 3 }],
                     },
                     {
                         talentName: "Improved Mana Shield",
@@ -1780,6 +1782,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Spell_Fire_Fireball02",
                         pointsNeededToUnlock: 10,
+                        unlocks: [{ row: 5, column: 3 }],
                     },
                     {
                         talentName: "Burning Soul",
@@ -1848,6 +1851,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Nature_WispHeal",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Blast Wave",
@@ -1981,6 +1985,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Spell_Frost_FreezingBreath",
                         pointsNeededToUnlock: 5,
+                        unlocks: [{ row: 4, column: 3 }],
                     },
                     {
                         talentName: "Permafrost",
@@ -2090,6 +2095,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Frost_Frost",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Improved Cone of Cold",

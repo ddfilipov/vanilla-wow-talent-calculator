@@ -25,7 +25,7 @@ const StyledTestArrow = styled.div<IArrow>`
     grid-column-start: ${(props) => props.$startingColumn};
     grid-column-end: ${(props) => props.$endingColumn + 1};
     background-color: #ffd100;
-    z-index: 4;
+    z-index: 2;
     position: relative;
     align-self: center;
     bottom: ${(props) => (props.$isVerticalArrow ? (props.$arrowIndex === 2 ? "13px" : "5px") : "0")};
