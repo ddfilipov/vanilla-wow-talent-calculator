@@ -5725,6 +5725,7 @@ export const classData: ClassData[] = [
                         talentRow: 1,
                         talentIcon: "Ability_Gouge",
                         pointsNeededToUnlock: 0,
+                        unlocks: [{ row: 3, column: 3 }],
                     },
                     {
                         talentName: "Improved Charge",
@@ -5754,6 +5755,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Spell_Nature_EnchantArmor",
                         pointsNeededToUnlock: 5,
+                        unlocks: [{ row: 3, column: 2 }],
                     },
                     {
                         talentName: "Improved Thunder Clap",
@@ -5807,6 +5809,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Ability_BackStab",
                         pointsNeededToUnlock: 10,
+                        unlocks: [{ row: 4, column: 3 }],
                     },
                     {
                         talentName: "Two-Handed Weapon Specialization",
@@ -5862,6 +5865,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Ability_Rogue_SliceDice",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Mace Specialization",
@@ -6108,6 +6112,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Spell_Shadow_UnholyFrenzy",
                         pointsNeededToUnlock: 15,
+                        unlocks: [{ row: 6, column: 3 }],
                     },
                     {
                         talentName: "Improved Slam",
@@ -6136,6 +6141,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_DeathPact",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Improved Intercept",
@@ -6213,6 +6219,7 @@ export const classData: ClassData[] = [
                         talentRow: 1,
                         talentIcon: "INV_Shield_06",
                         pointsNeededToUnlock: 0,
+                        unlocks: [{ row: 3, column: 2 }],
                     },
                     {
                         talentName: "Anticipation",
@@ -6394,6 +6401,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Ability_ThunderBolt",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Improved Shield Bash",
