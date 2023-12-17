@@ -27,15 +27,15 @@ const StyledTestArrow = styled.div<IArrow>`
     position: relative;
     align-self: center;
     /* width: 100%; width of the rectangle part */
-    /* height: 50px; height of the rectangle part */
-
-    width: ${(props) => (props.$isVerticalArrow ? "12%" : "90%")};
-    height: ${(props) => (props.$isVerticalArrow ? "90%" : "12%")};
+    bottom: ${(props) => (props.$isVerticalArrow ? "5px" : "0")};
+    right: ${(props) => (props.$isVerticalArrow ? "0" : "5px")};
+    width: ${(props) => (props.$isVerticalArrow ? "12%" : "calc(100% - 102px)")};
+    height: ${(props) => (props.$isVerticalArrow ? "calc(100% - 102px)" : "12%")};
 `;
 const ArrowHead = styled.div<{ $isVerticalArrow: boolean }>`
     position: absolute;
     right: ${(props) => (props.$isVerticalArrow ? "-5px" : "-10px")}; /* position the arrowhead */
-    top: ${(props) => (props.$isVerticalArrow ? "100%" : "50%")};
+    top: ${(props) => (props.$isVerticalArrow ? "100% " : "50%")};
     width: 0;
     height: 0;
     border-top: ${(props) => (props.$isVerticalArrow ? "10px solid #ffd100" : "10px solid transparent")};
@@ -57,7 +57,7 @@ export const Arrow: FC<ArrowProps> = ({ startingRow, endingRow, startingColumn, 
             $endingColumn={endingColumn}
             $isVerticalArrow={isVericalArrow}
         >
-            {/* <ArrowHead $isVerticalArrow={isVericalArrow} /> */}
+            <ArrowHead $isVerticalArrow={isVericalArrow} />
         </StyledTestArrow>
     );
 };
