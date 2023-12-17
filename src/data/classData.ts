@@ -2925,6 +2925,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Spell_Nature_Sleep",
                         pointsNeededToUnlock: 10,
+                        unlocks: [{ row: 5, column: 3 }],
                     },
                     {
                         talentName: "Improved Inner Fire",
@@ -2984,6 +2985,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Nature_EnchantArmor",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Divine Spirit",
@@ -3104,6 +3106,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Spell_Holy_SealOfWrath",
                         pointsNeededToUnlock: 5,
+                        unlocks: [{ row: 4, column: 3 }],
                     },
                     {
                         talentName: "Holy Nova",
@@ -3209,6 +3212,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "INV_Enchant_EssenceEternalLarge",
                         pointsNeededToUnlock: 20,
+                        unlocks: [{ row: 7, column: 2 }],
                     },
                     {
                         talentName: "Spiritual Guidance",
@@ -3348,6 +3352,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Spell_Shadow_PsychicScream",
                         pointsNeededToUnlock: 10,
+                        unlocks: [{ row: 5, column: 1 }],
                     },
                     {
                         talentName: "Improved Mind Blast",
@@ -3441,6 +3446,10 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_UnsummonBuilding",
                         pointsNeededToUnlock: 20,
+                        unlocks: [
+                            { row: 7, column: 2 },
+                            { row: 5, column: 3 },
+                        ],
                     },
                     {
                         talentName: "Improved Vampiric Embrace",
@@ -4355,6 +4364,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Spell_Nature_CallStorm",
                         pointsNeededToUnlock: 10,
+                        unlocks:[{ row: 6, column: 3 }]
                     },
                     {
                         talentName: "Improved Fire Totems",
@@ -4421,6 +4431,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Fire_Volcano",
                         pointsNeededToUnlock: 20,
+                        unlocks:[{ row: 7, column: 2 }]
                     },
                     {
                         talentName: "Lightning Mastery",
@@ -4517,6 +4528,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Ability_ThunderBolt",
                         pointsNeededToUnlock: 5,
+                        unlocks:[{ row: 4, column: 2 }]
                     },
                     {
                         talentName: "Improved Ghost Wolf",
@@ -4642,6 +4654,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Fire_FlameTounge",
                         pointsNeededToUnlock: 20,
+                        unlocks:[{ row: 7, column: 2 }]
                     },
                     {
                         talentName: "Parry",
@@ -4834,6 +4847,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Spell_Nature_ManaRegenTotem",
                         pointsNeededToUnlock: 15,
+                        unlocks:[{ row: 7, column: 2 }]
                     },
                     {
                         talentName: "Tidal Mastery",
