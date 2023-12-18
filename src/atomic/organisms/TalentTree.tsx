@@ -223,7 +223,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                   );
                                               });
                                           }
-                                          return index <= 1 ? (
+                                          return (
                                               <Arrow
                                                   startingRow={node.talentRow}
                                                   endingRow={arrowArray.row}
@@ -232,15 +232,6 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                   arrowIndex={index}
                                                   key={index}
                                                   hasArrowhead={node?.unlocks?.length === 2}
-                                              />
-                                          ) : (
-                                              <Arrow
-                                                  startingRow={node.unlocks?.[1].row as number}
-                                                  endingRow={arrowArray.row}
-                                                  startingColumn={node.unlocks?.[1].column as number}
-                                                  endingColumn={arrowArray.column}
-                                                  arrowIndex={index}
-                                                  key={index}
                                               />
                                           );
                                       })

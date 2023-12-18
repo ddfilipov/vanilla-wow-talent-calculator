@@ -26,7 +26,7 @@ export interface SpecTalent {
     talentcolumn: number;
     talentRow: number;
     talentIcon: string;
-    unlocks?: ICoords[];
+    unlocks?: ICoords[] | ICoords[][];
     unlocksId?: number;
     unlockedById?: number;
     pointsNeededToUnlock: number;
