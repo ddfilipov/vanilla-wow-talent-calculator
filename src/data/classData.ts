@@ -4157,8 +4157,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "INV_Sword_17",
                         pointsNeededToUnlock: 15,
-                        unlocks: [
-                            { row: 4, column: 8 }, //fake arrow so stupid rogue talent looks good
+                        unlocks: [ //fake arrow so stupid rogue talent looks good
                             { row: 4, column: 4 },
                             { row: 5, column: 4 },
                         ],

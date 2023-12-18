@@ -32,13 +32,13 @@ const StyledTestArrow = styled.div<IArrow>`
     align-self: center;
     bottom: ${(props) => (props.$isVerticalArrow ? (props.$arrowIndex === 2 ? "13px" : "5px") : "0")};
     right: ${(props) =>
-        props.$isVerticalArrow ? "0" : props.$arrowIndex === 1 && !props.$hasArrowhead ? "-5px" : "5px"};
+        props.$isVerticalArrow ? "0" : props.$arrowIndex === 1 && !props.$hasArrowhead ? "-9px" : "4px"};
     width: ${(props) =>
         props.$isVerticalArrow
             ? "12%"
             : props.$arrowIndex === 1 && !props.$hasArrowhead
-            ? "calc(100% - 72px)"
-            : "calc(100% - 102px)"};
+            ? "calc(100% - 78px)"
+            : "calc(100% - 106px)"};
     height: ${(props) =>
         props.$isVerticalArrow ? (props.$arrowIndex === 2 ? "calc(100% - 84px)" : "calc(100% - 102px)") : "12%"};
 `;
