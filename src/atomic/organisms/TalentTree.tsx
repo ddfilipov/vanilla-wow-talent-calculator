@@ -185,13 +185,50 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 />
                                 {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                                 {node.unlocks && node.unlocks?.length > 0
-                                    ? node.unlocks.map((arrow, index) => {
+                                    ? node.unlocks.map((arrowArray, index) => {
+                                          if (arrowArray.length > 1) {
+                                              console.log("holisss");
+                                              return arrowArray.map((partOfAnArrow, partOfAnArrowIndex) => {
+                                                  console.log("partOfAnArrow.row:", partOfAnArrow.row);
+                                                  console.log("partOfAnArrow.column:", partOfAnArrow.column);
+                                                  console.log("partOfAnArrowIndex:", partOfAnArrowIndex);
+                                                  console.log("node.talentName:", node.talentName);
+                                                  console.log("partOfAnArrow:", partOfAnArrow);
+                                                  return partOfAnArrowIndex === 0 ? (
+                                                      <Arrow
+                                                          startingRow={node.talentRow}
+                                                          endingRow={node.talentRow}
+                                                          startingColumn={node.talentcolumn}
+                                                          endingColumn={arrowArray.column}
+                                                          arrowIndex={partOfAnArrowIndex}
+                                                          key={partOfAnArrowIndex}
+                                                          hasArrowhead={false}
+                                                          hasTurns
+                                                      />
+                                                  ) : (
+                                                      <Arrow
+                                                          //   startingRow={node.unlocks?.[0].row as number}
+                                                          //   endingRow={partOfAnArrow.row}
+                                                          //   startingColumn={node.unlocks?.[0].column as number}
+                                                          //   endingColumn={partOfAnArrow.column}
+                                                          startingRow={arrowArray[0].row}
+                                                          endingRow={partOfAnArrow.row}
+                                                          startingColumn={arrowArray[0].column}
+                                                          endingColumn={partOfAnArrow.column}
+                                                          arrowIndex={partOfAnArrowIndex}
+                                                          key={partOfAnArrowIndex}
+                                                          hasArrowhead={true}
+                                                          hasTurns
+                                                      />
+                                                  );
+                                              });
+                                          }
                                           return index <= 1 ? (
                                               <Arrow
                                                   startingRow={node.talentRow}
-                                                  endingRow={arrow.row}
+                                                  endingRow={arrowArray.row}
                                                   startingColumn={node.talentcolumn}
-                                                  endingColumn={arrow.column}
+                                                  endingColumn={arrowArray.column}
                                                   arrowIndex={index}
                                                   key={index}
                                                   hasArrowhead={node?.unlocks?.length === 2}
@@ -199,9 +236,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                           ) : (
                                               <Arrow
                                                   startingRow={node.unlocks?.[1].row as number}
-                                                  endingRow={arrow.row}
+                                                  endingRow={arrowArray.row}
                                                   startingColumn={node.unlocks?.[1].column as number}
-                                                  endingColumn={arrow.column}
+                                                  endingColumn={arrowArray.column}
                                                   arrowIndex={index}
                                                   key={index}
                                               />

@@ -400,10 +400,18 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "INV_Misc_MonsterClaw_04",
+                        // unlocks: [
+                        //     { row: 4, column: 3 },
+                        //     { row: 3, column: 4 },
+                        //     { row: 4, column: 4 },
+                        // ],
                         unlocks: [
+                            //fake arrow so stupid rogue talent looks good
                             { row: 4, column: 3 },
-                            { row: 3, column: 4 },
-                            { row: 4, column: 4 },
+                            [
+                                { row: 3, column: 4 },
+                                { row: 4, column: 4 },
+                            ],
                         ],
                         pointsNeededToUnlock: 10,
                     },
@@ -4157,9 +4165,12 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "INV_Sword_17",
                         pointsNeededToUnlock: 15,
-                        unlocks: [ //fake arrow so stupid rogue talent looks good
-                            { row: 4, column: 4 },
-                            { row: 5, column: 4 },
+                        unlocks: [
+                            //fake arrow so stupid rogue talent looks good
+                            [
+                                { row: 4, column: 4 },
+                                { row: 5, column: 4 },
+                            ],
                         ],
                     },
                     {

@@ -9,6 +9,7 @@ export interface ArrowProps {
     endingColumn: number;
     arrowIndex: number;
     hasArrowhead?: boolean;
+    hasTurns?: boolean;
 }
 
 interface IArrow {
@@ -19,6 +20,7 @@ interface IArrow {
     $isVerticalArrow: boolean;
     $arrowIndex: number;
     $hasArrowhead: boolean;
+    $hasTurns?: boolean;
 }
 
 const StyledTestArrow = styled.div<IArrow>`
@@ -30,17 +32,26 @@ const StyledTestArrow = styled.div<IArrow>`
     z-index: 2;
     position: relative;
     align-self: center;
-    bottom: ${(props) => (props.$isVerticalArrow ? (props.$arrowIndex === 2 ? "13px" : "5px") : "0")};
+    bottom: ${(props) =>
+        props.$isVerticalArrow ? (props.$arrowIndex === 2 || props.$hasTurns ? "13px" : "5px") : "0"};
     right: ${(props) =>
-        props.$isVerticalArrow ? "0" : props.$arrowIndex === 1 && !props.$hasArrowhead ? "-9px" : "4px"};
+        props.$isVerticalArrow
+            ? "0"
+            : (props.$arrowIndex === 1 && !props.$hasArrowhead) || props.$hasTurns
+            ? "-9px"
+            : "4px"};
     width: ${(props) =>
         props.$isVerticalArrow
             ? "12%"
-            : props.$arrowIndex === 1 && !props.$hasArrowhead
+            : (props.$arrowIndex === 1 && !props.$hasArrowhead) || props.$hasTurns
             ? "calc(100% - 78px)"
             : "calc(100% - 106px)"};
     height: ${(props) =>
-        props.$isVerticalArrow ? (props.$arrowIndex === 2 ? "calc(100% - 84px)" : "calc(100% - 102px)") : "12%"};
+        props.$isVerticalArrow
+            ? props.$arrowIndex === 2 || props.$hasTurns
+                ? "calc(100% - 84px)"
+                : "calc(100% - 102px)"
+            : "12%"};
 `;
 const ArrowHead = styled.div<{ $isVerticalArrow: boolean; $arrowIndex: number }>`
     position: absolute;
@@ -61,7 +72,8 @@ export const Arrow: FC<ArrowProps> = ({
     startingColumn,
     endingColumn,
     arrowIndex,
-    hasArrowhead = false,
+    hasArrowhead = true,
+    hasTurns = false,
 }) => {
     const isVericalArrow = startingColumn - endingColumn === 0;
     return (
@@ -73,8 +85,9 @@ export const Arrow: FC<ArrowProps> = ({
             $isVerticalArrow={isVericalArrow}
             $arrowIndex={arrowIndex}
             $hasArrowhead={hasArrowhead}
+            $hasTurns={hasTurns}
         >
-            {arrowIndex !== 1 || hasArrowhead ? (
+            {hasArrowhead || !hasTurns ? (
                 <ArrowHead $isVerticalArrow={isVericalArrow} $arrowIndex={arrowIndex} />
             ) : null}
         </StyledTestArrow>
