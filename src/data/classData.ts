@@ -2973,6 +2973,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_Sleep",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 5, column: 3 }]],
+                        unlocksId: 351,
                     },
                     {
                         talentName: "Improved Inner Fire",
@@ -3043,6 +3044,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Holy_DivineSpirit",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 347,
                     },
                     {
                         talentName: "Force of Will",
@@ -3071,6 +3073,8 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Holy_PowerInfusion",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 1201,
+                        unlocksId: 1201,
                     },
                 ],
             },
@@ -3154,6 +3158,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Holy_SealOfWrath",
                         pointsNeededToUnlock: 5,
                         unlocks: [[{ row: 4, column: 3 }]],
+                        unlocksId: 403,
                     },
                     {
                         talentName: "Holy Nova",
@@ -3234,6 +3239,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Spell_Holy_SearingLightPriest",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 1181,
                     },
                     {
                         talentName: "Improved Prayer of Healing",
@@ -3260,6 +3266,7 @@ export const classData: ClassData[] = [
                         talentIcon: "INV_Enchant_EssenceEternalLarge",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 1637,
                     },
                     {
                         talentName: "Spiritual Guidance",
@@ -3304,6 +3311,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Holy_SummonLightwell",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 1561,
                     },
                 ],
             },
@@ -3400,6 +3408,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_PsychicScream",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 5, column: 1 }]],
+                        unlocksId: 541,
                     },
                     {
                         talentName: "Improved Mind Blast",
@@ -3481,6 +3490,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_ImpPhaseShift",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 542,
                     },
                     {
                         talentName: "Vampiric Embrace",
@@ -3494,6 +3504,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_UnsummonBuilding",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }], [{ row: 5, column: 3 }]],
+                        unlocksId: [1638, 521],
                     },
                     {
                         talentName: "Improved Vampiric Embrace",
@@ -3507,6 +3518,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_ImprovedVampiricEmbrace",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 484,
                     },
                     {
                         talentName: "Darkness",
@@ -3535,6 +3547,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Shadow_Shadowform",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 484,
                     },
                 ],
             },
