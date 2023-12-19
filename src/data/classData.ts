@@ -138,6 +138,7 @@ export const classData: ClassData[] = [
                         talentIcon: "INV_Staff_01",
                         unlocks: [[{ row: 2, column: 4 }]],
                         pointsNeededToUnlock: 5,
+                        unlocksId: 781,
                     },
                     {
                         talentName: "Natural Shapeshifter",
@@ -152,6 +153,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Spell_Nature_WispSplode",
                         pointsNeededToUnlock: 5,
+                        unlockedById: 791,
                     },
                     {
                         talentName: "Improved Thorns",
@@ -409,6 +411,7 @@ export const classData: ClassData[] = [
                             ],
                         ],
                         pointsNeededToUnlock: 10,
+                        unlocksId: 800,
                     },
                     {
                         talentName: "Improved Shred",
@@ -437,6 +440,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_Hunter_Pet_Cat",
                         unlocks: [[{ row: 6, column: 2 }]],
                         pointsNeededToUnlock: 15,
+                        unlocksId: 808,
                     },
                     {
                         talentName: "Blood Frenzy",
@@ -450,6 +454,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Ability_GhoulFrenzy",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 798,
                     },
                     {
                         talentName: "Primal Fury",
@@ -463,6 +468,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Ability_Racial_Cannibalize",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 798,
                     },
                     {
                         talentName: "Savage Fury",
@@ -504,6 +510,7 @@ export const classData: ClassData[] = [
                         talentRow: 6,
                         talentIcon: "Spell_Holy_BlessingOfAgility",
                         pointsNeededToUnlock: 25,
+                        unlockedById: 803,
                     },
                     {
                         talentName: "Leader of the Pack",
@@ -572,6 +579,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_HealingTouch",
                         unlocks: [[{ row: 5, column: 1 }]],
                         pointsNeededToUnlock: 5,
+                        unlocksId: 831,
                     },
                     {
                         talentName: "Nature's Focus",
@@ -628,6 +636,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_InsectSwarm",
                         unlocks: [[{ row: 5, column: 3 }]],
                         pointsNeededToUnlock: 10,
+                        unlocksId: 828,
                     },
                     {
                         talentName: "Subtlety",
@@ -661,6 +670,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Holy_ElunesGrace",
                         unlocks: [[{ row: 7, column: 2 }]],
                         pointsNeededToUnlock: 15,
+                        unlocksId: 844,
                     },
                     {
                         talentName: "Improved Rejuvenation",
@@ -685,6 +695,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Nature_RavenForm",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 824,
                     },
                     {
                         talentName: "Gift of Nature",
@@ -701,6 +712,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Nature_ProtectionformNature",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 827,
                     },
                     {
                         talentName: "Improved Tranquility",
@@ -742,6 +754,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "INV_Relics_IdolofRejuvenation",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 843,
                     },
                 ],
             },
