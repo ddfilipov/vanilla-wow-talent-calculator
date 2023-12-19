@@ -1144,6 +1144,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Ability_PierceDamage",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 1344,
                     },
                     {
                         talentName: "Scatter Shot",
