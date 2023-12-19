@@ -70,7 +70,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 1,
                         talentIcon: "Spell_Nature_NaturesWrath",
-                        unlocks: [{ row: 1, column: 3 }],
+                        unlocks: [[{ row: 1, column: 3 }]],
                         pointsNeededToUnlock: 0,
                         unlocksId: 921,
                     },
@@ -118,7 +118,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_StarFall",
-                        unlocks: [{ row: 4, column: 2 }],
+                        unlocks: [[{ row: 4, column: 2 }]],
                         pointsNeededToUnlock: 5,
                         unlocksId: 792,
                     },
@@ -136,7 +136,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 2,
                         talentIcon: "INV_Staff_01",
-                        unlocks: [{ row: 2, column: 4 }],
+                        unlocks: [[{ row: 2, column: 4 }]],
                         pointsNeededToUnlock: 5,
                     },
                     {
@@ -400,11 +400,6 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "INV_Misc_MonsterClaw_04",
-                        // unlocks: [
-                        //     { row: 4, column: 3 },
-                        //     { row: 3, column: 4 },
-                        //     { row: 4, column: 4 },
-                        // ],
                         unlocks: [
                             //fake arrow so stupid rogue talent looks good
                             [{ row: 4, column: 3 }],
@@ -440,7 +435,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Ability_Hunter_Pet_Cat",
-                        unlocks: [{ row: 6, column: 2 }],
+                        unlocks: [[{ row: 6, column: 2 }]],
                         pointsNeededToUnlock: 15,
                     },
                     {
@@ -575,7 +570,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 1,
                         talentRow: 2,
                         talentIcon: "Spell_Nature_HealingTouch",
-                        unlocks: [{ row: 5, column: 1 }],
+                        unlocks: [[{ row: 5, column: 1 }]],
                         pointsNeededToUnlock: 5,
                     },
                     {
@@ -631,7 +626,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 3,
                         talentRow: 3,
                         talentIcon: "Spell_Nature_InsectSwarm",
-                        unlocks: [{ row: 5, column: 3 }],
+                        unlocks: [[{ row: 5, column: 3 }]],
                         pointsNeededToUnlock: 10,
                     },
                     {
@@ -664,7 +659,7 @@ export const classData: ClassData[] = [
                         talentcolumn: 2,
                         talentRow: 4,
                         talentIcon: "Spell_Holy_ElunesGrace",
-                        unlocks: [{ row: 7, column: 2 }],
+                        unlocks: [[{ row: 7, column: 2 }]],
                         pointsNeededToUnlock: 15,
                     },
                     {
@@ -918,7 +913,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "INV_Misc_MonsterClaw_04",
                         pointsNeededToUnlock: 15,
-                        unlocks: [{ row: 6, column: 3 }],
+                        unlocks: [[{ row: 6, column: 3 }]],
                     },
                     {
                         talentName: "Spirit Bond",
@@ -944,7 +939,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Ability_Devour",
                         pointsNeededToUnlock: 20,
-                        unlocks: [{ row: 7, column: 2 }],
+                        unlocks: [[{ row: 7, column: 2 }]],
                     },
                     {
                         talentName: "Bestial Discipline",
@@ -1057,7 +1052,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Ability_SearingArrow",
                         pointsNeededToUnlock: 5,
-                        unlocks: [{ row: 4, column: 3 }],
+                        unlocks: [[{ row: 4, column: 3 }]],
                     },
                     {
                         talentName: "Aimed Shot",
@@ -1157,7 +1152,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_UpgradeMoonGlaive",
                         pointsNeededToUnlock: 20,
 
-                        unlocks: [{ row: 7, column: 2 }],
+                        unlocks: [[{ row: 7, column: 2 }]],
                     },
                     {
                         talentName: "Improved Scorpid Sting",
@@ -1335,7 +1330,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Ability_Whirlwind",
                         pointsNeededToUnlock: 10,
-                        unlocks: [{ row: 5, column: 3 }],
+                        unlocks: [[{ row: 5, column: 3 }]],
                     },
                     {
                         talentName: "Trap Mastery",
@@ -1390,7 +1385,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Holy_BlessingOfStamina",
                         pointsNeededToUnlock: 20,
-                        unlocks: [{ row: 7, column: 2 }],
+                        unlocks: [[{ row: 7, column: 2 }],]
                     },
                     {
                         talentName: "Counterattack",
@@ -1574,7 +1569,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Arcane_ArcaneResilience",
                         pointsNeededToUnlock: 10,
 
-                        unlocks: [{ row: 5, column: 3 }],
+                        unlocks: [[{ row: 5, column: 3 }],]
                     },
                     {
                         talentName: "Improved Mana Shield",
@@ -1790,7 +1785,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Spell_Fire_Fireball02",
                         pointsNeededToUnlock: 10,
-                        unlocks: [{ row: 5, column: 3 }],
+                        unlocks: [[{ row: 5, column: 3 }]],
                     },
                     {
                         talentName: "Burning Soul",
@@ -1859,7 +1854,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Nature_WispHeal",
                         pointsNeededToUnlock: 20,
-                        unlocks: [{ row: 7, column: 2 }],
+                        unlocks: [[{ row: 7, column: 2 }]],
                     },
                     {
                         talentName: "Blast Wave",
@@ -1993,7 +1988,7 @@ export const classData: ClassData[] = [
                         talentRow: 2,
                         talentIcon: "Spell_Frost_FreezingBreath",
                         pointsNeededToUnlock: 5,
-                        unlocks: [{ row: 4, column: 3 }],
+                        unlocks:[ [{ row: 4, column: 3 }]],
                     },
                     {
                         talentName: "Permafrost",
@@ -2103,7 +2098,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Frost_Frost",
                         pointsNeededToUnlock: 20,
-                        unlocks: [{ row: 7, column: 2 }],
+                        unlocks: [[{ row: 7, column: 2 }]],
                     },
                     {
                         talentName: "Improved Cone of Cold",
