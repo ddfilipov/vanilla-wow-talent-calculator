@@ -2323,6 +2323,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Holy_GreaterHeal",
                         pointsNeededToUnlock: 15,
                         unlocks: [[{ row: 5, column: 2 }]],
+                        unlocksId: 1433,
                     },
                     {
                         talentName: "Improved Blessing of Wisdom",
@@ -2349,6 +2350,8 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Holy_Heal",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 1502,
+                        unlockedById: 1461,
                     },
                     {
                         talentName: "Lasting Judgement",
@@ -2391,6 +2394,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Holy_SearingLight",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 1433,
                     },
                 ],
             },
@@ -2431,6 +2435,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_Defend",
                         pointsNeededToUnlock: 0,
                         unlocks: [[{ row: 3, column: 3 }]],
+                        unlocksId: 1424,
                     },
                     {
                         talentName: "Precision",
@@ -2514,6 +2519,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "INV_Shield_06",
                         pointsNeededToUnlock: 10,
+                        unlockedById: 1421,
                     },
                     {
                         talentName: "Anticipation",
@@ -2571,6 +2577,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_LightningShield",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 1430,
                     },
                     {
                         talentName: "Reckoning",
@@ -2615,6 +2622,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "classic_Spell_Holy_BlessingOfProtection",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 1431,
                     },
                 ],
             },
@@ -2728,6 +2736,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Holy_RetributionAura",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 6, column: 2 }]],
+                        unlocksId: 1402,
                     },
                     {
                         talentName: "Seal of Command",
@@ -2821,6 +2830,7 @@ export const classData: ClassData[] = [
                         talentRow: 6,
                         talentIcon: "Ability_Racial_Avatar",
                         pointsNeededToUnlock: 25,
+                        unlockedById: 1411,
                     },
                     {
                         talentName: "Repentance",
