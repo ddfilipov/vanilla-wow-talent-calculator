@@ -5151,6 +5151,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_Contagion",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 5, column: 3 }]],
+                        unlocksId: 1081,
                     },
                     {
                         talentName: "Grim Reach",
@@ -5216,6 +5217,8 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_GrimWard",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 5, column: 4 }]],
+                        unlockedById: 1061,
+                        unlocksId: 1082,
                     },
                     {
                         talentName: "Improved Curse of Exhaustion",
@@ -5231,6 +5234,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_GrimWard",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 1081,
                     },
                     {
                         talentName: "Shadow Mastery",
@@ -5247,6 +5251,8 @@ export const classData: ClassData[] = [
                         talentRow: 6,
                         talentIcon: "Spell_Shadow_ShadeTrueSight",
                         pointsNeededToUnlock: 25,
+                        unlockedById: 1041,
+                        unlocksId: 1042,
                     },
                     {
                         talentName: "Dark Pact",
@@ -5377,6 +5383,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_RemoveCurse",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 4, column: 2 }]],
+                        unlocksId: 1227,
                     },
                     {
                         talentName: "Fel Stamina",
@@ -5406,6 +5413,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Spell_Shadow_ImpPhaseShift",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 1226,
                     },
                     {
                         talentName: "Unholy Power",
@@ -5423,6 +5431,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_ShadowWordDominate",
                         pointsNeededToUnlock: 15,
                         unlocks: [[{ row: 6, column: 3 }]],
+                        unlocksId: 1244,
                     },
                     {
                         talentName: "Improved Enslave Demon",
@@ -5452,6 +5461,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_PsychicScream",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 1282,
                     },
                     {
                         talentName: "Improved Firestone",
@@ -5481,6 +5491,7 @@ export const classData: ClassData[] = [
                         talentRow: 6,
                         talentIcon: "Spell_Shadow_ShadowPact",
                         pointsNeededToUnlock: 25,
+                        unlockedById: 1262,
                     },
                     {
                         talentName: "Soul Link",
@@ -5493,6 +5504,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Shadow_GatherShadows",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 1281,
                     },
                     {
                         talentName: "Improved Spellstone",
@@ -5620,6 +5632,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Fire_FlameShock",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 5, column: 3 }]],
+                        unlocksId: 967,
                     },
                     {
                         talentName: "Shadowburn",
@@ -5704,6 +5717,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Fire_Immolation",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 968,
                     },
                     {
                         talentName: "Ruin",
@@ -5716,6 +5730,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_ShadowWordPain",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 981,
                     },
                     {
                         talentName: "Emberstorm",
@@ -5744,6 +5759,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Fire_Fireball",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 961,
                     },
                 ],
             },
