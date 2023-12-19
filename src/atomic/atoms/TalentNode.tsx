@@ -115,7 +115,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
             }
         });
     }, [unlockableNodes, resetSignal]);
-    
+
     const childNodes = useMemo(() => {
         return unlockableNodes.filter((node) => node?.unlockedById === nodeId);
     }, [unlockableNodes, resetSignal]);
@@ -140,11 +140,11 @@ export const TalentNode: FC<TalentNodeProps> = ({
             ) {
                 if ((unlockedBy || unlocksId) && childNodes) {
                     if (childNodes.length === 0) {
-                        if (childNodes?.[0]?.pointsSpent > 0) {
+                        if (childNodes?.[0]?.pointsSpent ?? 0 > 0) {
                             return;
                         }
                     } else {
-                        const shouldLeave = childNodes?.some((x) => x?.pointsSpent > 0);
+                        const shouldLeave = childNodes?.some((x) => x?.pointsSpent ?? 0 > 0);
                         if (shouldLeave) {
                             return;
                         }
