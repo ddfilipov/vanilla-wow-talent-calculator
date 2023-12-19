@@ -39,7 +39,6 @@ const ButtonStyled = styled.button<IStyledNode>`
     width: 100%;
     background-image: url(${(props) => props.$backgroundImage});
     border: 1px solid var(--main-area-border);
-    //TODO: should have 3 colors: --uncapped-node-color, --capped-node-color, --main-area-border
     cursor: pointer;
     border-radius: 0.3rem;
     &:hover {
@@ -116,9 +115,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
             }
         });
     }, [unlockableNodes, resetSignal]);
-
-    const childNode = useMemo(() => {
-        return unlockableNodes.find((node) => node?.unlockedById === nodeId);
+    
+    const childNodes = useMemo(() => {
+        return unlockableNodes.filter((node) => node?.unlockedById === nodeId);
     }, [unlockableNodes, resetSignal]);
 
     const handleClick = (event: MouseEvent<HTMLElement>) => {
@@ -139,19 +138,26 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 currentNodePoints > 0 && // can't lvl down unless I've put at least 1 point on this node
                 pointsNeededToUnluck < pointsSpentOnTree // can't lvl down unless I've spent one point on this tree
             ) {
-                if (unlockedBy || unlocksId) {
-                    if (childNode && childNode?.pointsSpent > 0) {
-                        return;
+                if ((unlockedBy || unlocksId) && childNodes) {
+                    if (childNodes.length === 0) {
+                        if (childNodes?.[0]?.pointsSpent > 0) {
+                            return;
+                        }
+                    } else {
+                        const shouldLeave = childNodes?.some((x) => x?.pointsSpent > 0);
+                        if (shouldLeave) {
+                            return;
+                        }
                     }
                 }
 
                 if (pointsNeededToUnluck < highestMilestone) {
-                    const test = nodeCantLvlDown(
+                    const cantLvlUp = nodeCantLvlDown(
                         unlockableNodes as IUnlockableNodes[],
                         pointsNeededToUnluck,
                         highestMilestone
                     );
-                    if (test) {
+                    if (cantLvlUp) {
                         return;
                     }
                 }
