@@ -927,6 +927,8 @@ export const classData: ClassData[] = [
                         talentIcon: "INV_Misc_MonsterClaw_04",
                         pointsNeededToUnlock: 15,
                         unlocks: [[{ row: 6, column: 3 }]],
+                        unlocksId: 1397,
+                        unlockedById: 1393,
                     },
                     {
                         talentName: "Spirit Bond",
@@ -953,6 +955,8 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_Devour",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 1386,
+                        unlockedById: 387,
                     },
                     {
                         talentName: "Bestial Discipline",
@@ -1066,6 +1070,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_SearingArrow",
                         pointsNeededToUnlock: 5,
                         unlocks: [[{ row: 4, column: 3 }]],
+                        unlocksId: 1349,
                     },
                     {
                         talentName: "Aimed Shot",
@@ -1076,6 +1081,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "INV_Spear_07",
                         pointsNeededToUnlock: 10,
+                        unlockedById: 1344,
                     },
                     {
                         talentName: "Improved Arcane Shot",
@@ -1164,8 +1170,9 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Ability_UpgradeMoonGlaive",
                         pointsNeededToUnlock: 20,
-
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 1361,
+                        unlockedById: 1347,
                     },
                     {
                         talentName: "Improved Scorpid Sting",
@@ -1344,6 +1351,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_Whirlwind",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 5, column: 3 }]],
+                        unlocksId: 1312,
                     },
                     {
                         talentName: "Trap Mastery",
@@ -1399,6 +1407,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Holy_BlessingOfStamina",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 1325,
                     },
                     {
                         talentName: "Counterattack",
@@ -1411,6 +1420,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Ability_Warrior_Challange",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 1308,
                     },
                     {
                         talentName: "Lightning Reflexes",
@@ -1439,6 +1449,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "INV_Spear_02",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 1321,
                     },
                 ],
             },
