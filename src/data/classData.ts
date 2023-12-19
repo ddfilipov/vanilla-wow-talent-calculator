@@ -1593,8 +1593,8 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Spell_Arcane_ArcaneResilience",
                         pointsNeededToUnlock: 10,
-
                         unlocks: [[{ row: 5, column: 3 }]],
+                        unlocksId: 77,
                     },
                     {
                         talentName: "Improved Mana Shield",
@@ -1663,6 +1663,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_Charm",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 85,
                     },
                     {
                         talentName: "Arcane Instability",
@@ -1811,6 +1812,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Fire_Fireball02",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 5, column: 3 }]],
+                        unlocksId: 32,
                     },
                     {
                         talentName: "Burning Soul",
@@ -1880,6 +1882,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_WispHeal",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 36,
                     },
                     {
                         talentName: "Blast Wave",
@@ -1892,6 +1895,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Holy_Excorcism_02",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 29,
                     },
                     {
                         talentName: "Fire Power",
@@ -1920,6 +1924,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Fire_SealOfFire",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 33,
                     },
                 ],
             },
@@ -2014,6 +2019,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Frost_FreezingBreath",
                         pointsNeededToUnlock: 5,
                         unlocks: [[{ row: 4, column: 3 }]],
+                        unlocksId: 67,
                     },
                     {
                         talentName: "Permafrost",
@@ -2111,6 +2117,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Spell_Frost_FrostShock",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 62,
                     },
                     {
                         talentName: "Ice Block",
@@ -2124,6 +2131,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Frost_Frost",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 71,
                     },
                     {
                         talentName: "Improved Cone of Cold",
@@ -2166,6 +2174,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Ice_Lament",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 72,
                     },
                 ],
             },
