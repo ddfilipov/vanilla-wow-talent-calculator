@@ -27,7 +27,7 @@ export interface SpecTalent {
     talentRow: number;
     talentIcon: string;
     unlocks?: ICoords[] | ICoords[][];
-    unlocksId?: number;
+    unlocksId?: number | number[]; // a node can unlock several nodes
     unlockedById?: number;
     pointsNeededToUnlock: number;
 }
@@ -411,7 +411,7 @@ export const classData: ClassData[] = [
                             ],
                         ],
                         pointsNeededToUnlock: 10,
-                        unlocksId: 800,
+                        unlocksId: [800, 801],
                     },
                     {
                         talentName: "Improved Shred",

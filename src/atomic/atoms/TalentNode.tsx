@@ -108,7 +108,13 @@ export const TalentNode: FC<TalentNodeProps> = ({
     const { unlockableNodes, handleUnlockableNodes, highestMilestone } = useContext(UnlockableNodesContext);
 
     const parentNode = useMemo(() => {
-        return unlockableNodes.find((node) => node?.unlocksId === nodeId);
+        return unlockableNodes.find((node) => {
+            if (!Array.isArray(node?.unlocksId)) {
+                return node?.unlocksId === nodeId;
+            } else {
+                return node?.unlocksId.find((x) => x === nodeId);
+            }
+        });
     }, [unlockableNodes, resetSignal]);
 
     const childNode = useMemo(() => {

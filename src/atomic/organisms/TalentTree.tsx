@@ -187,13 +187,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 {node.unlocks && node.unlocks?.length > 0
                                     ? node.unlocks.map((arrowArray, index) => {
                                           if (Array.isArray(arrowArray)) {
-                                              console.log("holisss");
                                               return arrowArray.map((arrowSegment, arrowSegmentIndex) => {
-                                                  console.log("partOfAnArrow.row:", arrowSegment.row);
-                                                  console.log("partOfAnArrow.column:", arrowSegment.column);
-                                                  console.log("partOfAnArrowIndex:", arrowSegmentIndex);
-                                                  console.log("node.talentName:", node.talentName);
-                                                  console.log("partOfAnArrow:", arrowSegment);
                                                   if (arrowArray.length > 1) {
                                                       return arrowSegmentIndex === 0 ? (
                                                           <Arrow
