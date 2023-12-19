@@ -23,7 +23,7 @@ interface IArrow {
     $hasTurns?: boolean;
 }
 
-const StyledTestArrow = styled.div<IArrow>`
+const StyledArrow = styled.div<IArrow>`
     grid-row-start: ${(props) => props.$startingRow};
     grid-row-end: ${(props) => props.$endingRow + 1};
     grid-column-start: ${(props) => props.$startingColumn};
@@ -32,6 +32,7 @@ const StyledTestArrow = styled.div<IArrow>`
     z-index: 2;
     position: relative;
     align-self: center;
+    pointer-events: none;
     bottom: ${(props) =>
         props.$isVerticalArrow ? (props.$arrowIndex === 2 || props.$hasTurns ? "13px" : "5px") : "0"};
     right: ${(props) =>
@@ -59,6 +60,7 @@ const ArrowHead = styled.div<{ $isVerticalArrow: boolean; $arrowIndex: number }>
     top: ${(props) => (props.$isVerticalArrow ? "100% " : "50%")};
     width: 0;
     height: 0;
+    pointer-events: none;
     border-top: ${(props) => (props.$isVerticalArrow ? "10px solid #ffd100" : "10px solid transparent")};
     border-right: ${(props) => (props.$isVerticalArrow ? "9px solid transparent" : "none")};
     border-bottom: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : "10px solid transparent")};
@@ -77,7 +79,7 @@ export const Arrow: FC<ArrowProps> = ({
 }) => {
     const isVericalArrow = startingColumn - endingColumn === 0;
     return (
-        <StyledTestArrow
+        <StyledArrow
             $startingRow={startingRow}
             $endingRow={endingRow}
             $startingColumn={startingColumn}
@@ -90,6 +92,6 @@ export const Arrow: FC<ArrowProps> = ({
             {hasArrowhead || !hasTurns ? (
                 <ArrowHead $isVerticalArrow={isVericalArrow} $arrowIndex={arrowIndex} />
             ) : null}
-        </StyledTestArrow>
+        </StyledArrow>
     );
 };
