@@ -38,7 +38,7 @@ const StyledTestArrow = styled.div<IArrow>`
         props.$isVerticalArrow
             ? "0"
             : (props.$arrowIndex === 1 && !props.$hasArrowhead) || props.$hasTurns
-            ? "-9px"
+            ? "-8px"
             : "4px"};
     width: ${(props) =>
         props.$isVerticalArrow
