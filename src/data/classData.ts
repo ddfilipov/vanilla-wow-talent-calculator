@@ -407,7 +407,7 @@ export const classData: ClassData[] = [
                         // ],
                         unlocks: [
                             //fake arrow so stupid rogue talent looks good
-                            { row: 4, column: 3 },
+                            [{ row: 4, column: 3 }],
                             [
                                 { row: 3, column: 4 },
                                 { row: 4, column: 4 },

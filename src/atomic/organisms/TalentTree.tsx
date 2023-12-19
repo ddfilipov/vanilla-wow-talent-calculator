@@ -186,54 +186,55 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 {/* //TODO: shouldn't do this here, should do it in the Arrow compontent */}
                                 {node.unlocks && node.unlocks?.length > 0
                                     ? node.unlocks.map((arrowArray, index) => {
-                                          if (arrowArray.length > 1) {
+                                          if (Array.isArray(arrowArray)) {
                                               console.log("holisss");
-                                              return arrowArray.map((partOfAnArrow, partOfAnArrowIndex) => {
-                                                  console.log("partOfAnArrow.row:", partOfAnArrow.row);
-                                                  console.log("partOfAnArrow.column:", partOfAnArrow.column);
-                                                  console.log("partOfAnArrowIndex:", partOfAnArrowIndex);
+                                              return arrowArray.map((arrowSegment, arrowSegmentIndex) => {
+                                                  console.log("partOfAnArrow.row:", arrowSegment.row);
+                                                  console.log("partOfAnArrow.column:", arrowSegment.column);
+                                                  console.log("partOfAnArrowIndex:", arrowSegmentIndex);
                                                   console.log("node.talentName:", node.talentName);
-                                                  console.log("partOfAnArrow:", partOfAnArrow);
-                                                  return partOfAnArrowIndex === 0 ? (
-                                                      <Arrow
-                                                          startingRow={node.talentRow}
-                                                          endingRow={node.talentRow}
-                                                          startingColumn={node.talentcolumn}
-                                                          endingColumn={arrowArray.column}
-                                                          arrowIndex={partOfAnArrowIndex}
-                                                          key={partOfAnArrowIndex}
-                                                          hasArrowhead={false}
-                                                          hasTurns
-                                                      />
-                                                  ) : (
-                                                      <Arrow
-                                                          //   startingRow={node.unlocks?.[0].row as number}
-                                                          //   endingRow={partOfAnArrow.row}
-                                                          //   startingColumn={node.unlocks?.[0].column as number}
-                                                          //   endingColumn={partOfAnArrow.column}
-                                                          startingRow={arrowArray[0].row}
-                                                          endingRow={partOfAnArrow.row}
-                                                          startingColumn={arrowArray[0].column}
-                                                          endingColumn={partOfAnArrow.column}
-                                                          arrowIndex={partOfAnArrowIndex}
-                                                          key={partOfAnArrowIndex}
-                                                          hasArrowhead={true}
-                                                          hasTurns
-                                                      />
+                                                  console.log("partOfAnArrow:", arrowSegment);
+                                                  if (arrowArray.length > 1) {
+                                                      return arrowSegmentIndex === 0 ? (
+                                                          <Arrow
+                                                              startingRow={node.talentRow}
+                                                              endingRow={arrowArray[arrowSegmentIndex].row}
+                                                              startingColumn={node.talentcolumn}
+                                                              endingColumn={arrowArray[arrowSegmentIndex].column}
+                                                              arrowIndex={arrowSegmentIndex}
+                                                              key={arrowSegmentIndex}
+                                                              hasArrowhead={false}
+                                                              hasTurns
+                                                          />
+                                                      ) : (
+                                                          <Arrow
+                                                              startingRow={arrowArray[0].row}
+                                                              endingRow={arrowSegment.row}
+                                                              startingColumn={arrowArray[0].column}
+                                                              endingColumn={arrowSegment.column}
+                                                              arrowIndex={arrowSegmentIndex}
+                                                              key={arrowSegmentIndex}
+                                                              hasArrowhead={true}
+                                                              hasTurns
+                                                          />
+                                                      );
+                                                  }
+
+                                                  return (
+                                                      <>
+                                                          <Arrow
+                                                              startingRow={node.talentRow}
+                                                              endingRow={arrowArray[arrowSegmentIndex].row}
+                                                              startingColumn={node.talentcolumn}
+                                                              endingColumn={arrowArray[arrowSegmentIndex].column}
+                                                              arrowIndex={arrowSegmentIndex}
+                                                              key={arrowSegmentIndex}
+                                                              hasArrowhead={true}
+                                                          />
+                                                      </>
                                                   );
                                               });
                                           }
-                                          return (
-                                              <Arrow
-                                                  startingRow={node.talentRow}
-                                                  endingRow={arrowArray.row}
-                                                  startingColumn={node.talentcolumn}
-                                                  endingColumn={arrowArray.column}
-                                                  arrowIndex={index}
-                                                  key={index}
-                                                  hasArrowhead={node?.unlocks?.length === 2}
-                                              />
-                                          );
                                       })
                                     : null}
                             </Fragment>
