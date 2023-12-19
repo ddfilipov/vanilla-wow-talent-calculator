@@ -83,7 +83,7 @@ export interface TalentNodeProps {
     pointsNeededToUnluck: number;
     ranksDescription: string[];
     talentName: string;
-    unlocksId: number | undefined;
+    unlocksId: number | number[] | undefined;
     unlockedBy: number | undefined;
 }
 export const TalentNode: FC<TalentNodeProps> = ({

@@ -58,7 +58,7 @@ const TalentGrid = styled.div<IStyledContainer>`
 export interface IUnlockableNodes {
     nodeId: number;
     unlockedById: number | undefined;
-    unlocksId: number | undefined;
+    unlocksId: number | number[] | undefined;
     pointsSpent: number;
     maxPoints: number;
     pointsNeededToUnlock: number;
