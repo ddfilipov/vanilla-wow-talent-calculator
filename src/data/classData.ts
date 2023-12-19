@@ -3607,6 +3607,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_Racial_BloodRage",
                         pointsNeededToUnlock: 0,
                         unlocks: [[{ row: 3, column: 3 }]],
+                        unlocksId: 269,
                     },
                     {
                         talentName: "Ruthlessness",
@@ -3689,6 +3690,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Ability_CriticalStrike",
                         pointsNeededToUnlock: 10,
+                        unlockedById: 270,
                     },
                     {
                         talentName: "Vile Poisons",
@@ -3854,6 +3856,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_Parry",
                         pointsNeededToUnlock: 5,
                         unlocks: [[{ row: 3, column: 2 }]],
+                        unlocksId: 301,
                     },
                     {
                         talentName: "Precision",
@@ -3871,6 +3874,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_Marksmanship",
                         pointsNeededToUnlock: 5,
                         unlocks: [[{ row: 4, column: 3 }]],
+                        unlocksId: 221,
                     },
                     {
                         talentName: "Endurance",
@@ -3896,6 +3900,7 @@ export const classData: ClassData[] = [
                         talentRow: 3,
                         talentIcon: "Ability_Warrior_Challange",
                         pointsNeededToUnlock: 10,
+                        unlockedById: 187,
                     },
                     {
                         talentName: "Improved Sprint",
@@ -3954,6 +3959,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Ability_DualWield",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 181,
                     },
                     {
                         talentName: "Mace Specialization",
@@ -4220,6 +4226,7 @@ export const classData: ClassData[] = [
                                 { row: 5, column: 4 },
                             ],
                         ],
+                        unlocksId: 681,
                     },
                     {
                         talentName: "Heightened Senses",
@@ -4246,6 +4253,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_AntiShadow",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 381,
                     },
                     {
                         talentName: "Dirty Deeds",
@@ -4271,6 +4279,7 @@ export const classData: ClassData[] = [
                         talentRow: 5,
                         talentIcon: "Spell_Shadow_LifeDrain",
                         pointsNeededToUnlock: 20,
+                        unlockedById: 1123,
                     },
                     {
                         talentName: "Deadliness",
@@ -4299,6 +4308,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Shadow_Possession",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 284,
                     },
                 ],
             },
