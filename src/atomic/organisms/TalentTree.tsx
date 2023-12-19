@@ -132,6 +132,15 @@ export const TalentTree: FC<TalentTreeProps> = ({
         );
     };
 
+    const checkIfNodeIsCapped = (nodeId: number) => {
+        const foundNode = unlockableNodes.find((node) => node?.nodeId === nodeId);
+        console.log("este es tu found node:;", foundNode);
+        if (foundNode) {
+            return foundNode.pointsSpent === foundNode.maxPoints;
+        }
+        return false;
+    };
+
     useEffect(() => {
         const reversedNodes = [...unlockableNodes].reverse();
         const highestMilestone = reversedNodes.find(
@@ -197,6 +206,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                           key={arrowSegmentIndex}
                                                           hasArrowhead={arrowArray.length === 0}
                                                           hasTurns={arrowArray.length > 1}
+                                                          parentNodeCapped={checkIfNodeIsCapped(node.talentId)}
                                                       />
                                                   ) : (
                                                       <Arrow
@@ -208,6 +218,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                           key={arrowSegmentIndex}
                                                           hasArrowhead={true}
                                                           hasTurns
+                                                          parentNodeCapped={checkIfNodeIsCapped(node.talentId)}
                                                       />
                                                   );
                                               });

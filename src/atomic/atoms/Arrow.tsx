@@ -10,6 +10,7 @@ export interface ArrowProps {
     arrowIndex: number;
     hasArrowhead?: boolean;
     hasTurns?: boolean;
+    parentNodeCapped: boolean;
 }
 
 interface IArrow {
@@ -21,6 +22,7 @@ interface IArrow {
     $arrowIndex: number;
     $hasArrowhead: boolean;
     $hasTurns?: boolean;
+    $arrowColor: string;
 }
 
 const StyledArrow = styled.div<IArrow>`
@@ -28,7 +30,7 @@ const StyledArrow = styled.div<IArrow>`
     grid-row-end: ${(props) => props.$endingRow + 1};
     grid-column-start: ${(props) => props.$startingColumn};
     grid-column-end: ${(props) => props.$endingColumn + 1};
-    background-color: #ffd100;
+    background-color: ${(props) => props.$arrowColor};
     z-index: 2;
     position: relative;
     align-self: center;
@@ -54,19 +56,30 @@ const StyledArrow = styled.div<IArrow>`
                 : "calc(100% - 102px)"
             : "12%"};
 `;
-const ArrowHead = styled.div<{ $isVerticalArrow: boolean; $arrowIndex: number }>`
+
+interface IArrowHead {
+    $isVerticalArrow: boolean;
+    $arrowIndex: number;
+    $arrowColor: string;
+}
+
+const ArrowHead = styled.div<IArrowHead>`
     position: absolute;
     right: ${(props) => (props.$isVerticalArrow ? "-5px" : "-10px")};
     top: ${(props) => (props.$isVerticalArrow ? "100% " : "50%")};
     width: 0;
     height: 0;
     pointer-events: none;
-    border-top: ${(props) => (props.$isVerticalArrow ? "10px solid #ffd100" : "10px solid transparent")};
+    border-top: ${(props) => (props.$isVerticalArrow ? `10px solid ${props.$arrowColor}` : "10px solid transparent")};
     border-right: ${(props) => (props.$isVerticalArrow ? "9px solid transparent" : "none")};
     border-bottom: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : "10px solid transparent")};
-    border-left: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : "10px solid #ffd100")};
+    border-left: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : `10px solid ${props.$arrowColor}`)};
     transform: ${(props) => (props.$isVerticalArrow ? "inherit" : "translateY(-50%)")};
 `;
+
+function getArrowColor(isParentNodeCapped: boolean) {
+    return isParentNodeCapped ? "#ffd100" : "#9d9d9d";
+}
 
 export const Arrow: FC<ArrowProps> = ({
     startingRow,
@@ -76,6 +89,7 @@ export const Arrow: FC<ArrowProps> = ({
     arrowIndex,
     hasArrowhead = true,
     hasTurns = false,
+    parentNodeCapped,
 }) => {
     const isVericalArrow = startingColumn - endingColumn === 0;
     return (
@@ -88,9 +102,14 @@ export const Arrow: FC<ArrowProps> = ({
             $arrowIndex={arrowIndex}
             $hasArrowhead={hasArrowhead}
             $hasTurns={hasTurns}
+            $arrowColor={getArrowColor(parentNodeCapped)}
         >
             {hasArrowhead || !hasTurns ? (
-                <ArrowHead $isVerticalArrow={isVericalArrow} $arrowIndex={arrowIndex} />
+                <ArrowHead
+                    $isVerticalArrow={isVericalArrow}
+                    $arrowIndex={arrowIndex}
+                    $arrowColor={getArrowColor(parentNodeCapped)}
+                />
             ) : null}
         </StyledArrow>
     );
