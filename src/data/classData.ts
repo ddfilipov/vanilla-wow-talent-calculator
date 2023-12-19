@@ -4442,6 +4442,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_CallStorm",
                         pointsNeededToUnlock: 10,
                         unlocks: [[{ row: 6, column: 3 }]],
+                        unlocksId: 721,
                     },
                     {
                         talentName: "Improved Fire Totems",
@@ -4509,6 +4510,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Fire_Volcano",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 573,
                     },
                     {
                         talentName: "Lightning Mastery",
@@ -4525,6 +4527,7 @@ export const classData: ClassData[] = [
                         talentRow: 6,
                         talentIcon: "Spell_Lightning_LightningBolt01",
                         pointsNeededToUnlock: 25,
+                        unlockedById: 562,
                     },
                     {
                         talentName: "Elemental Mastery",
@@ -4537,6 +4540,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Nature_WispHeal",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 565,
                     },
                 ],
             },
@@ -4606,6 +4610,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Ability_ThunderBolt",
                         pointsNeededToUnlock: 5,
                         unlocks: [[{ row: 4, column: 2 }]],
+                        unlocksId: 602,
                     },
                     {
                         talentName: "Improved Ghost Wolf",
@@ -4688,6 +4693,7 @@ export const classData: ClassData[] = [
                         talentRow: 4,
                         talentIcon: "Ability_GhoulFrenzy",
                         pointsNeededToUnlock: 15,
+                        unlockedById: 613,
                     },
                     {
                         talentName: "Toughness",
@@ -4732,6 +4738,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Fire_FlameTounge",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 901,
                     },
                     {
                         talentName: "Parry",
@@ -4770,6 +4777,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Holy_SealOfMight",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 611,
                     },
                 ],
             },
@@ -4925,6 +4933,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Nature_ManaRegenTotem",
                         pointsNeededToUnlock: 15,
                         unlocks: [[{ row: 7, column: 2 }]],
+                        unlocksId: 590,
                     },
                     {
                         talentName: "Tidal Mastery",
@@ -4995,6 +5004,7 @@ export const classData: ClassData[] = [
                         talentRow: 7,
                         talentIcon: "Spell_Frost_SummonWaterElemental",
                         pointsNeededToUnlock: 30,
+                        unlockedById: 588,
                     },
                 ],
             },
