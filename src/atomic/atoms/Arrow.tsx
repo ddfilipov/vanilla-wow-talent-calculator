@@ -31,7 +31,6 @@ const StyledArrow = styled.div<IArrow>`
     grid-column-start: ${(props) => props.$startingColumn};
     grid-column-end: ${(props) => props.$endingColumn + 1};
     background-color: ${(props) => props.$arrowColor};
-    z-index: 2;
     position: relative;
     align-self: center;
     pointer-events: none;
@@ -70,6 +69,7 @@ const ArrowHead = styled.div<IArrowHead>`
     width: 0;
     height: 0;
     pointer-events: none;
+    z-index: 2;
     border-top: ${(props) => (props.$isVerticalArrow ? `10px solid ${props.$arrowColor}` : "10px solid transparent")};
     border-right: ${(props) => (props.$isVerticalArrow ? "9px solid transparent" : "none")};
     border-bottom: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : "10px solid transparent")};
