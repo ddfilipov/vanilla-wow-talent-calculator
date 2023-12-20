@@ -133,11 +133,11 @@ export const TalentTree: FC<TalentTreeProps> = ({
         );
     };
 
-    const isNodeUnlockable = (nodeId: number, unlockedId?: number, indice: number) => {
+    const isNodeUnlockable = (nodeId: number, unlockableNodeIndex: number) => {
         const checkIsParentNodeCapped = isParentNodeCapped(nodeId);
-        let checkIsUnlockableNodeUnlockable = true;
-        checkIsUnlockableNodeUnlockable = isUnlockableNodeUnlockable(nodeId, indice);
-        return checkIsParentNodeCapped && checkIsUnlockableNodeUnlockable;
+        let checkIsChildUnlockable = true;
+        checkIsChildUnlockable = isChildUnlockable(nodeId, unlockableNodeIndex);
+        return checkIsParentNodeCapped && checkIsChildUnlockable;
     };
 
     const isParentNodeCapped = (nodeId: number) => {
@@ -149,16 +149,19 @@ export const TalentTree: FC<TalentTreeProps> = ({
         return false;
     };
 
-    const isUnlockableNodeUnlockable = (nodeId: number, indice: number) => {
-        const prueba = unlockableNodes.find((node) => node?.nodeId === nodeId);
-        let foundNode;
-        if (Array.isArray(prueba?.unlocksId)) {
-            foundNode = unlockableNodes.find((node) => node.nodeId === prueba.unlocksId[indice]);
+    const isChildUnlockable = (nodeId: number, unlockableNodeIndex: number) => {
+        const parentNode = unlockableNodes.find((node) => node?.nodeId === nodeId);
+        let childNode;
+
+        if (Array.isArray(parentNode?.unlocksId)) {
+            childNode = unlockableNodes.find(
+                (node) => node && node.nodeId === (parentNode.unlocksId as number[])[unlockableNodeIndex]
+            );
         } else {
-            foundNode = unlockableNodes.find((node) => node.nodeId === prueba.unlocksId);
+            childNode = unlockableNodes.find((node) => node && node.nodeId === (parentNode && parentNode.unlocksId));
         }
-        if (foundNode) {
-            return pointsSpentOnTree >= foundNode.pointsNeededToUnlock;
+        if (childNode) {
+            return pointsSpentOnTree >= childNode.pointsNeededToUnlock;
         }
         return false;
     };
@@ -228,11 +231,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                           key={arrowSegmentIndex}
                                                           hasArrowhead={arrowArray.length === 0}
                                                           hasTurns={arrowArray.length > 1}
-                                                          parentNodeCapped={isNodeUnlockable(
-                                                              node.talentId,
-                                                              arrowSegment.truco,
-                                                              index
-                                                          )}
+                                                          parentNodeCapped={isNodeUnlockable(node.talentId, index)}
                                                       />
                                                   ) : (
                                                       <Arrow
@@ -244,11 +243,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                           key={arrowSegmentIndex}
                                                           hasArrowhead={true}
                                                           hasTurns
-                                                          parentNodeCapped={isNodeUnlockable(
-                                                              node.talentId,
-                                                              arrowSegment.truco,
-                                                              index
-                                                          )}
+                                                          parentNodeCapped={isNodeUnlockable(node.talentId, index)}
                                                       />
                                                   );
                                               });

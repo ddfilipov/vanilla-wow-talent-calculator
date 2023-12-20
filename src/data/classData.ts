@@ -404,10 +404,10 @@ export const classData: ClassData[] = [
                         talentIcon: "INV_Misc_MonsterClaw_04",
                         unlocks: [
                             //fake arrow so stupid rogue talent looks good
-                            [{ row: 4, column: 3, truco: 800 }],
+                            [{ row: 4, column: 3 }],
                             [
-                                { row: 3, column: 4, truco: 801 },
-                                { row: 4, column: 4, truco: 801 },
+                                { row: 3, column: 4 },
+                                { row: 4, column: 4 },
                             ],
                         ],
                         pointsNeededToUnlock: 10,
