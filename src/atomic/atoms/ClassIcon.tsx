@@ -20,7 +20,7 @@ const ButtonStyled = styled.button<IBackgroundImage>`
     background-image: url(${(props) => props.$backgroundImage});
     border: 2px solid #212e46;
     cursor: pointer;
-    opacity: ${(props) => (props.href === props.$currentPath ? 1 : 0.6666)};
+    opacity: ${(props) => (props.href === props.$currentPath ? 1 : 0.5)};
     border: 2px solid
         ${(props) => (props.href === props.$currentPath ? "var(--uncapped-node-color)" : "var(--icon-border-color)")};
     border-radius: 0.2rem;

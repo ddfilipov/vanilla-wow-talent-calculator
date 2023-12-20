@@ -1,7 +1,7 @@
 "use client";
 import { FC, createContext, useState } from "react";
 import styled from "styled-components";
-import { ClassChooser } from "../molecules/ClassChooser";
+import { ClassSelector } from "../molecules/ClassChooser";
 import { MAX_TALENT_POINTS, PlayableClassesType } from "@/utils/consts";
 import Link from "next/link";
 import Image from "next/image";
@@ -75,7 +75,7 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                     </Link>
                     <Title>{`${className} Vanilla Talent Calculator`}</Title>
                 </StyledHeader>
-                <ClassChooser />
+                <ClassSelector />
                 <PointsSpentHeader
                     className={className}
                     classIcon={classData.classIcon.toLowerCase()}

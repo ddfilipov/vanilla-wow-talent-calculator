@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 import styled from "styled-components";
-import { ClassChooser } from "../molecules/ClassChooser";
+import { ClassSelector } from "../molecules/ClassChooser";
 
 const Title = styled.span`
     color: white;
@@ -20,7 +20,7 @@ export const RootComponent: FC = () => {
     return (
         <Container>
             <Title>Choose a class:</Title>
-            <ClassChooser />
+            <ClassSelector />
         </Container>
     );
 };

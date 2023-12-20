@@ -13,7 +13,7 @@ const Container = styled.div`
     justify-content: center;
 `;
 
-export const ClassChooser: FC = () => {
+export const ClassSelector: FC = () => {
     return (
         <>
             <Container>
