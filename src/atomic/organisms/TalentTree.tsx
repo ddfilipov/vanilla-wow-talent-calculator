@@ -134,14 +134,14 @@ export const TalentTree: FC<TalentTreeProps> = ({
     };
 
     const isNodeUnlockable = (nodeId: number, unlockableNodeIndex: number) => {
+        // first, check if parent node is capped
         const checkIsParentNodeCapped = isParentNodeCapped(nodeId);
-        let checkIsChildUnlockable = true;
-        checkIsChildUnlockable = isChildUnlockable(nodeId, unlockableNodeIndex);
+        // then, check if we've spent enough pts on this current tree to unlock the "unlockable" node
+        const checkIsChildUnlockable = isChildUnlockable(nodeId, unlockableNodeIndex);
         return checkIsParentNodeCapped && checkIsChildUnlockable;
     };
 
     const isParentNodeCapped = (nodeId: number) => {
-        // check if parent is maxed
         const foundNode = unlockableNodes.find((node) => node?.nodeId === nodeId);
         if (foundNode) {
             return foundNode.pointsSpent === foundNode.maxPoints;

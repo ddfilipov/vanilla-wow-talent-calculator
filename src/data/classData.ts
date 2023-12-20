@@ -5204,6 +5204,7 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_Requiem",
                         pointsNeededToUnlock: 20,
                         unlocks: [[{ row: 6, column: 2 }]],
+                        unlocksId: 1042,
                     },
                     {
                         talentName: "Curse of Exhaustion",
@@ -5252,7 +5253,6 @@ export const classData: ClassData[] = [
                         talentIcon: "Spell_Shadow_ShadeTrueSight",
                         pointsNeededToUnlock: 25,
                         unlockedById: 1041,
-                        unlocksId: 1042,
                     },
                     {
                         talentName: "Dark Pact",
