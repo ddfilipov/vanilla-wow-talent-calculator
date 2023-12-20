@@ -132,11 +132,63 @@ export const TalentTree: FC<TalentTreeProps> = ({
         );
     };
 
-    const checkIfNodeIsCapped = (nodeId: number) => {
+    const isNodeUnlockable = (nodeId: number, unlockedId?: number, indice: number) => {
+        // console.log("entrando en funcion de los cojones con este nodeId:", nodeId, "y este unlockedId:", unlockedId);
+        // check if parent is maxed
+        const checkIsParentNodeCapped = isParentNodeCapped(nodeId);
+        let checkIsUnlockableNodeUnlockable = true;
+        // if (unlockedId) {
+        checkIsUnlockableNodeUnlockable = isUnlockableNodeUnlockable(nodeId, unlockedId, indice);
+        // console.log("unlockableNodes:", unlockableNodes);
+        // console.log("pointsSpentOnTree:", pointsSpentOnTree);
+        console.log("checkIsUnlockableNodeUnlockable:", checkIsUnlockableNodeUnlockable);
+        // console.log("unlockedId:", unlockedId);
+        // isUnlockableNodeUnlockable(nodeId, unlockedId, indice);
+        // }
+        // const checkIsUnlockableNodeUnlockable = isUnlockableNodeUnlockable(unlockedId);
+        // console.log("checkIsUnlockableNodeUnlockable:", checkIsUnlockableNodeUnlockable);
+        // console.log("checkIsParentNodeCapped:", checkIsParentNodeCapped);
+        // also check if points spent on this tree are enoough to unlock the "unlocked" node
+        // console.log("este es tu found node:;", foundNode);
+        // if (nodeId === 763) {
+        //     console.log("unlockableNodes:", unlockableNodes);
+        //     console.log("pointsSpentOnTree:", pointsSpentOnTree);
+        //     console.log("nodeId:", nodeId);
+        //     console.log("unlocksId:", unlockedId);
+        //     isUnlockableNodeUnlockable(nodeId);
+        // }
+        return checkIsParentNodeCapped && checkIsUnlockableNodeUnlockable;
+    };
+
+    const isParentNodeCapped = (nodeId: number) => {
+        // check if parent is maxed
         const foundNode = unlockableNodes.find((node) => node?.nodeId === nodeId);
-        console.log("este es tu found node:;", foundNode);
         if (foundNode) {
             return foundNode.pointsSpent === foundNode.maxPoints;
+        }
+        return false;
+    };
+
+    const isUnlockableNodeUnlockable = (nodeId: number, unlockedId?: number, indice: number) => {
+        // console.log(JSON.stringify(unlockableNodes));
+        // console.log("ppppppp indice:", indice);
+        // console.log("ppppppp unlockedId:", unlockedId);
+        const prueba = unlockableNodes.find((node) => node?.nodeId === nodeId);
+        // console.log(prueba);
+        // const prueba = unlockableNodes.find((node) => node?.nodeId === nodeId)?.unlocksId[indice];
+        // const foundNode = unlockableNodes.find((node) => node?.unlockedById === nodeId && node.nodeId === unlockedId);
+        let foundNode;
+        if (Array.isArray(prueba?.unlocksId)) {
+            console.log("est id:", prueba, " es array");
+            foundNode = unlockableNodes.find((node) => node.nodeId === prueba.unlocksId[indice]);
+            console.log("foundNode:", foundNode, " foundNode");
+        } else {
+            foundNode = unlockableNodes.find((node) => node.nodeId === prueba.unlocksId);
+        }
+        // console.log("9999 prueba:", prueba);
+        if (foundNode) {
+            // console.log("found Node nuevoooo:", pointsSpentOnTree >= foundNode.pointsNeededToUnlock);
+            return pointsSpentOnTree >= foundNode.pointsNeededToUnlock;
         }
         return false;
     };
@@ -195,7 +247,9 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                 {node.unlocks && node.unlocks?.length > 0
                                     ? node.unlocks.map((arrowArray, index) => {
                                           if (Array.isArray(arrowArray)) {
+                                              //   console.log("node.unlockedByIdnode.unlockedByIdnode.unlockedById:", node);
                                               return arrowArray.map((arrowSegment, arrowSegmentIndex) => {
+                                                  // console.log("asdasdasd arrowSegment:", arrowSegment.truco);
                                                   return arrowSegmentIndex === 0 ? (
                                                       <Arrow
                                                           startingRow={node.talentRow}
@@ -206,7 +260,11 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                           key={arrowSegmentIndex}
                                                           hasArrowhead={arrowArray.length === 0}
                                                           hasTurns={arrowArray.length > 1}
-                                                          parentNodeCapped={checkIfNodeIsCapped(node.talentId)}
+                                                          parentNodeCapped={isNodeUnlockable(
+                                                              node.talentId,
+                                                              arrowSegment.truco,
+                                                              index
+                                                          )}
                                                       />
                                                   ) : (
                                                       <Arrow
@@ -218,7 +276,11 @@ export const TalentTree: FC<TalentTreeProps> = ({
                                                           key={arrowSegmentIndex}
                                                           hasArrowhead={true}
                                                           hasTurns
-                                                          parentNodeCapped={checkIfNodeIsCapped(node.talentId)}
+                                                          parentNodeCapped={isNodeUnlockable(
+                                                              node.talentId,
+                                                              arrowSegment.truco,
+                                                              index
+                                                          )}
                                                       />
                                                   );
                                               });
