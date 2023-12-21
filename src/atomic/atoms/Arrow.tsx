@@ -69,7 +69,7 @@ const ArrowHead = styled.div<IArrowHead>`
     width: 0;
     height: 0;
     pointer-events: none;
-    z-index: 2;
+    z-index: 2; // TODO: change this somehow so it appears under the talent tooltip!
     border-top: ${(props) => (props.$isVerticalArrow ? `10px solid ${props.$arrowColor}` : "10px solid transparent")};
     border-right: ${(props) => (props.$isVerticalArrow ? "9px solid transparent" : "none")};
     border-bottom: ${(props) => (props.$isVerticalArrow ? "10px solid transparent" : "10px solid transparent")};
