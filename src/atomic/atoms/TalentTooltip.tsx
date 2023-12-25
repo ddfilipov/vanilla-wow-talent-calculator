@@ -34,7 +34,6 @@ const Background = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.8;
 `;
 const TalentName = styled.div`
     flex-basis: 100%;
