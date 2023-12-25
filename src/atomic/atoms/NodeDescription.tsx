@@ -15,7 +15,6 @@ interface IStyledNode {
 
 const Container = styled.button`
     border: 1px solid var(--main-area-border);
-    z-index: 2;
 `;
 
 export const NodeDescription: FC<NodeDescriptionProps> = ({ src, talentRow, talentColumn }) => {

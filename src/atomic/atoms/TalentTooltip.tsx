@@ -18,7 +18,7 @@ const Container = styled.div`
     gap: 0.2rem;
     bottom: 40px;
     left: 40px;
-    z-index: 3;
+    z-index: 1;
     background-color: rgba(5, 12, 24, 0.8);
     border: 1px solid var(--main-area-border);
     border-radius: 0.3rem;

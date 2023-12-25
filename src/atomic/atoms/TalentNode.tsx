@@ -14,6 +14,7 @@ const Container = styled.div<IStyledContainer>`
     border-radius: 0.3rem;
     grid-row-start: ${(props) => props.$talentRow};
     grid-column-start: ${(props) => props.$talentColumn};
+    order: 1; // most important prop, otherwise arow stays on top of the node, and we don't want that!
     button {
         filter: ${(props) => (props.$grayed ? "grayscale(100%)" : "default")};
     }

@@ -20,7 +20,6 @@ const Container = styled.div<IContainer>`
     padding: 1px;
     justify-content: right;
     border-radius: 0.3rem;
-    z-index: 1;
     span {
         position: relative;
         font-size: 0.7rem;
