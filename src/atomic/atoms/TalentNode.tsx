@@ -80,7 +80,7 @@ export interface TalentNodeProps {
     specIndex: number;
     resetSignal: number;
     pointsSpentOnTree: number;
-    pointsNeededToUnluck: number;
+    pointsNeededToUnlock: number;
     ranksDescription: string[];
     talentName: string;
     unlocksId: number | number[] | undefined;
@@ -96,7 +96,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     specIndex,
     resetSignal,
     pointsSpentOnTree,
-    pointsNeededToUnluck,
+    pointsNeededToUnlock: pointsNeededToUnluck,
     ranksDescription,
     talentName,
     unlocksId,
@@ -213,6 +213,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                             ranksDescription[currentNodePoints],
                         ]}
                         talentName={talentName}
+                        isNodeReachable={pointsSpentOnTree >= pointsNeededToUnluck}
+                        pointsNeededToUnlock={pointsNeededToUnluck}
                     />
                 ) : null}
             </Container>

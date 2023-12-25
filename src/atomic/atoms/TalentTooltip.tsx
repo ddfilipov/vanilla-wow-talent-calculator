@@ -9,6 +9,8 @@ export interface TalentTooltipProps {
     isNodeUntouched: boolean;
     isNodeCapped: boolean;
     ranksDescription: string[];
+    isNodeReachable: boolean;
+    pointsNeededToUnlock: number;
 }
 
 const Container = styled.div`
@@ -49,8 +51,9 @@ const RankDescription = styled.div`
     color: var(--tooltip-description);
 `;
 
-const LearnableNode = styled.div<{ $isNodeLearnable: boolean }>`
-    color: ${(props) => (props.$isNodeLearnable ? "var(--learnable-talent)" : "var(--unlearn-talent-color)")};
+const LearnableNode = styled.div<{ $isNodeLearnable: boolean; $isNodeReachable: boolean }>`
+    color: ${(props) =>
+        props.$isNodeLearnable && props.$isNodeReachable ? "var(--learnable-talent)" : "var(--unlearn-talent-color)"};
 `;
 
 export const TalentTooltip: FC<TalentTooltipProps> = ({
@@ -60,18 +63,25 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
     isNodeUntouched,
     ranksDescription,
     talentName,
+    isNodeReachable,
+    pointsNeededToUnlock,
 }) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
-
+    console.log("isNodeCapped", isNodeCapped, "isNodeUntouched", isNodeUntouched, "isNodeReachable", isNodeReachable);
     useEffect(() => {
         if (isNodeCapped) {
             setActionDescription("Right-click to unlearn");
             return;
         }
-        if (isNodeUntouched) {
+        if (isNodeUntouched && isNodeReachable) {
+            console.log("ERERAERASDF");
             setActionDescription("Click to learn");
+            return;
+        } else {
+            setActionDescription(`Requires ${pointsNeededToUnlock} points in tree to unlock`);
+            return;
         }
-    }, [isNodeCapped, isNodeUntouched]);
+    }, [isNodeCapped, isNodeUntouched, isNodeReachable]);
     return (
         <Container>
             <Background />
@@ -86,7 +96,9 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
                 </>
             ) : null}
             {isNodeCapped || isNodeUntouched ? (
-                <LearnableNode $isNodeLearnable={isNodeUntouched}>{actionDescription}</LearnableNode>
+                <LearnableNode $isNodeLearnable={isNodeUntouched} $isNodeReachable={isNodeReachable}>
+                    {actionDescription}
+                </LearnableNode>
             ) : null}
         </Container>
     );
