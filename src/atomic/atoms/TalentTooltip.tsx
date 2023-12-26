@@ -11,15 +11,17 @@ export interface TalentTooltipProps {
     ranksDescription: string[];
     isNodeReachable: boolean;
     pointsNeededToUnlock: number;
+    referece: any;
+    isEnoughSpaceToTheRight: boolean;
 }
 
-const Container = styled.div`
+const Container = styled.div<{ $isEnoughSpaceToTheRight: boolean }>`
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
     bottom: 40px;
-    left: 40px;
+    ${(props) => (props.$isEnoughSpaceToTheRight ? "left: 40px;" : "right: 40px;")}
     z-index: 1;
     background-color: rgba(5, 12, 24, 0.8);
     border: 1px solid var(--main-area-border);
@@ -66,8 +68,14 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
     talentName,
     isNodeReachable,
     pointsNeededToUnlock,
+    referece,
+    isEnoughSpaceToTheRight,
 }) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
+    // TODO: not the best way but it is what it is. I'm having issues calculating the space to the right cuz the component
+    // doesn't have space at first but when I hover onto the node it does have and its a shitshow
+    const [delayedSpaceToTheRight, setDelayedSpaceToTheRight] = useState<boolean>(true);
+
     useEffect(() => {
         if (isNodeCapped) {
             setActionDescription("Right-click to unlearn");
@@ -81,8 +89,12 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
             return;
         }
     }, [isNodeCapped, isNodeUntouched, isNodeReachable]);
+
+    useEffect(() => {
+        setDelayedSpaceToTheRight(isEnoughSpaceToTheRight);
+    }, [isEnoughSpaceToTheRight]);
     return (
-        <Container>
+        <Container ref={referece} $isEnoughSpaceToTheRight={delayedSpaceToTheRight}>
             <Background />
             <TalentName>{talentName}</TalentName>
             <CurrentRank>{`Rank ${currentPoints}/${maxPoints}`}</CurrentRank>

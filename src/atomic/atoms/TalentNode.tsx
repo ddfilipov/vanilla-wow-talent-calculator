@@ -102,8 +102,10 @@ export const TalentNode: FC<TalentNodeProps> = ({
     unlocksId,
     unlockedBy,
 }) => {
+    const tooltipRef = useRef<HTMLInputElement>(null);
     const [currentNodePoints, setCurrentNodePoints] = useState<number>(0);
     const [isHovered, setIsHovered] = useState<boolean>(false);
+    const [isEnoughSpaceToTheRight, setIsEnoughSpaceToTheRight] = useState<boolean>(true);
     const remainingPoints: number = useContext(PointsLeftContext);
     const { unlockableNodes, handleUnlockableNodes, highestMilestone } = useContext(UnlockableNodesContext);
 
@@ -117,6 +119,13 @@ export const TalentNode: FC<TalentNodeProps> = ({
         });
     }, [unlockableNodes, resetSignal]);
 
+    useEffect(() => {
+        if (isHovered && tooltipRef.current) {
+            const rect = tooltipRef.current.getBoundingClientRect();
+            setIsEnoughSpaceToTheRight(window.innerWidth - rect?.right > 0);
+            // Use 'rect' here
+        }
+    }, [isHovered]);
     const childNodes = useMemo(() => {
         return unlockableNodes.filter((node) => node?.unlockedById === nodeId);
     }, [unlockableNodes, resetSignal]);
@@ -215,6 +224,8 @@ export const TalentNode: FC<TalentNodeProps> = ({
                         talentName={talentName}
                         isNodeReachable={pointsSpentOnTree >= pointsNeededToUnluck}
                         pointsNeededToUnlock={pointsNeededToUnluck}
+                        referece={tooltipRef}
+                        isEnoughSpaceToTheRight={isEnoughSpaceToTheRight}
                     />
                 ) : null}
             </Container>
