@@ -52,6 +52,7 @@ const RankDescription = styled.div`
 `;
 
 const LearnableNode = styled.div<{ $isNodeLearnable: boolean; $isNodeReachable: boolean }>`
+    font-size: 0.9rem;
     color: ${(props) =>
         props.$isNodeLearnable && props.$isNodeReachable ? "var(--learnable-talent)" : "var(--unlearn-talent-color)"};
 `;
@@ -67,14 +68,12 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
     pointsNeededToUnlock,
 }) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
-    console.log("isNodeCapped", isNodeCapped, "isNodeUntouched", isNodeUntouched, "isNodeReachable", isNodeReachable);
     useEffect(() => {
         if (isNodeCapped) {
             setActionDescription("Right-click to unlearn");
             return;
         }
         if (isNodeUntouched && isNodeReachable) {
-            console.log("ERERAERASDF");
             setActionDescription("Click to learn");
             return;
         } else {
