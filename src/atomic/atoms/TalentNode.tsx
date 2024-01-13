@@ -6,6 +6,7 @@ import { TalentNodePoints } from "./TalentNodePoints";
 import { TalentTooltip } from "./TalentTooltip";
 import { IUnlockableNodes, UnlockableNodesContext } from "../organisms/TalentTree";
 import { nodeCantLvlDown } from "@/utils/sharedFunctions";
+import { Tooltip } from "react-tooltip";
 
 const Container = styled.div<IStyledContainer>`
     position: relative;
@@ -104,8 +105,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
 }) => {
     const tooltipRef = useRef<HTMLInputElement>(null);
     const [currentNodePoints, setCurrentNodePoints] = useState<number>(0);
-    const [isHovered, setIsHovered] = useState<boolean>(false);
-    const [isEnoughSpaceToTheRight, setIsEnoughSpaceToTheRight] = useState<boolean>(true);
     const remainingPoints: number = useContext(PointsLeftContext);
     const { unlockableNodes, handleUnlockableNodes, highestMilestone } = useContext(UnlockableNodesContext);
 
@@ -119,13 +118,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
         });
     }, [unlockableNodes, nodeId]);
 
-    useEffect(() => {
-        if (isHovered && tooltipRef.current) {
-            const rect = tooltipRef.current.getBoundingClientRect();
-            setIsEnoughSpaceToTheRight(window.innerWidth - rect?.right > 0);
-            // Use 'rect' here
-        }
-    }, [isHovered]);
     const childNodes = useMemo(() => {
         return unlockableNodes.filter((node) => node?.unlockedById === nodeId);
     }, [unlockableNodes, nodeId]);
@@ -178,10 +170,6 @@ export const TalentNode: FC<TalentNodeProps> = ({
         }
     };
 
-    const handleOnMouseEnter = () => {
-        setIsHovered(true);
-    };
-
     useEffect(() => {
         setCurrentNodePoints(0);
     }, [resetSignal]);
@@ -199,8 +187,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 }
                 $remainingPoints={remainingPoints}
                 $currentPoints={currentNodePoints}
-                onMouseEnter={handleOnMouseEnter}
-                onMouseLeave={() => setIsHovered(false)}
+                data-tooltip-id={`${nodeId}_tooltip`}
             >
                 {/* {nodeId} */}
                 <ButtonStyled
@@ -211,7 +198,14 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 {remainingPoints > 0 || currentNodePoints > 0 ? (
                     <TalentNodePoints currentPoints={currentNodePoints} maxPoints={maxPoints} />
                 ) : null}
-                {isHovered ? (
+            </Container>
+            <Tooltip
+                id={`${nodeId}_tooltip`}
+                style={{ zIndex: 10 }}
+                disableStyleInjection
+                place={"top"}
+                opacity={1}
+                children={
                     <TalentTooltip
                         currentPoints={currentNodePoints}
                         maxPoints={maxPoints}
@@ -225,10 +219,9 @@ export const TalentNode: FC<TalentNodeProps> = ({
                         isNodeReachable={pointsSpentOnTree >= pointsNeededToUnluck}
                         pointsNeededToUnlock={pointsNeededToUnluck}
                         referece={tooltipRef}
-                        isEnoughSpaceToTheRight={isEnoughSpaceToTheRight}
                     />
-                ) : null}
-            </Container>
+                }
+            />
         </>
     );
 };
