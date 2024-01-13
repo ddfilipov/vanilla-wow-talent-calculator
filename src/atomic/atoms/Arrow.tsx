@@ -40,7 +40,7 @@ const StyledArrow = styled.div<IArrow>`
         props.$isVerticalArrow
             ? "0"
             : (props.$arrowIndex === 1 && !props.$hasArrowhead) || props.$hasTurns
-            ? "-8px"
+            ? "-6px"
             : "4px"};
     width: ${(props) =>
         props.$isVerticalArrow
@@ -53,7 +53,7 @@ const StyledArrow = styled.div<IArrow>`
             ? props.$arrowIndex === 2 || props.$hasTurns
                 ? "calc(100% - 84px)"
                 : "calc(100% - 102px)"
-            : "12%"};
+            : "14%"};
 `;
 
 interface IArrowHead {

@@ -9,8 +9,6 @@ const inter = Inter({ subsets: ["latin"] });
 const MainContainer = styled.div`
     display: flex;
     padding: 1rem;
-    @media ((${breakpoints.mobile})) {
-    }
     @media ((${breakpoints.tablet})) {
         height: 100vh;
         align-items: center;
@@ -18,20 +16,17 @@ const MainContainer = styled.div`
     }
     @media ((${breakpoints.desktop})) {
         height: 100vh;
-        align-items: center;
-        justify-content: center;
     }
 `;
 
 const Container = styled.div`
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     gap: 10px;
     background-color: var(--main-area-background);
     padding: 1rem;
     border-radius: 0.2rem;
     border: 1px solid var(--main-area-border);
+    flex-direction: column;
 
     @media ((${breakpoints.mobile})) {
         min-width: 280px;
@@ -39,6 +34,7 @@ const Container = styled.div`
     }
     @media ((${breakpoints.tablet})) {
         min-height: 500px;
+        justify-content: center;
     }
     @media ((${breakpoints.desktop})) {
         max-width: 1200px;
