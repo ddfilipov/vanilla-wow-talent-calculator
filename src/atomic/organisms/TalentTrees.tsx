@@ -1,15 +1,18 @@
 "use client";
 import { FC } from "react";
 import styled from "styled-components";
-import { PlayableClassesType } from "@/utils/consts";
 import { TalentTree } from "./TalentTree";
 import { ClassData } from "@/data/classData";
 import { RemainingPointsActionType } from "./TalentCalculator";
+import { breakpoints } from "@/styles/breakpoints";
 
 const Container = styled.div`
     display: flex;
     flex-wrap: nowrap;
-    gap: 30px;
+    gap: none;
+    @media ((${breakpoints.tablet})) {
+        gap: 30px;
+    }
     overflow-y: auto;
 `;
 

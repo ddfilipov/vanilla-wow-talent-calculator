@@ -31,23 +31,21 @@ const Container = styled.div`
     flex-direction: column;
     gap: 30px;
     max-width: 300px;
-    @media ((${breakpoints.tablet})) {
-        max-width: none;
-        ::-webkit-scrollbar {
-            height: 5px;
-        }
+    max-width: none;
+    ::-webkit-scrollbar {
+        height: 5px;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: var(--main-area-border);
-        }
+    ::-webkit-scrollbar-thumb {
+        background: var(--main-area-border);
+    }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--icon-border-color);
-        }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--icon-border-color);
     }
 `;
 
