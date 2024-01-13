@@ -9,13 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 const MainContainer = styled.div`
     display: flex;
     padding: 1rem;
+    justify-content: center;
     @media ((${breakpoints.tablet})) {
         height: 100vh;
         align-items: center;
-        justify-content: center;
-    }
-    @media ((${breakpoints.desktop})) {
-        height: 100vh;
     }
 `;
 
@@ -27,7 +24,6 @@ const Container = styled.div`
     border-radius: 0.2rem;
     border: 1px solid var(--main-area-border);
     flex-direction: column;
-
     @media ((${breakpoints.mobile})) {
         min-width: 280px;
         min-height: 300px;

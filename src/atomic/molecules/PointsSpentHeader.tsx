@@ -19,7 +19,6 @@ const Container = styled.div`
     text-transform: capitalize;
     border: 1px solid var(--main-area-border);
     font-size: 1rem;
-    max-width: 300px;
     @media ((${breakpoints.tablet})) {
         max-width: none;
         display: flex;

@@ -8,6 +8,7 @@ import Image from "next/image";
 import { TalentTrees } from "./TalentTrees";
 import { ClassData } from "@/data/classData";
 import { PointsSpentHeader } from "../molecules/PointsSpentHeader";
+import { breakpoints } from "@/styles/breakpoints";
 
 const StyledHeader = styled.div`
     display: grid;
@@ -29,6 +30,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-width: 300px;
+    @media ((${breakpoints.tablet})) {
+        max-width: none;
+    }
 `;
 
 interface TalentCalculatorProps {
