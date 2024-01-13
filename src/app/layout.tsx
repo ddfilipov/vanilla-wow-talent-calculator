@@ -10,6 +10,7 @@ const MainContainer = styled.div`
     display: flex;
     padding: 1rem;
     justify-content: center;
+    overflow: hidden;
     @media ((${breakpoints.tablet})) {
         height: 100vh;
         align-items: center;
@@ -24,10 +25,8 @@ const Container = styled.div`
     border-radius: 0.2rem;
     border: 1px solid var(--main-area-border);
     flex-direction: column;
-    @media ((${breakpoints.mobile})) {
-        min-width: 280px;
-        min-height: 300px;
-    }
+    min-width: 280px;
+    min-height: 300px;
     @media ((${breakpoints.tablet})) {
         min-height: 500px;
         justify-content: center;
