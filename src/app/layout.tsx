@@ -7,11 +7,21 @@ import { breakpoints } from "@/styles/breakpoints";
 const inter = Inter({ subsets: ["latin"] });
 
 const MainContainer = styled.div`
-    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 1rem;
+    background-color: red;
+    @media ((${breakpoints.mobile})) {
+    }
+    @media ((${breakpoints.tablet})) {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    @media ((${breakpoints.desktop})) {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const Container = styled.div`
@@ -34,7 +44,6 @@ const Container = styled.div`
     @media ((${breakpoints.desktop})) {
         max-width: 1200px;
         min-width: 750px;
-        max-height: 800px;
     }
 `;
 

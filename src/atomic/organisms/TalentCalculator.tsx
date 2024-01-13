@@ -26,7 +26,6 @@ const Title = styled.h2`
 `;
 
 const Container = styled.div`
-    height: 800px;
     display: flex;
     flex-direction: column;
     gap: 30px;

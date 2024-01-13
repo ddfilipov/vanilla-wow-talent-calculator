@@ -9,7 +9,7 @@ import { RemainingPointsActionType } from "./TalentCalculator";
 const Container = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 30px;
 `;
