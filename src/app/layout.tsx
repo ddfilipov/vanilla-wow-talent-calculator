@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ["latin"] });
 const MainContainer = styled.div`
     display: flex;
     padding: 1rem;
-    background-color: red;
     @media ((${breakpoints.mobile})) {
     }
     @media ((${breakpoints.tablet})) {
