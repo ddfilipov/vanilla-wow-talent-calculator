@@ -14,7 +14,6 @@ const Container = styled.div`
 `;
 
 interface TalentTreesProps {
-    className: PlayableClassesType;
     classData: ClassData;
     handleRemainingPoints: (action: RemainingPointsActionType, pointsDistributionIndex: number) => void;
     resetSpecPoints: (pointsDistributionIndex: number) => void;
@@ -22,7 +21,6 @@ interface TalentTreesProps {
 }
 
 export const TalentTrees: FC<TalentTreesProps> = ({
-    className,
     classData,
     handleRemainingPoints,
     resetSpecPoints,

@@ -88,7 +88,6 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
                     pointsDistribution={pointsDistribution}
                 />
                 <TalentTrees
-                    className={className}
                     classData={classData}
                     handleRemainingPoints={handleRemainingPoints}
                     resetSpecPoints={resetSpecPoints}
