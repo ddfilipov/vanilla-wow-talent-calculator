@@ -5,28 +5,31 @@ import { PlayableClassesType } from "@/utils/consts";
 import Image from "next/image";
 import { breakpoints } from "@/styles/breakpoints";
 
-interface IStyledContainer {
+interface IStyledInfo {
     $classNameColor: string;
 }
 
-const Container = styled.div<IStyledContainer>`
+const Container = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
     padding: 5px;
     text-transform: capitalize;
     border: 1px solid var(--main-area-border);
     font-size: 1rem;
+    max-width: 300px;
     @media ((${breakpoints.tablet})) {
+        max-width: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         flex-wrap: nowrap;
+        gap: 10px;
     }
     img {
         border-radius: 1rem;
-    }
-    h2 {
-        color: ${(props) => props.$classNameColor};
     }
     :last-child {
         margin-left: auto;
@@ -35,7 +38,20 @@ const Container = styled.div<IStyledContainer>`
         @media ((${breakpoints.tablet})) {
             flex-basis: auto;
         }
-        flex-basis: 100%;
+    }
+`;
+
+const StyledInfo = styled.div<IStyledInfo>`
+    flex-basis: 90%;
+    @media ((${breakpoints.tablet})) {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-basis: auto;
+    }
+    h2 {
+        color: ${(props) => props.$classNameColor};
+        font-size: 1.2rem;
     }
 `;
 
@@ -55,7 +71,7 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
     classNameColor,
 }) => {
     return (
-        <Container $classNameColor={classNameColor}>
+        <Container>
             <Image
                 src={`/images/class-icons/${classIcon}.jpg`}
                 width={26}
@@ -66,8 +82,10 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
                 }}
                 alt={className}
             />
-            <h2>{className}</h2>
-            <div style={{ margin: 0 }}>{pointsDistribution?.join(" / ")}</div>
+            <StyledInfo $classNameColor={classNameColor}>
+                <h2>{className}</h2>
+                <div>{pointsDistribution?.join(" / ")}</div>
+            </StyledInfo>
             <span>Remaining points: {remainingPoints}</span>
         </Container>
     );
