@@ -33,6 +33,21 @@ const Container = styled.div`
     max-width: 300px;
     @media ((${breakpoints.tablet})) {
         max-width: none;
+        ::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--main-area-border);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--icon-border-color);
+        }
     }
 `;
 
