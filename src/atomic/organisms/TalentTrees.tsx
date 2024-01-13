@@ -14,6 +14,7 @@ const Container = styled.div`
     gap: 30px;
     overflow-y: auto;
     @media ((${breakpoints.tablet})) {
+        overflow-y: initial;
         justify-content: center;
     }
 `;
