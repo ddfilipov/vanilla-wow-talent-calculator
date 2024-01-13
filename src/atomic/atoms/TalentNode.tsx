@@ -117,7 +117,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 return node?.unlocksId.find((x) => x === nodeId);
             }
         });
-    }, [unlockableNodes, resetSignal]);
+    }, [unlockableNodes, nodeId]);
 
     useEffect(() => {
         if (isHovered && tooltipRef.current) {
@@ -128,7 +128,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
     }, [isHovered]);
     const childNodes = useMemo(() => {
         return unlockableNodes.filter((node) => node?.unlockedById === nodeId);
-    }, [unlockableNodes, resetSignal]);
+    }, [unlockableNodes, nodeId]);
 
     const handleClick = (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();

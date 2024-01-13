@@ -118,7 +118,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
             })
             .filter((node) => node);
         return filteredNodes;
-    }, []);
+    }, [specData]);
 
     const [unlockableNodes, setUnlockableNodes] = useState<(IUnlockableNodes | undefined)[]>(defaultUnlockableNodes);
     const handleUnlockableNodes = (action: RemainingPointsActionType, nodeId: number) => {
@@ -155,7 +155,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
 
         if (Array.isArray(parentNode?.unlocksId)) {
             childNode = unlockableNodes.find(
-                (node) => node && node.nodeId === (parentNode.unlocksId as number[])[unlockableNodeIndex]
+                (node) => node && node.nodeId === (parentNode?.unlocksId as number[])[unlockableNodeIndex]
             );
         } else {
             childNode = unlockableNodes.find((node) => node && node.nodeId === (parentNode && parentNode.unlocksId));

@@ -88,7 +88,7 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
             setActionDescription(`Requires ${pointsNeededToUnlock} points in tree to unlock`);
             return;
         }
-    }, [isNodeCapped, isNodeUntouched, isNodeReachable]);
+    }, [isNodeCapped, isNodeUntouched, isNodeReachable, pointsNeededToUnlock]);
 
     useEffect(() => {
         setDelayedSpaceToTheRight(isEnoughSpaceToTheRight);
