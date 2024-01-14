@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const capitalizedSlug = params.slug[0].toUpperCase() + params.slug.slice(1, params.slug.length);
     return {
         title: capitalizedSlug,
+        description: "Level up your World of Warcraft class with this talent calculator"
     };
 }
 
