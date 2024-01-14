@@ -1,5 +1,6 @@
 "use client";
-import { FC, useEffect, useState } from "react";
+import { breakpoints } from "@/styles/breakpoints";
+import { FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 export interface TalentTooltipProps {
@@ -55,6 +56,10 @@ const LearnableNode = styled.div<{ $isNodeLearnable: boolean; $isNodeReachable: 
         props.$isNodeLearnable && props.$isNodeReachable ? "var(--learnable-talent)" : "var(--unlearn-talent-color)"};
 `;
 
+const StyledTouchButtons = styled.div`
+
+`;
+
 export const TalentTooltip: FC<TalentTooltipProps> = ({
     currentPoints,
     maxPoints,
@@ -67,6 +72,17 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
     referece,
 }) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
+    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, [window.innerWidth]);
 
     useEffect(() => {
         if (isNodeCapped) {
@@ -100,6 +116,12 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
                     {actionDescription}
                 </LearnableNode>
             ) : null}
+            {windowWidth < 768 && (
+                <StyledTouchButtons>
+                    <button>ARRIBA</button>
+                    <button>ABAJO</button>
+                </StyledTouchButtons>
+            )}
         </Container>
     );
 };
