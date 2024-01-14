@@ -11,10 +11,8 @@ const MainContainer = styled.div`
     padding: 1rem;
     justify-content: center;
     overflow: hidden;
-    @media ((${breakpoints.tablet})) {
-        height: 100vh;
-        align-items: center;
-    }
+    height: 100vh;
+    align-items: center;
 `;
 
 const Container = styled.div`
