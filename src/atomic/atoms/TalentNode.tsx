@@ -194,6 +194,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     $backgroundImage={`/images/talent-icons/${src}.jpg`}
                     onClick={handleClick}
                     onContextMenu={handleClick}
+                    title={talentName}
                 />
                 {remainingPoints > 0 || currentNodePoints > 0 ? (
                     <TalentNodePoints currentPoints={currentNodePoints} maxPoints={maxPoints} />
