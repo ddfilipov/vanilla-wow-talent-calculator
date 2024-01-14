@@ -1,5 +1,4 @@
 "use client";
-import { breakpoints } from "@/styles/breakpoints";
 import { FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { CustomButton } from "./CustomButton";
@@ -71,17 +70,17 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
     referece,
 }) => {
     const [actionDescription, setActionDescription] = useState<string>("Click to learn");
-    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+    // const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setWindowWidth(window.innerWidth);
+    //     };
 
-        window.addEventListener("resize", handleResize);
+    //     window.addEventListener("resize", handleResize);
 
-        return () => window.removeEventListener("resize", handleResize);
-    }, [window.innerWidth]);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, [window.innerWidth]);
 
     useEffect(() => {
         if (isNodeCapped) {
@@ -115,12 +114,12 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
                     {actionDescription}
                 </LearnableNode>
             ) : null}
-            {windowWidth < 768 && (
+            {/* {windowWidth < 768 && (
                 <StyledTouchButtons>
                     <CustomButton buttonLabel="+" handleOnClick={() => {}} />
                     <CustomButton buttonLabel="-" handleOnClick={() => {}} />
                 </StyledTouchButtons>
-            )}
+            )} */}
         </Container>
     );
 };

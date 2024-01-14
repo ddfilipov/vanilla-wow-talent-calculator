@@ -205,7 +205,7 @@ export const TalentNode: FC<TalentNodeProps> = ({
                 disableStyleInjection
                 place={"top"}
                 opacity={1}
-                children={
+                                children={
                     <TalentTooltip
                         currentPoints={currentNodePoints}
                         maxPoints={maxPoints}
