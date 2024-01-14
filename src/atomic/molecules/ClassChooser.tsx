@@ -18,7 +18,12 @@ export const ClassSelector: FC = () => {
         <>
             <Container>
                 {playableClasses.map((playableClass) => (
-                    <ClassIcon href={`/${playableClass.name}`} src={playableClass.src} key={playableClass.name} />
+                    <ClassIcon
+                        href={`/${playableClass.name}`}
+                        src={playableClass.src}
+                        key={playableClass.name}
+                        aria-label={`Make your ${playableClass.name} build`}
+                    />
                 ))}
             </Container>
         </>
