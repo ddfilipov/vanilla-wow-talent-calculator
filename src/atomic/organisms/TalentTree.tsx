@@ -6,6 +6,7 @@ import { TalentNode } from "../atoms/TalentNode";
 import Image from "next/image";
 import { Arrow } from "../atoms/Arrow";
 import { RemainingPointsActionType } from "./TalentCalculator";
+import { CustomButton } from "../atoms/CustomButton";
 
 interface IStyledContainer {
     $backgroundImage: string;
@@ -29,20 +30,10 @@ const Header = styled.div`
     img {
         border-radius: 1rem;
     }
-    /* TODO: maybe use a styled component instead of :last-child? */
     :last-child {
         margin-left: auto;
         background-color: transparent;
         color: var(--red-reset-color);
-        font-weight: bold;
-        border-radius: 0.3rem;
-        padding: 0.2rem 0.4rem;
-        border-width: 1px;
-        border-color: #121822; //TODO: should use a var
-        cursor: pointer;
-        &:hover {
-            box-shadow: inset 0 0 5px #596e92;
-        }
     }
 `;
 
@@ -192,9 +183,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                     />
                     <h3>{specName}</h3>
                     <span style={{ color: "gray" }}>({pointsSpentOnTree})</span>
-                    <button type="button" onClick={handleReset}>
-                        X
-                    </button>
+                    <CustomButton buttonLabel="X" handleOnClick={handleReset} />
                 </Header>
                 <TalentGrid $backgroundImage={`/images/spec-backgrounds/${specBackground}.jpg`}>
                     {specData.map((node, indice) => {

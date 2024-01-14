@@ -2,6 +2,7 @@
 import { breakpoints } from "@/styles/breakpoints";
 import { FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import { CustomButton } from "./CustomButton";
 
 export interface TalentTooltipProps {
     talentName: string;
@@ -56,9 +57,7 @@ const LearnableNode = styled.div<{ $isNodeLearnable: boolean; $isNodeReachable: 
         props.$isNodeLearnable && props.$isNodeReachable ? "var(--learnable-talent)" : "var(--unlearn-talent-color)"};
 `;
 
-const StyledTouchButtons = styled.div`
-
-`;
+const StyledTouchButtons = styled.div``;
 
 export const TalentTooltip: FC<TalentTooltipProps> = ({
     currentPoints,
@@ -118,8 +117,8 @@ export const TalentTooltip: FC<TalentTooltipProps> = ({
             ) : null}
             {windowWidth < 768 && (
                 <StyledTouchButtons>
-                    <button>ARRIBA</button>
-                    <button>ABAJO</button>
+                    <CustomButton buttonLabel="+" handleOnClick={() => {}} />
+                    <CustomButton buttonLabel="-" handleOnClick={() => {}} />
                 </StyledTouchButtons>
             )}
         </Container>
