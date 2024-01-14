@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 import styled from "styled-components";
-import { MAX_TALENT_POINTS, PlayableClassesType } from "@/utils/consts";
+import { MAX_TALENT_POINTS, MIN_LEVEL, PlayableClassesType } from "@/utils/consts";
 import Image from "next/image";
 import { breakpoints } from "@/styles/breakpoints";
 
@@ -85,7 +85,7 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
             </StyledInfo>
             <StyledInfo $classNameColor={classNameColor} style={{ textAlign: "right" }}>
                 <p>Remaining points: {remainingPoints}</p>
-                <p>Current level: {MAX_TALENT_POINTS - remainingPoints + 10}</p>
+                <p>Current level: {MAX_TALENT_POINTS - remainingPoints + MIN_LEVEL - 1}</p>
             </StyledInfo>
         </Container>
     );
