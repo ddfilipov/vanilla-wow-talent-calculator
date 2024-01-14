@@ -199,29 +199,19 @@ export const TalentNode: FC<TalentNodeProps> = ({
                     <TalentNodePoints currentPoints={currentNodePoints} maxPoints={maxPoints} />
                 ) : null}
             </Container>
-            <Tooltip
-                id={`${nodeId}_tooltip`}
-                style={{ zIndex: 10 }}
-                disableStyleInjection
-                place={"top"}
-                opacity={1}
-                                children={
-                    <TalentTooltip
-                        currentPoints={currentNodePoints}
-                        maxPoints={maxPoints}
-                        isNodeCapped={currentNodePoints === maxPoints}
-                        isNodeUntouched={currentNodePoints === 0}
-                        ranksDescription={[
-                            ranksDescription[currentNodePoints - 1],
-                            ranksDescription[currentNodePoints],
-                        ]}
-                        talentName={talentName}
-                        isNodeReachable={pointsSpentOnTree >= pointsNeededToUnluck}
-                        pointsNeededToUnlock={pointsNeededToUnluck}
-                        referece={tooltipRef}
-                    />
-                }
-            />
+            <Tooltip id={`${nodeId}_tooltip`} style={{ zIndex: 10 }} disableStyleInjection place={"top"} opacity={1}>
+                <TalentTooltip
+                    currentPoints={currentNodePoints}
+                    maxPoints={maxPoints}
+                    isNodeCapped={currentNodePoints === maxPoints}
+                    isNodeUntouched={currentNodePoints === 0}
+                    ranksDescription={[ranksDescription[currentNodePoints - 1], ranksDescription[currentNodePoints]]}
+                    talentName={talentName}
+                    isNodeReachable={pointsSpentOnTree >= pointsNeededToUnluck}
+                    pointsNeededToUnlock={pointsNeededToUnluck}
+                    referece={tooltipRef}
+                />
+            </Tooltip>
         </>
     );
 };

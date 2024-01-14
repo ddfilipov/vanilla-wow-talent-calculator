@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 import styled from "styled-components";
-import { PlayableClassesType } from "@/utils/consts";
+import { MAX_TALENT_POINTS, PlayableClassesType } from "@/utils/consts";
 import Image from "next/image";
 import { breakpoints } from "@/styles/breakpoints";
 
@@ -41,12 +41,10 @@ const Container = styled.div`
 `;
 
 const StyledInfo = styled.div<IStyledInfo>`
-    flex-basis: 90%;
     @media ((${breakpoints.tablet})) {
         display: flex;
         align-items: center;
         gap: 10px;
-        flex-basis: auto;
     }
     h2 {
         color: ${(props) => props.$classNameColor};
@@ -58,7 +56,7 @@ interface PointsSpentHeaderProps {
     className: PlayableClassesType;
     classIcon: string;
     pointsDistribution?: number[];
-    remainingPoints?: number;
+    remainingPoints: number;
     classNameColor: string;
 }
 
@@ -85,7 +83,10 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
                 <h2>{className}</h2>
                 <div>{pointsDistribution?.join(" / ")}</div>
             </StyledInfo>
-            <span>Remaining points: {remainingPoints}</span>
+            <StyledInfo $classNameColor={classNameColor} style={{ textAlign: "right" }}>
+                <p>Remaining points: {remainingPoints}</p>
+                <p>Current level: {MAX_TALENT_POINTS - remainingPoints + 10}</p>
+            </StyledInfo>
         </Container>
     );
 };
