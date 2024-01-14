@@ -78,6 +78,7 @@ export const PointsSpentHeader: FC<PointsSpentHeaderProps> = ({
                     height: 28,
                 }}
                 alt={className}
+                loading="lazy" 
             />
             <StyledInfo $classNameColor={classNameColor}>
                 <h2>{className}</h2>

@@ -88,7 +88,7 @@ export const TalentCalculator: FC<TalentCalculatorProps> = ({ className, classDa
             <Container>
                 <StyledHeader>
                     <Link href="/">
-                        <Image src="/images/wow-icon.png" width={38} height={38} alt="Picture of the author" />
+                        <Image src="/images/wow-icon.png" width={38} height={38} alt="Picture of the author" loading="lazy" />
                     </Link>
                     <Title>{`${className} Vanilla Talent Calculator`}</Title>
                 </StyledHeader>

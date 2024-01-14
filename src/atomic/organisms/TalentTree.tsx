@@ -180,6 +180,7 @@ export const TalentTree: FC<TalentTreeProps> = ({
                         width={26}
                         height={26}
                         alt="Picture of the author"
+                        loading="lazy"
                     />
                     <h3>{specName}</h3>
                     <span style={{ color: "gray" }}>({pointsSpentOnTree})</span>
