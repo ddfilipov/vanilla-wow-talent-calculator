@@ -2,16 +2,24 @@
 
 My own approach of a World of Warcraft talent calculator using nextjs13. This project doesn't intend on profiting on Blizzard's game. Rather, I'm using it as a tool to learn new technologies and build something fun!
 
+## Want to check out the project?
+
+Use this [link](https://ddfilipov-wow-talent-calculator.netlify.app/)
+
 ## Technologies/tools this project runs on:
-- React
-- Nextjs 13
+
+-   React
+-   Nextjs 13
 
 ## TODO list:
-- [ ] Turn the project into a monorepo
-- [ ] Add api calls (backend) with express (TBD)
-- [ ] Add database
-- [ ] Add test cases
 
+-   [x] Host the website somewhere
+-   [ ] Add TBC and WOTLK expansion talents
+-   [ ] Add api calls (backend) with express (TBD)
+-   [ ] Turn the project into a monorepo
+-   [ ] Add database
+-   [ ] Add test cases
+-   [ ] Also make a phone app
 
 ## How to run the project
 
