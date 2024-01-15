@@ -13,11 +13,12 @@ Use this [link](https://ddfilipov-wow-talent-calculator.netlify.app/)
 
 ## TODO list:
 
+-   [x] Develop the frontend
 -   [x] Host the website somewhere
--   [ ] Add TBC and WOTLK expansion talents
--   [ ] Add api calls (backend) with express (TBD)
 -   [ ] Turn the project into a monorepo
--   [ ] Add database
+-   [ ] Set up a database (MongoDB?)
+-   [ ] Add TBC and WOTLK expansion talents
+-   [ ] Develop the backend (Node + Express)
 -   [ ] Add test cases
 -   [ ] Also make a phone app
 
