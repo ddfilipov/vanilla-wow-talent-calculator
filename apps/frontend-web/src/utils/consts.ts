@@ -39,3 +39,4 @@ export const playableClasses: IClass[] = [
 export const MAX_TALENT_POINTS: number = 51;
 export const MIN_LEVEL: number = 10;
 export const MAX_LEVEL: number = 60;
+export const BASE_URL = "http://localhost:5000";

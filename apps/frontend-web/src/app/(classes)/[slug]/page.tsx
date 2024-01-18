@@ -1,6 +1,6 @@
 import { TalentCalculator } from "@/atomic/organisms/TalentCalculator";
 import { ClassData, classData } from "@/data/classData";
-import { PlayableClassesType } from "@/utils/consts";
+import { BASE_URL, PlayableClassesType } from "@/utils/consts";
 import { redirect } from "next/navigation";
 
 export default async function ClassPage({ params }: { params: { slug: PlayableClassesType } }) {
@@ -8,6 +8,8 @@ export default async function ClassPage({ params }: { params: { slug: PlayableCl
         redirect("/");
     }
     const fetchedClass: ClassData = await getClassData(params.slug);
+    const testCall = await JSON.stringify(fetchClassData(params.slug));
+    console.log("xxxxxxxxxxxxxxxxxxxxxxx testCall xxxxxxxxxxxxxxxxxxxxxxx", testCall);
     return <TalentCalculator className={params.slug} classData={fetchedClass} />;
 }
 
@@ -15,7 +17,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const capitalizedSlug = params.slug[0].toUpperCase() + params.slug.slice(1, params.slug.length);
     return {
         title: capitalizedSlug,
-        description: "Level up your World of Warcraft class with this talent calculator"
+        description: "Level up your World of Warcraft class with this talent calculator",
     };
 }
 
@@ -42,4 +44,9 @@ const getClassData = async (className: PlayableClassesType) => {
             resolve(fetchedClass);
         }, 0);
     });
+};
+
+const fetchClassData = async (className: PlayableClassesType) => {
+    const response = await fetch(`${BASE_URL}/`);
+    return response.json();
 };
