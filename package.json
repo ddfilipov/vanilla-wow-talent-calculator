@@ -1,7 +1,7 @@
 {
     "name": "vanilla-wow-talent-calculator",
     "version": "1.1.0",
-    "description": "World of Warcraft talent trees builder monorepo",
+    "description": "World of Warcraft talent tree builder monorepo",
     "main": "index.js",
     "scripts": {
         "dev": "pnpm --parallel --stream -r run dev",
