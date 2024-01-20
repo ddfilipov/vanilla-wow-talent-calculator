@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import { classData } from "./data/classData";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -12,7 +13,8 @@ if (process.env.NODE_ENV === "development") {
 
 app.get("/class-data", (req: Request, res: Response) => {
     const className = req.query.className;
-    res.send({ data: "returnedData" });
+    const fetchedClass = classData.find((classinfo) => classinfo.className === className);
+    res.send({ data: fetchedClass });
 });
 
 app.listen(port, () => {

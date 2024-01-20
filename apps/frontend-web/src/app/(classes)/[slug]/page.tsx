@@ -1,5 +1,5 @@
 import { TalentCalculator } from "@/atomic/organisms/TalentCalculator";
-import { ClassData, classData } from "@/data/classData";
+import { ClassData } from "@/data/classData";
 import { BASE_URL, PlayableClassesType } from "@/utils/consts";
 import { redirect } from "next/navigation";
 
@@ -7,9 +7,7 @@ export default async function ClassPage({ params }: { params: { slug: PlayableCl
     if (!doesClassExist(params.slug)) {
         redirect("/");
     }
-    const fetchedClass: ClassData = await getClassData(params.slug);
-    const testCall = await fetchClassData(params.slug);
-    console.log("xxxxxxxxxxxxxxxxxxxxxxx testCall xxxxxxxxxxxxxxxxxxxxxxx", testCall);
+    const fetchedClass: ClassData = await fetchClassData(params.slug);
     return <TalentCalculator className={params.slug} classData={fetchedClass} />;
 }
 
@@ -36,15 +34,6 @@ function doesClassExist(val: any): val is PlayableClassesType {
         ] as PlayableClassesType[]
     ).includes(val);
 }
-
-const getClassData = async (className: PlayableClassesType) => {
-    return new Promise<ClassData>((resolve: any, reject: any) => {
-        setTimeout(() => {
-            const fetchedClass = classData.find((classinfo) => classinfo.className === className);
-            resolve(fetchedClass);
-        }, 0);
-    });
-};
 
 const fetchClassData = async (className: PlayableClassesType) => {
     const params = new URLSearchParams({
