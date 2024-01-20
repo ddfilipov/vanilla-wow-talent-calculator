@@ -48,5 +48,7 @@ const getClassData = async (className: PlayableClassesType) => {
 
 const fetchClassData = async (className: PlayableClassesType) => {
     const response = await fetch(`${BASE_URL}/`);
-    return response.json();
+    const jsonResponse = await response.json();
+    console.log("a ver response.data", jsonResponse.data);
+    return jsonResponse.data;
 };
