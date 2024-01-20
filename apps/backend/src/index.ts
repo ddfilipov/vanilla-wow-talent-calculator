@@ -10,7 +10,8 @@ if (process.env.NODE_ENV === "development") {
     });
 }
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/class-data", (req: Request, res: Response) => {
+    const className = req.query.className;
     res.send({ data: "returnedData" });
 });
 

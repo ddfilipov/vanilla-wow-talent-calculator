@@ -47,7 +47,10 @@ const getClassData = async (className: PlayableClassesType) => {
 };
 
 const fetchClassData = async (className: PlayableClassesType) => {
-    const response = await fetch(`${BASE_URL}/`);
+    const params = new URLSearchParams({
+        className: className,
+    });
+    const response = await fetch(`${BASE_URL}/class-data?${params.toString()}`);
     const jsonResponse = await response.json();
     return jsonResponse.data;
 };
