@@ -8,7 +8,7 @@ export default async function ClassPage({ params }: { params: { slug: PlayableCl
         redirect("/");
     }
     const fetchedClass: ClassData = await getClassData(params.slug);
-    const testCall = await JSON.stringify(fetchClassData(params.slug));
+    const testCall = await fetchClassData(params.slug);
     console.log("xxxxxxxxxxxxxxxxxxxxxxx testCall xxxxxxxxxxxxxxxxxxxxxxx", testCall);
     return <TalentCalculator className={params.slug} classData={fetchedClass} />;
 }
@@ -49,6 +49,5 @@ const getClassData = async (className: PlayableClassesType) => {
 const fetchClassData = async (className: PlayableClassesType) => {
     const response = await fetch(`${BASE_URL}/`);
     const jsonResponse = await response.json();
-    console.log("a ver response.data", jsonResponse.data);
     return jsonResponse.data;
 };
