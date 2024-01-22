@@ -1,0 +1,12 @@
+{
+    "name": "shared-directory",
+    "version": "0.0.1",
+    "description": "shared package for frontend and backend",
+    "scripts": {
+        "dev": "pnpm --parallel --stream -r run dev",
+        "build": "pnpm --stream -r run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
