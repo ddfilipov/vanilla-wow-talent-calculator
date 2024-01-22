@@ -1,5 +1,5 @@
 import { TalentCalculator } from "@/atomic/organisms/TalentCalculator";
-import { ClassData } from "@/data/classData";
+import { ClassData } from "@vanilla-wow-talent-calculator/shared/interfaces";
 import { BASE_URL, PlayableClassesType } from "@/utils/consts";
 import { redirect } from "next/navigation";
 

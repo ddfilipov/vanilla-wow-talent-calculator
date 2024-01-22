@@ -1,5 +1,5 @@
 {
-    "name": "shared-directory",
+    "name": "@vanilla-wow-talent-calculator/shared",
     "version": "0.0.1",
     "description": "shared package for frontend and backend",
     "scripts": {

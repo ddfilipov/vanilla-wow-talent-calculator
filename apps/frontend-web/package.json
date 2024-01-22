@@ -22,6 +22,6 @@
         "eslint": "^8",
         "eslint-config-next": "13.5.6",
         "typescript": "^5",
-        "shared-directory": "^0.0.1"
+        "@vanilla-wow-talent-calculator/shared": "workspace:^0.0.1"
     }
 }
